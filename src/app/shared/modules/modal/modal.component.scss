@@ -1,0 +1,111 @@
+.modalParent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: 0s ease;
+    transition-delay: 0.4s;
+    z-index: -1;
+    background: #011b338c;
+    opacity: 0;
+    padding: 15px;
+    @media (max-width: 500px) {
+        align-items: flex-end;
+        padding: 0;
+        justify-content: center;
+    }
+    .closeModal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+::ng-deep .modalContent {
+    transform: scale(0.5);
+    transition: 0.4s ease;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+    z-index: 20;
+    opacity: 0;
+    @media (max-width: 550px) {
+        transform: translateY(100%) scale(1);
+        margin: 0;
+        opacity: 1;
+        transition: 0.2s ease;
+        max-width: calc(100% - 16px) !important;
+    }
+    .modalHead,
+    ::ng-deep .modalHead {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h4 {
+            margin: 0;
+        }
+    }
+    .closeBtn,
+    ::ng-deep .closeBtn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        opacity: 0.4;
+        &:hover {
+            opacity: 1;
+        }
+        svg,
+        ::ng-deep svg {
+            width: 17px;
+            height: 17px;
+        }
+    }
+    .modalBody,
+    ::ng-deep .modalBody {
+        padding: 20px;
+    }
+}
+
+::ng-deep app-trans-det-modal {
+    margin: auto;
+    max-width: 400px;
+    width: 100%;
+    height: fit-content;
+    @media (max-width: 550px) {
+        margin: unset;
+        max-width: calc(100% - 16px) !important;
+    }
+    .modalContent {
+        max-width: unset;
+        width: 100%;
+        @media (max-width: 550px) {
+            transform: translateY(100%) scale(1);
+            margin: 0;
+            opacity: 1;
+            transition: 0.2s ease;
+            max-width: unset !important;
+        }
+    }
+}
+
+.modalParent.modalShow {
+    z-index: 3000;
+    transition-delay: 0s;
+    opacity: 1;
+    ::ng-deep .modalContent {
+        transform: scale(1);
+        opacity: 1;
+        @media (max-width: 550px) {
+            transition: 0.2s ease;
+            transform: translateY(0);
+        }
+    }
+}

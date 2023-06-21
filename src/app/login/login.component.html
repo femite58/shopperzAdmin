@@ -1,0 +1,98 @@
+<main>
+    <div class="bannerCont">
+        <img src="assets/images/topRightImg.svg" alt="Login Vector" />
+        <img src="assets/images/bottomLeftImg.svg" alt="Login Vector" />
+        <div class="centered">
+            <a routerLink="/" class="logo d-block">
+                <img src="assets/images/logo.svg" alt="Logo" />
+            </a>
+            <p>
+                Streamline Your Ecommerce Operations with Our Powerful
+                Management Platform.
+            </p>
+            <img src="assets/images/loginArrow.svg" alt="arrow" />
+            <img src="assets/images/loginImg.png" alt="Dashboard Mockup" />
+        </div>
+    </div>
+    <div class="formPar">
+        <div class="formCont">
+            <div class="headTxt text-center">
+                <h1>Welcome Back!</h1>
+                <p class="txtLight mb40">
+                    Securely login to your shopperz admin account.
+                </p>
+            </div>
+            <form [formGroup]="form" (ngSubmit)="submit()">
+                <div class="formGroup">
+                    <label for="">Email Address</label>
+                    <div class="inputCont preIcon">
+                        <svg-icons name="envelope"></svg-icons>
+                        <input
+                            type="text"
+                            placeholder="Enter your email"
+                            formControlName="user"
+                            [class.error]="
+                                f('user').touched && f('user').invalid
+                            "
+                        />
+                    </div>
+                    <div
+                        *ngIf="f('user').touched && f('user').invalid"
+                        class="errDisp"
+                    >
+                        This field is required!
+                    </div>
+                </div>
+                <div class="formGroup">
+                    <label for="">Password</label>
+                    <div class="inputCont preIcon">
+                        <svg-icons name="lock"></svg-icons>
+                        <input
+                            type="password"
+                            placeholder="Enter password"
+                            formControlName="password"
+                            [class.error]="
+                                f('password').touched && f('password').invalid
+                            "
+                            #pwd
+                        />
+                        <span class="pointer" [appTogglePass]="pwd">
+                            <svg-icons
+                                [name]="
+                                    pwd.type == 'password' ? 'eye-slash' : 'eye'
+                                "
+                            ></svg-icons>
+                        </span>
+                    </div>
+                    <div
+                        *ngIf="f('password').touched && f('password').invalid"
+                        class="errDisp"
+                    >
+                        This field is required!
+                    </div>
+                </div>
+                <div
+                    class="d-flex align-items-center justify-content-between mb30"
+                >
+                    <div class="cusCheck">
+                        <input type="checkbox" id="rememberMe" />
+                        <label for="rememberMe">
+                            <div class="checkbox">
+                                <i class="fa fa-check"></i>
+                            </div>
+                            <span>Remember me</span>
+                        </label>
+                    </div>
+                    <a routerLink="/forgot-password" class="priCol"
+                        >Forgot Password?</a
+                    >
+                </div>
+                <submit-btn
+                    btnTxt="Login"
+                    [loading]="submitting"
+                    [disabled]="form.invalid"
+                ></submit-btn>
+            </form>
+        </div>
+    </div>
+</main>
