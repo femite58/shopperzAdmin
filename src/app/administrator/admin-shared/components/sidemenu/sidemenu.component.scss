@@ -1,6 +1,7 @@
 @import "../../../../../theme.scss";
 aside {
-  position: relative;
+  position: sticky;
+  top: 0;
   height: var(--view-height);
 }
 #innerSideMenu {
@@ -8,6 +9,12 @@ aside {
   width: 260px;
   height: 100%;
   background: #f1f2f6;
+  display: flex;
+  flex-direction: column;
+}
+.scrollable {
+  flex: 1;
+  overflow: auto;
 }
 .logo {
   padding: 35px 30px;
@@ -24,52 +31,57 @@ aside {
     padding: 0 30px;
     margin-bottom: 15px;
   }
-  .eachMenu {
+}
+.eachMenu {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: 40px;
+  // margin-bottom: 8px;
+  padding: 0 30px;
+  color: $txtDark;
+  position: relative;
+  cursor: pointer;
+  .iconCont {
+    width: 22px;
+    height: 22px;
     display: flex;
-    gap: 8px;
     align-items: center;
-    height: 40px;
-    // margin-bottom: 8px;
-    padding: 0 30px;
-    color: $txtDark;
-    position: relative;
-    .iconCont {
-      width: 22px;
-      height: 22px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      ::ng-deep svg {
-        max-width: 100%;
-      }
+    justify-content: center;
+    ::ng-deep svg {
+      max-width: 100%;
     }
-    ::ng-deep path[style*="fill: #292931"],
-    ::ng-deep path[fill="#292931"] {
-      fill: $txtDark !important;
-    }
+  }
+  ::ng-deep path[style*="fill: #292931"],
+  ::ng-deep path[fill="#292931"] {
+    fill: $txtDark !important;
+  }
+  ::ng-deep path[stroke="#292931"],
+  ::ng-deep path[style*="stroke: #292931"] {
+    stroke: $txtDark !important;
+  }
+  &.active {
+    color: $primary;
     ::ng-deep path[stroke="#292931"],
     ::ng-deep path[style*="stroke: #292931"] {
-      stroke: $txtDark !important;
+      stroke: $primary !important;
     }
-    &.active {
-      color: $primary;
-      ::ng-deep path[stroke="#292931"],
-      ::ng-deep path[style*="stroke: #292931"] {
-        stroke: $primary !important;
-      }
-      ::ng-deep path[fill="#292931"],
-      ::ng-deep path[style*="fill: #292931"] {
-        fill: $primary !important;
-      }
-      &::after {
-        display: block;
-        right: 0;
-        top: 0;
-        height: 100%;
-        position: absolute;
-        content: "";
-        border-right: 2px solid $primary;
-      }
+    ::ng-deep path[fill="#292931"],
+    ::ng-deep path[style*="fill: #292931"] {
+      fill: $primary !important;
     }
+    &::after {
+      display: block;
+      right: 0;
+      top: 0;
+      height: 100%;
+      position: absolute;
+      content: "";
+      border-right: 2px solid $primary;
+    }
+  }
+  &.logout {
+    height: 62px;
+    border-top: $border;
   }
 }

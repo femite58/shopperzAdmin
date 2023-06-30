@@ -3,117 +3,155 @@
         <a routerLink="/administrator/dashboard" class="logo">
             <img src="assets/images/logo_big.svg" alt="Logo" />
         </a>
-        <div class="eachMenuCat">
-            <div class="menuTitle">MAIN MENU</div>
-            <a
-                routerLink="/administrator/dashboard"
-                routerLinkActive="active"
-                [routerLinkActiveOptions]="{ exact: true }"
-                class="eachMenu"
-            >
-                <div class="iconCont">
-                    <svg-icons name="home"></svg-icons>
-                </div>
-                <span>Dashboard</span>
-            </a>
-            <a
-                routerLink="/administrator/orders"
-                routerLinkActive="active"
-                class="eachMenu"
-            >
-                <div class="iconCont">
-                    <svg-icons name="shopping-cart"></svg-icons>
-                </div>
-                <span>Orders</span>
-            </a>
-            <a
-                routerLink="/administrator/customers"
-                routerLinkActive="active"
-                class="eachMenu"
-            >
-                <div class="iconCont">
-                    <svg-icons name="users"></svg-icons>
-                </div>
-                <span>Customers</span>
-            </a>
-            <a
-                routerLink="/administrator/coupons"
-                routerLinkActive="active"
-                class="eachMenu"
-            >
-                <div class="iconCont">
-                    <svg-icons name="ticket"></svg-icons>
-                </div>
-                <span>Coupon Code</span>
-            </a>
-            <a
-                routerLink="/administrator/stores"
-                routerLinkActive="active"
-                class="eachMenu"
-            >
-                <div class="iconCont">
-                    <svg-icons name="store"></svg-icons>
-                </div>
-                <span>Stores</span>
-            </a>
+        <div class="scrollable">
+            <div class="eachMenuCat">
+                <div class="menuTitle">MAIN MENU</div>
+                <a
+                    routerLink="/administrator/dashboard"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                    class="eachMenu"
+                >
+                    <div class="iconCont">
+                        <svg-icons name="home"></svg-icons>
+                    </div>
+                    <span>Dashboard</span>
+                </a>
+                <a
+                    routerLink="/administrator/orders"
+                    routerLinkActive="active"
+                    class="eachMenu"
+                >
+                    <div class="iconCont">
+                        <svg-icons name="shopping-cart"></svg-icons>
+                    </div>
+                    <span>Orders</span>
+                </a>
+                <a
+                    routerLink="/administrator/products"
+                    routerLinkActive="active"
+                    class="eachMenu"
+                >
+                    <div class="iconCont">
+                        <svg-icons name="box"></svg-icons>
+                    </div>
+                    <span>Products</span>
+                </a>
+                <a
+                    routerLink="/administrator/coupons"
+                    routerLinkActive="active"
+                    class="eachMenu"
+                >
+                    <div class="iconCont">
+                        <svg-icons name="ticket"></svg-icons>
+                    </div>
+                    <span>Coupon Code</span>
+                </a>
+                <a
+                    routerLink="/administrator/stores"
+                    routerLinkActive="active"
+                    class="eachMenu"
+                >
+                    <div class="iconCont">
+                        <svg-icons name="store"></svg-icons>
+                    </div>
+                    <span>Stores</span>
+                </a>
+                <a
+                    routerLink="/administrator/customers"
+                    routerLinkActive="active"
+                    class="eachMenu"
+                >
+                    <div class="iconCont">
+                        <svg-icons name="users"></svg-icons>
+                    </div>
+                    <span>Customers</span>
+                </a>
+            </div>
+            <div class="eachMenuCat">
+                <div class="menuTitle">OTHERS</div>
+                <a
+                    routerLink="/administrator/product-categories"
+                    routerLinkActive="active"
+                    class="eachMenu"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                >
+                    <div class="iconCont">
+                        <svg-icons name="categories"></svg-icons>
+                    </div>
+                    <span>Categories</span>
+                </a>
+                <a
+                    routerLink="/administrator/product-variations"
+                    routerLinkActive="active"
+                    class="eachMenu"
+                >
+                    <div class="iconCont">
+                        <svg-icons name="filters"></svg-icons>
+                    </div>
+                    <span>Variations</span>
+                </a>
+                <a
+                    routerLink="/administrator/sales-promotion"
+                    routerLinkActive="active"
+                    class="eachMenu"
+                >
+                    <div class="iconCont">
+                        <svg-icons name="tag"></svg-icons>
+                    </div>
+                    <span>Sales Promotion</span>
+                </a>
+                <a
+                    routerLink="/administrator/manage-admins"
+                    routerLinkActive="active"
+                    class="eachMenu"
+                >
+                    <div class="iconCont">
+                        <svg-icons name="userMultiple"></svg-icons>
+                    </div>
+                    <span>Manage Admins</span>
+                </a>
+                <a
+                    routerLink="/administrator/notifications"
+                    routerLinkActive="active"
+                    class="eachMenu"
+                >
+                    <div class="iconCont">
+                        <svg-icons name="notification"></svg-icons>
+                    </div>
+                    <span>Notifications</span>
+                </a>
+            </div>
+            <div class="eachMenuCat">
+                <div class="menuTitle">SETTINGS</div>
+                <a
+                    routerLink="/administrator/account"
+                    routerLinkActive="active"
+                    class="eachMenu"
+                >
+                    <div class="iconCont">
+                        <svg-icons name="userCircle"></svg-icons>
+                    </div>
+                    <span>Account Settings</span>
+                </a>
+                <a
+                    routerLink="/administrator/general-settings"
+                    routerLinkActive="active"
+                    class="eachMenu"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                >
+                    <div class="iconCont">
+                        <svg-icons name="settings"></svg-icons>
+                    </div>
+                    <span>General Settings</span>
+                </a>
+            </div>
         </div>
-        <div class="eachMenuCat">
-            <div class="menuTitle">PRODUCT</div>
-            <a
-                routerLink="/administrator/product/listing"
-                routerLinkActive="active"
-                class="eachMenu"
-            >
-                <div class="iconCont">
-                    <svg-icons name="box"></svg-icons>
-                </div>
-                <span>Products</span>
-            </a>
-            <a
-                routerLink="/administrator/product/categories"
-                routerLinkActive="active"
-                class="eachMenu"
-                [routerLinkActiveOptions]="{ exact: true }"
-            >
-                <div class="iconCont">
-                    <svg-icons name="categories"></svg-icons>
-                </div>
-                <span>Categories</span>
-            </a>
-            <a
-                routerLink="/administrator/product/specifications"
-                routerLinkActive="active"
-                class="eachMenu"
-            >
-                <div class="iconCont">
-                    <svg-icons name="filters"></svg-icons>
-                </div>
-                <span>Specifications</span>
-            </a>
-        </div>
-        <div class="eachMenuCat">
-            <div class="menuTitle">ADMIN</div>
-            <a
-                routerLink="/administrator/manage-admins"
-                routerLinkActive="active"
-                class="eachMenu"
-            >
-                <div class="iconCont">
-                    <svg-icons name="box"></svg-icons>
-                </div>
-                <span>Manage Admins</span>
-            </a>
-            <a
-                routerLink="/administrator/profile"
-                routerLinkActive="active"
-                class="eachMenu"
-                [routerLinkActiveOptions]="{ exact: true }"
-            >
-                <div class="iconCont">
-                    <svg-icons name="categories"></svg-icons>
-                </div>
-                <span>Profile</span>
-            </a>
+        <div class="eachMenu logout">
+            <div class="iconCont">
+                <svg-icons name="logout"></svg-icons>
+            </div>
+            <span>Logout</span>
         </div>
     </div>
 </aside>

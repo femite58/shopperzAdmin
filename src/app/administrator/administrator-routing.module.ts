@@ -15,19 +15,18 @@ const routes: Routes = [
   { path: 'stores', component: StoresComponent },
   { path: 'customers', component: CustomersComponent },
   {
-    path: 'product',
+    path: 'products',
     children: [
-      {
-        path: '',
-        redirectTo: '/administrator/product/listing',
-        pathMatch: 'full',
-      },
+      { path: '', redirectTo: '/administrator/products/listing', pathMatch: 'full' },
       { path: 'listing', component: ProductsComponent },
-      { path: 'categories', component: CategoriesComponent },
       { path: 'add', component: ProductsFormComponent },
       { path: 'edit/:id', component: ProductsFormComponent },
-      { path: 'specifications', component: ProductSpecificationsComponent },
     ],
+  },
+  { path: 'product-variations', component: ProductSpecificationsComponent },
+  {
+    path: 'product-categories',
+    component: CategoriesComponent,
   },
 ];
 
