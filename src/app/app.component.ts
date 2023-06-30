@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'shopperz';
+
+  ngOnInit(): void {
+    document.documentElement.style.setProperty(
+      '--scrollBW',
+      `${window.innerWidth - document.body.clientWidth}px`
+    );
+  }
 }

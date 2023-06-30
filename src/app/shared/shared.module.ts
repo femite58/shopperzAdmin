@@ -40,6 +40,7 @@ import { CloudinaryModule as clModule } from '@cloudinary/ng';
 import { CloudTransPipe } from './pipe/cloud-trans.pipe';
 import { StripSpaceDirective } from './directives/strip-space.directive';
 import { SubmitBtnComponent } from './components/submit-btn/submit-btn.component';
+import { CustomScrollComponent } from './components/custom-scroll/custom-scroll.component';
 
 @NgModule({
   declarations: [
@@ -79,6 +80,7 @@ import { SubmitBtnComponent } from './components/submit-btn/submit-btn.component
     CloudTransPipe,
     StripSpaceDirective,
     SubmitBtnComponent,
+    CustomScrollComponent,
   ],
   imports: [
     CommonModule,
@@ -129,6 +131,7 @@ import { SubmitBtnComponent } from './components/submit-btn/submit-btn.component
     CloudTransPipe,
     StripSpaceDirective,
     SubmitBtnComponent,
+    CustomScrollComponent,
   ],
 })
 export class SharedModule {}

@@ -42,6 +42,9 @@
   --primary-color: #f8253a;
   --view-height: 100vh;
 }
+html {
+  overflow-y: scroll;
+}
 
 body {
   font-family: "SF Pro Display";
