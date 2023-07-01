@@ -2,6 +2,12 @@
     <sidemenu></sidemenu>
     <div id="bigMain">
         <admin-header></admin-header>
-        <ng-content></ng-content>
+        <div *ngIf="pageTitle" id="pageHead">
+            <h1>{{pageTitle}}</h1>
+            <ng-content selector="#headBtnCont"></ng-content>
+        </div>
+        <main>
+            <ng-content></ng-content>
+        </main>
     </div>
 </div>

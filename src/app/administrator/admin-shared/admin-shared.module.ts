@@ -9,6 +9,6 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [LayoutComponent, SidemenuComponent, AdminHeaderComponent],
   imports: [CommonModule, RouterModule, SharedModule],
-  exports: [LayoutComponent],
+  exports: [LayoutComponent, SharedModule],
 })
 export class AdminSharedModule {}

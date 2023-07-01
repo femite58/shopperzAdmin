@@ -1,7 +1,38 @@
+@import "../../../../../theme.scss";
 #adminLayout {
-  display: flex;
-  min-height: var(--view-height);
+    display: flex;
+    min-height: var(--view-height);
 }
 #bigMain {
-  flex: 1 10px;
+    flex: 1 10px;
+}
+#pageHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    border-bottom: $border;
+    padding: 0 30px;
+    h1 {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+    }
+    ::ng-deep #headBtnCont {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        button {
+            gap: 8px;
+            padding: 0 16px;
+            &:not(.primBtn) {
+              background: #fff;
+            }
+        }
+    }
+}
+main {
+    margin: 20px 30px;
+    border: $border;
+    border-radius: 10px;
 }

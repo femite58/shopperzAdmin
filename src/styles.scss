@@ -136,10 +136,15 @@ button {
   border: none;
   width: 100%;
   cursor: pointer;
+  white-space: nowrap;
   &.primBtn {
     background: $primary;
     color: #fff;
     font-weight: 500;
+  }
+  &.greyOutlineBtn {
+    border: $border;
+    
   }
   &:disabled {
     opacity: 0.5;
