@@ -63,7 +63,6 @@ export class CustomScrollComponent implements AfterViewInit, OnDestroy {
   }
 
   dragStart(e) {
-    console.log(e);
     this.contactY = e.y - this.scrollThumb.getBoundingClientRect().top;
     this.initPosY = e.y;
     this.constTop = this.scrollThumb.getBoundingClientRect().top - this.top;
