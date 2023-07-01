@@ -23,6 +23,8 @@ export class CustomScrollComponent implements AfterViewInit, OnDestroy {
   top = 0;
   contactY = 0;
   initPosY = 0;
+  bcTop = 0;
+  constTop = 0;
 
   ngOnDestroy(): void {
     window.removeEventListener('resize', this.initiateVar);
@@ -61,22 +63,30 @@ export class CustomScrollComponent implements AfterViewInit, OnDestroy {
 
   dragStart(e) {
     console.log(e);
-    this.contactY = e.offsetY;
+    this.contactY = e.y - this.scrollThumb.getBoundingClientRect().top;
     this.initPosY = e.y;
+    this.constTop = this.scrollThumb.getBoundingClientRect().top - this.top;
     e.preventDefault();
     document.addEventListener('mousemove', this.drag);
     document.addEventListener('mouseup', this.stopDrag);
   }
 
   drag = (e) => {
-    console.log(e.offsetY, this.contactY, e);
     let diff = e.y - this.initPosY;
     this.initPosY = e.y;
     let finalTop = this.top + diff;
+    let finalBcTop = finalTop + this.constTop;
     finalTop =
       finalTop < 0 ? 0 : finalTop > this.maxTop ? this.maxTop : finalTop;
+    if (this.contactY != e.y - finalBcTop) {
+      finalTop = e.y - this.contactY - this.constTop;
+      finalTop =
+        finalTop < 0 ? 0 : finalTop > this.maxTop ? this.maxTop : finalTop;
+    }
     this.top = finalTop;
     this.scrollThumb.style.top = `${this.top}px`;
+    let scrlTop = (this.top * this.maxScrl) / this.maxTop;
+    this.scrollCont.scrollTop = scrlTop;
   };
 
   stopDrag = (e) => {
