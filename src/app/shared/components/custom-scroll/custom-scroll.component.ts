@@ -25,6 +25,7 @@ export class CustomScrollComponent implements AfterViewInit, OnDestroy {
   initPosY = 0;
   bcTop = 0;
   constTop = 0;
+  dragging = false;
 
   ngOnDestroy(): void {
     window.removeEventListener('resize', this.initiateVar);
@@ -67,6 +68,7 @@ export class CustomScrollComponent implements AfterViewInit, OnDestroy {
     this.initPosY = e.y;
     this.constTop = this.scrollThumb.getBoundingClientRect().top - this.top;
     e.preventDefault();
+    this.dragging = true;
     document.addEventListener('mousemove', this.drag);
     document.addEventListener('mouseup', this.stopDrag);
   }
@@ -92,5 +94,6 @@ export class CustomScrollComponent implements AfterViewInit, OnDestroy {
   stopDrag = (e) => {
     document.removeEventListener('mousemove', this.drag);
     document.removeEventListener('mouseup', this.stopDrag);
+    this.dragging = false;
   };
 }

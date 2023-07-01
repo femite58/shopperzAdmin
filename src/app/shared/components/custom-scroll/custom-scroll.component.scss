@@ -24,6 +24,12 @@
                 background: #c1c1c1;
             }
         }
+        &.dragging {
+            opacity: 1;
+            .scrollThumb {
+                background: #c1c1c1;
+            }
+        }
     }
     &:hover {
         .scrollTrack {
