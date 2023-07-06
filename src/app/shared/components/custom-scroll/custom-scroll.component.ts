@@ -43,7 +43,7 @@ export class CustomScrollComponent implements AfterViewInit, OnDestroy {
     obs.observe(this.scrollCont, { childList: true });
     setTimeout(() => {
       this.initiateVar();
-    });
+    }, 50);
     window.addEventListener('resize', this.initiateVar);
   }
 

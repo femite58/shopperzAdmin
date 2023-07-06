@@ -4,9 +4,20 @@
             <svg-icons name="download"></svg-icons>
             <span>Import</span>
         </button>
-        <button class="primBtn">
+        <button class="primBtn" [openModal]="">
             <svg-icons name="plus"></svg-icons>
             <span>Add Product</span>
         </button>
     </div>
 </layout>
+<div id="modals">
+    <app-modal #storeQuestionModal [closeModal]="closeModal" (onClose)="onClose()">
+        <div class="modalContent">
+            <div class="modalHead question">
+                <div class="modalTitle">
+                    <div class="modalTitle">Add product</div>
+                </div>
+            </div>
+        </div>
+    </app-modal>
+</div>

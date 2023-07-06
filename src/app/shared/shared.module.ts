@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+// import { HeaderComponent } from './components/header/header.component';
+// import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { BannerCarouselComponent } from './components/banner-carousel/banner-carousel.component';
@@ -44,8 +44,8 @@ import { CustomScrollComponent } from './components/custom-scroll/custom-scroll.
 
 @NgModule({
   declarations: [
-    HeaderComponent,
-    FooterComponent,
+    // HeaderComponent,
+    // FooterComponent,
     DropdownComponent,
     BannerCarouselComponent,
     CusAccordionComponent,
@@ -94,8 +94,8 @@ import { CustomScrollComponent } from './components/custom-scroll/custom-scroll.
     FormsModule,
     ModalModule,
     ReactiveFormsModule,
-    HeaderComponent,
-    FooterComponent,
+    // HeaderComponent,
+    // FooterComponent,
     DropdownComponent,
     BannerCarouselComponent,
     CusAccordionComponent,
