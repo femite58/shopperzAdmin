@@ -34,5 +34,5 @@ jobs:
           repository-name: femite58/shopperzAdmin
           branch: gh-pages
           folder: dist/shopperz
-          target-folder: shopperz
+          # target-folder: shopperz
           token: ${{ secrets.GH_TOKEN }}

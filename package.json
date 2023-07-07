@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:app": "ng build --base-href=/shopperz/",
+    "build:app": "ng build --base-href=/shopperzAdmin/",
     "semantic-release": "semantic-release"
   },
   "private": true,
