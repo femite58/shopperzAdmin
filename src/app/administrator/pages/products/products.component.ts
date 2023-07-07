@@ -8,6 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ProductsComponent implements OnInit {
   closeModal = new BehaviorSubject(false);
+  products = [];
   constructor() {}
 
   ngOnInit(): void {}

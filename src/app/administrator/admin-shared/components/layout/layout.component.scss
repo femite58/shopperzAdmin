@@ -5,6 +5,8 @@
 }
 #bigMain {
     flex: 1 10px;
+    display: flex;
+    flex-direction: column;
 }
 #pageHead {
     display: flex;
@@ -35,5 +37,5 @@ main {
     margin: 20px 30px;
     border: $border;
     border-radius: 10px;
-    min-height: calc(var(--view-height) - 70px - 80px - 40px);
+    flex: 1 10px;
 }

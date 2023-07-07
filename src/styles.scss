@@ -4,183 +4,185 @@
 @import "theme.scss";
 
 @font-face {
-  font-family: "SF Pro Display";
-  src: url(assets/fonts/SF-Pro-Display-Regular.otf);
-  font-weight: 400;
+    font-family: "SF Pro Display";
+    src: url(assets/fonts/SF-Pro-Display-Regular.otf);
+    font-weight: 400;
 }
 @font-face {
-  font-family: "SF Pro Display";
-  src: url(assets/fonts/SF-Pro-Display-Medium.otf);
-  font-weight: 500;
+    font-family: "SF Pro Display";
+    src: url(assets/fonts/SF-Pro-Display-Medium.otf);
+    font-weight: 500;
 }
 @font-face {
-  font-family: "SF Pro Display";
-  src: url(assets/fonts/SF-Pro-Display-Semibold.otf);
-  font-weight: 600;
+    font-family: "SF Pro Display";
+    src: url(assets/fonts/SF-Pro-Display-Semibold.otf);
+    font-weight: 600;
 }
 @font-face {
-  font-family: "SF Pro Display";
-  src: url(assets/fonts/SF-Pro-Display-Bold.otf);
-  font-weight: 700;
+    font-family: "SF Pro Display";
+    src: url(assets/fonts/SF-Pro-Display-Bold.otf);
+    font-weight: 700;
 }
 @font-face {
-  font-family: "SF Pro Display";
-  src: url(assets/fonts/SF-Pro-Display-Heavy.otf);
-  font-weight: 800;
+    font-family: "SF Pro Display";
+    src: url(assets/fonts/SF-Pro-Display-Heavy.otf);
+    font-weight: 800;
 }
 @font-face {
-  font-family: "SF Pro Display";
-  src: url(assets/fonts/SF-Pro-Display-Black.otf);
-  font-weight: 900;
+    font-family: "SF Pro Display";
+    src: url(assets/fonts/SF-Pro-Display-Black.otf);
+    font-weight: 900;
 }
 @font-face {
-  font-family: "Reliq Std";
-  src: url(assets/fonts/ReliqStd-Active.otf);
+    font-family: "Reliq Std";
+    src: url(assets/fonts/ReliqStd-Active.otf);
 }
 
 :root {
-  --primary-color: #f8253a;
-  --view-height: 100vh;
+    --primary-color: #f8253a;
+    --view-height: 100vh;
 }
 html {
-  overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 body {
-  font-family: "SF Pro Display";
-  font-size: 14px;
-  color: $txtDark;
+    font-family: "SF Pro Display";
+    font-size: 14px;
+    color: $txtDark;
 }
 
 .formGroup {
-  margin-bottom: 20px;
-  & > label {
-    margin-bottom: 10px;
-    line-height: 17px;
-  }
-  .errDisp {
-    font-size: 13px;
-    color: red;
-    margin-top: 5px;
-  }
+    margin-bottom: 20px;
+    & > label {
+        margin-bottom: 10px;
+        line-height: 17px;
+    }
+    .errDisp {
+        font-size: 13px;
+        color: red;
+        margin-top: 5px;
+    }
 }
 .priCol {
-  color: $primary;
+    color: $primary;
 }
 .txtLight,
 .greyTxt {
-  color: $txtLight;
+    color: $txtLight;
 }
 .priBg {
-  background-color: $primary;
+    background-color: $primary;
 }
 @for $i from 1 through 100 {
-  .mb#{$i} {
-    margin-bottom: #{$i}px;
-  }
-  .pb#{$i} {
-    padding-bottom: #{$i}px;
-  }
+    .mb#{$i} {
+        margin-bottom: #{$i}px;
+    }
+    .pb#{$i} {
+        padding-bottom: #{$i}px;
+    }
 }
 input {
-  display: block;
-  border-radius: 8px;
-  border: $border;
-  width: 100%;
-  height: 45px;
-  padding: 13px 20px;
-  color: $txtDark;
-  font-weight: normal;
-  outline: none;
-  &:focus {
-    border-color: $primary;
-  }
-  &.error {
-    border-color: red;
-  }
-  &::placeholder {
-    color: $txtLight;
-  }
+    display: block;
+    border-radius: 8px;
+    border: $border;
+    width: 100%;
+    height: 45px;
+    padding: 13px 20px;
+    color: $txtDark;
+    font-weight: normal;
+    outline: none;
+    &:focus {
+        border-color: $primary;
+    }
+    &.error {
+        border-color: red;
+    }
+    &::placeholder {
+        color: $txtLight;
+    }
 }
 .inputCont {
-  position: relative;
-  & > *:not(input) {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translate(0, -50%);
-    &:last-child {
-      left: unset;
-      right: 20px;
+    position: relative;
+    & > *:not(input) {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translate(0, -50%);
+        &:last-child {
+            left: unset;
+            right: 20px;
+        }
     }
-  }
-  &.preIcon {
-    input {
-      padding-left: 46px;
+    &.preIcon {
+        input {
+            padding-left: 46px;
+        }
     }
-  }
 }
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 .pointer {
-  cursor: pointer;
+    cursor: pointer;
 }
 button {
-  height: 40px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  outline: none;
-  border: none;
-  width: 100%;
-  cursor: pointer;
-  white-space: nowrap;
-  &.primBtn {
-    background: $primary;
-    color: #fff;
-    font-weight: 500;
-  }
-  &.greyOutlineBtn {
-    border: $border;
-    
-  }
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-}
-.cusCheck {
-  input {
-    display: none;
-  }
-  .checkbox {
-    border: $border;
-    width: 16px;
-    height: 16px;
-    border-radius: 4px;
+    height: 40px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    i {
-      display: none;
-      font-size: 9px;
-      color: #fff;
+    outline: none;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    white-space: nowrap;
+    &.primBtn {
+        background: $primary;
+        color: #fff;
+        font-weight: 500;
     }
-  }
-  input + label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  input:checked + label {
+    &.greyOutlineBtn {
+        border: $border;
+    }
+    &.greyBtn {
+        background: #eaeaea;
+    }
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+.cusCheck {
+    input {
+        display: none;
+    }
     .checkbox {
-      background-color: $primary;
-      border-color: $primary;
-      i {
-        display: block;
-      }
+        border: $border;
+        width: 16px;
+        height: 16px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+            display: none;
+            font-size: 9px;
+            color: #fff;
+        }
     }
-  }
+    input + label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    input:checked + label {
+        .checkbox {
+            background-color: $primary;
+            border-color: $primary;
+            i {
+                display: block;
+            }
+        }
+    }
 }

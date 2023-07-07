@@ -25,7 +25,7 @@ import { SummaryPipe } from './pipe/summary.pipe';
 import { TruncateAmountPipe } from './pipe/truncate-amount.pipe';
 import { DefaultBankDirective } from './directives/default-bank.directive';
 import { CusRouterLinkDirective } from './directives/cus-router-link.directive';
-import { AuthLayoutComponent } from './components/auth-layout/auth-layout.component';
+// import { AuthLayoutComponent } from './components/auth-layout/auth-layout.component';
 import { PhoneCodePipe } from './pipe/phone-code.pipe';
 import { SvgLoaderDirective } from './directives/svg-loader.directive';
 import { InnerContPhoneComponent } from './components/inner-cont-phone/inner-cont-phone.component';
@@ -66,7 +66,7 @@ import { CustomScrollComponent } from './components/custom-scroll/custom-scroll.
     TruncateAmountPipe,
     DefaultBankDirective,
     CusRouterLinkDirective,
-    AuthLayoutComponent,
+    // AuthLayoutComponent,
     PhoneCodePipe,
     SvgLoaderDirective,
     InnerContPhoneComponent,
@@ -116,7 +116,7 @@ import { CustomScrollComponent } from './components/custom-scroll/custom-scroll.
     TruncateAmountPipe,
     DefaultBankDirective,
     CusRouterLinkDirective,
-    AuthLayoutComponent,
+    // AuthLayoutComponent,
     PhoneCodePipe,
     SvgLoaderDirective,
     InnerContPhoneComponent,

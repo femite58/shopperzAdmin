@@ -1,12 +1,14 @@
 {
   "name": "shopperz",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:app": "ng build --base-href=/shopperz/",
+    "semantic-release": "semantic-release"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +35,8 @@
     "@angular-devkit/build-angular": "^16.0.3",
     "@angular/cli": "~16.0.3",
     "@angular/compiler-cli": "^16.0.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
@@ -40,6 +44,12 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~5.0.2"
+    "semantic-release-cli": "^5.4.4",
+    "typescript": "~5.0.2",
+    "semantic-release": "^21.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/femite58/shopperzAdmin.git"
   }
 }

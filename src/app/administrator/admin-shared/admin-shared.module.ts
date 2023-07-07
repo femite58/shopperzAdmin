@@ -8,8 +8,13 @@ import { RouterModule } from '@angular/router';
 import { EmptyItemsComponent } from './components/empty-items/empty-items.component';
 
 @NgModule({
-  declarations: [LayoutComponent, SidemenuComponent, AdminHeaderComponent, EmptyItemsComponent],
+  declarations: [
+    LayoutComponent,
+    SidemenuComponent,
+    AdminHeaderComponent,
+    EmptyItemsComponent,
+  ],
   imports: [CommonModule, RouterModule, SharedModule],
-  exports: [LayoutComponent, SharedModule],
+  exports: [LayoutComponent, EmptyItemsComponent, SharedModule],
 })
 export class AdminSharedModule {}

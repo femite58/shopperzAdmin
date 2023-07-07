@@ -1,3 +1,4 @@
+@import "../../../../theme.scss";
 .modalParent {
     position: fixed;
     top: 0;
@@ -29,9 +30,9 @@
     transform: scale(0.5);
     transition: 0.4s ease;
     background: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     position: relative;
-    max-width: 500px;
+    max-width: 400px;
     margin: auto;
     width: 100%;
     z-index: 20;
@@ -48,8 +49,19 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        .modalTitle {
+            font-weight: 600;
+            font-size: 16px;
+        }
         h4 {
             margin: 0;
+        }
+        &:not(.question) {
+            border-bottom: $border;
+            padding: 48px 32px 12px;
+        }
+        &.question {
+            padding: 45px 32px 8px;
         }
     }
     .closeBtn,
@@ -70,7 +82,21 @@
     }
     .modalBody,
     ::ng-deep .modalBody {
-        padding: 20px;
+        padding: 0 32px 32px;
+        .note {
+            background: #ffebed;
+            color: $primary;
+            padding: 13px 18px;
+            border-radius: 5px;
+        }
+        .btnCont {
+            margin-top: 35px;
+            display: flex;
+            gap: 10px;
+            button {
+                flex: 1;
+            }
+        }
     }
 }
 
