@@ -31,16 +31,7 @@
                             type="text"
                             placeholder="Enter your email"
                             formControlName="user"
-                            [class.error]="
-                                f('user').touched && f('user').invalid
-                            "
                         />
-                    </div>
-                    <div
-                        *ngIf="f('user').touched && f('user').invalid"
-                        class="errDisp"
-                    >
-                        This field is required!
                     </div>
                 </div>
                 <div class="formGroup">
@@ -51,9 +42,6 @@
                             type="password"
                             placeholder="Enter password"
                             formControlName="password"
-                            [class.error]="
-                                f('password').touched && f('password').invalid
-                            "
                             #pwd
                         />
                         <span class="pointer" [appTogglePass]="pwd">
@@ -63,12 +51,6 @@
                                 "
                             ></svg-icons>
                         </span>
-                    </div>
-                    <div
-                        *ngIf="f('password').touched && f('password').invalid"
-                        class="errDisp"
-                    >
-                        This field is required!
                     </div>
                 </div>
                 <div
