@@ -31,7 +31,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
-          repository-name: femite58/femite58.github.io
+          repository-name: femite58/shopperzAdmin
           branch: gh-pages
           folder: dist/shopperz
           target-folder: shopperz
