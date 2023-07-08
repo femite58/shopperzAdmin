@@ -111,7 +111,7 @@
     }
     .formBody {
         .scrollCont {
-            max-height: calc(var(--view-height) - 279px);
+            height: calc(var(--view-height) - 279px);
         }
         .scrollInnerCont {
             padding: 0 32px;
