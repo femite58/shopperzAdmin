@@ -49,6 +49,7 @@ html {
 body {
     font-family: "SF Pro Display";
     font-size: 14px;
+    line-height: 17px;
     color: $txtDark;
 }
 
@@ -57,6 +58,12 @@ body {
     & > label {
         margin-bottom: 10px;
         line-height: 17px;
+        &.req {
+            &::after {
+                content: "*";
+                color: #f8253a;
+            }
+        }
     }
     .errDisp {
         font-size: 13px;
@@ -82,7 +89,8 @@ body {
         padding-bottom: #{$i}px;
     }
 }
-input {
+input,
+textarea {
     display: block;
     border-radius: 8px;
     border: $border;
@@ -102,6 +110,9 @@ input {
         color: $txtLight;
     }
 }
+textarea {
+    height: unset;
+}
 .inputCont {
     position: relative;
     & > *:not(input) {
@@ -117,6 +128,19 @@ input {
     &.preIcon {
         input {
             padding-left: 46px;
+        }
+    }
+}
+.vScrlB {
+    overflow-y: auto;
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-track {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #e2e2e2;
+        &:hover {
+            background: #c1c1c1;
         }
     }
 }

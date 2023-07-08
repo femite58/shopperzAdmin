@@ -41,6 +41,7 @@ import { CloudTransPipe } from './pipe/cloud-trans.pipe';
 import { StripSpaceDirective } from './directives/strip-space.directive';
 import { SubmitBtnComponent } from './components/submit-btn/submit-btn.component';
 import { CustomScrollComponent } from './components/custom-scroll/custom-scroll.component';
+import { CustomSelectComponent } from './components/custom-select/custom-select.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { CustomScrollComponent } from './components/custom-scroll/custom-scroll.
     StripSpaceDirective,
     SubmitBtnComponent,
     CustomScrollComponent,
+    CustomSelectComponent,
   ],
   imports: [
     CommonModule,
@@ -132,6 +134,7 @@ import { CustomScrollComponent } from './components/custom-scroll/custom-scroll.
     StripSpaceDirective,
     SubmitBtnComponent,
     CustomScrollComponent,
+    CustomSelectComponent,
   ],
 })
 export class SharedModule {}

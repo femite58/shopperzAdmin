@@ -82,7 +82,7 @@
     }
     .modalBody,
     ::ng-deep .modalBody {
-        padding: 0 32px 32px;
+        padding: 30px 0px 32px;
         .note {
             background: #ffebed;
             color: $primary;
@@ -93,10 +93,32 @@
             margin-top: 35px;
             display: flex;
             gap: 10px;
-            button {
+            padding: 0 32px;
+            & > * {
                 flex: 1;
             }
         }
+    }
+    .modalHead.question + .modalBody {
+        padding: 0px 0px 32px;
+    }
+    .modalBody.noFormBody {
+        padding-left: 32px !important;
+        padding-right: 32px !important;
+        .btnCont {
+            padding: 0;
+        }
+    }
+    .formBody {
+        .scrollCont {
+            max-height: calc(var(--view-height) - 279px);
+        }
+        .scrollInnerCont {
+            padding: 0 32px;
+        }
+    }
+    .formGroup {
+        margin-bottom: 18px;
     }
 }
 

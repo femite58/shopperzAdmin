@@ -1,0 +1,19 @@
+<div class="cusDropdown" #customSelect>
+    <div class="clickable inputCont" appDropdown>
+        <input
+            type="text"
+            [placeholder]="placeholder"
+            hidden
+        />
+        <div class="customInput">
+            <span *ngIf="!fc.value" class="cusPlaceholder">{{ placeholder }}</span>
+            <div *ngIf="fc.value" class="value">
+                {{ options[selectedOption]?.txt }}
+            </div>
+        </div>
+        <i class="fa fa-caret-down"></i>
+    </div>
+    <div class="dropped vScrlB">
+        <ng-content></ng-content>
+    </div>
+</div>

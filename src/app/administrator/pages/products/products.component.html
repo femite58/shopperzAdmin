@@ -28,15 +28,26 @@
                     <svg-icons name="times"></svg-icons>
                 </span>
             </div>
-            <div class="modalBody">
+            <div class="modalBody noFormBody">
                 <p>Does your business have a physical store?</p>
                 <div class="note">
                     We’ll like to know if your business operates multiple
                     branches or outlets throughout the country.
                 </div>
                 <div class="btnCont">
-                    <button class="greyBtn">No, Continue</button>
-                    <button class="primBtn">Yes! Continue</button>
+                    <button
+                        class="greyBtn"
+                        routerLink="/administrator/products/add"
+                    >
+                        No, Continue
+                    </button>
+                    <button
+                        class="primBtn"
+                        routerLink="/administrator/stores"
+                        [queryParams]="{ action: 'add' }"
+                    >
+                        Yes! Add Store
+                    </button>
                 </div>
             </div>
         </div>
