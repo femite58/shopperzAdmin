@@ -5,6 +5,7 @@
 }
 #bigMain {
     flex: 1 10px;
+    width: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -38,4 +39,128 @@ main {
     border: $border;
     border-radius: 10px;
     flex: 1 10px;
+    ::ng-deep #tableCont {
+        #topActions {
+            padding: 23px 17px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .searchCont {
+                position: relative;
+                & > *:not(input) {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    right: 20px;
+                }
+            }
+            .btnCont {
+                display: flex;
+                gap: 12px;
+            }
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 49px;
+            th,
+            td {
+                border-bottom: 1px solid #eaecf0;
+                white-space: nowrap;
+            }
+            .check {
+                input {
+                    display: none;
+                }
+                input + label {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: $border;
+                    border-radius: 6px;
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                }
+                input:checked + label {
+                    border-color: $primary;
+                    background: $primary;
+                }
+            }
+            thead {
+                background: #f1f2f6;
+                color: $txtLight;
+                font-weight: 500;
+                font-size: 12px;
+                th {
+                    padding: 12px 24px;
+                    white-space: nowrap;
+                    text-transform: uppercase;
+                }
+            }
+            tbody {
+                tr {
+                    &:hover {
+                        background: #f9f9f9;
+                    }
+                    td {
+                        padding: 12px 24px;
+                        vertical-align: middle;
+                        .withImg {
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+                        }
+                        .ratingFlash {
+                            display: flex;
+                            align-items: center;
+                            gap: 13px;
+                            .rating {
+                                gap: 5px;
+                                display: flex;
+                                align-items: center;
+                            }
+                            .hidden {
+                                visibility: hidden;
+                            }
+                        }
+                        .action {
+                            position: relative;
+                            &.shown {
+                                z-index: 20;
+                            }
+                            .clickable {
+                                cursor: pointer;
+                            }
+                            .dropped {
+                                position: absolute;
+                                right: 0;
+                                width: 100px;
+                                box-shadow: 0px 1px 8px 0px #00000026;
+                                border-radius: 8px;
+                                background: #fff;
+                                transform-origin: 50% 0;
+                                transform: scaleY(0);
+                                padding: 9px 0;
+                                transition: 0.3s ease;
+                                &.dropShow {
+                                    transform: scaleY(1);
+                                }
+                                .dropItem {
+                                    height: 26px;
+                                    display: flex;
+                                    align-items: center;
+                                    cursor: pointer;
+                                    padding: 0 14px;
+                                    &:hover {
+                                        background: #f7f7f7;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

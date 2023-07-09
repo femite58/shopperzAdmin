@@ -14,6 +14,101 @@
         title="No Products yet!"
         body="Here you will be able to see the list of products you have"
     ></app-empty-items>
+    <div id="tableCont">
+        <div id="topActions">
+            <div class="searchCont">
+                <input type="text" placeholder="Search product..." />
+                <svg-icons name="search"></svg-icons>
+            </div>
+            <div class="btnCont">
+                <button class="greyOutlineBtn">
+                    <svg-icons name="upload"></svg-icons>
+                    <span>Export</span>
+                </button>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <th class="check">
+                        <input type="checkbox" id="all" />
+                        <label for="all">
+                            <svg-icons name="check"></svg-icons>
+                        </label>
+                    </th>
+                    <th>Product</th>
+                    <th>STORES</th>
+                    <th>Category</th>
+                    <th>QTY</th>
+                    <th>AV. Qty</th>
+                    <th>SELLING Price</th>
+                    <th>DISCOUNT Price</th>
+                    <th>Rating</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let prod of products">
+                        <td class="check">
+                            <input type="checkbox" id="check{{ prod?.id }}" />
+                            <label for="check{{ prod?.id }}">
+                                <svg-icons name="check"></svg-icons>
+                            </label>
+                        </td>
+                        <td>
+                            <div class="withImg">
+                                <img
+                                    src="{{ prod?.image }}"
+                                    alt="{{ prod?.name }}"
+                                />
+                                <span>{{ prod?.name }}</span>
+                            </div>
+                        </td>
+                        <td>
+                            <span *ngFor="let s of prod?.stores">{{ s }},</span>
+                        </td>
+                        <td>{{ prod?.category }}</td>
+                        <td>{{ prod?.qty }}</td>
+                        <td>{{ prod?.available_qty }}</td>
+                        <td>{{ prod?.selling_price | number }}</td>
+                        <td>{{ prod?.discount_price | number }}</td>
+                        <td>
+                            <div class="ratingFlash">
+                                <div class="rating">
+                                    <svg-icons
+                                        name="{{
+                                            prod?.average_rating
+                                                ? 'star'
+                                                : 'starOutline'
+                                        }}"
+                                    ></svg-icons>
+                                    <span
+                                        >({{ prod?.average_rating | number }})
+                                    </span>
+                                </div>
+                                <div
+                                    class="flash"
+                                    [class.hidden]="!prod?.flash_price"
+                                >
+                                    <svg-icons name="lightningBolt"></svg-icons>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="action">
+                                <div appDropdown class="clickable">
+                                    <svg-icons name="vEllipsis"></svg-icons>
+                                </div>
+                                <div class="dropped">
+                                    <div class="dropItem">Edit</div>
+                                    <div class="dropItem">Delete</div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </layout>
 <div id="modals">
     <app-modal

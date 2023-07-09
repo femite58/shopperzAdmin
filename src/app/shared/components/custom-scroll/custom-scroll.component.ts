@@ -50,6 +50,8 @@ export class CustomScrollComponent implements AfterViewInit, OnDestroy {
   initiateVar = () => {
     this.scrlH = this.scrollCont.scrollHeight;
     this.viewH = this.scrollCont.clientHeight;
+    this.scrollThumb.style.display =
+      this.viewH == this.scrlH ? 'none' : 'block';
     this.maxScrl = this.scrlH - this.viewH;
     this.thumbH = (this.viewH * this.viewH) / this.scrlH;
     this.maxTop = this.viewH - this.thumbH;

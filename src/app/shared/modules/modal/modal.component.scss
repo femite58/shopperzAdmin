@@ -111,14 +111,20 @@
     }
     .formBody {
         .scrollCont {
-            height: calc(var(--view-height) - 279px);
-        }
-        .scrollInnerCont {
-            padding: 0 32px;
+            max-height: calc(var(--view-height) - 279px);
+            height: unset;
+            .scrollInnerCont {
+                padding: 0 32px;
+                max-height: calc(var(--view-height) - 279px);
+                height: unset !important;
+            }
         }
     }
     .formGroup {
         margin-bottom: 18px;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
