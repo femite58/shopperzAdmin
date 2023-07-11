@@ -62,11 +62,15 @@ main {
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 49px;
+            margin-bottom: 59px;
             th,
             td {
                 border-bottom: 1px solid #eaecf0;
                 white-space: nowrap;
+                display: flex;
+                align-items: center;
+                min-width: 90px;
+                padding: 12px 12px;
             }
             .check {
                 input {
@@ -92,24 +96,29 @@ main {
                 color: $txtLight;
                 font-weight: 500;
                 font-size: 12px;
+                display: flex;
                 th {
-                    padding: 12px 24px;
                     white-space: nowrap;
                     text-transform: uppercase;
                 }
             }
             tbody {
                 tr {
+                    display: flex;
                     &:hover {
                         background: #f9f9f9;
                     }
                     td {
-                        padding: 12px 24px;
                         vertical-align: middle;
                         .withImg {
                             display: flex;
+                            width: 100%;
                             align-items: center;
                             gap: 12px;
+                            span {
+                                flex: 1 5px;
+                                width: 5px;
+                            }
                         }
                         .ratingFlash {
                             display: flex;
@@ -158,6 +167,39 @@ main {
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+        #paginationPar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            margin-bottom: 100px;
+            .perPage {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                & > span {
+                    color: $txtLight;
+                }
+                .clickable {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    justify-content: center;
+                    padding: 10px 20px;
+                    border-radius: 0 0 6px 6px;
+                    border: $border;
+                    border-top-color: transparent;
+                }
+                .dropped {
+                    width: 100%;
+                    padding: 0;
+                    .dropItem {
+                        height: 26px;
+                        padding: 0 20px;
                     }
                 }
             }

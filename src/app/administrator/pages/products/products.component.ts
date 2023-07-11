@@ -8,6 +8,8 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ProductsComponent implements OnInit {
   closeModal = new BehaviorSubject(false);
+  count = 2;
+  page = 1;
   products = [
     {
       id: 1,

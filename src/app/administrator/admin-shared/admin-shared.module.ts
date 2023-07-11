@@ -6,6 +6,7 @@ import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
 import { AdminHeaderComponent } from './components/admin-header/admin-header.component';
 import { RouterModule } from '@angular/router';
 import { EmptyItemsComponent } from './components/empty-items/empty-items.component';
+import { PaginationParentComponent } from './components/pagination-parent/pagination-parent.component';
 
 @NgModule({
   declarations: [
@@ -13,8 +14,14 @@ import { EmptyItemsComponent } from './components/empty-items/empty-items.compon
     SidemenuComponent,
     AdminHeaderComponent,
     EmptyItemsComponent,
+    PaginationParentComponent,
   ],
   imports: [CommonModule, RouterModule, SharedModule],
-  exports: [LayoutComponent, EmptyItemsComponent, SharedModule],
+  exports: [
+    LayoutComponent,
+    EmptyItemsComponent,
+    PaginationParentComponent,
+    SharedModule,
+  ],
 })
 export class AdminSharedModule {}
