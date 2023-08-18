@@ -13,6 +13,7 @@ import { CategoriesComponent } from './pages/categories/categories.component';
 import { AdminSharedModule } from './admin-shared/admin-shared.module';
 import { StoresComponent } from './pages/stores/stores.component';
 import { ProductSpecificationsComponent } from './pages/product-specifications/product-specifications.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,6 @@ import { ProductSpecificationsComponent } from './pages/product-specifications/p
     StoresComponent,
     ProductSpecificationsComponent,
   ],
-  imports: [CommonModule, AdminSharedModule, AdministratorRoutingModule],
+  imports: [CommonModule, AdminSharedModule, AdministratorRoutingModule, SharedModule],
 })
 export class AdministratorModule {}

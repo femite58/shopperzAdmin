@@ -8,31 +8,37 @@
     src: url(assets/fonts/SF-Pro-Display-Regular.otf);
     font-weight: 400;
 }
+
 @font-face {
     font-family: "SF Pro Display";
     src: url(assets/fonts/SF-Pro-Display-Medium.otf);
     font-weight: 500;
 }
+
 @font-face {
     font-family: "SF Pro Display";
     src: url(assets/fonts/SF-Pro-Display-Semibold.otf);
     font-weight: 600;
 }
+
 @font-face {
     font-family: "SF Pro Display";
     src: url(assets/fonts/SF-Pro-Display-Bold.otf);
     font-weight: 700;
 }
+
 @font-face {
     font-family: "SF Pro Display";
     src: url(assets/fonts/SF-Pro-Display-Heavy.otf);
     font-weight: 800;
 }
+
 @font-face {
     font-family: "SF Pro Display";
     src: url(assets/fonts/SF-Pro-Display-Black.otf);
     font-weight: 900;
 }
+
 @font-face {
     font-family: "Reliq Std";
     src: url(assets/fonts/ReliqStd-Active.otf);
@@ -40,8 +46,10 @@
 
 :root {
     --primary-color: #f8253a;
+    --secondary-color: #16B05D;
     --view-height: 100vh;
 }
+
 html {
     overflow-y: scroll;
 }
@@ -55,9 +63,11 @@ body {
 
 .formGroup {
     margin-bottom: 20px;
-    & > label {
+
+    &>label {
         margin-bottom: 10px;
         color: $txtLight;
+
         &.req {
             &::after {
                 content: "*";
@@ -65,30 +75,41 @@ body {
             }
         }
     }
+
     .errDisp {
         font-size: 13px;
         color: red;
         margin-top: 5px;
     }
 }
+
 .priCol {
     color: $primary;
 }
+
+.secCol {
+    color: $secondary;
+}
+
 .txtLight,
 .greyTxt {
     color: $txtLight;
 }
+
 .priBg {
     background-color: $primary;
 }
+
 @for $i from 1 through 100 {
     .mb#{$i} {
         margin-bottom: #{$i}px;
     }
+
     .pb#{$i} {
         padding-bottom: #{$i}px;
     }
 }
+
 input,
 textarea {
     display: block;
@@ -100,56 +121,71 @@ textarea {
     color: $txtDark;
     font-weight: normal;
     outline: none;
+
     &:focus {
         border-color: $primary;
     }
+
     &.error {
         border-color: red;
     }
+
     &::placeholder {
         color: $txtLight;
     }
 }
+
 textarea {
     height: unset;
 }
+
 .inputCont {
     position: relative;
-    & > *:not(input) {
+
+    &>*:not(input) {
         position: absolute;
         top: 50%;
         left: 20px;
         transform: translate(0, -50%);
+
         &:last-child {
             left: unset;
             right: 20px;
         }
     }
+
     &.preIcon {
         input {
             padding-left: 46px;
         }
     }
 }
+
 .vScrlB {
     overflow-y: auto;
+
     &::-webkit-scrollbar,
     &::-webkit-scrollbar-track {
         width: 5px;
     }
+
     &::-webkit-scrollbar-thumb {
         background: #e2e2e2;
+
         &:hover {
             background: #c1c1c1;
         }
     }
 }
+
 a {
     text-decoration: none;
 }
+
 .pointer {
     cursor: pointer;
 }
+
 button {
     height: 40px;
     border-radius: 8px;
@@ -163,28 +199,35 @@ button {
     white-space: nowrap;
     gap: 8px;
     padding: 0 16px;
+
     &.primBtn {
         background: $primary;
         color: #fff;
         font-weight: 500;
     }
+
     &.greyOutlineBtn {
         border: $border;
         background: #fff;
     }
+
     &.greyBtn {
         background: #eaeaea;
     }
+
     &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
     }
 }
+
 .cusDropdown {
     position: relative;
+
     .clickable {
         cursor: pointer;
     }
+
     .dropped {
         position: absolute;
         top: 100%;
@@ -195,30 +238,36 @@ button {
         transform: scaleY(0);
         padding: 9px 0;
         transition: 0.3s ease;
+
         &.dropShow {
             transform: scaleY(1);
         }
+
         .dropItem {
             display: flex;
             align-items: center;
             cursor: pointer;
             padding: 0 14px;
+
             &:hover {
                 background: #f7f7f7;
             }
         }
     }
 }
+
 .ellipsis {
     display: block;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
 .cusCheck {
     input {
         display: none;
     }
+
     .checkbox {
         border: $border;
         width: 16px;
@@ -227,24 +276,67 @@ button {
         display: flex;
         align-items: center;
         justify-content: center;
+
         i {
             display: none;
             font-size: 9px;
             color: #fff;
         }
     }
-    input + label {
+
+    input+label {
         display: flex;
         align-items: center;
         gap: 8px;
     }
-    input:checked + label {
+
+    input:checked+label {
         .checkbox {
             background-color: $primary;
             border-color: $primary;
+
             i {
                 display: block;
             }
         }
     }
+}
+
+.status {
+    display: flex;
+    height: 22px;
+    padding: 2px 10px 2px 6px;
+    align-items: center;
+    gap: 6px;
+    border-radius: 16px;
+
+    &.Active {
+        width: 64px;
+        background-color: $activeBg;
+        color: #16B05D;
+        &>:first-child {
+            display: flex;
+            width: 10px;
+            height: 5px;
+            border-radius: 100%;
+            background-color: #16B05D;
+            color: #16B05D;
+        }
+    }
+
+    &.Inactive {
+        width: 72px;
+        background-color: $inactiveBg;
+        color: #888888;
+        &>:first-child {
+            display: flex;
+            width: 10px;
+            height: 5px;
+            border-radius: 100%;
+            background-color: #888888;
+            color: #888888;
+        }
+    }
+
+    
 }

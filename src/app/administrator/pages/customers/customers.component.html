@@ -1,1 +1,114 @@
-<layout></layout>
+<layout pageTitle="Customers">
+    <div id="headBtnCont">
+        <button class="greyOutlineBtn">
+            <svg-icons name="upload"></svg-icons>
+            <span>Export</span>
+        </button>
+        <button class="primBtn" [openModal]="addCustomerModal">
+            <svg-icons name="plus"></svg-icons>
+            <span>Add New</span>
+        </button>
+    </div>
+    <div id="tableCont">
+        <div id="topActions">
+            <div class="searchCont">
+                <input type="text" placeholder="Search order...">
+                <svg-icons name="search"></svg-icons>
+            </div>
+            <!-- <custom-select placeholder="Status: All" [options]="">
+
+            </custom-select> -->
+        </div>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Register Date</th>
+                    <th>Email Address</th>
+                    <th>Phone</th>
+                    <th>Rank</th>
+                    <th>Orders</th>
+                    <th>Status</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cus_data of customerData">
+                        <td>{{ cus_data.id }}</td>
+                        <td>{{ cus_data.firstname + ' ' + cus_data.lastname }}</td>
+                        <td>{{ cus_data.created_at | dateFormat }}</td>
+                        <td>{{ cus_data.email }}</td>
+                        <td>{{ cus_data.phone }}</td>
+                        <td>{{ cus_data.rank }}</td>
+                        <td>{{ cus_data.order_count }}</td>
+                        <td>
+                            <div class="status {{cus_data.status}}">
+                                <span></span>
+                                <span>{{ cus_data.status }}</span>
+                            </div>
+                        </td>
+                        <td>
+                            <svg-icons name="delete"></svg-icons>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</layout>
+<div id="modals">
+    <app-modal #addCustomerModal [closeModal]="closeModal">
+        <div class="modalContent">
+            <div class="modalHead">
+                <div class="modalTitle">Add Customer</div>
+                <span class="closeBtn">
+                    <svg-icons name="times"></svg-icons>
+                </span>
+            </div>
+            <div class="modalBody">
+                <form [formGroup]="form" (ngSubmit)="submit()">
+                    <div class="formBody">
+                        <app-custom-scroll>
+                            <div class="formGroup">
+                                <label for="" class="req">Full Name</label>
+                                <input type="text" formControlName="name" />
+                            </div>
+                            <div class="formGroup">
+                                <label for="" class="req">Email Address</label>
+                                <input type="email" formControlName="email" />
+                            </div>
+                            <div class="formGroup">
+                                <label for="phone" class="req">Phone Number</label>
+                                <input type="tel" formControlName="phone" />
+                            </div>
+                            <div class="formGroup">
+                                <label for="rankSelect">Choose Rank (Loyalty card member only)</label>
+                                <custom-select placeholder="Select" [fc]="f('rank')" [options]="options">
+                                    <div *ngFor="let option of options" class="option" >
+                                        {{ option?.txt }}
+                                    </div>
+                                </custom-select>
+                            </div>
+                        </app-custom-scroll>
+                    </div>
+                    <div class="btnCont">
+                            <button
+                                type="button"
+                                class="greyBtn"
+                                (click)="closeModal.next(true)"
+                            >
+                                Cancel
+                            </button>
+                            <submit-btn
+                                btnTxt="Submit"
+                                clss="primBtn"
+                                [loading]="submitting"
+                                [disabled]="form.invalid"
+                            >
+                            </submit-btn>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </app-modal>
+</div>
