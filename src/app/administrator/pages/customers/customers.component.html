@@ -15,9 +15,9 @@
                 <input type="text" placeholder="Search order...">
                 <svg-icons name="search"></svg-icons>
             </div>
-            <!-- <custom-select placeholder="Status: All" [options]="">
-
-            </custom-select> -->
+            <custom-select placeholder="Status: All" [options]="filterOpts" >
+                <div class="option" *ngFor="let option of filterOpts">{{ option?.txt }}</div>
+            </custom-select>
         </div>
         <div class="table-responsive">
             <table>
@@ -33,7 +33,7 @@
                     <th></th>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let cus_data of customerData">
+                    <tr *ngFor="let cus_data of filteredData">
                         <td>{{ cus_data.id }}</td>
                         <td>{{ cus_data.firstname + ' ' + cus_data.lastname }}</td>
                         <td>{{ cus_data.created_at | dateFormat }}</td>
