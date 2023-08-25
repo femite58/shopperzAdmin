@@ -4,13 +4,30 @@
     &.shown {
         z-index: 20;
     }
+    ::ng-deep .preIcon {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: fit-content;
+        svg {
+            width: 15px;
+            height: auto;
+            *[fill]:not([fill="none"]) {
+                fill: #767676;
+            }
+            *[stroke]:not([stroke="none"]) {
+                stroke: #767676;
+            }
+        }
+    }
     .customInput {
         display: flex;
         align-items: center;
-        border-radius: 8px;
+        border-radius: 5px;
         border: $border;
         width: 100%;
-        height: 45px;
+        height: 40px;
         padding: 13px 20px;
         color: $txtDark;
         font-weight: normal;
@@ -18,6 +35,16 @@
         position: static;
         transform: unset;
         cursor: pointer;
+        line-height: 1;
+        .value {
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    ::ng-deep .preIcon + .customInput {
+        padding-left: 37px;
     }
     .cusPlaceholder {
         color: $txtLight;
