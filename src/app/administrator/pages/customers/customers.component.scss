@@ -43,3 +43,14 @@
         }
     }
 }
+#tableCont{
+    #topActions{
+        ::ng-deep .cusDropdown{
+            .customInput{
+                .value{
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

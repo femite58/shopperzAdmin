@@ -15,7 +15,7 @@
                 <input type="text" placeholder="Search order...">
                 <svg-icons name="search"></svg-icons>
             </div>
-            <custom-select placeholder="Status: All" [options]="filterOpts" >
+            <custom-select placeholder="Status: All" [options]="filterOpts" [fc]="filteredVal" >
                 <div class="option" *ngFor="let option of filterOpts">{{ option?.txt }}</div>
             </custom-select>
         </div>
@@ -33,7 +33,7 @@
                     <th></th>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let cus_data of filteredData">
+                    <tr *ngFor="let cus_data of objectFiltered">
                         <td>{{ cus_data.id }}</td>
                         <td>{{ cus_data.firstname + ' ' + cus_data.lastname }}</td>
                         <td>{{ cus_data.created_at | dateFormat }}</td>
@@ -48,7 +48,7 @@
                             </div>
                         </td>
                         <td>
-                            <svg-icons name="delete"></svg-icons>
+                            <svg-icons name="delete" [openModal]="deleteCusModal"></svg-icons>
                         </td>
                     </tr>
                 </tbody>
@@ -108,6 +108,37 @@
                             </submit-btn>
                         </div>
                 </form>
+            </div>
+        </div>
+    </app-modal>
+    <app-modal #deleteCusModal [closeModal]="closeModal" (onClose)="onClose()">
+        <div class="modalContent">
+            <div class="modalHead question">
+                <div class="modalTitle">Delete Customer</div>
+                <span class="closeBtn">
+                    <svg-icons name="times"></svg-icons>
+                </span>
+            </div>
+            <div class="modalBody noFormBody">
+                <p>Do you want to delete this custormer?</p>
+                <div class="note">
+                    Lorem ipsum dolor sit amet. Lorem sit amet dolor lorem ipsum.
+                </div>
+                <div class="btnCont">
+                    <button
+                        class="greyBtn"
+                        routerLink="/"
+                    >
+                        No, Continue
+                    </button>
+                    <button
+                        class="primBtn"
+                        routerLink="/administrator/stores"
+                        [queryParams]="{ action: 'add' }"
+                    >
+                        Yes! Add Store
+                    </button>
+                </div>
             </div>
         </div>
     </app-modal>

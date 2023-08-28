@@ -18,7 +18,7 @@ import { AbstractControl } from '@angular/forms';
 })
 export class CustomSelectComponent implements AfterViewInit, OnChanges {
     @Input() placeholder;
-    @Input() fc: AbstractControl;
+    @Input() fc?: AbstractControl;
     @Input() options: { value: any; txt: any }[];
     curOptions;
     @Output() onSelect = new EventEmitter();
@@ -42,7 +42,7 @@ export class CustomSelectComponent implements AfterViewInit, OnChanges {
             let options =
                 this.customSelect.nativeElement.querySelectorAll('.option');
             for (let o of this.options) {
-                if (o.value == this.fc.value) {
+                if (o.value == this.fc?.value) {
                     this.selectedOption = this.options.indexOf(o);
                     break;
                 }
@@ -51,7 +51,7 @@ export class CustomSelectComponent implements AfterViewInit, OnChanges {
                 // console.log(o);
                 o.onclick = () => {
                     this.selectedOption = i;
-                    this.fc.setValue(this.options[i].value);
+                    this.fc?.setValue(this.options[i].value);
                     this.onSelect.emit(this.options[i]);
                 };
             });
