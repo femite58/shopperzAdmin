@@ -12,11 +12,17 @@
     <div id="tableCont">
         <div id="topActions">
             <div class="searchCont">
-                <input type="text" placeholder="Search order...">
+                <input type="text" placeholder="Search order..." />
                 <svg-icons name="search"></svg-icons>
             </div>
-            <custom-select placeholder="Status: All" [options]="filterOpts" [fc]="filteredVal" >
-                <div class="option" *ngFor="let option of filterOpts">{{ option?.txt }}</div>
+            <custom-select
+                placeholder="Status: All"
+                [options]="filterOpts"
+                [fc]="filteredVal"
+            >
+                <div class="option" *ngFor="let option of filterOpts">
+                    {{ option?.txt }}
+                </div>
             </custom-select>
         </div>
         <div class="table-responsive">
@@ -34,26 +40,62 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let cus_data of objectFiltered">
-                        <td>{{ cus_data.id }}</td>
-                        <td>{{ cus_data.firstname + ' ' + cus_data.lastname }}</td>
-                        <td>{{ cus_data.created_at | dateFormat }}</td>
-                        <td>{{ cus_data.email }}</td>
-                        <td>{{ cus_data.phone }}</td>
-                        <td>{{ cus_data.rank }}</td>
-                        <td>{{ cus_data.order_count }}</td>
                         <td>
-                            <div class="status {{cus_data.status}}">
+                            <div class="ellipsis">
+                                {{ cus_data.id }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ cus_data.firstname + " " + cus_data.lastname }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ cus_data.created_at | date }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ cus_data.email }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ cus_data.phone }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ cus_data.rank }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ cus_data.order_count }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="status {{ cus_data.status }}">
                                 <span></span>
                                 <span>{{ cus_data.status }}</span>
                             </div>
                         </td>
                         <td>
-                            <svg-icons name="delete" [openModal]="deleteCusModal"></svg-icons>
+                            <svg-icons
+                                name="delete"
+                                [openModal]="deleteCusModal"
+                                (click)="currentId = cus_data.id"
+                                *ngIf="deleting != cus_data.id"
+                            ></svg-icons>
+                            <i class="fa fa-spinner spin" *ngIf="deleting == cus_data.id"></i>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <app-pagination-parent [limit]="limit" [page]="page" [count]="count" (setPage)="onSetPage($event)"></app-pagination-parent>
+
     </div>
 </layout>
 <div id="modals">
@@ -78,13 +120,25 @@
                                 <input type="email" formControlName="email" />
                             </div>
                             <div class="formGroup">
-                                <label for="phone" class="req">Phone Number</label>
+                                <label for="phone" class="req"
+                                    >Phone Number</label
+                                >
                                 <input type="tel" formControlName="phone" />
                             </div>
                             <div class="formGroup">
-                                <label for="rankSelect">Choose Rank (Loyalty card member only)</label>
-                                <custom-select placeholder="Select" [fc]="f('rank')" [options]="options">
-                                    <div *ngFor="let option of options" class="option" >
+                                <label for="rankSelect"
+                                    >Choose Rank (Loyalty card member
+                                    only)</label
+                                >
+                                <custom-select
+                                    placeholder="Select"
+                                    [fc]="f('rank')"
+                                    [options]="options"
+                                >
+                                    <div
+                                        *ngFor="let option of options"
+                                        class="option"
+                                    >
                                         {{ option?.txt }}
                                     </div>
                                 </custom-select>
@@ -92,21 +146,21 @@
                         </app-custom-scroll>
                     </div>
                     <div class="btnCont">
-                            <button
-                                type="button"
-                                class="greyBtn"
-                                (click)="closeModal.next(true)"
-                            >
-                                Cancel
-                            </button>
-                            <submit-btn
-                                btnTxt="Submit"
-                                clss="primBtn"
-                                [loading]="submitting"
-                                [disabled]="form.invalid"
-                            >
-                            </submit-btn>
-                        </div>
+                        <button
+                            type="button"
+                            class="greyBtn"
+                            (click)="closeModal.next(true)"
+                        >
+                            Cancel
+                        </button>
+                        <submit-btn
+                            btnTxt="Submit"
+                            clss="primBtn"
+                            [loading]="submitting"
+                            [disabled]="form.invalid"
+                        >
+                        </submit-btn>
+                    </div>
                 </form>
             </div>
         </div>
@@ -120,23 +174,15 @@
                 </span>
             </div>
             <div class="modalBody noFormBody">
-                <p>Do you want to delete this custormer?</p>
-                <div class="note">
-                    Lorem ipsum dolor sit amet. Lorem sit amet dolor lorem ipsum.
-                </div>
+                <p>Are you sure you want to delete customer data?</p>
+
                 <div class="btnCont">
-                    <button
-                        class="greyBtn"
-                        routerLink="/"
-                    >
-                        No, Continue
-                    </button>
+                    <button class="greyBtn">Cancel</button>
                     <button
                         class="primBtn"
-                        routerLink="/administrator/stores"
-                        [queryParams]="{ action: 'add' }"
+                        (click)="deleteCustomer()"
                     >
-                        Yes! Add Store
+                        Delete
                     </button>
                 </div>
             </div>

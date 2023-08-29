@@ -7,17 +7,17 @@
                 max-width: 44px;
             }
             &:nth-child(2) {
-                flex: .5 100px;
+                flex: 0.5 100px;
                 width: 100px;
                 min-width: unset;
             }
             &:nth-child(3) {
-                flex: .5 100px;
+                flex: 0.5 100px;
                 width: 100px;
                 min-width: unset;
             }
             &:nth-child(4) {
-                max-width: 300px;
+                max-width: 00px;
                 min-width: 100px;
                 flex: 1 100px;
                 width: 100px;
@@ -43,11 +43,14 @@
         }
     }
 }
-#tableCont{
-    #topActions{
-        ::ng-deep .cusDropdown{
-            .customInput{
-                .value{
+#tableCont {
+    #topActions {
+        ::ng-deep .cusDropdown {
+            .customInput {
+                .value {
+                    &::before {
+                        content: "Status:";
+                    }
                     margin-right: 20px;
                 }
             }

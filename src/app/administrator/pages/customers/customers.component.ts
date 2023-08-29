@@ -9,6 +9,9 @@ import { BehaviorSubject } from 'rxjs';
 })
 
 export class CustomersComponent implements OnInit {
+  count = 5;
+  limit = 3;
+  page = 1;
   customerData = [
     { id: '1', firstname: 'Hawawu', lastname: 'Shittu', email: 'ishaqhawawu66@gmail.com', created_at: Date.now(), phone: '07066091112', rank: 'Loyalty', order_count: 523, status: 'Active' },
     { id: '2', firstname: '-', lastname: '', email: 'tijanialiy@gmail.com', created_at: Date.now(), phone: '-', rank: '-', order_count: '-', status: 'Inactive' },
@@ -16,6 +19,8 @@ export class CustomersComponent implements OnInit {
     { id: '4', firstname: 'Henry', lastname: 'Essien', email: 'henryvictor161@gmail.com', created_at: Date.now(), phone: '+2348060240322', rank: 'Loyalty', order_count: 112, status: 'Active' },
     { id: '5', firstname: 'Benneth', lastname: 'Akintolure', email: 'bennettanderson8@gmail.com', created_at: Date.now(), phone: '07063012438', rank: 'Loyalty', order_count: '-', status: 'Inactive' },
   ]
+  currentId;
+  deleting;
   filteredVal = new FormControl('All'); 
   
   form = new FormGroup({
@@ -54,5 +59,17 @@ export class CustomersComponent implements OnInit {
   ngOnInit(): void {
   }
   onClose() {}
+  deleteCustomer() {
+    // this.currentId;
+    this.deleting = this.currentId;
+    setTimeout(()=> {
+      this.customerData = this.customerData.filter(c => c.id != this.currentId);
+      this.deleting = null
+    }, 1000)
+    this.closeModal.next(true);
+  }
+  onSetPage(page) {
+    this.page = page;
+  }
   
 }
