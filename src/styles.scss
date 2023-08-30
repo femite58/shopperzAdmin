@@ -311,26 +311,78 @@ button {
     border-radius: 16px;
 
     &.Active {
-        width: 64px;
+        width: auto;
         background-color: $activeBg;
         color: #16B05D;
         &>:first-child {
             display: flex;
-            width: 10px;
+            width: 5px;
             height: 5px;
             border-radius: 100%;
             background-color: #16B05D;
             color: #16B05D;
         }
     }
+    &.Complete {
+        width: auto;
+        background-color: $activeBg;
+        color: #16B05D;
+        &>:first-child {
+            display: flex;
+            width: 5px;
+            height: 5px;
+            border-radius: 100%;
+            background-color: #16B05D;
+            color: #16B05D;
+        }
+    }
+    &.Pending {
+        width: auto;
+        background-color: $pendingBg;
+        color: $primary;
+        &>:first-child {
+            display: flex;
+            width: 5px;
+            height: 5px;
+            border-radius: 100%;
+            background-color: #f8253a;
+            color: #f8253a;
+        }
+    }
+    &.Shipped {
+        width: auto;
+        background-color: $shippedBg;
+        color: #013399;
+        &>:first-child {
+            display: flex;
+            width: 5px;
+            height: 5px;
+            border-radius: 100%;
+            background-color: #013399;
+            color: #013399;
+        }
+    }
 
     &.Inactive {
-        width: 72px;
+        width: auto;
         background-color: $inactiveBg;
         color: #888888;
         &>:first-child {
             display: flex;
-            width: 10px;
+            width: 5px;
+            height: 5px;
+            border-radius: 100%;
+            background-color: #888888;
+            color: #888888;
+        }
+    }
+    &.Canceled {
+        width: auto;
+        background-color: $inactiveBg;
+        color: #888888;
+        &>:first-child {
+            display: flex;
+            width: 5px;
             height: 5px;
             border-radius: 100%;
             background-color: #888888;

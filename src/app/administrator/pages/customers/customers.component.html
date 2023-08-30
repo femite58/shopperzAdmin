@@ -84,8 +84,7 @@
                         <td>
                             <svg-icons
                                 name="delete"
-                                [openModal]="deleteCusModal"
-                                (click)="currentId = cus_data.id"
+                                (click)="deleteConf(cus_data.id)"
                                 *ngIf="deleting != cus_data.id"
                             ></svg-icons>
                             <i class="fa fa-spinner spin" *ngIf="deleting == cus_data.id"></i>
@@ -165,27 +164,5 @@
             </div>
         </div>
     </app-modal>
-    <app-modal #deleteCusModal [closeModal]="closeModal" (onClose)="onClose()">
-        <div class="modalContent">
-            <div class="modalHead question">
-                <div class="modalTitle">Delete Customer</div>
-                <span class="closeBtn">
-                    <svg-icons name="times"></svg-icons>
-                </span>
-            </div>
-            <div class="modalBody noFormBody">
-                <p>Are you sure you want to delete customer data?</p>
-
-                <div class="btnCont">
-                    <button class="greyBtn">Cancel</button>
-                    <button
-                        class="primBtn"
-                        (click)="deleteCustomer()"
-                    >
-                        Delete
-                    </button>
-                </div>
-            </div>
-        </div>
-    </app-modal>
+    
 </div>

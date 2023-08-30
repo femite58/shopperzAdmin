@@ -89,10 +89,9 @@
                                 <div class="dropped">
                                     <div
                                         class="dropItem"
-                                        [openModal]="actionModal"
-                                        (click)="openDeactivateModal(str)"
+                                        (click)="confirmModOpen(str)"
                                     >
-                                        Deactivate
+                                    {{ str.status === 'Active' ? 'Deactivate' : 'Activate' }}
                                     </div>
                                 </div>
                             </div>
@@ -193,27 +192,5 @@
             </div>
         </div>
     </app-modal>
-    <app-modal #actionModal [closeModal]="closeModal" (onClose)="onClose()">
-        <div class="modalContent">
-          <div class="modalHead question">
-            <div class="modalTitle">{{ selectedStore?.status === 'Active' ? 'Deactivate' : 'Activate' }} Store</div>
-            <span class="closeBtn">
-              <svg-icons name="times"></svg-icons>
-            </span>
-          </div>
-          <div class="modalBody noFormBody">
-            <p>
-              Are you sure you want to {{ selectedStore?.status === 'Active' ? 'deactivate' : 'activate' }} the store?
-            </p>
-      
-            <div class="btnCont">
-              <button class="greyBtn" (click)="closeModal.next(true)">Cancel</button>
-              <button class="primBtn" (click)="confirmAction()">
-                {{ selectedStore?.status === 'Active' ? 'Deactivate' : 'Activate' }}
-              </button>
-            </div>
-          </div>
-        </div>
-      </app-modal>
-      
+    
 </div>

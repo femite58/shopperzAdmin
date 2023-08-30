@@ -1,1 +1,121 @@
-<layout></layout>
+<layout pageTitle="Stores">
+    <div id="headBtnCont">
+        <button class="primBtn" #addStoreModalOpener>
+            <svg-icons name="plus"></svg-icons>
+            <span>Add New</span>
+        </button>
+    </div>
+    <div id="tableCont">
+        <div id="topActions">
+            <div class="searchCont">
+                <input type="text" placeholder="Search product..." />
+                <svg-icons name="search"></svg-icons>
+            </div>
+            <custom-select
+                placeholder="Status: All"
+                [options]="filterOpts"
+                [fc]="filteredVal"
+            >
+                <div class="option" *ngFor="let option of filterOpts">
+                    {{ option?.txt }}
+                </div>
+            </custom-select>
+        </div>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <th>Id</th>
+                    <th>Store Name</th>
+                    <th>Address</th>
+                    <th>State</th>
+                    <th>Manager</th>
+                    <th>Phone</th>
+                    <th>Date Created</th>
+                    <th>Status</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let ord of objectFiltered">
+                        <tr>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ ord.id }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ ord.date_created | date : "dd/MM/yyyy" }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ ord.order_id }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ ord.item }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ ord.amount }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ ord.str_name }}
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="ellipsis">
+                                    {{ ord.order_type }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="status {{ ord.status }}">
+                                    <span></span>
+                                    <span>{{ ord.status }}</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="action">
+                                    <div class="dropOpener">
+                                        <svg-icons
+                                            name="caret-down-light"
+                                            (click)="toggleAccordion(ord)"
+                                        ></svg-icons>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <div class="table-responsive hasChildren" >
+                            <table>
+                                <thead>
+                                    <th>#</th>
+                                    <th>SKU</th>
+                                    <th>Product Name</th>
+                                    <th>Price</th>
+                                    <th>Qty</th>
+                                    <th>Disc.</th>
+                                    <th>Total</th>
+                                    <th>
+                                        <svg-icons name="print"></svg-icons>
+                                        Print
+                                    </th>
+                                </thead>
+                            </table>
+                        </div>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+        <app-pagination-parent
+            [limit]="limit"
+            [page]="page"
+            [count]="count"
+            (setPage)="onSetPage($event)"
+        ></app-pagination-parent>
+    </div>
+</layout>

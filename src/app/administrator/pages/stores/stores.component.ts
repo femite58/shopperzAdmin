@@ -9,6 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { CountryService } from 'src/app/data/localData/country.service';
+import { ConfirmActionService } from 'src/app/data/services/confirm-action.service';
 
 @Component({
   selector: 'app-stores',
@@ -123,7 +124,7 @@ export class StoresComponent implements OnInit, AfterViewInit {
       : [];
   }
 
-  constructor(private route: ActivatedRoute, private locS: CountryService) {}
+  constructor(private route: ActivatedRoute, private locS: CountryService, private confS: ConfirmActionService) {}
 
   ngAfterViewInit(): void {
     this.route.queryParams.subscribe((param) => {
@@ -148,21 +149,32 @@ export class StoresComponent implements OnInit, AfterViewInit {
     this.selectedStore = store;
   }
 
-  confirmAction() {
-    if (this.selectedStore) {
-      if (this.selectedStore.status === 'Inactive') {
-        this.selectedStore.status = 'Active';
-      } else if (this.selectedStore.status === 'Active') {
-        this.selectedStore.status = 'Inactive'; 
-      }
-    }
-
-    this.selectedStore = null; 
-
-    this.closeModal.next(true); 
-  }
+ 
 
   onSetPage(page) {
     this.page = page;
   }
+  confirmModOpen(store) {
+    this.selectedStore = store;
+    this.confS.actionObj.next({
+      title: store.status == 'Active' ? 'Deactivate Store' : 'Activate Store',
+      body: `Are you sure you want to ${store.status == 'Active' ? 'deactivate' : 'activate'} store?`,
+      confirm: () => {
+        if (this.selectedStore) {
+          if (this.selectedStore.status === 'Inactive') {
+            this.selectedStore.status = 'Active';
+          } else if (this.selectedStore.status === 'Active') {
+            this.selectedStore.status = 'Inactive'; 
+          }
+        }
+    
+        this.selectedStore = null; 
+    
+        this.closeModal.next(true); 
+      },
+      confirmTxt: 'Confirm',
+      
+    });
+  }
+  
 }
