@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
@@ -10,7 +10,7 @@ import { ConfirmActionService } from 'src/app/data/services/confirm-action.servi
   templateUrl: './orders.component.html',
   styleUrls: ['./orders.component.scss'],
 })
-export class OrdersComponent {
+export class OrdersComponent implements OnInit {
   submitting = false;
   closeModal = new BehaviorSubject(false);
   stores = [];
@@ -85,9 +85,16 @@ export class OrdersComponent {
   ];
   orderDetails: [
     {
-
-    }
+      sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
+    },
+    {
+      sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
+    },
+    {
+      sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
+    },
   ];
+  
   filteredVal = new FormControl('All');
   filterOpts = [
     { txt: 'All', value: 'All' },
@@ -101,6 +108,10 @@ export class OrdersComponent {
     private locS: CountryService,
     private confS: ConfirmActionService
   ) {}
+  ngOnInit(): void {
+    console.log(this.orderDetails);
+    
+  }
 
    
   get objectFiltered() {

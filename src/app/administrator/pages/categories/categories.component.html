@@ -1,1 +1,68 @@
-<layout></layout>
+<layout pageTitle="Category" >
+    <div id="headBtnCont">
+        <button class="primBtn" >
+            <svg-icons name="plus"></svg-icons>
+            <span>Add Category</span>
+        </button>
+    </div>
+    <div id="tableCont">
+        <div id="topActions">
+            <div class="searchCont">
+                <input type="text" placeholder="Search categories..." />
+                <svg-icons name="search"></svg-icons>
+            </div>
+            
+        </div>
+        <div class="table-responsive">
+            <table class="table-responsive">
+                <thead>
+                    <th>ID</th>
+                    <th></th>
+                    <th>Company Name</th>
+                    <th>Sub-Categories</th>
+                    <th>Date Created</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cat of categories">
+                        <td>
+                            <div class="ellipsis">
+                                {{ cat.id }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                <img [src]="cat.img_url" alt="product_img">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ cat.name }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ cat.sub_cat }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ cat.date_created | date: 'dd/mm/yyyy' }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="action">
+                                <div appDropdown class="clickable">
+                                    <svg-icons name="vEllipsis"></svg-icons>
+                                </div>
+                                <div class="dropped">
+                                    <div class="dropItem">Edit</div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</layout>
