@@ -1,6 +1,6 @@
 <layout pageTitle="Category" >
     <div id="headBtnCont">
-        <button class="primBtn" >
+        <button class="primBtn" [openModal]="addCatModal">
             <svg-icons name="plus"></svg-icons>
             <span>Add Category</span>
         </button>
@@ -66,3 +66,49 @@
         </div>
     </div>
 </layout>
+<div id="modals">
+    <app-modal
+        #addCatModal
+        [closeModal]="closeModal"
+        (onClose)="onClose()"
+    >
+        <div class="modalContent">
+            <div class="modalHead question">
+                <div class="modalTitle">Add Category</div>
+                <span class="closeBtn">
+                    <svg-icons name="times"></svg-icons>
+                </span>
+            </div>
+            <div class="modalBody">
+                <form [formGroup]="form" (ngSubmit)="submit()">
+                    <div class="formBody">
+                        <app-custom-scroll>
+                            <div class="formGroup">
+                                <label for="" class="req">Category name</label>
+                                <input type="text" formControlName="name" />
+                            </div>
+                            
+                            
+                        </app-custom-scroll>
+                    </div>
+                    <div class="btnCont">
+                        <button
+                            type="button"
+                            class="greyBtn"
+                            (click)="closeModal.next(true)"
+                        >
+                            Cancel
+                        </button>
+                        <submit-btn
+                            btnTxt="Submit"
+                            clss="primBtn"
+                            [loading]="submitting"
+                            [disabled]="form.invalid"
+                        >
+                        </submit-btn>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </app-modal>
+</div>
