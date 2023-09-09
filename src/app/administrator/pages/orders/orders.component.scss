@@ -91,7 +91,13 @@
     .accHead{
         font-size: 14px;
     }
+    .action{
+        .clickable{
+            transform: rotate(90deg);
+        }
+    }
 }
+
 #tableCont {
     #topActions {
         ::ng-deep .cusDropdown {
