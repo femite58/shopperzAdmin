@@ -8,7 +8,7 @@
     <div id="tableCont">
         <div id="topActions">
             <div class="searchCont">
-                <input type="text" placeholder="Search product..." />
+                <input type="text" placeholder="Search orders..." />
                 <svg-icons name="search"></svg-icons>
             </div>
             <custom-select
@@ -86,8 +86,8 @@
                                                 <span>{{ ord.status }}</span>
                                             </div>
                                         </td>
-                                        <td>
-                                            <div class="action">
+                                        <td class="action">
+                                            <div >
                                                 <div class="dropOpener">
                                                     <svg-icons
                                                         name="caret-down-light"
@@ -172,6 +172,26 @@
                                                         </div>
                                                     </div>
                                                 </td>
+                                            </tr>
+                                            <tr class="summary">
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>
+                                                    <div class="greyTxt">Sub-total</div>
+                                                    <div class="greyTxt">Shipping</div>
+                                                    <div class="greyTxt">Discount</div>
+                                                    <div class="greyTxt">Tax</div>
+                                                </td>
+                                                <td>
+                                                    <div>₦2,847.96</div>
+                                                    <div>₦5.50</div>
+                                                    <div class="priCol">₦150.32</div>
+                                                    <div>₦2647.32</div>
+                                                </td>
+                                                <td></td>
                                             </tr>
                                         </tbody>
                                     </table>
