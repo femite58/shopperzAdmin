@@ -9,6 +9,7 @@ import { CustomersComponent } from './pages/customers/customers.component';
 import { ProductSpecificationsComponent } from './pages/product-specifications/product-specifications.component';
 import { ProductsFormComponent } from './pages/products-form/products-form.component';
 import { OrderDetailsComponent } from './pages/order-details/order-details.component';
+import { ManageAdminComponent } from './pages/manage-admin/manage-admin.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'details', component: OrderDetailsComponent },
   { path: 'stores', component: StoresComponent },
   { path: 'customers', component: CustomersComponent },
+  { path: 'manage-admin', component: ManageAdminComponent },
   {
     path: 'products',
     children: [

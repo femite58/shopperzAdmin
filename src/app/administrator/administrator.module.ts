@@ -14,6 +14,7 @@ import { AdminSharedModule } from './admin-shared/admin-shared.module';
 import { StoresComponent } from './pages/stores/stores.component';
 import { ProductSpecificationsComponent } from './pages/product-specifications/product-specifications.component';
 import { SharedModule } from '../shared/shared.module';
+import { ManageAdminComponent } from './pages/manage-admin/manage-admin.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { SharedModule } from '../shared/shared.module';
     CategoriesComponent,
     StoresComponent,
     ProductSpecificationsComponent,
+    ManageAdminComponent,
   ],
   imports: [CommonModule, AdminSharedModule, AdministratorRoutingModule, SharedModule],
 })

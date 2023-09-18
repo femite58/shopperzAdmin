@@ -29,72 +29,80 @@
             <table>
                 <thead>
                     <th>ID</th>
-                    <th>Customer</th>
-                    <th>Register Date</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Store</th>
                     <th>Email Address</th>
                     <th>Phone</th>
-                    <th>Rank</th>
-                    <th>Orders</th>
                     <th>Status</th>
+                    <th></th>
                     <th></th>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let cus_data of objectFiltered">
+                    <tr *ngFor="let man_data of objectFiltered">
                         <td>
                             <div class="ellipsis">
-                                {{ cus_data.id }}
+                                {{ man_data.id }}
                             </div>
                         </td>
                         <td>
                             <div class="ellipsis">
-                                {{ cus_data.firstname + " " + cus_data.lastname }}
+                                {{
+                                    man_data.firstname + " " + man_data.lastname
+                                }}
                             </div>
                         </td>
                         <td>
                             <div class="ellipsis">
-                                {{ cus_data.created_at | date }}
+                                {{ man_data.role }}
                             </div>
                         </td>
                         <td>
                             <div class="ellipsis">
-                                {{ cus_data.email }}
+                                {{ man_data.store }}
                             </div>
                         </td>
                         <td>
                             <div class="ellipsis">
-                                {{ cus_data.phone }}
+                                {{ man_data.email }}
                             </div>
                         </td>
                         <td>
                             <div class="ellipsis">
-                                {{ cus_data.rank }}
+                                {{ man_data.phone }}
                             </div>
                         </td>
+
                         <td>
-                            <div class="ellipsis">
-                                {{ cus_data.order_count }}
-                             </div>
-                        </td>
-                        <td>
-                            <div class="status {{ cus_data.status }}">
+                            <div class="status {{ man_data.status }}">
                                 <span></span>
-                                <span>{{ cus_data.status }}</span>
+                                <span>{{ man_data.status }}</span>
                             </div>
+                        </td>
+                        <td>
+                            <svg-icons name="edit"></svg-icons>
                         </td>
                         <td>
                             <svg-icons
                                 name="delete"
-                                (click)="deleteConf(cus_data.id)"
-                                *ngIf="deleting != cus_data.id"
+                                (click)="deleteConf(man_data.id)"
+                                *ngIf="deleting != man_data.id"
                             ></svg-icons>
-                            <i class="fa fa-spinner spin" *ngIf="deleting == cus_data.id"></i>
+                            <i
+                                class="fa fa-spinner spin"
+                                *ngIf="deleting == man_data.id"
+                            ></i>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <app-pagination-parent [limit]="limit" [page]="page" [count]="count" (setPage)="onSetPage($event)"></app-pagination-parent>
-
+        <app-pagination-parent
+            [limit]="limit"
+            [page]="page"
+            [count]="count"
+            (setPage)="onSetPage($event)"
+        ></app-pagination-parent>
     </div>
 </layout>
 <div id="modals">
@@ -164,5 +172,4 @@
             </div>
         </div>
     </app-modal>
-    
 </div>

@@ -4,37 +4,37 @@
 @import "theme.scss";
 
 @font-face {
-    font-family: "SF Pro Display";
+    font-family: "Adobe Clean";
     src: url(assets/fonts/AdobeClean-Regular.otf) format("woff2");
     font-weight: 400;
 }
 
 @font-face {
-    font-family: "SF Pro Display";
+    font-family: "Adobe Clean";
     src: url(assets/fonts/AdobeClean-Medium.otf) format("woff2");
     font-weight: 500;
 }
 
 @font-face {
-    font-family: "SF Pro Display";
+    font-family: "Adobe Clean";
     src: url(assets/fonts/AdobeClean-BoldSemiCn.otf) format("woff2");
     font-weight: 600;
 }
 
 @font-face {
-    font-family: "SF Pro Display";
+    font-family: "Adobe Clean";
     src: url(assets/fonts/SF-Pro-Display-Bold.woff2) format("woff2");
     font-weight: 700;
 }
 
 @font-face {
-    font-family: "SF Pro Display";
+    font-family: "Adobe Clean";
     src: url(assets/fonts/AdobeClean-Bold.otf) format("woff2");
     font-weight: 800;
 }
 
 @font-face {
-    font-family: "SF Pro Display";
+    font-family: "Adobe Clean";
     src: url(assets/fonts/AdobeClean-Black.otf) format("woff2");
     font-weight: 900;
 }
@@ -55,7 +55,7 @@ html {
 }
 
 body {
-    font-family: "SF Pro Display";
+    font-family: "Adobe Clean";
     font-size: 14px;
     line-height: 1.215;
     color: $txtDark;
@@ -310,7 +310,7 @@ button {
     gap: 6px;
     border-radius: 16px;
 
-    &.Active {
+    &.Active, &.Complete, &.Online {
         width: auto;
         background-color: $activeBg;
         color: #16B05D;
@@ -323,19 +323,7 @@ button {
             color: #16B05D;
         }
     }
-    &.Complete {
-        width: auto;
-        background-color: $activeBg;
-        color: #16B05D;
-        &>:first-child {
-            display: flex;
-            width: 5px;
-            height: 5px;
-            border-radius: 100%;
-            background-color: #16B05D;
-            color: #16B05D;
-        }
-    }
+    
     &.Pending {
         width: auto;
         background-color: $pendingBg;
@@ -363,7 +351,7 @@ button {
         }
     }
 
-    &.Inactive {
+    &.Inactive, &.Offline {
         width: auto;
         background-color: $inactiveBg;
         color: #888888;
