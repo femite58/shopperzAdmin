@@ -1,10 +1,10 @@
-<layout pageTitle="Stores">
+<layout pageTitle="Customers">
     <div id="headBtnCont">
-        <button
-            class="primBtn"
-            #addStoreModalOpener
-            [openModal]="addStoreModal"
-        >
+        <button class="greyOutlineBtn">
+            <svg-icons name="upload"></svg-icons>
+            <span>Export</span>
+        </button>
+        <button class="primBtn" [openModal]="addCustomerModal">
             <svg-icons name="plus"></svg-icons>
             <span>Add New</span>
         </button>
@@ -12,7 +12,7 @@
     <div id="tableCont">
         <div id="topActions">
             <div class="searchCont">
-                <input type="text" placeholder="Search product..." />
+                <input type="text" placeholder="Search order..." />
                 <svg-icons name="search"></svg-icons>
             </div>
             <custom-select
@@ -28,73 +28,70 @@
         <div class="table-responsive">
             <table>
                 <thead>
-                    <th>Id</th>
-                    <th>Store Name</th>
-                    <th>Address</th>
-                    <th>State</th>
-                    <th>Manager</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Store</th>
+                    <th>Email Address</th>
                     <th>Phone</th>
-                    <th>Date Created</th>
                     <th>Status</th>
+                    <th></th>
                     <th></th>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let str of objectFiltered">
+                    <tr *ngFor="let man_data of objectFiltered">
                         <td>
                             <div class="ellipsis">
-                                {{ str.id }}
+                                {{ man_data.id }}
                             </div>
                         </td>
                         <td>
                             <div class="ellipsis">
-                                {{ str.name }}
+                                {{
+                                    man_data.firstname + " " + man_data.lastname
+                                }}
                             </div>
                         </td>
                         <td>
                             <div class="ellipsis">
-                                {{ str.address }}
+                                {{ man_data.role }}
                             </div>
                         </td>
                         <td>
                             <div class="ellipsis">
-                                {{ str.state }}
+                                {{ man_data.store }}
                             </div>
                         </td>
                         <td>
                             <div class="ellipsis">
-                                {{ str.manager_name }}
+                                {{ man_data.email }}
                             </div>
                         </td>
                         <td>
                             <div class="ellipsis">
-                                {{ str.phone }}
+                                {{ man_data.phone }}
                             </div>
                         </td>
+
                         <td>
-                            <div class="ellipsis">
-                                {{ str.date_created | date : "dd/MM/yyyy" }}
-                            </div>
-                        </td>
-                        <td>
-                            <div class="status {{ str.status }}">
+                            <div class="status {{ man_data.status }}">
                                 <span></span>
-                                <span>{{ str.status }}</span>
+                                <span>{{ man_data.status }}</span>
                             </div>
                         </td>
                         <td>
-                            <div class="action">
-                                <div appDropdown class="clickable">
-                                    <svg-icons name="vEllipsis"></svg-icons>
-                                </div>
-                                <div class="dropped">
-                                    <div
-                                        class="dropItem"
-                                        (click)="confirmModOpen(str)"
-                                    >
-                                    {{ str.status === 'Active' ? 'Deactivate' : 'Activate' }}
-                                    </div>
-                                </div>
-                            </div>
+                            <svg-icons name="edit"></svg-icons>
+                        </td>
+                        <td>
+                            <svg-icons
+                                name="delete"
+                                (click)="deleteConf(man_data.id)"
+                                *ngIf="deleting != man_data.id"
+                            ></svg-icons>
+                            <i
+                                class="fa fa-spinner spin"
+                                *ngIf="deleting == man_data.id"
+                            ></i>
                         </td>
                     </tr>
                 </tbody>
@@ -108,12 +105,11 @@
         ></app-pagination-parent>
     </div>
 </layout>
-
 <div id="modals">
-    <app-modal #addStoreModal [closeModal]="closeModal">
+    <app-modal #addCustomerModal [closeModal]="closeModal">
         <div class="modalContent">
             <div class="modalHead">
-                <div class="modalTitle">Add New Store</div>
+                <div class="modalTitle">Add Customer</div>
                 <span class="closeBtn">
                     <svg-icons name="times"></svg-icons>
                 </span>
@@ -123,52 +119,36 @@
                     <div class="formBody">
                         <app-custom-scroll>
                             <div class="formGroup">
-                                <label for="" class="req">Store name</label>
-                                <input
-                                    type="text"
-                                    placeholder="eg: Shopperz - Ikeja Branch"
-                                    formControlName="name"
-                                />
+                                <label for="" class="req">Full Name</label>
+                                <input type="text" formControlName="name" />
                             </div>
                             <div class="formGroup">
-                                <label for="" class="req">State</label>
+                                <label for="" class="req">Email Address</label>
+                                <input type="email" formControlName="email" />
+                            </div>
+                            <div class="formGroup">
+                                <label for="phone" class="req"
+                                    >Phone Number</label
+                                >
+                                <input type="tel" formControlName="phone" />
+                            </div>
+                            <div class="formGroup">
+                                <label for="rankSelect"
+                                    >Choose Rank (Loyalty card member
+                                    only)</label
+                                >
                                 <custom-select
-                                    placeholder="Choose state"
-                                    [fc]="f('state')"
-                                    [options]="stateOpts"
+                                    placeholder="Select"
+                                    [fc]="f('rank')"
+                                    [options]="options"
                                 >
                                     <div
-                                        *ngFor="let st of stateOpts"
+                                        *ngFor="let option of options"
                                         class="option"
                                     >
-                                        {{ st.txt }}
+                                        {{ option?.txt }}
                                     </div>
                                 </custom-select>
-                            </div>
-                            <div class="formGroup">
-                                <label for="" class="req">LGA</label>
-                                <custom-select
-                                    placeholder="Choose LGA"
-                                    [fc]="f('lga')"
-                                    [options]="lgaOpts"
-                                >
-                                    <div
-                                        *ngFor="
-                                            let l of lgaOpts;
-                                            trackBy: trackLga
-                                        "
-                                        class="option"
-                                    >
-                                        {{ l.txt }}
-                                    </div>
-                                </custom-select>
-                            </div>
-                            <div class="formGroup">
-                                <label for="" class="req">Store address</label>
-                                <textarea
-                                    formControlName="address"
-                                    rows="5"
-                                ></textarea>
                             </div>
                         </app-custom-scroll>
                     </div>
@@ -182,7 +162,7 @@
                         </button>
                         <submit-btn
                             btnTxt="Submit"
-                            class="primBtn"
+                            clss="primBtn"
                             [loading]="submitting"
                             [disabled]="form.invalid"
                         >
@@ -192,5 +172,4 @@
             </div>
         </div>
     </app-modal>
-    
 </div>

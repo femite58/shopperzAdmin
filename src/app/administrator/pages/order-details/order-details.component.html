@@ -1,1 +1,161 @@
-<layout></layout>
+<layout pageTitle="Order Details">
+    <div id="headBtnCont">
+        <div class="status {{ orderStatus }}">
+            <span></span>
+            <span>{{ orderStatus }}</span>
+        </div>
+    </div>
+    <div id="orderDetCont">
+        <div class="orderDet">
+            <div class="profImg">
+                <img
+                    src="assets/images/profile-default.png"
+                    alt="profile-img"
+                />
+            </div>
+            <div class="profName">
+                <strong> Foloshade Adenuga </strong>
+            </div>
+            <div class="profExt">
+                <span class="greyTxt">07066091112</span>
+                <span class="greyTxt">Harolashade@gmail.com</span>
+            </div>
+        </div>
+        <div class="orderDet">
+            <div class="orderInf">
+                <span class="greyTxt">Order Information</span>
+                <div>
+                    <span>Order Id:</span>
+                    <span>SHI-122546</span>
+                </div>
+                <div>
+                    <span>Date:</span>
+                    <span>03/06/2023 06:30PM</span>
+                </div>
+                <div>
+                    <span>Order Type:</span>
+                    <span>Home Delivery</span>
+                </div>
+                <div>
+                    <span>Payment Method:</span>
+                    <span>Bank Trannfer</span>
+                </div>
+            </div>
+        </div>
+        <div class="orderDet">
+            <div class="shipDet">
+                <span class="greyTxt">Shipping Address</span>
+                <div>
+                    <span
+                        >117-195 Iroquois Ave London, ON N6C 2K9, Ikeja
+                        Lagos</span
+                    >
+                </div>
+                <div class="orderCount">
+                    <div>
+                        <strong>150</strong>
+                        <div class="greyTxt">Total Order</div>
+                    </div>
+                    <div>
+                        <strong>140</strong>
+                        <div class="greyTxt">Completed</div>
+                    </div>
+                    <div>
+                        <strong>10</strong>
+                        <div class="greyTxt">Canceled</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tableCont">
+        <div class="table-responsive hasChildren">
+            <table>
+                <thead>
+                    <th>#</th>
+                    <th>SKU</th>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Disc.</th>
+                    <th>Total</th>
+                    <th>
+                        <svg-icons name="print"></svg-icons>
+                        Printed
+                    </th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let ordDet of orderDetails">
+                        <td>
+                            <div class="ellipsis">
+                                {{ ordDet.id }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ ordDet.sku }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ ordDet.product_name }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ ordDet.price }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ ordDet.qty }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis priCol">
+                                {{ ordDet.disc }}%
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ (ordDet.disc / 100) * ordDet.price }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="action">
+                                <div appDropdown class="clickable">
+                                    <svg-icons name="vEllipsis"></svg-icons>
+                                </div>
+                                <div class="dropped">
+                                    <div class="dropItem" routerLink="/details">
+                                        View
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="summary">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="greyTxt">Sub-total</div>
+                            <div class="greyTxt">Shipping</div>
+                            <div class="greyTxt">Discount</div>
+                            <div class="greyTxt">Tax</div>
+                        </td>
+                        <td>
+                            <div>₦2,847.96</div>
+                            <div>₦5.50</div>
+                            <div class="priCol">₦150.32</div>
+                            <div>₦2647.32</div>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</layout>

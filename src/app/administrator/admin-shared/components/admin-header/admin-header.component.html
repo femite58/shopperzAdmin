@@ -18,3 +18,27 @@
         </div>
     </div>
 </header>
+<div #confirmModalOpener [openModal]="confirmModal"></div>
+<app-modal #confirmModal [closeModal]="closeModal" (onClose)="onClose()">
+    <div class="modalContent">
+        <div class="modalHead question">
+            <div class="modalTitle">{{ confirmModalInf?.title }}</div>
+            <span class="closeBtn">
+                <svg-icons name="times"></svg-icons>
+            </span>
+        </div>
+        <div class="modalBody noFormBody">
+            <p>{{ confirmModalInf?.body }}</p>
+
+            <div class="btnCont">
+                <button class="greyBtn" (click)="closeModal.next(true)">{{ confirmModalInf?.cancelTxt || 'Cancel' }}</button>
+                <button
+                    class="primBtn"
+                    (click)="confirmAction()"
+                >
+                {{ confirmModalInf?.confirmTxt || 'Confirm' }}
+                </button>
+            </div>
+        </div>
+    </div>
+</app-modal>

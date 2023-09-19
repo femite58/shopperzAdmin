@@ -1,1 +1,212 @@
-<layout></layout>
+<layout pageTitle="Stores">
+    <div id="headBtnCont">
+        <button class="primBtn" #addStoreModalOpener>
+            <svg-icons name="plus"></svg-icons>
+            <span>Add New</span>
+        </button>
+    </div>
+    <div id="tableCont">
+        <div id="topActions">
+            <div class="searchCont">
+                <input type="text" placeholder="Search orders..." />
+                <svg-icons name="search"></svg-icons>
+            </div>
+            <custom-select
+                placeholder="Status: All"
+                [options]="filterOpts"
+                [fc]="filteredVal"
+            >
+                <div class="option" *ngFor="let option of filterOpts">
+                    {{ option?.txt }}
+                </div>
+            </custom-select>
+        </div>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <th>Id</th>
+                    <th>Date</th>
+                    <th>Order Id</th>
+                    <th>Item</th>
+                    <th>Amount</th>
+                    <th>Store</th>
+                    <th>OrderType</th>
+                    <th>Status</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <app-group-accordion>
+                        <app-cus-accordion *ngFor="let ord of objectFiltered">
+                            <div class="accHead cusCollapsed">
+                                    <tr>
+                                        <td>
+                                            <div class="ellipsis">
+                                                {{ ord.id }}
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="ellipsis">
+                                                {{
+                                                    ord.date_created
+                                                        | date : "dd/MM/yyyy"
+                                                }}
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="ellipsis">
+                                                {{ ord.order_id }}
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="ellipsis">
+                                                {{ ord.item }}
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="ellipsis">
+                                                {{ ord.amount }}
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="ellipsis">
+                                                {{ ord.str_name }}
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="ellipsis">
+                                                {{ ord.order_type }}
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div
+                                                class="status {{ ord.status }}"
+                                            >
+                                                <span></span>
+                                                <span>{{ ord.status }}</span>
+                                            </div>
+                                        </td>
+                                        <td class="action">
+                                            <div >
+                                                <div class="dropOpener">
+                                                    <svg-icons
+                                                        name="caret-down-light"
+                                                    ></svg-icons>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                            </div>
+                            <div class="accBody">
+                                <div class="table-responsive hasChildren">
+                                    <table>
+                                        <thead>
+                                            <th>#</th>
+                                            <th>SKU</th>
+                                            <th>Product Name</th>
+                                            <th>Price</th>
+                                            <th>Qty</th>
+                                            <th>Disc.</th>
+                                            <th>Total</th>
+                                            <th>
+                                                <svg-icons
+                                                    name="print"
+                                                ></svg-icons>
+                                                Printed
+                                            </th>
+                                        </thead>
+                                        <tbody>
+                                            <tr
+                                                *ngFor="
+                                                    let ordDet of orderDetails
+                                                "
+                                            >
+                                                <td>
+                                                    <div class="ellipsis">
+                                                        {{ ordDet.id }}
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="ellipsis">
+                                                        {{ ordDet.sku }}
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="ellipsis">
+                                                        {{
+                                                            ordDet.product_name
+                                                        }}
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="ellipsis">
+                                                        {{ ordDet.price }}
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="ellipsis">
+                                                        {{ ordDet.qty }}
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="ellipsis priCol">
+                                                        {{ ordDet.disc }}%
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="ellipsis">
+                                                        {{
+                                                            (ordDet.disc /
+                                                                100) *
+                                                                ordDet.price
+                                                        }}
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="action">
+                                                        <div appDropdown class="clickable">
+                                                            <svg-icons name="vEllipsis"></svg-icons>
+                                                        </div>
+                                                        <div class="dropped">
+                                                            <div class="dropItem" routerLink="/details">View</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="summary">
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>
+                                                    <div class="greyTxt">Sub-total</div>
+                                                    <div class="greyTxt">Shipping</div>
+                                                    <div class="greyTxt">Discount</div>
+                                                    <div class="greyTxt">Tax</div>
+                                                </td>
+                                                <td>
+                                                    <div>₦2,847.96</div>
+                                                    <div>₦5.50</div>
+                                                    <div class="priCol">₦150.32</div>
+                                                    <div>₦2647.32</div>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </app-cus-accordion>
+                    </app-group-accordion>
+                </tbody>
+            </table>
+        </div>
+        <app-pagination-parent
+            [limit]="limit"
+            [page]="page"
+            [count]="count"
+            (setPage)="onSetPage($event)"
+        ></app-pagination-parent>
+    </div>
+</layout>
