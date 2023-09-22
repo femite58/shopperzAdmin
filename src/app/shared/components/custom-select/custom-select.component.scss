@@ -1,6 +1,19 @@
 @import "../../../../theme.scss";
 .cusDropdown {
     position: relative;
+    &.cusReadonly {
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: "";
+            background: #ffffff73;
+            z-index: 20;
+            cursor: not-allowed;
+        }
+    }
     &.shown {
         z-index: 20;
     }
@@ -28,7 +41,7 @@
         border: $border;
         width: 100%;
         height: 40px;
-        padding: 13px 20px;
+        padding: 0px 20px;
         color: $txtDark;
         font-weight: normal;
         outline: none;
@@ -41,6 +54,7 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            line-height: normal;
         }
     }
     ::ng-deep .preIcon + .customInput {
