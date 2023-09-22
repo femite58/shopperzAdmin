@@ -1,5 +1,9 @@
-<div class="cusDropdown" #customSelect>
-    <div class="clickable inputCont" appDropdown>
+<div class="cusDropdown" #customSelect (click)="dropClick($event)" [class.cusReadonly]="readonly">
+    <div
+        class="clickable inputCont"
+        appDropdown
+        (onDropChng)="onDropChng.emit($event)"
+    >
         <ng-content select=".preIcon"></ng-content>
         <div class="customInput">
             <ng-container *ngIf="!valueTxt">

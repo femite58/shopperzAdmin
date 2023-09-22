@@ -16,26 +16,19 @@ import { AbstractControl } from '@angular/forms';
     templateUrl: './custom-select.component.html',
     styleUrls: ['./custom-select.component.scss'],
 })
-export class CustomSelectComponent implements AfterViewInit, OnChanges {
+export class CustomSelectComponent implements AfterViewInit {
     @Input() placeholder;
     @Input() fc?: AbstractControl;
     @Input() options: { value: any; txt: any }[];
     curOptions;
     @Output() onSelect = new EventEmitter();
     @Input() valueTxt;
+    @Input() readonly;
+    @Output() onDropChng = new EventEmitter();
 
     selectedOption = -1;
 
     @ViewChild('customSelect') customSelect: ElementRef;
-
-    ngOnChanges(changes: SimpleChanges): void {
-        if (
-            !this.customSelect ||
-            JSON.stringify(this.options) == this.curOptions
-        )
-            return;
-        this.init();
-    }
 
     init() {
         setTimeout(() => {
@@ -47,16 +40,26 @@ export class CustomSelectComponent implements AfterViewInit, OnChanges {
                     break;
                 }
             }
-            options.forEach((o, i) => {
-                // console.log(o);
-                o.onclick = () => {
+        });
+    }
+
+    dropClick(e) {
+        let clicked = e.target.closest('.option');
+        if (!clicked) return;
+        let options = [
+            ...this.customSelect.nativeElement.querySelectorAll('.option'),
+        ];
+        for (let o of options) {
+            let i = options.indexOf(o);
+            if (o.innerHTML.includes(this.options[i].txt)) {
+                if (clicked.innerHTML == o.innerHTML) {
                     this.selectedOption = i;
                     this.fc?.setValue(this.options[i].value);
                     this.onSelect.emit(this.options[i]);
-                };
-            });
-            this.curOptions = JSON.stringify(this.options);
-        });
+                    break;
+                }
+            }
+        }
     }
 
     ngAfterViewInit(): void {
