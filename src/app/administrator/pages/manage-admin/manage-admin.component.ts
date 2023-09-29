@@ -86,7 +86,8 @@ export class ManageAdminComponent {
   }
   submitting = false;
 
-  options = [{ txt: 'Loyalty member', value: 'Loyalty member' }];
+  store = [{ txt: 'Shopperz-Ikeja', value: 'Shopperz-Ikeja' }];
+  role = [{ txt: 'Manager', value: 'Manager' }];
 
   get objectFiltered() {
     return this.managerData.filter((item) => {
@@ -97,8 +98,8 @@ export class ManageAdminComponent {
 
   filterOpts = [
     { txt: 'All', value: 'All' },
-    { txt: 'Active', value: 'Active' },
-    { txt: 'Inactive', value: 'Inactive' },
+    { txt: 'Online', value: 'Online' },
+    { txt: 'Offline', value: 'Offline' },
   ];
   deleteCustomer() {
     // this.currentId;
@@ -117,8 +118,8 @@ export class ManageAdminComponent {
   deleteConf(id) {
     this.currentId = id;
     this.confS.actionObj.next({
-      title: 'Delete Customer',
-      body: 'Are you sure you want to delete customer data?',
+      title: 'Delete Manager',
+      body: 'Are you sure you want to delete manager data?',
       confirm: () => {
         this.deleting = this.currentId;
         setTimeout(() => {

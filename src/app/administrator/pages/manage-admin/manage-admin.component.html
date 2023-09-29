@@ -1,4 +1,4 @@
-<layout pageTitle="Customers">
+<layout pageTitle="Manage Admin">
     <div id="headBtnCont">
         <button class="greyOutlineBtn">
             <svg-icons name="upload"></svg-icons>
@@ -80,7 +80,9 @@
                             </div>
                         </td>
                         <td>
-                            <svg-icons name="edit"></svg-icons>
+                            <a href="javascript:void" routerLink="/admin-details">
+                                <svg-icons name="edit"></svg-icons>
+                            </a>
                         </td>
                         <td>
                             <svg-icons
@@ -109,7 +111,7 @@
     <app-modal #addCustomerModal [closeModal]="closeModal">
         <div class="modalContent">
             <div class="modalHead">
-                <div class="modalTitle">Add Customer</div>
+                <div class="modalTitle">Add Manager</div>
                 <span class="closeBtn">
                     <svg-icons name="times"></svg-icons>
                 </span>
@@ -133,17 +135,29 @@
                                 <input type="tel" formControlName="phone" />
                             </div>
                             <div class="formGroup">
-                                <label for="rankSelect"
-                                    >Choose Rank (Loyalty card member
-                                    only)</label
-                                >
+                                <label for="rankSelect">Choose Store</label>
                                 <custom-select
                                     placeholder="Select"
                                     [fc]="f('rank')"
-                                    [options]="options"
+                                    [options]="store"
                                 >
                                     <div
-                                        *ngFor="let option of options"
+                                        *ngFor="let option of store"
+                                        class="option"
+                                    >
+                                        {{ option?.txt }}
+                                    </div>
+                                </custom-select>
+                            </div>
+                            <div class="formGroup">
+                                <label for="rankSelect">Assign Role</label>
+                                <custom-select
+                                    placeholder="Select"
+                                    [fc]="f('rank')"
+                                    [options]="role"
+                                >
+                                    <div
+                                        *ngFor="let option of role"
                                         class="option"
                                     >
                                         {{ option?.txt }}

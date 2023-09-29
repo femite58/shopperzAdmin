@@ -10,6 +10,7 @@ import { ProductSpecificationsComponent } from './pages/product-specifications/p
 import { ProductsFormComponent } from './pages/products-form/products-form.component';
 import { OrderDetailsComponent } from './pages/order-details/order-details.component';
 import { ManageAdminComponent } from './pages/manage-admin/manage-admin.component';
+import { AdminDetailsComponent } from './pages/admin-details/admin-details.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'details', component: OrderDetailsComponent },
   { path: 'stores', component: StoresComponent },
   { path: 'customers', component: CustomersComponent },
-  { path: 'manage-admin', component: ManageAdminComponent },
+  { path: 'manage-admins', component: ManageAdminComponent },
+  { path: 'admin-details', component: AdminDetailsComponent },
   {
     path: 'products',
     children: [

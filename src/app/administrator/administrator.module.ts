@@ -15,6 +15,7 @@ import { StoresComponent } from './pages/stores/stores.component';
 import { ProductSpecificationsComponent } from './pages/product-specifications/product-specifications.component';
 import { SharedModule } from '../shared/shared.module';
 import { ManageAdminComponent } from './pages/manage-admin/manage-admin.component';
+import { AdminDetailsComponent } from './pages/admin-details/admin-details.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ManageAdminComponent } from './pages/manage-admin/manage-admin.componen
     StoresComponent,
     ProductSpecificationsComponent,
     ManageAdminComponent,
+    AdminDetailsComponent,
   ],
   imports: [CommonModule, AdminSharedModule, AdministratorRoutingModule, SharedModule],
 })
