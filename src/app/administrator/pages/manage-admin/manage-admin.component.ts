@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
 import { ConfirmActionService } from 'src/app/data/services/confirm-action.service';
+import { InformationService } from 'src/app/data/services/information.service';
 
 @Component({
   selector: 'app-manage-admin',
@@ -12,61 +13,10 @@ export class ManageAdminComponent {
   count = 5;
   limit = 3;
   page = 1;
-  constructor (private confS: ConfirmActionService) {
+  constructor (private confS: ConfirmActionService, private infoService: InformationService) {
 
   }
-  managerData = [
-    {
-      id: '1',
-      firstname: 'Hawawu',
-      lastname: 'Shittu',
-      role: 'Manager',
-      store: 'Shopperz-Ikeja,Festac',
-      email: 'ishaqhawawu66@gmail.com',
-      phone: '07066091112',
-      status: 'Online',
-    },
-    {
-      id: '2',
-      firstname: 'Hawawu',
-      lastname: 'Shittu',
-      role: 'Manager',
-      store: 'Shopperz-Ikeja,Festac',
-      email: 'ishaqhawawu66@gmail.com',
-      phone: '07066091112',
-      status: 'Offline',
-    },
-    {
-      id: '3',
-      firstname: 'Hawawu',
-      lastname: 'Shittu',
-      role: 'Manager',
-      store: 'Shopperz-Ikeja,Festac',
-      email: 'ishaqhawawu66@gmail.com',
-      phone: '07066091112',
-      status: 'Online',
-    },
-    {
-      id: '4',
-      firstname: 'Hawawu',
-      lastname: 'Shittu',
-      role: 'Manager',
-      store: 'Shopperz-Ikeja,Festac',
-      email: 'ishaqhawawu66@gmail.com',
-      phone: '07066091112',
-      status: 'Offline',
-    },
-    {
-      id: '5',
-      firstname: 'Hawawu',
-      lastname: 'Shittu',
-      role: 'Manager',
-      store: 'Shopperz-Ikeja,Festac',
-      email: 'ishaqhawawu66@gmail.com',
-      phone: '07066091112',
-      status: 'Online',
-    },
-  ];
+  managerData = this.infoService.managerData;
   currentId;
   deleting;
   filteredVal = new FormControl('All');

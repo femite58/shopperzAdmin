@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { CountryService } from 'src/app/data/localData/country.service';
 import { ConfirmActionService } from 'src/app/data/services/confirm-action.service';
+import { InformationService } from 'src/app/data/services/information.service';
 
 @Component({
   selector: 'app-stores',
@@ -25,68 +26,7 @@ export class StoresComponent implements OnInit, AfterViewInit {
   currentStat;
   deactivate;
   selectedStore: any;
-  storesData = [
-    {
-      id: '1',
-      name: 'Shopperz - Ikeja',
-      address: '89 shitta street, dopemu round',
-      state: 'Lagos',
-      manager_name: 'Micheal',
-      phone: '07066091112',
-      date_created: Date.now(),
-      status: 'Active',
-    },
-    {
-      id: '2',
-      name: 'Bitstore - Surulere',
-      address: '12 Janyy street, downing road',
-      state: 'Ogun',
-      manager_name: 'Jude',
-      phone: '07066091112',
-      date_created: Date.now(),
-      status: 'Inactive',
-    },
-    {
-      id: '3',
-      name: 'Generanshop - Festac',
-      address: '70 Bowman St. South Windsor',
-      state: 'Rivers',
-      manager_name: 'Stephen',
-      phone: '07066091112',
-      date_created: Date.now(),
-      status: 'Active',
-    },
-    {
-      id: '4',
-      name: 'Viaanmarket -  Sango',
-      address: '4 Shirley Ave. West Chicago',
-      state: 'Abia',
-      manager_name: 'Dayo S',
-      phone: '07066091112',
-      date_created: Date.now(),
-      status: 'Active',
-    },
-    {
-      id: '5',
-      name: 'ZBuy - Alimosho',
-      address: '123 6th St. Melbourne, FL 3',
-      state: 'Kano',
-      manager_name: 'Adeleke',
-      phone: '07066091112',
-      date_created: Date.now(),
-      status: 'Active',
-    },
-    {
-      id: '6',
-      name: 'Zcross - Lekki',
-      address: '170 Wowman St. South Win',
-      state: 'Abuja',
-      manager_name: 'Mathew',
-      phone: '07066091112',
-      date_created: Date.now(),
-      status: 'Inactive',
-    },
-  ];
+  storesData = this.infoService.storesData;
   filteredVal = new FormControl('All');
   filterOpts = [
     { txt: 'All', value: 'All' },
@@ -124,7 +64,7 @@ export class StoresComponent implements OnInit, AfterViewInit {
       : [];
   }
 
-  constructor(private route: ActivatedRoute, private locS: CountryService, private confS: ConfirmActionService) {}
+  constructor(private route: ActivatedRoute, private locS: CountryService, private confS: ConfirmActionService, private infoService: InformationService) {}
 
   ngAfterViewInit(): void {
     this.route.queryParams.subscribe((param) => {

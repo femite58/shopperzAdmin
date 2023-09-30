@@ -36,8 +36,16 @@
                 </thead>
                 <tbody>
                     <app-group-accordion [listener]="accListener">
-                        <app-cus-accordion *ngFor="let ord of objectFiltered; let i = index" (openEv)="accListener.next(i)">
-                            <div routerLink="/administrator/orders/details/{{ord?.id}}" class="accHead cusCollapsed">
+                        <app-cus-accordion
+                            *ngFor="let ord of objectFiltered; let i = index"
+                            (openEv)="accListener.next(i)"
+                        >
+                            <div
+                                routerLink="/administrator/orders/details/{{
+                                    ord?.id
+                                }}"
+                                class="accHead cusCollapsed"
+                            >
                                 <tr>
                                     <td>
                                         <div class="ellipsis">
@@ -86,7 +94,12 @@
                                     </td>
                                     <td class="action">
                                         <div>
-                                            <div (click)="stopPropagation($event)" class="accToggle dropOpener">
+                                            <div
+                                                (click)="
+                                                    stopPropagation($event)
+                                                "
+                                                class="accToggle dropOpener"
+                                            >
                                                 <svg-icons
                                                     name="caret-down-light"
                                                 ></svg-icons>
@@ -118,7 +131,10 @@
                                                 *ngFor="
                                                     let prod of ord?.products
                                                 "
-                                                routerLink="/administrator/products/details/{{prod?.id}}"
+                                                routerLink="/administrator/products/details/{{
+                                                    prod?.id
+                                                }}"
+                                                class="pointerF"
                                             >
                                                 <td>
                                                     <div class="ellipsis">
@@ -132,9 +148,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="ellipsis">
-                                                        {{
-                                                            prod.product_name
-                                                        }}
+                                                        {{ prod.product_name }}
                                                     </div>
                                                 </td>
                                                 <td>
@@ -157,8 +171,7 @@
                                                 <td>
                                                     <div class="ellipsis">
                                                         {{
-                                                            (prod.disc /
-                                                                100) *
+                                                            (prod.disc / 100) *
                                                                 prod.price
                                                         }}
                                                     </div>

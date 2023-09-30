@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { CountryService } from 'src/app/data/localData/country.service';
 import { ConfirmActionService } from 'src/app/data/services/confirm-action.service';
+import { InformationService } from 'src/app/data/services/information.service';
 
 @Component({
   selector: 'app-orders',
@@ -21,135 +22,7 @@ export class OrdersComponent implements OnInit {
   currentStat;
   deactivate;
   selectedOrder: any;
-  storesData = [
-    
-    {
-      id: '1',
-      date_created: Date.now(),
-      order_id: 'SHI-23571',
-      item: 'Oculus VR, Soap, Speaker, T-shirt',
-      amount: 503.7,
-      str_name: 'Zcross - Lekki',
-      order_type: 'Mathew',
-      status: 'Complete',
-      products: [
-        {
-          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
-        },
-        {
-          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
-        },
-        {
-          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
-        },
-      ],
-    },
-    {
-      id: '2',
-      date_created: Date.now(),
-      order_id: 'SHI-23571',
-      item: 'DJI MAcvic Quadcopter, Premier',
-      amount: 503.7,
-      str_name: 'Shopperz-Festac',
-      order_type: 'In Store',
-      status: 'Pending',
-      products: [
-        {
-          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
-        },
-        {
-          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
-        },
-        {
-          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
-        },
-      ],
-    },
-    {
-      id: '3',
-      date_created: Date.now(),
-      order_id: 'SHI-23571',
-      item: 'Oculus VR, Soap, Speaker, T-shirt',
-      amount: 503.7,
-      str_name: 'Shopperz-Badagry',
-      order_type: 'Home Delivery',
-      status: 'Complete',
-      products: [
-        {
-          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
-        },
-        {
-          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
-        },
-        {
-          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
-        },
-      ],
-    },
-    {
-      id: '4',
-      date_created: Date.now(),
-      order_id: 'SHI-23571',
-      item: 'DJI MAcvic Quadcopter, Premier',
-      amount: 503.7,
-      str_name: 'Shopperz-Sango',
-      order_type: 'Scanning',
-      status: 'Pending',
-      products: [
-        {
-          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
-        },
-        {
-          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
-        },
-        {
-          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
-        },
-      ],
-    },
-    {
-      id: '5',
-      date_created: Date.now(),
-      order_id: 'SHI-23571',
-      item: 'Oculus VR, Soap, Speaker, T-shirt',
-      amount: 503.7,
-      str_name: 'Shopperz-Ojo',
-      order_type: 'Booking',
-      status: 'Shipped',
-      products: [
-        {
-          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
-        },
-        {
-          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
-        },
-        {
-          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
-        },
-      ],
-    },
-    {
-      id: '6',
-      date_created: Date.now(),
-      order_id: 'SHI-23571',
-      item: 'Oculus VR, Soap, Speaker, T-shirt',
-      amount: 503.7,
-      str_name: 'Shopperz-Lekki',
-      order_type: 'Booking',
-      status: 'Canceled',
-      products: [
-        {
-          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
-        },
-        {
-          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
-        },
-        {
-          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
-        },
-      ],
-    },
-  ];
+  orderData = this.infoService.orderData;
   orderDetails= [
     {
       id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
@@ -173,7 +46,8 @@ export class OrdersComponent implements OnInit {
     constructor(
     private route: ActivatedRoute,
     private locS: CountryService,
-    private confS: ConfirmActionService
+    private confS: ConfirmActionService,
+    private infoService: InformationService,
   ) {}
   ngOnInit(): void {
     console.log(this.orderDetails);
@@ -182,7 +56,7 @@ export class OrdersComponent implements OnInit {
 
    
   get objectFiltered() {
-    return this.storesData.filter((item) => {
+    return this.orderData.filter((item) => {
       if (this.filteredVal.value === 'All') return true;
       return this.filteredVal.value === item.status;
     });
