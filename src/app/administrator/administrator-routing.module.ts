@@ -11,11 +11,18 @@ import { ProductsFormComponent } from './pages/products-form/products-form.compo
 import { OrderDetailsComponent } from './pages/order-details/order-details.component';
 import { ManageAdminComponent } from './pages/manage-admin/manage-admin.component';
 import { AdminDetailsComponent } from './pages/admin-details/admin-details.component';
+import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'orders', component: OrdersComponent},
-  { path: 'details', component: OrderDetailsComponent },
+  {
+    path: 'orders',
+    children: [
+      { path: '', component: OrdersComponent },
+      { path: 'details/:id', component: OrderDetailsComponent },
+    ],
+  },
+  // { path: 'order', component: OrderDetailsComponent },
   { path: 'stores', component: StoresComponent },
   { path: 'customers', component: CustomersComponent },
   { path: 'manage-admins', component: ManageAdminComponent },
@@ -23,8 +30,13 @@ const routes: Routes = [
   {
     path: 'products',
     children: [
-      { path: '', redirectTo: '/administrator/products/listing', pathMatch: 'full' },
+      {
+        path: '',
+        redirectTo: '/administrator/products/listing',
+        pathMatch: 'full',
+      },
       { path: 'listing', component: ProductsComponent },
+      { path: 'details/:id', component: ProductDetailsComponent },
       { path: 'add', component: ProductsFormComponent },
       { path: 'edit/:id', component: ProductsFormComponent },
     ],

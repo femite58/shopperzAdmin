@@ -23,7 +23,7 @@
 
 @font-face {
     font-family: "Adobe Clean";
-    src: url(assets/fonts/SF-Pro-Display-Bold.woff2) format("woff2");
+    src: url(assets/fonts/AdobeClean-BoldCond.otf) format("woff2");
     font-weight: 700;
 }
 
@@ -203,6 +203,11 @@ button {
     &.primBtn {
         background: $primary;
         color: #fff;
+        font-weight: 500;
+    }
+    &.secBtn {
+        background: $pendingBg !important;
+        color: #F8253A !important;
         font-weight: 500;
     }
 

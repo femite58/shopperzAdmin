@@ -13,6 +13,7 @@ import { ConfirmActionService } from 'src/app/data/services/confirm-action.servi
 export class OrdersComponent implements OnInit {
   submitting = false;
   closeModal = new BehaviorSubject(false);
+  accListener = new BehaviorSubject(-1);
   stores = [];
   count = 5;
   limit = 3;
@@ -31,6 +32,17 @@ export class OrdersComponent implements OnInit {
       str_name: 'Zcross - Lekki',
       order_type: 'Mathew',
       status: 'Complete',
+      products: [
+        {
+          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
+        },
+        {
+          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
+        },
+        {
+          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
+        },
+      ],
     },
     {
       id: '2',
@@ -41,6 +53,17 @@ export class OrdersComponent implements OnInit {
       str_name: 'Shopperz-Festac',
       order_type: 'In Store',
       status: 'Pending',
+      products: [
+        {
+          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
+        },
+        {
+          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
+        },
+        {
+          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
+        },
+      ],
     },
     {
       id: '3',
@@ -51,6 +74,17 @@ export class OrdersComponent implements OnInit {
       str_name: 'Shopperz-Badagry',
       order_type: 'Home Delivery',
       status: 'Complete',
+      products: [
+        {
+          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
+        },
+        {
+          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
+        },
+        {
+          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
+        },
+      ],
     },
     {
       id: '4',
@@ -61,6 +95,17 @@ export class OrdersComponent implements OnInit {
       str_name: 'Shopperz-Sango',
       order_type: 'Scanning',
       status: 'Pending',
+      products: [
+        {
+          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
+        },
+        {
+          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
+        },
+        {
+          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
+        },
+      ],
     },
     {
       id: '5',
@@ -71,6 +116,17 @@ export class OrdersComponent implements OnInit {
       str_name: 'Shopperz-Ojo',
       order_type: 'Booking',
       status: 'Shipped',
+      products: [
+        {
+          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
+        },
+        {
+          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
+        },
+        {
+          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
+        },
+      ],
     },
     {
       id: '6',
@@ -81,6 +137,17 @@ export class OrdersComponent implements OnInit {
       str_name: 'Shopperz-Lekki',
       order_type: 'Booking',
       status: 'Canceled',
+      products: [
+        {
+          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
+        },
+        {
+          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
+        },
+        {
+          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
+        },
+      ],
     },
   ];
   orderDetails= [
@@ -129,6 +196,11 @@ export class OrdersComponent implements OnInit {
   }
   toggleAccordion(ord: any) {
     ord.isAccordionOpen = !ord.isAccordionOpen;
+}
+
+stopPropagation(e) {
+  e.preventDefault();
+  e.stopPropagation();
 }
   
 }

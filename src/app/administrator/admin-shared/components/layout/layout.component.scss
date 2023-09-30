@@ -16,6 +16,11 @@
     height: 80px;
     border-bottom: $border;
     padding: 0 30px;
+    .leftSide {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
     h1 {
         font-size: 18px;
         font-weight: 600;

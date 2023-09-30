@@ -35,9 +35,9 @@
                     <th></th>
                 </thead>
                 <tbody>
-                    <app-group-accordion>
-                        <app-cus-accordion *ngFor="let ord of objectFiltered">
-                            <div class="accHead cusCollapsed">
+                    <app-group-accordion [listener]="accListener">
+                        <app-cus-accordion *ngFor="let ord of objectFiltered; let i = index" (openEv)="accListener.next(i)">
+                            <div routerLink="/administrator/orders/details/{{ord?.id}}" class="accHead cusCollapsed">
                                 <tr>
                                     <td>
                                         <div class="ellipsis">
@@ -86,7 +86,7 @@
                                     </td>
                                     <td class="action">
                                         <div>
-                                            <div class="dropOpener">
+                                            <div (click)="stopPropagation($event)" class="accToggle dropOpener">
                                                 <svg-icons
                                                     name="caret-down-light"
                                                 ></svg-icons>
@@ -116,49 +116,50 @@
                                         <tbody>
                                             <tr
                                                 *ngFor="
-                                                    let ordDet of orderDetails
+                                                    let prod of ord?.products
                                                 "
+                                                routerLink="/administrator/products/details/{{prod?.id}}"
                                             >
                                                 <td>
                                                     <div class="ellipsis">
-                                                        {{ ordDet.id }}
+                                                        {{ prod.id }}
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="ellipsis">
-                                                        {{ ordDet.sku }}
+                                                        {{ prod.sku }}
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="ellipsis">
                                                         {{
-                                                            ordDet.product_name
+                                                            prod.product_name
                                                         }}
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="ellipsis">
-                                                        {{ ordDet.price }}
+                                                        {{ prod.price }}
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="ellipsis">
-                                                        {{ ordDet.qty }}
+                                                        {{ prod.qty }}
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div
                                                         class="ellipsis priCol"
                                                     >
-                                                        {{ ordDet.disc }}%
+                                                        {{ prod.disc }}%
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="ellipsis">
                                                         {{
-                                                            (ordDet.disc /
+                                                            (prod.disc /
                                                                 100) *
-                                                                ordDet.price
+                                                                prod.price
                                                         }}
                                                     </div>
                                                 </td>

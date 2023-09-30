@@ -27,7 +27,8 @@ export class CusAccordionComponent implements OnInit, AfterViewInit {
     ngAfterViewInit() {
         if (!isPlatformBrowser(this.platformId)) return;
         const accHead = this.cusAcc.nativeElement.children[0];
-        accHead.addEventListener('click', () => {
+        const accToggle = accHead.querySelector('.accToggle');
+        (accToggle || accHead).addEventListener('click', () => {
             const items = accHead.nextElementSibling.children;
             if (
                 accHead.classList.contains('cusCollapsed') ||
