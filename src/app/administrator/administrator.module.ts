@@ -16,6 +16,7 @@ import { ProductSpecificationsComponent } from './pages/product-specifications/p
 import { SharedModule } from '../shared/shared.module';
 import { ManageAdminComponent } from './pages/manage-admin/manage-admin.component';
 import { AdminDetailsComponent } from './pages/admin-details/admin-details.component';
+import { CouponComponent } from './pages/coupon/coupon.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { AdminDetailsComponent } from './pages/admin-details/admin-details.compo
     ProductSpecificationsComponent,
     ManageAdminComponent,
     AdminDetailsComponent,
+    CouponComponent,
   ],
   imports: [CommonModule, AdminSharedModule, AdministratorRoutingModule, SharedModule],
 })

@@ -1,0 +1,196 @@
+<layout pageTitle="Sales Promotion">
+    <div id="headBtnCont">
+        <button class="greyOutlineBtn">
+            <svg-icons name="upload"></svg-icons>
+            <span>Export</span>
+        </button>
+        <button class="primBtn" [openModal]="">
+            <svg-icons name="plus"></svg-icons>
+            <span>Add New</span>
+        </button>
+    </div>
+    <div class="tabContainer">
+        <div class="tabHeader">
+          <div class="tab pointer" [class.active]="selectedTab === 1" (click)="selectTab(1)">Coupons</div>
+          <div class="tab pointer" [class.active]="selectedTab === 2" (click)="selectTab(2)">Flash Sales</div>
+        </div>
+    </div>
+    <div class="tabContent">
+      <div *ngIf="selectedTab === 1">
+        <div id="tableCont">
+            <div id="topActions">
+                <div class="searchCont">
+                    <input type="text" placeholder="Search order..." />
+                    <svg-icons name="search"></svg-icons>
+                </div>
+                <custom-select
+                    placeholder="Status: All"
+                    [options]="filterOpts"
+                    [fc]="filteredVal"
+                >
+                    <div class="option" *ngFor="let option of filterOpts">
+                        {{ option?.txt }}
+                    </div>
+                </custom-select>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>Customer</th>
+                        <th>Register Date</th>
+                        <th>Email Address</th>
+                        <th>Phone</th>
+                        <th>Rank</th>
+                        <th>Orders</th>
+                        <th>Status</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let cus_data of objectFiltered">
+                            <td>
+                                <div class="ellipsis">
+                                    {{ cus_data.id }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ cus_data.firstname + " " + cus_data.lastname }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ cus_data.created_at | date }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ cus_data.email }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ cus_data.phone }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ cus_data.rank }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ cus_data.order_count }}
+                                 </div>
+                            </td>
+                            <td>
+                                <div class="status {{ cus_data.status }}">
+                                    <span></span>
+                                    <span>{{ cus_data.status }}</span>
+                                </div>
+                            </td>
+                            <td>
+                                <svg-icons
+                                    name="delete"
+                                    (click)="deleteConf(cus_data.id)"
+                                    *ngIf="deleting != cus_data.id"
+                                ></svg-icons>
+                                <i class="fa fa-spinner spin" *ngIf="deleting == cus_data.id"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+        </div>
+      </div>
+      <div *ngIf="selectedTab === 2">
+        <div id="tableCont">
+            <div id="topActions">
+                <div class="searchCont">
+                    <input type="text" placeholder="Search order..." />
+                    <svg-icons name="search"></svg-icons>
+                </div>
+                <custom-select
+                    placeholder="Status: All"
+                    [options]="filterOpts"
+                    [fc]="filteredVal"
+                >
+                    <div class="option" *ngFor="let option of filterOpts">
+                        {{ option?.txt }}
+                    </div>
+                </custom-select>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>Customer</th>
+                        <th>Register Date</th>
+                        <th>Email Address</th>
+                        <th>Phone</th>
+                        <th>Rank</th>
+                        <th>Orders</th>
+                        <th>Status</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let cus_data of objectFiltered">
+                            <td>
+                                <div class="ellipsis">
+                                    {{ cus_data.id }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ cus_data.firstname + " " + cus_data.lastname }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ cus_data.created_at | date }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ cus_data.email }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ cus_data.phone }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ cus_data.rank }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ellipsis">
+                                    {{ cus_data.order_count }}
+                                 </div>
+                            </td>
+                            <td>
+                                <div class="status {{ cus_data.status }}">
+                                    <span></span>
+                                    <span>{{ cus_data.status }}</span>
+                                </div>
+                            </td>
+                            <td>
+                                <svg-icons
+                                    name="delete"
+                                    (click)="deleteConf(cus_data.id)"
+                                    *ngIf="deleting != cus_data.id"
+                                ></svg-icons>
+                                <i class="fa fa-spinner spin" *ngIf="deleting == cus_data.id"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+        </div>
+      </div>
+    </div>
+</layout>

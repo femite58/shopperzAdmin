@@ -12,6 +12,7 @@ import { OrderDetailsComponent } from './pages/order-details/order-details.compo
 import { ManageAdminComponent } from './pages/manage-admin/manage-admin.component';
 import { AdminDetailsComponent } from './pages/admin-details/admin-details.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
+import { CouponComponent } from './pages/coupon/coupon.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
   },
   // { path: 'order', component: OrderDetailsComponent },
   { path: 'stores', component: StoresComponent },
+  { path: 'sales-promotion', component: CouponComponent },
   { path: 'customers', component: CustomersComponent },
   { path: 'manage-admins', component: ManageAdminComponent },
   { path: 'admin-details', component: AdminDetailsComponent },
