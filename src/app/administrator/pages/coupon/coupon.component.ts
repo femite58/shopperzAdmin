@@ -7,11 +7,15 @@ import { InformationService } from 'src/app/data/services/information.service';
 @Component({
   selector: 'app-coupon',
   templateUrl: './coupon.component.html',
-  styleUrls: ['./coupon.component.scss']
+  styleUrls: ['./coupon.component.scss'],
 })
 export class CouponComponent {
-  constructor (private infoService: InformationService, private confS: ConfirmActionService) {}
+  constructor(
+    private infoService: InformationService,
+    private confS: ConfirmActionService
+  ) {}
   customerData = this.infoService.customerData;
+  couponData = this.infoService.couponData;
   count = 5;
   limit = 3;
   page = 1;
@@ -26,12 +30,24 @@ export class CouponComponent {
     { txt: 'Active', value: 'Active' },
     { txt: 'Inactive', value: 'Inactive' },
   ];
+  filterOpts2 = [
+    { txt: 'All', value: 'All' },
+    { txt: 'Active', value: 'Active' },
+    { txt: 'Inactive', value: 'Inactive' },
+  ];
 
   selectTab(tabNumber: number) {
     this.selectedTab = tabNumber;
+    this.filteredVal = new FormControl('All');
   }
-  get objectFiltered() {
-    return this.customerData.filter((item) => {
+  get couponFiltered() {
+    return this.couponData.filter((item) => {
+      if (this.filteredVal.value == 'All') return true;
+      return this.filteredVal.value == item.status;
+    });
+  }
+  get fSalesFiltered() {
+    return this.couponData.filter((item) => {
       if (this.filteredVal.value == 'All') return true;
       return this.filteredVal.value == item.status;
     });
@@ -66,8 +82,6 @@ export class CouponComponent {
         this.closeModal.next(true);
       },
       confirmTxt: 'Delete',
-      
     });
   }
-
 }

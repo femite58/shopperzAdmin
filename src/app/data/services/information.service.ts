@@ -78,6 +78,41 @@ export class InformationService {
       status: 'Inactive',
     },
   ];
+  couponData = [
+    {
+      id: '1',
+      coupon_code: 'AXXQT-2547',
+      coupon_type: 'Percentage',
+      discount: '10% Off',
+      start_at: Date.now(),
+      end_at: Date.now(),
+      usage: 523,
+      status: 'Active',
+    },
+    
+    {
+      id: '2',
+      coupon_code: 'BATTT-XA47',
+      coupon_type: 'Fixed Amount',
+      discount: '200 Off',
+      start_at: Date.now(),
+      end_at: Date.now(),
+      usage: 523,
+      status: 'Active',
+    },
+    
+    {
+      id: '3',
+      coupon_code: 'DTZQT-8547',
+      coupon_type: 'Percentage',
+      discount: '10% Off',
+      start_at: Date.now(),
+      end_at: Date.now(),
+      usage: 523,
+      status: 'Active',
+    },
+    
+  ];
   product = [
     {
       id: 1,
