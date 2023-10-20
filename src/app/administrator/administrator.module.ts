@@ -17,6 +17,8 @@ import { SharedModule } from '../shared/shared.module';
 import { ManageAdminComponent } from './pages/manage-admin/manage-admin.component';
 import { AdminDetailsComponent } from './pages/admin-details/admin-details.component';
 import { CouponComponent } from './pages/coupon/coupon.component';
+import { NotificationManagerComponent } from './pages/notification-manager/notification-manager.component';
+import { NotificationDetailsComponent } from './pages/notification-details/notification-details.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { CouponComponent } from './pages/coupon/coupon.component';
     ManageAdminComponent,
     AdminDetailsComponent,
     CouponComponent,
+    NotificationManagerComponent,
+    NotificationDetailsComponent,
   ],
   imports: [CommonModule, AdminSharedModule, AdministratorRoutingModule, SharedModule],
 })

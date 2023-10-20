@@ -1,24 +1,39 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class InformationService {
+  constructor() {}
 
-  constructor() { }
-
-  categories= [
+  categories = [
     {
-      id: 1, name: 'Electronics',img_url:'assets/images/products/image_sm1.png', sub_cat: 'TV, Fridge, Iron, Phone', date_created: Date.now()
+      id: 1,
+      name: 'Electronics',
+      img_url: 'assets/images/products/image_sm1.png',
+      sub_cat: 'TV, Fridge, Iron, Phone',
+      date_created: Date.now(),
     },
     {
-      id: 2, name: 'Home accessories',img_url:'assets/images/products/image_sm2.png', sub_cat: '-', date_created: Date.now()  
+      id: 2,
+      name: 'Home accessories',
+      img_url: 'assets/images/products/image_sm2.png',
+      sub_cat: '-',
+      date_created: Date.now(),
     },
     {
-      id: 3, name: 'Gadgets',img_url:'assets/images/products/image_sm1.png', sub_cat: 'Bag, Keys, Glass', date_created: Date.now()  
+      id: 3,
+      name: 'Gadgets',
+      img_url: 'assets/images/products/image_sm1.png',
+      sub_cat: 'Bag, Keys, Glass',
+      date_created: Date.now(),
     },
     {
-      id: 4, name: 'Rado Watch',img_url:'assets/images/products/image_sm2.png', sub_cat: '', date_created: Date.now()  
+      id: 4,
+      name: 'Rado Watch',
+      img_url: 'assets/images/products/image_sm2.png',
+      sub_cat: '',
+      date_created: Date.now(),
     },
   ];
   customerData = [
@@ -89,7 +104,7 @@ export class InformationService {
       usage: 523,
       status: 'Active',
     },
-    
+
     {
       id: '2',
       coupon_code: 'BATTT-XA47',
@@ -100,7 +115,7 @@ export class InformationService {
       usage: 523,
       status: 'Active',
     },
-    
+
     {
       id: '3',
       coupon_code: 'DTZQT-8547',
@@ -111,7 +126,6 @@ export class InformationService {
       usage: 523,
       status: 'Active',
     },
-    
   ];
   product = [
     {
@@ -141,7 +155,6 @@ export class InformationService {
   ];
 
   orderData = [
-    
     {
       id: '1',
       date_created: Date.now(),
@@ -153,13 +166,28 @@ export class InformationService {
       status: 'Complete',
       products: [
         {
-          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
+          id: 1,
+          sku: 'SHI-65483',
+          product_name: 'Oculus VR',
+          price: 999.29,
+          qty: 1,
+          disc: 5,
         },
         {
-          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
+          id: 2,
+          sku: 'SHI-65483',
+          product_name: 'Note Diaries',
+          price: 999.29,
+          qty: 2,
+          disc: 5,
         },
         {
-          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
+          id: 3,
+          sku: 'SHI-65483',
+          product_name: 'Apple iPhone 13',
+          price: 999.29,
+          qty: 3,
+          disc: 5,
         },
       ],
     },
@@ -174,13 +202,28 @@ export class InformationService {
       status: 'Pending',
       products: [
         {
-          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
+          id: 1,
+          sku: 'SHI-65483',
+          product_name: 'Oculus VR',
+          price: 999.29,
+          qty: 1,
+          disc: 5,
         },
         {
-          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
+          id: 2,
+          sku: 'SHI-65483',
+          product_name: 'Note Diaries',
+          price: 999.29,
+          qty: 2,
+          disc: 5,
         },
         {
-          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
+          id: 3,
+          sku: 'SHI-65483',
+          product_name: 'Apple iPhone 13',
+          price: 999.29,
+          qty: 3,
+          disc: 5,
         },
       ],
     },
@@ -195,13 +238,28 @@ export class InformationService {
       status: 'Complete',
       products: [
         {
-          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
+          id: 1,
+          sku: 'SHI-65483',
+          product_name: 'Oculus VR',
+          price: 999.29,
+          qty: 1,
+          disc: 5,
         },
         {
-          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
+          id: 2,
+          sku: 'SHI-65483',
+          product_name: 'Note Diaries',
+          price: 999.29,
+          qty: 2,
+          disc: 5,
         },
         {
-          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
+          id: 3,
+          sku: 'SHI-65483',
+          product_name: 'Apple iPhone 13',
+          price: 999.29,
+          qty: 3,
+          disc: 5,
         },
       ],
     },
@@ -216,13 +274,28 @@ export class InformationService {
       status: 'Pending',
       products: [
         {
-          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
+          id: 1,
+          sku: 'SHI-65483',
+          product_name: 'Oculus VR',
+          price: 999.29,
+          qty: 1,
+          disc: 5,
         },
         {
-          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
+          id: 2,
+          sku: 'SHI-65483',
+          product_name: 'Note Diaries',
+          price: 999.29,
+          qty: 2,
+          disc: 5,
         },
         {
-          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
+          id: 3,
+          sku: 'SHI-65483',
+          product_name: 'Apple iPhone 13',
+          price: 999.29,
+          qty: 3,
+          disc: 5,
         },
       ],
     },
@@ -237,13 +310,28 @@ export class InformationService {
       status: 'Shipped',
       products: [
         {
-          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
+          id: 1,
+          sku: 'SHI-65483',
+          product_name: 'Oculus VR',
+          price: 999.29,
+          qty: 1,
+          disc: 5,
         },
         {
-          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
+          id: 2,
+          sku: 'SHI-65483',
+          product_name: 'Note Diaries',
+          price: 999.29,
+          qty: 2,
+          disc: 5,
         },
         {
-          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
+          id: 3,
+          sku: 'SHI-65483',
+          product_name: 'Apple iPhone 13',
+          price: 999.29,
+          qty: 3,
+          disc: 5,
         },
       ],
     },
@@ -258,13 +346,28 @@ export class InformationService {
       status: 'Canceled',
       products: [
         {
-          id: 1, sku: 'SHI-65483', product_name: 'Oculus VR', price: 999.29, qty: 1, disc: 5
+          id: 1,
+          sku: 'SHI-65483',
+          product_name: 'Oculus VR',
+          price: 999.29,
+          qty: 1,
+          disc: 5,
         },
         {
-          id: 2, sku: 'SHI-65483', product_name: 'Note Diaries', price: 999.29, qty: 2, disc: 5
+          id: 2,
+          sku: 'SHI-65483',
+          product_name: 'Note Diaries',
+          price: 999.29,
+          qty: 2,
+          disc: 5,
         },
         {
-          id: 3, sku: 'SHI-65483', product_name: 'Apple iPhone 13', price: 999.29, qty: 3, disc: 5
+          id: 3,
+          sku: 'SHI-65483',
+          product_name: 'Apple iPhone 13',
+          price: 999.29,
+          qty: 3,
+          disc: 5,
         },
       ],
     },
@@ -409,6 +512,40 @@ export class InformationService {
       email: 'ishaqhawawu66@gmail.com',
       phone: '07066091112',
       status: 'Online',
+    },
+  ];
+  adminNotifications = [
+    {
+      id: 1,
+      title: 'Special Announcement!',
+      message:
+        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+      timeStamp: Date.now(),
+      viewCount: 20,
+    },
+    {
+      id: 2,
+      title: 'Special Announcement!',
+      message:
+        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+      timeStamp: Date.now(),
+      viewCount: 20,
+    },
+    {
+      id: 3,
+      title: 'Special Announcement!',
+      message:
+        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+      timeStamp: Date.now(),
+      viewCount: 20,
+    },
+    {
+      id: 4,
+      title: 'Special Announcement!',
+      message:
+        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+      timeStamp: Date.now(),
+      viewCount: 20,
     },
   ];
 }

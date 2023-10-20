@@ -1,0 +1,43 @@
+.tabContent {
+    .notification {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 111px;
+        border-left: 1px solid #D6D9DE;
+        border-bottom: 1px solid #D6D9DE;
+        padding: 20px 37px 20px 17px;
+        .center{
+            display: flex;
+            .left {
+                margin-right: 17px;
+                padding-top: 6px;
+                .ellipse {
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 100%;
+                    background-color: #E9E8E8;
+                }
+            }
+            .notiContent{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 5px;
+                p{
+                    margin-bottom: 0;
+                    width: 531px;
+                }
+            }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        &:hover{
+            background-color: #F7F7F7;
+            transition: .3s;
+        }
+    }
+}

@@ -13,6 +13,8 @@ import { ManageAdminComponent } from './pages/manage-admin/manage-admin.componen
 import { AdminDetailsComponent } from './pages/admin-details/admin-details.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { CouponComponent } from './pages/coupon/coupon.component';
+import { NotificationManagerComponent } from './pages/notification-manager/notification-manager.component';
+import { NotificationDetailsComponent } from './pages/notification-details/notification-details.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -23,11 +25,18 @@ const routes: Routes = [
       { path: 'details/:id', component: OrderDetailsComponent },
     ],
   },
+  {
+    path: 'notifications',
+    children: [
+      { path: '', component: NotificationManagerComponent },
+      { path: 'details/:id', component: NotificationDetailsComponent },
+    ],
+  },
   // { path: 'order', component: OrderDetailsComponent },
   { path: 'stores', component: StoresComponent },
   { path: 'sales-promotion', component: CouponComponent },
   { path: 'customers', component: CustomersComponent },
-  { path: 'manage-admins', component: ManageAdminComponent },
+  { path: 'manage-admins/:id', component: ManageAdminComponent },
   { path: 'admin-details', component: AdminDetailsComponent },
   {
     path: 'products',

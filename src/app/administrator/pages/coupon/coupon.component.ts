@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
 import { ConfirmActionService } from 'src/app/data/services/confirm-action.service';
 import { InformationService } from 'src/app/data/services/information.service';
@@ -16,9 +16,18 @@ export class CouponComponent {
   ) {}
   customerData = this.infoService.customerData;
   couponData = this.infoService.couponData;
+  products = this.infoService.products;
   count = 5;
   limit = 3;
   page = 1;
+  submitting = false;
+  form = new FormGroup({
+    selectProd: new FormControl('', Validators.required),
+    price: new FormControl('', Validators.required),
+    discountPrice: new FormControl('', Validators.required),
+    flsPrice: new FormControl('', Validators.required),
+    limitSet: new FormControl('', Validators.required),
+  });
   currentId;
   deleting;
   filteredVal = new FormControl('All');
@@ -35,7 +44,7 @@ export class CouponComponent {
     { txt: 'Active', value: 'Active' },
     { txt: 'Inactive', value: 'Inactive' },
   ];
-
+  prods = this.products
   selectTab(tabNumber: number) {
     this.selectedTab = tabNumber;
     this.filteredVal = new FormControl('All');
@@ -84,4 +93,6 @@ export class CouponComponent {
       confirmTxt: 'Delete',
     });
   }
+  submit() {}
+
 }

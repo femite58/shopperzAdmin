@@ -83,5 +83,7 @@ export class CustomersComponent implements OnInit {
       confirmTxt: 'Delete',
       
     });
+    
   }
+  
 }

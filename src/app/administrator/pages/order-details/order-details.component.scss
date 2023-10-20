@@ -132,6 +132,9 @@
         th,
         td {
             display: block;
+            .sum{
+                padding: 8px 0px !important;
+            }
             &:first-child {
                 min-width: 44px;
                 max-width: 44px;
@@ -205,6 +208,7 @@
             .summary {
                 td {
                     display: block !important;
+                    
                     &:first-child {
                         min-width: 44px;
                         max-width: 44px;

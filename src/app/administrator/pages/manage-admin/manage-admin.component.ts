@@ -51,7 +51,7 @@ export class ManageAdminComponent {
     { txt: 'Online', value: 'Online' },
     { txt: 'Offline', value: 'Offline' },
   ];
-  deleteCustomer() {
+   deleteCustomer() {
     // this.currentId;
     this.deleting = this.currentId;
     setTimeout(() => {
