@@ -19,6 +19,7 @@ import { AdminDetailsComponent } from './pages/admin-details/admin-details.compo
 import { CouponComponent } from './pages/coupon/coupon.component';
 import { NotificationManagerComponent } from './pages/notification-manager/notification-manager.component';
 import { NotificationDetailsComponent } from './pages/notification-details/notification-details.component';
+import { UserNotificationsDetailsComponent } from './pages/user-notifications-details/user-notifications-details.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { NotificationDetailsComponent } from './pages/notification-details/notif
     CouponComponent,
     NotificationManagerComponent,
     NotificationDetailsComponent,
+    UserNotificationsDetailsComponent,
   ],
   imports: [CommonModule, AdminSharedModule, AdministratorRoutingModule, SharedModule],
 })

@@ -1,19 +1,19 @@
-.notificationsCont{
-    height: 505px;
-    .tabContent {
+.tabContent {
+    div {
+        position: relative;
         .notification {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            position: relative;
+            top: 0;
+            bottom: 0;
             margin-left: 111px;
-            border-left: 1px solid #D6D9DE;
-            border-bottom: 1px solid #d5d8dd;
             padding: 20px 37px 20px 17px;
-            &:last-of-type{
-                border-bottom: none;
-            }
-            .center{
+            .center {
                 display: flex;
+                flex-direction: column;
+                width: 100%;
+                .imgDesc{
+                    margin-bottom: 20px;
+                }
                 .left {
                     margin-right: 17px;
                     padding-top: 6px;
@@ -21,33 +21,32 @@
                         width: 7px;
                         height: 7px;
                         border-radius: 100%;
-                        background-color: #E9E8E8;
+                        background-color: #e9e8e8;
                     }
                 }
-                .imgDesc{
-                    margin-right: 15px;
-                }
-                .notiContent{
+                .notiContent {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     gap: 5px;
-                    p{
+                    small{
+                        margin-bottom: 8px;
+                    }
+                    strong{
+                        margin-bottom: 25px;
+                        font-size: 15px;
+                    }
+                    p {
                         margin-bottom: 0;
-                        width: 531px;
+                        font-size: 15px;
                     }
                 }
             }
-            .right{
+            .right {
                 display: flex;
                 align-items: center;
                 gap: 5px;
             }
-            &:hover{
-                background-color: #F7F7F7;
-                transition: .3s;
-            }
         }
     }
-    
 }
