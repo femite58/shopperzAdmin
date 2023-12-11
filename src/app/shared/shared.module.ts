@@ -42,6 +42,7 @@ import { StripSpaceDirective } from './directives/strip-space.directive';
 import { SubmitBtnComponent } from './components/submit-btn/submit-btn.component';
 import { CustomScrollComponent } from './components/custom-scroll/custom-scroll.component';
 import { CustomSelectComponent } from './components/custom-select/custom-select.component';
+import { DateFormatPipe } from './pipe/date-format.pipe';
 
 @NgModule({
   declarations: [
@@ -83,6 +84,7 @@ import { CustomSelectComponent } from './components/custom-select/custom-select.
     SubmitBtnComponent,
     CustomScrollComponent,
     CustomSelectComponent,
+    DateFormatPipe,
   ],
   imports: [
     CommonModule,
@@ -135,6 +137,7 @@ import { CustomSelectComponent } from './components/custom-select/custom-select.
     SubmitBtnComponent,
     CustomScrollComponent,
     CustomSelectComponent,
+    DateFormatPipe
   ],
 })
 export class SharedModule {}

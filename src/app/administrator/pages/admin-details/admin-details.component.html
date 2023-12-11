@@ -1,0 +1,105 @@
+<layout [backAct]="true" pageTitle="Manager Details">
+    <div id="headBtnCont">
+        <button class="secBtn">
+            <svg-icons name="lock2"></svg-icons>
+            <span>Lock Account</span>
+        </button>
+        <button class="greyOutlineBtn">
+            <svg-icons name="delete"></svg-icons>
+            <span>Delete</span>
+        </button>
+        <button class="greyOutlineBtn" (click)="editUser()">
+            <svg-icons name="edit2"></svg-icons>
+            <span>Edit User</span>
+        </button>
+    </div>
+    <div class="mngData">
+        <div class="leftSide">
+            <div class="userProf">
+                <div class="userImg">
+                    <img src="assets/images/userImg.png" alt="profile" />
+                </div>
+                <div class="status Online">
+                    <span></span>
+                    <span>Online</span>
+                </div>
+                <div class="btnCont">
+                    <button class="greyOutlineBtn">Upload Photo</button>
+                </div>
+            </div>
+        </div>
+        <div class="rightSide">
+            <form [formGroup]="form" (ngSubmit)="submit()">
+                <div class="formBody">
+                    <div class="edit">
+                        <div class="left">
+                            <div class="formGroup">
+                                <label for="" class="req">Full Name</label>
+                                <input type="text" formControlName="name" />
+                            </div>
+
+                            <div class="formGroup">
+                                <label for="phone" class="req"
+                                    >Phone Number</label
+                                >
+                                <input type="tel" formControlName="phone" />
+                            </div>
+                            <div class="formGroup">
+                                <label for="rankSelect">Assign Role</label>
+                                <custom-select
+                                    placeholder="Manager"
+                                    [fc]="f('role')"
+                                    [options]="options"
+                                >
+                                    <div
+                                        *ngFor="let option of options"
+                                        class="option"
+                                    >
+                                        {{ option?.txt }}
+                                    </div>
+                                </custom-select>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="formGroup">
+                                <label for="email" class="req">Email</label>
+                                <input type="email" formControlName="email" />
+                            </div>
+                            <div class="formGroup">
+                                <label for="rankSelect">Choose Store</label>
+                                <custom-select
+                                    placeholder="Shoppez-Ikeja  "
+                                    [fc]="f('store')"
+                                    [options]="storeOpts"
+                                >
+                                    <div
+                                        *ngFor="let option of storeOpts"
+                                        class="option"
+                                    >
+                                        {{ option?.txt }}
+                                    </div>
+                                </custom-select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btnCont">
+                        <button
+                            class="greyBtn"
+                            [disabled]="form.valid"
+                            *ngIf="cancelVisible"
+                        >
+                            Cancel
+                        </button>
+                        <button
+                            class="primBtn"
+                            [disabled]="!form.valid"
+                            *ngIf="updateVisible"
+                        >
+                            Update
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</layout>

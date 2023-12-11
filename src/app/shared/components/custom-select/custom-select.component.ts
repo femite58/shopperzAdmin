@@ -22,7 +22,7 @@ export class CustomSelectComponent
     implements AfterViewInit, OnDestroy, OnChanges
 {
     @Input() placeholder;
-    @Input() fc: AbstractControl;
+    @Input() fc?: AbstractControl;
     @Input() options: { value: any; txt: any }[];
     @Input() innerClose: string;
     curOptions;
@@ -65,7 +65,7 @@ export class CustomSelectComponent
             if (o.innerHTML.includes(this.options[i].txt)) {
                 if (clicked.innerHTML == o.innerHTML) {
                     this.selectedOption = i;
-                    this.fc.setValue(this.options[i].value);
+                    this.fc?.setValue(this.options[i].value);
                     this.onSelect.emit(this.options[i]);
                     break;
                 }

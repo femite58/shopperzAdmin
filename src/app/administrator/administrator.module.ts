@@ -13,6 +13,13 @@ import { CategoriesComponent } from './pages/categories/categories.component';
 import { AdminSharedModule } from './admin-shared/admin-shared.module';
 import { StoresComponent } from './pages/stores/stores.component';
 import { ProductSpecificationsComponent } from './pages/product-specifications/product-specifications.component';
+import { SharedModule } from '../shared/shared.module';
+import { ManageAdminComponent } from './pages/manage-admin/manage-admin.component';
+import { AdminDetailsComponent } from './pages/admin-details/admin-details.component';
+import { CouponComponent } from './pages/coupon/coupon.component';
+import { NotificationManagerComponent } from './pages/notification-manager/notification-manager.component';
+import { NotificationDetailsComponent } from './pages/notification-details/notification-details.component';
+import { UserNotificationsDetailsComponent } from './pages/user-notifications-details/user-notifications-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +33,13 @@ import { ProductSpecificationsComponent } from './pages/product-specifications/p
     CategoriesComponent,
     StoresComponent,
     ProductSpecificationsComponent,
+    ManageAdminComponent,
+    AdminDetailsComponent,
+    CouponComponent,
+    NotificationManagerComponent,
+    NotificationDetailsComponent,
+    UserNotificationsDetailsComponent,
   ],
-  imports: [CommonModule, AdminSharedModule, AdministratorRoutingModule],
+  imports: [CommonModule, AdminSharedModule, AdministratorRoutingModule, SharedModule],
 })
 export class AdministratorModule {}

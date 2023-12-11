@@ -1,0 +1,52 @@
+.tabContent {
+    div {
+        position: relative;
+        .notification {
+            position: relative;
+            top: 0;
+            bottom: 0;
+            margin-left: 111px;
+            padding: 20px 37px 20px 17px;
+            .center {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                .imgDesc{
+                    margin-bottom: 20px;
+                }
+                .left {
+                    margin-right: 17px;
+                    padding-top: 6px;
+                    .ellipse {
+                        width: 7px;
+                        height: 7px;
+                        border-radius: 100%;
+                        background-color: #e9e8e8;
+                    }
+                }
+                .notiContent {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 5px;
+                    small{
+                        margin-bottom: 8px;
+                    }
+                    strong{
+                        margin-bottom: 25px;
+                        font-size: 15px;
+                    }
+                    p {
+                        margin-bottom: 0;
+                        font-size: 15px;
+                    }
+                }
+            }
+            .right {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+    }
+}

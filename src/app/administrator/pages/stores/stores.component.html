@@ -1,24 +1,114 @@
 <layout pageTitle="Stores">
     <div id="headBtnCont">
-        <!-- <button class="greyOutlineBtn">
-            <svg-icons name="download"></svg-icons>
-            <span>Import</span>
-        </button> -->
         <button
             class="primBtn"
             #addStoreModalOpener
             [openModal]="addStoreModal"
         >
             <svg-icons name="plus"></svg-icons>
-            <span>Add Product</span>
+            <span>Add New</span>
         </button>
     </div>
-    <app-empty-items
-        *ngIf="!stores.length"
-        title="No Store yet!"
-        body="Here you will be able to see the list of stores you have"
-    ></app-empty-items>
+    <div id="tableCont">
+        <div id="topActions">
+            <div class="searchCont">
+                <input type="text" placeholder="Search product..." />
+                <svg-icons name="search"></svg-icons>
+            </div>
+            <custom-select
+                placeholder="Status: All"
+                [options]="filterOpts"
+                [fc]="filteredVal"
+            >
+                <div class="option" *ngFor="let option of filterOpts">
+                    {{ option?.txt }}
+                </div>
+            </custom-select>
+        </div>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <th>Id</th>
+                    <th>Store Name</th>
+                    <th>Address</th>
+                    <th>State</th>
+                    <th>Manager</th>
+                    <th>Phone</th>
+                    <th>Date Created</th>
+                    <th>Status</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let str of objectFiltered">
+                        <td>
+                            <div class="ellipsis">
+                                {{ str.id }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ str.name }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ str.address }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ str.state }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ str.manager_name }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ str.phone }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ellipsis">
+                                {{ str.date_created | date : "dd/MM/yyyy" }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="status {{ str.status }}">
+                                <span></span>
+                                <span>{{ str.status }}</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="action">
+                                <div appDropdown class="clickable">
+                                    <svg-icons name="vEllipsis"></svg-icons>
+                                </div>
+                                <div class="dropped">
+                                    <div
+                                        class="dropItem"
+                                        (click)="confirmModOpen(str)"
+                                    >
+                                    {{ str.status === 'Active' ? 'Deactivate' : 'Activate' }}
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <app-pagination-parent
+            [limit]="limit"
+            [page]="page"
+            [count]="count"
+            (setPage)="onSetPage($event)"
+        ></app-pagination-parent>
+    </div>
 </layout>
+
 <div id="modals">
     <app-modal #addStoreModal [closeModal]="closeModal">
         <div class="modalContent">
@@ -92,7 +182,7 @@
                         </button>
                         <submit-btn
                             btnTxt="Submit"
-                            clss="primBtn"
+                            class="primBtn"
                             [loading]="submitting"
                             [disabled]="form.invalid"
                         >
@@ -102,4 +192,5 @@
             </div>
         </div>
     </app-modal>
+    
 </div>

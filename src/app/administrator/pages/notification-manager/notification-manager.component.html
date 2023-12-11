@@ -1,0 +1,270 @@
+<layout pageTitle="Notifications">
+    <div id="headBtnCont">
+        <button
+            class="primBtn"
+            [openModal]="createNoti"
+            *ngIf="selectedTab == 1"
+        >
+            <svg-icons name="plus"></svg-icons>
+            <span>Create New</span>
+        </button>
+        <button
+            class="primBtn"
+            [openModal]="createNoti2"
+            *ngIf="selectedTab == 2"
+        >
+            <svg-icons name="plus"></svg-icons>
+            <span>Create New</span>
+        </button>
+    </div>
+    <div class="notificationsCont">
+        <app-custom-scroll>
+            <div class="tabContainer">
+                <div class="tabHeader">
+                    <div
+                        class="tab pointer"
+                        [class.active]="selectedTab === 1"
+                        (click)="selectTab(1)"
+                    >
+                        Admin Notification
+                    </div>
+                    <div
+                        class="tab pointer"
+                        [class.active]="selectedTab === 2"
+                        (click)="selectTab(2)"
+                    >
+                        User Notification
+                    </div>
+                </div>
+            </div>
+            <div class="tabContent">
+                <div *ngIf="selectedTab == 1">
+                    <div
+                        routerLink="/administrator/notifications/admin/details/{{
+                            noti?.id
+                        }}"
+                        class="notification pointer"
+                        *ngFor="let noti of adminNotifications"
+                    >
+                        <div class="center">
+                            <div class="left">
+                                <div class="ellipse"></div>
+                            </div>
+                            <div class="notiContent">
+                                <strong>{{ noti.title }}</strong>
+                                <p class="ellipsis">
+                                    {{ noti.message }}
+                                </p>
+                                <small>
+                                    Today at
+                                    {{ noti.timeStamp | date : "shortTime" }}
+                                </small>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <span>
+                                <svg-icons name="eye"></svg-icons>
+                            </span>
+                            <span> {{ noti.viewCount }} Views </span>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="selectedTab == 2">
+                    <div
+                        routerLink="/administrator/notifications/user/details/{{
+                            noti?.id
+                        }}"
+                        class="notification pointer"
+                        *ngFor="let noti of adminNotifications"
+                    >
+                        <div class="center">
+                            <div class="left">
+                                <div class="ellipse"></div>
+                            </div>
+                            <div class="imgDesc">
+                                <img
+                                    src="assets/images/notificationImg.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="notiContent">
+                                <strong>{{ noti.title }}</strong>
+                                <p class="ellipsis">
+                                    {{ noti.message }}
+                                </p>
+                                <small>
+                                    Today at
+                                    {{ noti.timeStamp | date : "shortTime" }}
+                                </small>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <span>
+                                <svg-icons name="eye"></svg-icons>
+                            </span>
+                            <span> {{ noti.viewCount }} Views </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </app-custom-scroll>
+    </div>
+</layout>
+<div id="modals">
+    <app-modal #createNoti [closeModal]="closeModal">
+        <div class="modalContent">
+            <div class="modalHead">
+                <div class="modalTitle">Add Customer</div>
+                <span class="closeBtn">
+                    <svg-icons name="times"></svg-icons>
+                </span>
+            </div>
+            <div class="modalBody">
+                <form [formGroup]="form" (ngSubmit)="submit()">
+                    <div class="formBody">
+                        <app-custom-scroll>
+                            <div class="formGroup">
+                                <label for="" class="req">Message Title</label>
+                                <input type="text" formControlName="title" />
+                            </div>
+                            <div class="formGroup">
+                                <label for="" class="req">Enter Message</label>
+                                <textarea
+                                    name="admin"
+                                    formControlName="message"
+                                    cols="10"
+                                    rows="5"
+                                ></textarea>
+                            </div>
+
+                            <div class="formGroup">
+                                <label for="rankSelect">Select Admin</label>
+                                <custom-select
+                                    placeholder="All"
+                                    [fc]="f('admin')"
+                                    [options]="adminOpts"
+                                >
+                                    <div
+                                        *ngFor="let option of adminOpts"
+                                        class="option"
+                                    >
+                                        {{ option?.txt }}
+                                    </div>
+                                </custom-select>
+                            </div>
+                            <div class="formGroup">
+                                <label for="rankSelect">Select Store</label>
+                                <custom-select
+                                    placeholder="All"
+                                    [fc]="f('location')"
+                                    [options]="storeOpts"
+                                >
+                                    <div
+                                        *ngFor="let option of storeOpts"
+                                        class="option"
+                                    >
+                                        {{ option?.txt }}
+                                    </div>
+                                </custom-select>
+                            </div>
+                        </app-custom-scroll>
+                    </div>
+                    <div class="btnCont">
+                        <button
+                            type="button"
+                            class="greyBtn"
+                            (click)="closeModal.next(true)"
+                        >
+                            Cancel
+                        </button>
+                        <submit-btn
+                            btnTxt="Send"
+                            clss="primBtn"
+                            [loading]="submitting"
+                            [disabled]="!form.valid"
+                        >
+                        </submit-btn>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </app-modal>
+    <app-modal #createNoti2 [closeModal]="closeModal">
+        <div class="modalContent">
+            <div class="modalHead">
+                <div class="modalTitle">Add Customer</div>
+                <span class="closeBtn">
+                    <svg-icons name="times"></svg-icons>
+                </span>
+            </div>
+            <div class="modalBody">
+                <form [formGroup]="form" (ngSubmit)="submit()">
+                    <div class="formBody">
+                        <app-custom-scroll>
+                            <div class="formGroup">
+                                <label for="" class="req">Message Title</label>
+                                <input type="text" formControlName="title" />
+                            </div>
+                            <div class="formGroup">
+                                <label for="" class="req">Enter Message</label>
+                                <textarea
+                                    name="admin"
+                                    formControlName="message"
+                                    cols="10"
+                                    rows="5"
+                                ></textarea>
+                            </div>
+
+                            <div class="formGroup">
+                                <label for="rankSelect">Select Admin</label>
+                                <custom-select
+                                    placeholder="All"
+                                    [fc]="f('admin')"
+                                    [options]="adminOpts"
+                                >
+                                    <div
+                                        *ngFor="let option of adminOpts"
+                                        class="option"
+                                    >
+                                        {{ option?.txt }}
+                                    </div>
+                                </custom-select>
+                            </div>
+                            <div class="formGroup">
+                                <label for="rankSelect">Select Store</label>
+                                <custom-select
+                                    placeholder="All"
+                                    [fc]="f('location')"
+                                    [options]="storeOpts"
+                                >
+                                    <div
+                                        *ngFor="let option of storeOpts"
+                                        class="option"
+                                    >
+                                        {{ option?.txt }}
+                                    </div>
+                                </custom-select>
+                            </div>
+                        </app-custom-scroll>
+                    </div>
+                    <div class="btnCont">
+                        <button
+                            type="button"
+                            class="greyBtn"
+                            (click)="closeModal.next(true)"
+                        >
+                            Cancel
+                        </button>
+                        <submit-btn
+                            btnTxt="Send"
+                            clss="primBtn"
+                            [loading]="submitting"
+                            [disabled]="!form.valid"
+                        >
+                        </submit-btn>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </app-modal>
+</div>

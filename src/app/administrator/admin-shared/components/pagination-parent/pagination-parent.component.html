@@ -14,5 +14,18 @@
         </div>
         <span>of {{count}}</span>
     </div>
-    <div class="pagination"></div>
+    <div class="pagination">
+        <app-pagination  [limit]="limit" [counts]="count" [page]="page" (setPageEv)="onSetPage($event)" >
+            <a class="pagePrev" href="javascript:void(0)">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="pages" href="javascript:void(0)">
+                <span class="numText"></span>
+            </a>
+            <a class="pageNext" href="javascript:void(0)">
+                <i class="fa fa-angle-right"></i>
+
+            </a>
+        </app-pagination>
+    </div>
 </div>

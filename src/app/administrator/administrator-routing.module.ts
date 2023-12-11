@@ -8,17 +8,55 @@ import { StoresComponent } from './pages/stores/stores.component';
 import { CustomersComponent } from './pages/customers/customers.component';
 import { ProductSpecificationsComponent } from './pages/product-specifications/product-specifications.component';
 import { ProductsFormComponent } from './pages/products-form/products-form.component';
+import { OrderDetailsComponent } from './pages/order-details/order-details.component';
+import { ManageAdminComponent } from './pages/manage-admin/manage-admin.component';
+import { AdminDetailsComponent } from './pages/admin-details/admin-details.component';
+import { ProductDetailsComponent } from './pages/product-details/product-details.component';
+import { CouponComponent } from './pages/coupon/coupon.component';
+import { NotificationManagerComponent } from './pages/notification-manager/notification-manager.component';
+import { NotificationDetailsComponent } from './pages/notification-details/notification-details.component';
+import { UserNotificationsDetailsComponent } from './pages/user-notifications-details/user-notifications-details.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'orders', component: OrdersComponent },
+  {
+    path: 'orders',
+    children: [
+      { path: '', component: OrdersComponent },
+      { path: 'details/:id', component: OrderDetailsComponent },
+    ],
+  },
+  { path: 'notifications', component: NotificationManagerComponent },
+  {
+    path: 'notifications/admin',
+    children: [
+      { path: '', component: NotificationManagerComponent },
+      { path: 'details/:id', component: NotificationDetailsComponent },
+    ],
+  },
+  {
+    path: 'notifications/user',
+    children: [
+      { path: '', component: NotificationManagerComponent },
+      { path: 'details/:id', component: UserNotificationsDetailsComponent },
+    ],
+  },
+  // { path: 'order', component: OrderDetailsComponent },
   { path: 'stores', component: StoresComponent },
+  { path: 'sales-promotion', component: CouponComponent },
   { path: 'customers', component: CustomersComponent },
+  { path: 'manage-admins/:id', component: ManageAdminComponent },
+  { path: 'admin-details', component: AdminDetailsComponent },
   {
     path: 'products',
     children: [
-      { path: '', redirectTo: '/administrator/products/listing', pathMatch: 'full' },
+      {
+        path: '',
+        redirectTo: '/administrator/products/listing',
+        pathMatch: 'full',
+      },
       { path: 'listing', component: ProductsComponent },
+      { path: 'details/:id', component: ProductDetailsComponent },
       { path: 'add', component: ProductsFormComponent },
       { path: 'edit/:id', component: ProductsFormComponent },
     ],
