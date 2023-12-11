@@ -45,8 +45,15 @@
 }
 
 :root {
-    --primary-color: #f8253a;
-    --secondary-color: #16B05D;
+    --primary: #f8253a;
+    --secondary: #16b05d;
+    --activeBg: #ecfdf3;
+    --inactiveBg: #f2f4f7;
+    --pendingBg: #ffebed;
+    --shippedBg: #eaeeff;
+    --txtDark: #292931;
+    --txtLight: #a6a5b2;
+    --border: 1px solid #d6d9de;
     --view-height: 100vh;
 }
 
@@ -64,7 +71,7 @@ body {
 .formGroup {
     margin-bottom: 20px;
 
-    &>label {
+    & > label {
         margin-bottom: 10px;
         color: $txtLight;
 
@@ -142,7 +149,7 @@ textarea {
 .inputCont {
     position: relative;
 
-    &>*:not(input) {
+    & > *:not(input) {
         position: absolute;
         top: 50%;
         left: 20px;
@@ -207,7 +214,7 @@ button {
     }
     &.secBtn {
         background: $pendingBg !important;
-        color: #F8253A !important;
+        color: #f8253a !important;
         font-weight: 500;
     }
 
@@ -228,35 +235,59 @@ button {
 
 .cusDropdown {
     position: relative;
-
+    pointer-events: none;
     .clickable {
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        pointer-events: all;
     }
-
     .dropped {
-        position: absolute;
         top: 100%;
+        pointer-events: all;
         background: #fff;
         box-shadow: 0px 1px 8px 0px #00000026;
         border-radius: 8px;
         transform-origin: 50% 0;
         transform: scaleY(0);
-        padding: 9px 0;
         transition: 0.3s ease;
-
+        padding: 9px 0;
+        position: absolute;
+        width: max-content;
+        * {
+            pointer-events: all;
+        }
+        &.right {
+            right: 0;
+            left: unset;
+        }
+        &.top {
+            bottom: 100%;
+            top: unset;
+            transform-origin: 50% 100%;
+        }
         &.dropShow {
             transform: scaleY(1);
+            z-index: 20;
         }
-
         .dropItem {
-            display: flex;
-            align-items: center;
             cursor: pointer;
-            padding: 0 14px;
-
+            padding: 8px 14px;
+            line-height: 1;
+            pointer-events: all;
             &:hover {
                 background: #f7f7f7;
             }
+            // &:hover {
+            //     background: #0000000d;
+            // }
+        }
+        hr {
+            margin: 5px 0;
+        }
+        .dropHead {
+            padding: 8px 15px;
         }
     }
 }
@@ -289,13 +320,13 @@ button {
         }
     }
 
-    input+label {
+    input + label {
         display: flex;
         align-items: center;
         gap: 8px;
     }
 
-    input:checked+label {
+    input:checked + label {
         .checkbox {
             background-color: $primary;
             border-color: $primary;
@@ -315,25 +346,27 @@ button {
     gap: 6px;
     border-radius: 16px;
 
-    &.Active, &.Complete, &.Online {
+    &.Active,
+    &.Complete,
+    &.Online {
         width: auto;
         background-color: $activeBg;
-        color: #16B05D;
-        &>:first-child {
+        color: #16b05d;
+        & > :first-child {
             display: flex;
             width: 5px;
             height: 5px;
             border-radius: 100%;
-            background-color: #16B05D;
-            color: #16B05D;
+            background-color: #16b05d;
+            color: #16b05d;
         }
     }
-    
+
     &.Pending {
         width: auto;
         background-color: $pendingBg;
         color: $primary;
-        &>:first-child {
+        & > :first-child {
             display: flex;
             width: 5px;
             height: 5px;
@@ -346,7 +379,7 @@ button {
         width: auto;
         background-color: $shippedBg;
         color: #013399;
-        &>:first-child {
+        & > :first-child {
             display: flex;
             width: 5px;
             height: 5px;
@@ -356,11 +389,12 @@ button {
         }
     }
 
-    &.Inactive, &.Offline {
+    &.Inactive,
+    &.Offline {
         width: auto;
         background-color: $inactiveBg;
         color: #888888;
-        &>:first-child {
+        & > :first-child {
             display: flex;
             width: 5px;
             height: 5px;
@@ -373,7 +407,7 @@ button {
         width: auto;
         background-color: $inactiveBg;
         color: #888888;
-        &>:first-child {
+        & > :first-child {
             display: flex;
             width: 5px;
             height: 5px;
@@ -382,6 +416,4 @@ button {
             color: #888888;
         }
     }
-
-    
 }

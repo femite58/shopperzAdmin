@@ -6,8 +6,8 @@
 #bigMain {
     flex: 1 10px;
     width: 10px;
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
 }
 #pageHead {
     display: flex;
@@ -16,6 +16,10 @@
     height: 80px;
     border-bottom: $border;
     padding: 0 30px;
+    position: sticky;
+    top: 70px;
+    z-index: 200;
+    background-color: #fff;
     .leftSide {
         display: flex;
         align-items: center;
@@ -177,44 +181,11 @@ main {
                 }
             }
         }
-        #paginationPar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-            margin-bottom: 100px;
-            .perPage {
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                & > span {
-                    color: $txtLight;
-                }
-                .clickable {
-                    display: flex;
-                    align-items: center;
-                    gap: 6px;
-                    justify-content: center;
-                    padding: 10px 20px;
-                    border-radius: 0 0 6px 6px;
-                    border: $border;
-                    border-top-color: transparent;
-                }
-                .dropped {
-                    width: 100%;
-                    padding: 0;
-                    .dropItem {
-                        height: 26px;
-                        padding: 0 20px;
-                    }
-                }
-            }
-        }
     }
 }
 ::ng-deep .tabContainer {
     padding: 20px 30px 0 30px;
-    border-bottom: 1px solid #D6D9DE;
+    border-bottom: 1px solid #d6d9de;
     .tabHeader {
         display: flex;
         width: 100%;

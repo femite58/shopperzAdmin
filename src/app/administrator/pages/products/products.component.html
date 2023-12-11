@@ -121,7 +121,12 @@
                 </tbody>
             </table>
         </div>
-        <app-pagination-parent></app-pagination-parent>
+        <app-pagination-parent
+            [count]="count"
+            [limit]="limit"
+            [page]="page"
+            (setPage)="setPage($event)"
+        ></app-pagination-parent>
     </div>
 </layout>
 <div id="modals">

@@ -10,6 +10,7 @@ export class ProductsComponent implements OnInit {
   closeModal = new BehaviorSubject(false);
   count = 2;
   page = 1;
+  limit = 10;
   products = [
     {
       id: 1,
@@ -43,4 +44,8 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {}
 
   onClose() {}
+
+  setPage(page) {
+    this.page = page;
+  }
 }
