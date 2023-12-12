@@ -1,0 +1,20 @@
+<input type="file" hidden id="{{ idn }}" (change)="selectFile($event)" />
+<label for="{{ idn }}" class="fileUpload" [class.withImg]="fc?.value">
+    <div *ngIf="fc?.value" class="imgCont">
+        <img [src]="fc?.value | safeUrl" alt="image" />
+    </div>
+    <div class="noImg" [class.d-none]="fc.value">
+        <ng-content></ng-content>
+        <div class="nativeIconTxt" *ngIf="!withInnerHTML">
+            <svg-icons name="upload"></svg-icons>
+            <span>Browse Image</span>
+        </div>
+    </div>
+    <div
+        *ngIf="fc.value"
+        (click)="resetVal($event)"
+        class="delBtn"
+    >
+        <svg-icons name="delete"></svg-icons>
+    </div>
+</label>

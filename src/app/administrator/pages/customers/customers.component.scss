@@ -1,48 +1,48 @@
-#tableCont {
-    table {
-        th,
-        td {
-            &:first-child {
-                min-width: 44px;
-                max-width: 44px;
-            }
-            &:nth-child(2) {
-                flex: 0.5 100px;
-                width: 100px;
-                min-width: unset;
-            }
-            &:nth-child(3) {
-                flex: 0.5 100px;
-                width: 100px;
-                min-width: unset;
-            }
-            &:nth-child(4) {
-                max-width: 00px;
-                min-width: 100px;
-                flex: 1 100px;
-                width: 100px;
-            }
-            &:nth-child(5),
-            &:nth-child(6) {
-                max-width: 200px;
-                min-width: 150px;
-            }
-            &:nth-child(7),
-            &:nth-child(8) {
-                max-width: 130px;
-                min-width: 130px;
-            }
-            &:nth-child(9) {
-                max-width: 85px;
-                min-width: 85px;
-            }
-            &:nth-child(10) {
-                max-width: 46px;
-                min-width: 46px;
-            }
-        }
-    }
-}
+// #tableCont {
+//     table {
+//         th,
+//         td {
+//             &:first-child {
+//                 min-width: 44px;
+//                 max-width: 44px;
+//             }
+//             &:nth-child(2) {
+//                 flex: 0.5 100px;
+//                 width: 100px;
+//                 min-width: unset;
+//             }
+//             &:nth-child(3) {
+//                 flex: 0.5 100px;
+//                 width: 100px;
+//                 min-width: unset;
+//             }
+//             &:nth-child(4) {
+//                 max-width: 00px;
+//                 min-width: 100px;
+//                 flex: 1 100px;
+//                 width: 100px;
+//             }
+//             &:nth-child(5),
+//             &:nth-child(6) {
+//                 max-width: 200px;
+//                 min-width: 150px;
+//             }
+//             &:nth-child(7),
+//             &:nth-child(8) {
+//                 max-width: 130px;
+//                 min-width: 130px;
+//             }
+//             &:nth-child(9) {
+//                 max-width: 85px;
+//                 min-width: 85px;
+//             }
+//             &:nth-child(10) {
+//                 max-width: 46px;
+//                 min-width: 46px;
+//             }
+//         }
+//     }
+// }
 #tableCont {
     #topActions {
         ::ng-deep .cusDropdown {

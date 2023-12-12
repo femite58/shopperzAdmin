@@ -344,12 +344,11 @@ button {
     padding: 2px 10px 2px 6px;
     align-items: center;
     gap: 6px;
+    width: fit-content;
     border-radius: 16px;
-
     &.Active,
     &.Complete,
     &.Online {
-        width: auto;
         background-color: $activeBg;
         color: #16b05d;
         & > :first-child {
@@ -363,7 +362,6 @@ button {
     }
 
     &.Pending {
-        width: auto;
         background-color: $pendingBg;
         color: $primary;
         & > :first-child {
@@ -376,7 +374,6 @@ button {
         }
     }
     &.Shipped {
-        width: auto;
         background-color: $shippedBg;
         color: #013399;
         & > :first-child {
@@ -391,7 +388,6 @@ button {
 
     &.Inactive,
     &.Offline {
-        width: auto;
         background-color: $inactiveBg;
         color: #888888;
         & > :first-child {
@@ -404,7 +400,6 @@ button {
         }
     }
     &.Canceled {
-        width: auto;
         background-color: $inactiveBg;
         color: #888888;
         & > :first-child {

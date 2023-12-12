@@ -1,1 +1,7 @@
-<button class="{{ clss }}" [disabled]="disabled">{{ btnTxt }}</button>
+<div class="submitCont" [class.loading]="loading">
+    <button class="{{ clss }}" [disabled]="disabled">
+        <ng-container *ngIf="btnTxt">{{ btnTxt }}</ng-container>
+        <ng-content *ngIf="!btnTxt"></ng-content>
+    </button>
+    <app-loading-btn clss="{{ clss }}"></app-loading-btn>
+</div>

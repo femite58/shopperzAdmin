@@ -2,32 +2,9 @@
     table {
         th,
         td {
-            &:first-child {
-                min-width: 44px;
-                max-width: 44px;
-            }
             &:nth-child(2) {
-                flex: 0 100px;
-                width: 100px;
-                min-width: unset;
+                width: 60%;
             }
-            &:nth-child(3) {
-                flex: 2.5 100px;
-                width: 100px;
-                min-width: unset;
-            }
-            &:nth-child(4) {
-                max-width: 200px;
-                min-width: 100px;
-                flex: 2 100px;
-                width: 100px;
-            }
-            &:nth-child(5),
-            &:nth-child(6) {
-                max-width: 100px;
-                min-width: 60px;
-            }
-
         }
     }
 }

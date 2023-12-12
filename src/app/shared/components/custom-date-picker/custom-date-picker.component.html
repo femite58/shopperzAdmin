@@ -1,0 +1,95 @@
+<div class="cusDropdown {{ uid }} datePicker">
+    <div
+        appDropdown
+        innerClose="{{ uid || 'datePicker' }}"
+        [closeDropdown]="closeDropdwn"
+        (onDropChng)="view = 'day'"
+        class="clickable"
+    >
+        <ng-content></ng-content>
+    </div>
+    <div class="dropped">
+        <ng-content select=".dropHead"></ng-content>
+        <div class="calendarCont">
+            <div class="calendarHead">
+                <div class="ctrl" (click)="ctrl(-1)">
+                    <i class="fa fa-angle-left"></i>
+                </div>
+                <div class="calendarTitle">
+                    <ng-container *ngIf="view != 'year'">
+                        <div
+                            class="month"
+                            (click)="genMonths(); view = 'month'"
+                        >
+                            {{ viewDate | date : "MMMM" }}
+                        </div>
+                        <div class="year" (click)="genYears(); view = 'year'">
+                            {{ viewDate | date : "YYYY" }}
+                        </div>
+                    </ng-container>
+                    <div *ngIf="view == 'year'" class="year">
+                        {{ years[0] | date : "YYYY" }} -
+                        {{ years.slice(-1)[0] | date : "YYYY" }}
+                    </div>
+                </div>
+                <div class="ctrl" (click)="ctrl(1)">
+                    <i class="fa fa-angle-right"></i>
+                </div>
+            </div>
+            <ng-container *ngIf="view == 'day'">
+                <div class="weekDays">
+                    <div *ngFor="let w of weekDays" class="eachW">
+                        {{ w | date : "E" }}
+                    </div>
+                </div>
+                <div class="monthDays">
+                    <div
+                        *ngFor="let m of monthDays"
+                        class="eachD"
+                        [class.disable]="
+                            (m | date : 'MMM') != (viewDate | date : 'MMM')
+                        "
+                        [class.selected]="
+                            (m | date : 'd') == (selected | date : 'd') &&
+                            (m | date : 'MM') == (selected | date : 'MM') &&
+                            (m | date : 'YYYY') == (selected | date : 'YYYY')
+                        "
+                        (click)="setDay(m)"
+                    >
+                        <span
+                            *ngIf="
+                                (m | date : 'MMM') == (viewDate | date : 'MMM')
+                            "
+                            >{{ m | date : "d" }}</span
+                        >
+                    </div>
+                </div>
+            </ng-container>
+            <div *ngIf="view == 'month'" class="months">
+                <div
+                    class="eachM"
+                    *ngFor="let m of months"
+                    [class.selected]="
+                        (m | date : 'MMM') == (selected | date : 'MMM')
+                    "
+                    (click)="setDate(m)"
+                >
+                    {{ m | date : "MMM" }}
+                </div>
+            </div>
+            <div *ngIf="view == 'year'" class="years">
+                <div
+                    class="eachM"
+                    *ngFor="let m of years"
+                    [class.selected]="
+                        (m | date : 'YYYY') == (selected | date : 'YYYY')
+                    "
+                    (click)="setDate(m)"
+                >
+                    {{ m | date : "YYYY" }}
+                </div>
+            </div>
+            <div class="greyBtn" (click)="setCurrent()">Current date</div>
+        </div>
+    </div>
+</div>

@@ -67,6 +67,17 @@ main {
                 display: flex;
                 gap: 12px;
             }
+
+            ::ng-deep .cusDropdown {
+                .customInput {
+                    .value {
+                        &::before {
+                            content: "Status:";
+                        }
+                        margin-right: 20px;
+                    }
+                }
+            }
         }
         table {
             width: 100%;
@@ -76,28 +87,28 @@ main {
             td {
                 border-bottom: 1px solid #eaecf0;
                 white-space: nowrap;
-                display: flex;
+                // display: flex;
                 align-items: center;
-                min-width: 90px;
+                // min-width: 90px;
                 padding: 12px 12px;
+                &:first-child {
+                    width: 50px;
+                }
             }
             .check {
-                input {
-                    display: none;
-                }
-                input + label {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border: $border;
-                    border-radius: 6px;
-                    width: 20px;
-                    height: 20px;
-                    cursor: pointer;
-                }
-                input:checked + label {
-                    border-color: $primary;
-                    background: $primary;
+                .eachCheck {
+                    margin: 0;
+                    label {
+                        gap: 0 !important;
+                        .cusCheck {
+                            width: 20px;
+                            height: 20px;
+                            svg {
+                                width: 12px;
+                                height: auto;
+                            }
+                        }
+                    }
                 }
             }
             thead {
@@ -105,7 +116,7 @@ main {
                 color: $txtLight;
                 font-weight: 500;
                 font-size: 12px;
-                display: flex;
+                // display: flex;
                 th {
                     white-space: nowrap;
                     text-transform: uppercase;
@@ -113,7 +124,7 @@ main {
             }
             tbody {
                 tr {
-                    display: flex;
+                    // display: flex;
                     width: 100%;
                     &:hover {
                         background: #f9f9f9;
@@ -126,8 +137,8 @@ main {
                             align-items: center;
                             gap: 12px;
                             span {
-                                flex: 1 5px;
-                                width: 5px;
+                                // flex: 1 5px;
+                                // width: 5px;
                             }
                         }
                         .ratingFlash {
@@ -143,44 +154,23 @@ main {
                                 visibility: hidden;
                             }
                         }
-                        .action {
-                            position: relative;
-                            &.shown {
-                                z-index: 20;
-                            }
-                            .clickable {
-                                cursor: pointer;
-                            }
-                            .dropped {
-                                position: absolute;
-                                right: 0;
-                                width: 100px;
-                                box-shadow: 0px 1px 8px 0px #00000026;
-                                border-radius: 8px;
-                                background: #fff;
-                                transform-origin: 50% 0;
-                                transform: scaleY(0);
-                                padding: 9px 0;
-                                transition: 0.3s ease;
-                                &.dropShow {
-                                    transform: scaleY(1);
-                                }
-                                .dropItem {
-                                    height: 26px;
-                                    display: flex;
-                                    align-items: center;
-                                    cursor: pointer;
-                                    padding: 0 14px;
-                                    &:hover {
-                                        background: #f7f7f7;
-                                    }
-                                }
-                            }
-                        }
                     }
                 }
             }
         }
+    }
+}
+::ng-deep .tableDataDropdwn {
+    width: fit-content;
+    margin-left: auto;
+    .clickable {
+        justify-content: flex-end;
+        width: fit-content;
+        padding: 0 5px;
+    }
+    .dropped {
+        right: 10px !important;
+        min-width: 99px;
     }
 }
 ::ng-deep .tabContainer {
