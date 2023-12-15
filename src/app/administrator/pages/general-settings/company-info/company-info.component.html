@@ -1,1 +1,84 @@
-<p>company-info works!</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="gridCont">
+        <div class="formGroup">
+            <label class="req" for="">Company Name</label>
+            <input type="text" formControlName="name" />
+        </div>
+        <div class="formGroup">
+            <label class="req" for="">Company Owner</label>
+            <input type="text" formControlName="owner" />
+        </div>
+        <div class="formGroup">
+            <label class="req" for="">Company Email</label>
+            <input
+                type="text"
+                [class.error]="f('email').touched && f('email').errors?.email"
+                formControlName="email"
+            />
+            <div
+                *ngIf="f('email').touched && f('email').errors?.email"
+                class="errDisp"
+            >
+                *Enter a valid email
+            </div>
+        </div>
+        <div class="formGroup">
+            <label class="req" for="">Company Phone</label>
+            <input type="text" formControlName="phone" />
+        </div>
+    </div>
+    <div class="formGroup">
+        <label class="req" for="">Company Address</label>
+        <textarea formControlName="address" rows="5"></textarea>
+    </div>
+    <div class="gridCont">
+        <div class="formGroup">
+            <div class="inputGroup">
+                <div class="iconCont">
+                    <i class="fa fa-facebook"></i>
+                </div>
+                <input type="text" formControlName="facebook_url" />
+            </div>
+        </div>
+        <div class="formGroup">
+            <div class="inputGroup">
+                <div class="iconCont">
+                    <i class="fa fa-twitter"></i>
+                </div>
+                <input type="text" formControlName="twitter_url" />
+            </div>
+        </div>
+        <div class="formGroup">
+            <div class="inputGroup">
+                <div class="iconCont">
+                    <i class="fa fa-instagram"></i>
+                </div>
+                <input type="text" formControlName="instagram_url" />
+            </div>
+        </div>
+        <div class="formGroup">
+            <div class="inputGroup">
+                <div class="iconCont">
+                    <i class="fa fa-linkedin"></i>
+                </div>
+                <input type="text" formControlName="linkedin_url" />
+            </div>
+        </div>
+    </div>
+    <div class="formGroup">
+        <label for="">Company Terms & Condition</label>
+        <textarea formControlName="terms_and_condition" rows="10"></textarea>
+    </div>
+    <div class="formGroup">
+        <label for="">Company Privacy Policy</label>
+        <textarea formControlName="privacy_policy" rows="10"></textarea>
+    </div>
+    <div class="btnCont">
+        <button type="button" class="greyBtn">Cancel</button>
+        <submit-btn
+            btnTxt="Update"
+            [loading]="submitting"
+            [disabled]="form.invalid"
+        ></submit-btn>
+    </div>
+</form>
