@@ -4,7 +4,10 @@
             <img src="assets/images/logo_big.svg" alt="Logo" />
         </a>
         <div class="scrollable">
-            <app-custom-scroll>
+            <app-custom-scroll
+                [scrlListner]="scrlListner"
+                (scrollEv)="onScroll($event)"
+            >
                 <div class="eachMenuCat">
                     <div class="menuTitle">MAIN MENU</div>
                     <a
@@ -139,7 +142,6 @@
                         routerLink="/administrator/general-settings"
                         routerLinkActive="active"
                         class="eachMenu"
-                        [routerLinkActiveOptions]="{ exact: true }"
                     >
                         <div class="iconCont">
                             <svg-icons name="settings"></svg-icons>

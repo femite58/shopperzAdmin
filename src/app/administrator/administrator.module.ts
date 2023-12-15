@@ -20,6 +20,11 @@ import { CouponComponent } from './pages/coupon/coupon.component';
 import { NotificationManagerComponent } from './pages/notification-manager/notification-manager.component';
 import { NotificationDetailsComponent } from './pages/notification-details/notification-details.component';
 import { UserNotificationsDetailsComponent } from './pages/user-notifications-details/user-notifications-details.component';
+import { GeneralSettingsComponent } from './pages/general-settings/general-settings.component';
+import { CompanyInfoComponent } from './pages/general-settings/company-info/company-info.component';
+import { CustomizationComponent } from './pages/general-settings/customization/customization.component';
+import { AppSettingsComponent } from './pages/general-settings/app-settings/app-settings.component';
+import { BannersComponent } from './pages/general-settings/banners/banners.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +44,11 @@ import { UserNotificationsDetailsComponent } from './pages/user-notifications-de
     NotificationManagerComponent,
     NotificationDetailsComponent,
     UserNotificationsDetailsComponent,
+    GeneralSettingsComponent,
+    CompanyInfoComponent,
+    CustomizationComponent,
+    AppSettingsComponent,
+    BannersComponent,
   ],
   imports: [CommonModule, AdminSharedModule, AdministratorRoutingModule, SharedModule],
 })

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewControllerService } from './data/services/view-controller.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'Shopperz';
 
+  constructor(private viewCS: ViewControllerService) {}
+
   ngOnInit(): void {
+    this.viewCS.getScrlTop();
     document.documentElement.style.setProperty(
       '--scrollBW',
       `${window.innerWidth - document.body.clientWidth}px`

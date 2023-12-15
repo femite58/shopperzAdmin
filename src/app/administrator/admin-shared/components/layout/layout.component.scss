@@ -247,3 +247,36 @@ main {
 //     line-height: 1.5;
 //     color: #333;
 //   }
+:host ::ng-deep #tabCont {
+    display: flex;
+    height: 58px;
+    border-bottom: var(--border);
+    padding: 0 30px;
+    align-items: flex-end;
+    position: sticky;
+    top: 150px;
+    background: #fff;
+    z-index: 200;
+    .eachTab {
+        display: flex;
+        align-items: center;
+        height: 38px;
+        cursor: pointer;
+        color: var(--txtLight);
+        font-weight: 600;
+        font-size: 15px;
+        padding: 0 20px;
+        position: relative;
+        &.activeTab {
+            color: var(--primary);
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                border-bottom: 2px solid var(--primary);
+            }
+        }
+    }
+}

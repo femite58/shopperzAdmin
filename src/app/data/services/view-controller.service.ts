@@ -2,10 +2,20 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-    providedIn: 'root',
+  providedIn: 'root',
 })
 export class ViewControllerService {
-    loading = new BehaviorSubject(false);
+  loading = new BehaviorSubject(false);
+  scrlTop = 0;
 
-    constructor() {}
+  constructor() {}
+
+  getScrlTop() {
+    this.scrlTop = +localStorage.getItem('sideBarScrlTop');
+  }
+
+  setScrlTop(top) {
+    this.scrlTop = top;
+    localStorage.setItem('sideBarScrlTop', top.toString());
+  }
 }

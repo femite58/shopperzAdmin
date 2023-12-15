@@ -2,7 +2,10 @@ import {
     AfterViewInit,
     Component,
     ElementRef,
+    EventEmitter,
+    Input,
     OnDestroy,
+    Output,
     ViewChild,
 } from '@angular/core';
 
@@ -14,6 +17,7 @@ import {
 export class CustomScrollComponent implements AfterViewInit, OnDestroy {
     @ViewChild('scrollCont') scrollPar: ElementRef;
     scrollCont: HTMLElement;
+    @Output() scrollEv = new EventEmitter();
     scrollThumb: HTMLElement;
     scrlH = 0;
     viewH = 0;
@@ -26,6 +30,8 @@ export class CustomScrollComponent implements AfterViewInit, OnDestroy {
     bcTop = 0;
     constTop = 0;
     dragging = false;
+    @Input() scrlListner;
+    lisSub;
 
     initScrlH;
 
@@ -40,6 +46,7 @@ export class CustomScrollComponent implements AfterViewInit, OnDestroy {
 
     ngOnDestroy(): void {
         window.removeEventListener('resize', this.initiateVar);
+        this.lisSub?.unsubscribe();
     }
 
     ngAfterViewInit(): void {
@@ -56,6 +63,12 @@ export class CustomScrollComponent implements AfterViewInit, OnDestroy {
             this.initiateVar();
         }, 50);
         window.addEventListener('resize', this.initiateVar);
+        if (this.scrlListner) {
+            this.lisSub = this.scrlListner.subscribe((top) => {
+                this.scrollCont.scrollTop = top;
+                this.setTop();
+            });
+        }
     }
 
     initiateVar = () => {
@@ -73,6 +86,7 @@ export class CustomScrollComponent implements AfterViewInit, OnDestroy {
     setTop() {
         this.top = (this.scrollCont.scrollTop * this.maxTop) / this.maxScrl;
         this.scrollThumb.style.top = `${this.top}px`;
+        this.scrollEv.emit(this.scrollCont.scrollTop);
     }
 
     dragStart(e) {

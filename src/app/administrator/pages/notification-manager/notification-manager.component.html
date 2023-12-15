@@ -17,26 +17,24 @@
             <span>Create New</span>
         </button>
     </div>
+    <div id="tabCont">
+        <div
+            class="eachTab"
+            [class.activeTab]="selectedTab === 1"
+            (click)="selectTab(1)"
+        >
+            Admin Notification
+        </div>
+        <div
+            class="eachTab"
+            [class.activeTab]="selectedTab === 2"
+            (click)="selectTab(2)"
+        >
+            User Notification
+        </div>
+    </div>
     <div class="notificationsCont">
         <app-custom-scroll>
-            <div class="tabContainer">
-                <div class="tabHeader">
-                    <div
-                        class="tab pointer"
-                        [class.active]="selectedTab === 1"
-                        (click)="selectTab(1)"
-                    >
-                        Admin Notification
-                    </div>
-                    <div
-                        class="tab pointer"
-                        [class.active]="selectedTab === 2"
-                        (click)="selectTab(2)"
-                    >
-                        User Notification
-                    </div>
-                </div>
-            </div>
             <div class="tabContent">
                 <div *ngIf="selectedTab == 1">
                     <div
