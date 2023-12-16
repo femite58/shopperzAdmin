@@ -50,8 +50,8 @@ const routes: Routes = [
   { path: 'stores', component: StoresComponent },
   { path: 'sales-promotion', component: CouponComponent },
   { path: 'customers', component: CustomersComponent },
-  { path: 'manage-admins/:id', component: ManageAdminComponent },
-  { path: 'admin-details', component: AdminDetailsComponent },
+  { path: 'manage-admins', component: ManageAdminComponent },
+  { path: 'manage-admins/details/:id', component: AdminDetailsComponent },
   {
     path: 'products',
     children: [
