@@ -25,6 +25,7 @@ import { CompanyInfoComponent } from './pages/general-settings/company-info/comp
 import { CustomizationComponent } from './pages/general-settings/customization/customization.component';
 import { AppSettingsComponent } from './pages/general-settings/app-settings/app-settings.component';
 import { BannersComponent } from './pages/general-settings/banners/banners.component';
+import { ImageUploadComponent } from './pages/general-settings/image-upload/image-upload.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { BannersComponent } from './pages/general-settings/banners/banners.compo
     CustomizationComponent,
     AppSettingsComponent,
     BannersComponent,
+    ImageUploadComponent,
   ],
   imports: [CommonModule, AdminSharedModule, AdministratorRoutingModule, SharedModule],
 })

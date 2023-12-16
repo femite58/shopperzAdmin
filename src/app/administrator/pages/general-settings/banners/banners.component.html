@@ -1,1 +1,35 @@
-<p>banners works!</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="eachField">
+        <div class="txtDesc">
+            <div class="fieldTitle">App Dashboard Banners</div>
+            <div class="fieldDesc">
+                Try upload banners you want your app users to see on their
+                dashboards, according to the specified size requirements.
+            </div>
+        </div>
+        <div class="fieldCont">
+            <div
+                *ngFor="let b of banners.controls; let i = index"
+                class="formGroup"
+            >
+                <label for="">Banner{{ i + 1 }}</label>
+                <app-image-upload
+                    [fc]="b"
+                    sizeDesc="Image size: 325px X 95px."
+                    uid="banner{{ i }}"
+                ></app-image-upload>
+            </div>
+            <div (click)="addMore()" class="pointer addMore d-flex gap1 align-items-center mt15">
+                <svg-icons name="plus"></svg-icons>
+                <span>Add more</span>
+            </div>
+            <div class="btnCont mt35">
+                <submit-btn
+                    btnTxt="Update"
+                    [loading]="submitting"
+                    [disabled]="form.invalid"
+                ></submit-btn>
+            </div>
+        </div>
+    </div>
+</form>

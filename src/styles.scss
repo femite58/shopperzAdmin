@@ -74,6 +74,7 @@ body {
     & > label {
         margin-bottom: 10px;
         color: $txtLight;
+        display: block;
 
         &.req {
             &::after {
@@ -108,12 +109,33 @@ body {
 }
 
 @for $i from 1 through 100 {
+    .fs#{$i} {
+        font-size: #{$i}px;
+    }
     .mb#{$i} {
         margin-bottom: #{$i}px;
+    }
+    .mt#{$i} {
+        margin-top: #{$i}px;
+    }
+    .ml#{$i} {
+        margin-left: #{$i}px;
+    }
+    .mr#{$i} {
+        margin-right: #{$i}px;
     }
 
     .pb#{$i} {
         padding-bottom: #{$i}px;
+    }
+    .pt#{$i} {
+        padding-top: #{$i}px;
+    }
+    .pl#{$i} {
+        padding-left: #{$i}px;
+    }
+    .pr#{$i} {
+        padding-right: #{$i}px;
     }
 }
 
@@ -193,7 +215,12 @@ a {
     cursor: pointer;
 }
 
-button {
+.primBtn,
+.secBtn,
+.greyBtn,
+.greyBtnOutline,
+.primBtnOutline,
+.secBtnOutline {
     height: 40px;
     border-radius: 8px;
     display: flex;
