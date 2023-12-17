@@ -28,6 +28,7 @@ export class ManageAdminComponent {
     phone: new FormControl('', Validators.required),
     rank: new FormControl('', Validators.required),
   });
+  
   f(n) {
     return this.form.get(n);
   }
