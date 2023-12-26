@@ -16,6 +16,9 @@ import { CouponComponent } from './pages/coupon/coupon.component';
 import { NotificationManagerComponent } from './pages/notification-manager/notification-manager.component';
 import { NotificationDetailsComponent } from './pages/notification-details/notification-details.component';
 import { UserNotificationsDetailsComponent } from './pages/user-notifications-details/user-notifications-details.component';
+import { SalesPromoComponent } from './pages/sales-promo/sales-promo.component';
+import { AccSettingsComponent } from './pages/acc-settings/acc-settings.component';
+import { GenSettingsComponent } from './pages/gen-settings/gen-settings.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -24,6 +27,13 @@ const routes: Routes = [
     children: [
       { path: '', component: OrdersComponent },
       { path: 'details/:id', component: OrderDetailsComponent },
+    ],
+  },
+  {
+    path: 'admin',
+    children: [
+      { path: '', component: ManageAdminComponent },
+      { path: 'details/:id', component: AdminDetailsComponent },
     ],
   },
   { path: 'notifications', component: NotificationManagerComponent },
@@ -43,10 +53,10 @@ const routes: Routes = [
   },
   // { path: 'order', component: OrderDetailsComponent },
   { path: 'stores', component: StoresComponent },
-  { path: 'sales-promotion', component: CouponComponent },
+  { path: 'sales-promotion', component: SalesPromoComponent },
   { path: 'customers', component: CustomersComponent },
-  { path: 'manage-admins/:id', component: ManageAdminComponent },
-  { path: 'admin-details', component: AdminDetailsComponent },
+  // { path: 'manage-admins', component: ManageAdminComponent },
+  // { path: 'admin-details', component: AdminDetailsComponent },
   {
     path: 'products',
     children: [
@@ -65,6 +75,13 @@ const routes: Routes = [
   {
     path: 'product-categories',
     component: CategoriesComponent,
+  },
+  {
+    path: 'settings',
+    children: [
+      { path: 'account', component: AccSettingsComponent },
+      { path: 'general', component: GenSettingsComponent },
+    ],
   },
 ];
 
