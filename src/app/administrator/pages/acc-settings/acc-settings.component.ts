@@ -13,12 +13,18 @@ export class AccSettingsComponent {
     { txt: 'Manager', value: 'Manager' },
     { txt: 'Manager', value: 'Manager' },
   ];
+  passForm = new FormGroup({
+    curpass: new FormControl('', Validators.required),
+    newpass: new FormControl('', Validators.required),
+    confnewpass: new FormControl('', Validators.required),
+    
+  });
   form = new FormGroup({
-    name: new FormControl('', Validators.required),
+    fname: new FormControl('', Validators.required),
+    lname: new FormControl('', Validators.required),
     email: new FormControl('', Validators.required),
     phone: new FormControl('', Validators.required),
-    role: new FormControl('', Validators.required),
-    store: new FormControl('', Validators.required),
+    
   });
   selectTab(tabNumber: number) {
     this.selectedTab = tabNumber;

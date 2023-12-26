@@ -145,5 +145,67 @@
                 </div>
             </div>
         </div>
+        <div *ngIf="selectedTab == 2" [class.active]="selectedTab == 2">
+            <div class="editPass">
+                <strong>Change Password</strong>
+                <p>Secure your account with your preferred password</p>
+                <form [formGroup]="passForm" (ngSubmit)="submit()">
+                    <div class="formBody">
+                        <div class="edit">
+                            <div class="left">
+                                <div class="formGroup">
+                                    <label for="curpas" class="req"
+                                        >Current Password</label
+                                    >
+                                    <input
+                                        type="text"
+                                        formControlName="password"
+                                    />
+                                </div>
+
+                                <div class="formGroup">
+                                    <label for="newpas" class="req"
+                                        >New Password</label
+                                    >
+                                    <input
+                                        type="password"
+                                        formControlName="newpas"
+                                    />
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="formGroup">
+                                    <label for="confnewpass" class="req"
+                                        >Confirm New Password</label
+                                    >
+                                    <input
+                                        type="password"
+                                        formControlName="confnewpass"
+                                    />
+                                </div>
+                                
+                               
+                            </div>
+                            
+                        </div>
+                       
+                        <div class="actions">
+                            <button
+                                class="greyBtn"
+                                [disabled]="form.valid"
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                class="primBtn"
+                                [disabled]="!form.valid"
+                            >
+                                Update
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </layout>
