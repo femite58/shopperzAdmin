@@ -1,0 +1,55 @@
+form {
+    max-width: 659px;
+}
+.eachField {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    .txtDesc {
+        flex: 1 200px;
+        width: 200px;
+        max-width: 247px;
+        .fieldTitle {
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .fieldDesc {
+            color: var(--txtLight);
+        }
+    }
+    .fieldCont {
+        flex: 1 300px;
+        width: 300px;
+    }
+    .colorCont {
+        display: flex;
+        gap: 30px;
+        .eachColor {
+            width: 106px;
+            input {
+                overflow: hidden;
+                &:first-child {
+                    border-radius: 6px 6px 0 0;
+                    padding: 0;
+                    border: none;
+                    height: 100px;
+                }
+                &:nth-child(2) {
+                    height: 31px;
+                    text-align: center;
+                    color: var(--txtLight);
+                    border-radius: 0 0 6px 6px;
+                    border: var(--border);
+                    border-top: none;
+                }
+            }
+        }
+    }
+}
+.btnCont {
+    ::ng-deep button {
+        width: 135px !important;
+    }
+}

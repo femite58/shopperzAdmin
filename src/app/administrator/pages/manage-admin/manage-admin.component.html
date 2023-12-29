@@ -1,9 +1,5 @@
-<layout  pageTitle="Manage Admin">
+<layout pageTitle="Manage Admin">
     <div id="headBtnCont">
-        <button class="greyOutlineBtn">
-            <svg-icons name="upload"></svg-icons>
-            <span>Export</span>
-        </button>
         <button class="primBtn" [openModal]="addCustomerModal">
             <svg-icons name="plus"></svg-icons>
             <span>Add New</span>
@@ -80,7 +76,11 @@
                             </div>
                         </td>
                         <td>
-                            <a routerLink="/administrator/admin/details/{{ man_data.id }}">
+                            <a
+                                routerLink="/administrator/manage-admins/details/{{
+                                    man_data.id
+                                }}"
+                            >
                                 <svg-icons name="edit"></svg-icons>
                             </a>
                         </td>

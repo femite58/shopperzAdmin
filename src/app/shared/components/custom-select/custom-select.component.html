@@ -1,7 +1,14 @@
-<div class="cusDropdown" #customSelect (click)="dropClick($event)" [class.cusReadonly]="readonly">
+<div
+    class="cusDropdown customSelect {{ uniqueId }} {{ innerClose }}"
+    id="{{ uniqueId }}"
+    #customSelect
+    [class.cusReadonly]="readonly"
+>
     <div
         class="clickable inputCont"
         appDropdown
+        [innerClose]="innerClose"
+        [closeDropdown]="closeDropdwn"
         (onDropChng)="onDropChng.emit($event)"
     >
         <ng-content select=".preIcon"></ng-content>
@@ -20,7 +27,7 @@
         </div>
         <i class="fa fa-caret-down"></i>
     </div>
-    <div class="dropped vScrlB">
+    <div class="dropped vScrlB" (click)="dropClick($event)">
         <ng-content></ng-content>
     </div>
 </div>

@@ -31,10 +31,7 @@
             <table>
                 <thead>
                     <th class="check">
-                        <input type="checkbox" id="all" />
-                        <label for="all">
-                            <svg-icons name="check"></svg-icons>
-                        </label>
+                        <cus-checkbox idn="all"></cus-checkbox>
                     </th>
                     <th>Product</th>
                     <th>STORES</th>
@@ -49,10 +46,7 @@
                 <tbody>
                     <tr *ngFor="let prod of products">
                         <td class="check">
-                            <input type="checkbox" id="check{{ prod?.id }}" />
-                            <label for="check{{ prod?.id }}">
-                                <svg-icons name="check"></svg-icons>
-                            </label>
+                            <cus-checkbox></cus-checkbox>
                         </td>
                         <td>
                             <div class="withImg">
@@ -82,8 +76,8 @@
                         </td>
                         <td>{{ prod?.qty }}</td>
                         <td>{{ prod?.available_qty }}</td>
-                        <td>{{ prod?.selling_price | number }}</td>
-                        <td>{{ prod?.discount_price | number }}</td>
+                        <td>₦{{ prod?.selling_price | number }}</td>
+                        <td>₦{{ prod?.discount_price | number }}</td>
                         <td>
                             <div class="ratingFlash">
                                 <div class="rating">
@@ -107,7 +101,7 @@
                             </div>
                         </td>
                         <td>
-                            <div class="action">
+                            <div class="cusDropdown tableDataDropdwn">
                                 <div appDropdown class="clickable">
                                     <svg-icons name="vEllipsis"></svg-icons>
                                 </div>
@@ -121,7 +115,12 @@
                 </tbody>
             </table>
         </div>
-        <app-pagination-parent></app-pagination-parent>
+        <app-pagination-parent
+            [count]="count"
+            [limit]="limit"
+            [page]="page"
+            (setPage)="setPage($event)"
+        ></app-pagination-parent>
     </div>
 </layout>
 <div id="modals">

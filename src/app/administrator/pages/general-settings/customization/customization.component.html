@@ -1,0 +1,77 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="eachField">
+        <div class="txtDesc">
+            <div class="fieldTitle">Set brand color</div>
+            <div class="fieldDesc">
+                You can set your company’s primary and secondary brand color.
+            </div>
+        </div>
+        <div class="fieldCont">
+            <div class="colorCont">
+                <div class="eachColor">
+                    <input
+                        type="color"
+                        formControlName="primary_color"
+                        [value]="f('primary_color').value"
+                    />
+                    <input
+                        type="text"
+                        formControlName="primary_color"
+                        [value]="f('primary_color').value"
+                    />
+                </div>
+                <div class="eachColor">
+                    <input
+                        type="color"
+                        formControlName="secondary_color"
+                        [value]="f('secondary_color').value"
+                    />
+                    <input
+                        type="text"
+                        formControlName="secondary_color"
+                        [value]="f('secondary_color').value"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="eachField">
+        <div class="txtDesc">
+            <div class="fieldTitle">Brand Logo</div>
+            <div class="fieldDesc">
+                You can set your company’s logo here, and logo should be in svg
+                format.
+            </div>
+        </div>
+        <div class="fieldCont">
+            <app-image-upload
+                sizeDesc="Logo size: 138 X 31px."
+                [fc]="f('logo')"
+                uid="brandLogo"
+            ></app-image-upload>
+        </div>
+    </div>
+    <div class="eachField">
+        <div class="txtDesc">
+            <div class="fieldTitle">Fav Icon</div>
+            <div class="fieldDesc">
+                You can set your company’s logo here, and logo should be in svg
+                format.
+            </div>
+        </div>
+        <div class="fieldCont">
+            <app-image-upload
+                sizeDesc="Fav icon size: 48 X 48px."
+                [fc]="f('favicon')"
+                uid="favicon"
+            ></app-image-upload>
+            <div class="btnCont mt35">
+                <submit-btn
+                    btnTxt="Update"
+                    [loading]="submitting"
+                    [disabled]="form.invalid"
+                ></submit-btn>
+            </div>
+        </div>
+    </div>
+</form>

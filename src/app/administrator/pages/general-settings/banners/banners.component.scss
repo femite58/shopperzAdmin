@@ -1,0 +1,29 @@
+@import "../customization/customization.component.scss";
+form {
+    max-width: 722px;
+    ::ng-deep .imageUpload {
+        .imgCont {
+            width: 325px !important;
+            height: 95px !important;
+        }
+    }
+}
+.formGroup {
+    margin-bottom: 15px;
+}
+.eachField {
+    gap: 60px;
+}
+.addMore {
+    text-decoration: underline;
+    ::ng-deep svg {
+        width: 20px;
+        height: auto;
+        *[stroke]:not([stroke="none"]) {
+            stroke: var(--txtDark);
+        }
+        *[fill]:not([fill="none"]) {
+            fill: var(--txtDark);
+        }
+    }
+}

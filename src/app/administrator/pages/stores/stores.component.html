@@ -82,7 +82,7 @@
                             </div>
                         </td>
                         <td>
-                            <div class="action">
+                            <div class="cusDropdown tableDataDropdwn">
                                 <div appDropdown class="clickable">
                                     <svg-icons name="vEllipsis"></svg-icons>
                                 </div>
@@ -91,7 +91,11 @@
                                         class="dropItem"
                                         (click)="confirmModOpen(str)"
                                     >
-                                    {{ str.status === 'Active' ? 'Deactivate' : 'Activate' }}
+                                        {{
+                                            str.status === "Active"
+                                                ? "Deactivate"
+                                                : "Activate"
+                                        }}
                                     </div>
                                 </div>
                             </div>
@@ -192,5 +196,4 @@
             </div>
         </div>
     </app-modal>
-    
 </div>

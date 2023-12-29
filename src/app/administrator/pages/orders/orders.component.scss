@@ -1,7 +1,12 @@
 #tableCont {
     table {
+        thead,
+        tr {
+            display: flex;
+        }
         th,
         td {
+            display: flex;
             &:first-child {
                 min-width: 44px;
                 max-width: 44px;
@@ -116,7 +121,7 @@
         table {
             thead {
                 background-color: #fff;
-                border-bottom: 1 px solid #d6d9de;
+                border-bottom: 1px solid #d6d9de;
             }
             .summary {
                 td {
@@ -178,17 +183,17 @@
     }
 }
 
-#tableCont {
-    #topActions {
-        ::ng-deep .cusDropdown {
-            .customInput {
-                .value {
-                    &::before {
-                        content: "Status:";
-                    }
-                    margin-right: 20px;
-                }
-            }
-        }
-    }
-}
+// #tableCont {
+//     #topActions {
+//         ::ng-deep .cusDropdown {
+//             .customInput {
+//                 .value {
+//                     &::before {
+//                         content: "Status:";
+//                     }
+//                     margin-right: 20px;
+//                 }
+//             }
+//         }
+//     }
+// }

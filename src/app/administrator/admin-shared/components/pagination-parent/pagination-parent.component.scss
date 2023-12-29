@@ -1,5 +1,17 @@
 #paginationPar {
-    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 30px 0 20px;
+    .perPage {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        & > span {
+            color: var(--txtLight);
+        }
+    }
     .pagination {
         ::ng-deep .pagination {
             margin: 0;
@@ -14,6 +26,26 @@
                 border-radius: 4px;
             }
 
+        }
+    }
+}
+.perPageDropdown {
+    .clickable {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        justify-content: center;
+        padding: 10px 20px;
+        border-radius: 0 0 6px 6px;
+        border: var(--border);
+        border-top-color: transparent;
+    }
+    .dropped {
+        width: 100%;
+        padding: 0;
+        .dropItem {
+            height: 26px;
+            padding: 0 20px;
         }
     }
 }

@@ -1,4 +1,4 @@
-<layout pageTitle="Category" >
+<layout pageTitle="Category">
     <div id="headBtnCont">
         <button class="primBtn" [openModal]="addCatModal">
             <svg-icons name="plus"></svg-icons>
@@ -11,14 +11,12 @@
                 <input type="text" placeholder="Search categories..." />
                 <svg-icons name="search"></svg-icons>
             </div>
-            
         </div>
         <div class="table-responsive">
             <table class="table-responsive">
                 <thead>
                     <th>ID</th>
-                    <th></th>
-                    <th>Company Name</th>
+                    <th>Category Name</th>
                     <th>Sub-Categories</th>
                     <th>Date Created</th>
                     <th></th>
@@ -26,32 +24,22 @@
                 <tbody>
                     <tr *ngFor="let cat of categories">
                         <td>
-                            <div class="ellipsis">
-                                {{ cat.id }}
+                            {{ cat.id }}
+                        </td>
+                        <td>
+                            <div class="withImg">
+                                <img [src]="cat.img_url" alt="product_img" />
+                                <span>{{ cat?.name }}</span>
                             </div>
                         </td>
                         <td>
-                            <div class="ellipsis">
-                                <img [src]="cat.img_url" alt="product_img">
-                            </div>
+                            {{ cat.sub_cat }}
                         </td>
                         <td>
-                            <div class="ellipsis">
-                                {{ cat.name }}
-                            </div>
+                            {{ cat.date_created | date : "dd/mm/yyyy" }}
                         </td>
                         <td>
-                            <div class="ellipsis">
-                                {{ cat.sub_cat }}
-                            </div>
-                        </td>
-                        <td>
-                            <div class="ellipsis">
-                                {{ cat.date_created | date: 'dd/mm/yyyy' }}
-                            </div>
-                        </td>
-                        <td>
-                            <div class="action">
+                            <div class="cusDropdown tableDataDropdwn">
                                 <div appDropdown class="clickable">
                                     <svg-icons name="vEllipsis"></svg-icons>
                                 </div>
@@ -67,13 +55,9 @@
     </div>
 </layout>
 <div id="modals">
-    <app-modal
-        #addCatModal
-        [closeModal]="closeModal"
-        (onClose)="onClose()"
-    >
+    <app-modal #addCatModal [closeModal]="closeModal" (onClose)="onClose()">
         <div class="modalContent">
-            <div class="modalHead question">
+            <div class="modalHead">
                 <div class="modalTitle">Add Category</div>
                 <span class="closeBtn">
                     <svg-icons name="times"></svg-icons>
@@ -85,10 +69,14 @@
                         <app-custom-scroll>
                             <div class="formGroup">
                                 <label for="" class="req">Category name</label>
-                                <input type="text" formControlName="name" />
+                                <input type="text" formControlName="cat_name" />
                             </div>
-                            
-                            
+                            <div class="formGroup">
+                                <label for="">Category picture</label>
+                                <app-file-upload
+                                    [fc]="f('cat_img')"
+                                ></app-file-upload>
+                            </div>
                         </app-custom-scroll>
                     </div>
                     <div class="btnCont">

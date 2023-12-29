@@ -1,0 +1,25 @@
+<div class="eachCheck">
+    <input
+        [type]="type"
+        (change)="change($event.target)"
+        [checked]="checked"
+        [name]="idn || fcn"
+        [id]="idn || fcn"
+        [value]="val"
+        [disabled]="disabled"
+    />
+    <label [for]="idn || fcn">
+        <div *ngIf="type == 'checkbox'" class="cusCheck">
+            <svg-icons name="check"></svg-icons>
+        </div>
+        <div *ngIf="type == 'radio'" class="cusRadio"></div>
+        <div>
+            <ng-container *ngIf="txt; else content">
+                {{ txt }}
+            </ng-container>
+            <ng-template #content>
+                <ng-content></ng-content>
+            </ng-template>
+        </div>
+    </label>
+</div>

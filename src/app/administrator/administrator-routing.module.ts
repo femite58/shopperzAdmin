@@ -16,9 +16,11 @@ import { CouponComponent } from './pages/coupon/coupon.component';
 import { NotificationManagerComponent } from './pages/notification-manager/notification-manager.component';
 import { NotificationDetailsComponent } from './pages/notification-details/notification-details.component';
 import { UserNotificationsDetailsComponent } from './pages/user-notifications-details/user-notifications-details.component';
-import { SalesPromoComponent } from './pages/sales-promo/sales-promo.component';
-import { AccSettingsComponent } from './pages/acc-settings/acc-settings.component';
-import { GenSettingsComponent } from './pages/gen-settings/gen-settings.component';
+import { GeneralSettingsComponent } from './pages/general-settings/general-settings.component';
+import { CompanyInfoComponent } from './pages/general-settings/company-info/company-info.component';
+import { CustomizationComponent } from './pages/general-settings/customization/customization.component';
+import { AppSettingsComponent } from './pages/general-settings/app-settings/app-settings.component';
+import { BannersComponent } from './pages/general-settings/banners/banners.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -55,8 +57,8 @@ const routes: Routes = [
   { path: 'stores', component: StoresComponent },
   { path: 'sales-promotion', component: SalesPromoComponent },
   { path: 'customers', component: CustomersComponent },
-  // { path: 'manage-admins', component: ManageAdminComponent },
-  // { path: 'admin-details', component: AdminDetailsComponent },
+  { path: 'manage-admins', component: ManageAdminComponent },
+  { path: 'manage-admins/details/:id', component: AdminDetailsComponent },
   {
     path: 'products',
     children: [
@@ -77,10 +79,14 @@ const routes: Routes = [
     component: CategoriesComponent,
   },
   {
-    path: 'settings',
+    path: 'general-settings',
+    component: GeneralSettingsComponent,
     children: [
-      { path: 'account', component: AccSettingsComponent },
-      { path: 'general', component: GenSettingsComponent },
+      { path: '', redirectTo: 'company-info', pathMatch: 'full' },
+      { path: 'company-info', component: CompanyInfoComponent },
+      { path: 'customization', component: CustomizationComponent },
+      { path: 'app-settings', component: AppSettingsComponent },
+      { path: 'banners', component: BannersComponent },
     ],
   },
 ];

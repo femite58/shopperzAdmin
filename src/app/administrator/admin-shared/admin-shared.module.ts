@@ -7,6 +7,7 @@ import { AdminHeaderComponent } from './components/admin-header/admin-header.com
 import { RouterModule } from '@angular/router';
 import { EmptyItemsComponent } from './components/empty-items/empty-items.component';
 import { PaginationParentComponent } from './components/pagination-parent/pagination-parent.component';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { PaginationParentComponent } from './components/pagination-parent/pagina
     AdminHeaderComponent,
     EmptyItemsComponent,
     PaginationParentComponent,
+    FileUploadComponent,
   ],
   imports: [CommonModule, RouterModule, SharedModule],
   exports: [
@@ -22,6 +24,7 @@ import { PaginationParentComponent } from './components/pagination-parent/pagina
     EmptyItemsComponent,
     PaginationParentComponent,
     SharedModule,
+    FileUploadComponent,
   ],
 })
 export class AdminSharedModule {}

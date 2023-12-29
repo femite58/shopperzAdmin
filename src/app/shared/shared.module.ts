@@ -43,6 +43,8 @@ import { SubmitBtnComponent } from './components/submit-btn/submit-btn.component
 import { CustomScrollComponent } from './components/custom-scroll/custom-scroll.component';
 import { CustomSelectComponent } from './components/custom-select/custom-select.component';
 import { DateFormatPipe } from './pipe/date-format.pipe';
+import { CusCheckboxComponent } from './components/cus-checkbox/cus-checkbox.component';
+import { CustomDatePickerComponent } from './components/custom-date-picker/custom-date-picker.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +87,8 @@ import { DateFormatPipe } from './pipe/date-format.pipe';
     CustomScrollComponent,
     CustomSelectComponent,
     DateFormatPipe,
+    CusCheckboxComponent,
+    CustomDatePickerComponent,
   ],
   imports: [
     CommonModule,
@@ -137,7 +141,9 @@ import { DateFormatPipe } from './pipe/date-format.pipe';
     SubmitBtnComponent,
     CustomScrollComponent,
     CustomSelectComponent,
-    DateFormatPipe
+    DateFormatPipe,
+    CusCheckboxComponent,
+    CustomDatePickerComponent,
   ],
 })
 export class SharedModule {}
