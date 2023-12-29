@@ -37,13 +37,6 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'admin',
-    children: [
-      { path: '', component: ManageAdminComponent },
-      { path: 'details/:id', component: AdminDetailsComponent },
-    ],
-  },
-  {
     path: 'notifications',
     redirectTo: '/administrator/notifications/admin',
     pathMatch: 'full',
@@ -56,10 +49,15 @@ const routes: Routes = [
       { path: 'details/:id', component: NotificationDetailsComponent },
     ],
   },
-  
+
   // { path: 'order', component: OrderDetailsComponent },
   { path: 'stores', component: StoresComponent },
-  { path: 'sales-promotion', component: SalesPromoComponent },
+  {
+    path: 'sales-promotion',
+    redirectTo: 'sales-promotion/coupons',
+    pathMatch: 'full',
+  },
+  { path: 'sales-promotion/:tab', component: SalesPromoComponent },
   { path: 'customers', component: CustomersComponent },
   { path: 'manage-admins', component: ManageAdminComponent },
   { path: 'manage-admins/details/:id', component: AdminDetailsComponent },

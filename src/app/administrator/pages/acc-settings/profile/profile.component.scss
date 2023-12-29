@@ -1,7 +1,7 @@
-.gridView{
+.gridView {
     display: flex;
     gap: 21px;
-    .leftSide{
+    .leftSide {
         display: flex;
         flex-direction: column;
         gap: 21px;
@@ -15,7 +15,7 @@
             border-radius: 10px;
             border: var(--border);
             height: 317px;
-    
+
             .userImg {
                 padding: 6px;
                 border-radius: 100%;
@@ -29,7 +29,7 @@
                     border-radius: 50%;
                     position: relative;
                 }
-                .edit{
+                .edit {
                     width: 40px;
                     height: 40px;
                     position: absolute;
@@ -42,7 +42,7 @@
                     left: 70%;
                 }
             }
-            .fullname{
+            .fullname {
                 font-size: 18px;
             }
             .status {
@@ -58,50 +58,40 @@
                 padding: 7px 20px !important;
             }
         }
-        .contactDet{
+        .contactDet {
             border-radius: 10px;
-            border: var(--border); 
+            border: var(--border);
             padding: 42px 37px;
-            .mail div, .location div, .phone div{
+            .eachInfo {
                 display: flex;
                 align-items: flex-start;
+                gap: 12px;
                 margin-bottom: 20px;
-                &:first-child{
-                    padding-right: 10px;
-                    margin-top: 3px;
+                .iconCont {
+                    // margin-top: 3px;
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
             }
         }
-
     }
-    .rightSide{
+    .rightSide {
         border: var(--border);
         border-radius: 10px;
         flex: 2 400px;
         width: 400px;
         form {
             padding: 20px;
-            display: flex;
-            flex-grow: 1;
-            .formBody {
-                flex-grow: 1;
-                .edit {
-                    width: 100%;
-                    display: flex;
-                    flex-grow: 1;
-                    gap: 15px;
-                    .left {
-                        width: 50%;
-                    }
-                    .right {
-                        width: 50%;
-                    }
-                }
-                .actions {
-                    display: flex;
-                    width: 50%;
-                    gap: 12px;
-                    
+            .gridCont {
+                display: flex;
+                gap: 0 20px;
+                flex-wrap: wrap;
+                .formGroup {
+                    flex: 1 200px;
+                    width: 200px;
                 }
             }
         }

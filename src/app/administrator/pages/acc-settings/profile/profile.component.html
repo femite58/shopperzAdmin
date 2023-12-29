@@ -15,79 +15,64 @@
             </div>
         </div>
         <div class="contactDet">
-            <div class="mail">
+            <div class="eachInfo">
+                <div class="iconCont">
+                    <svg-icons name="mail"></svg-icons>
+                </div>
+                <div>example@yahoo.com</div>
+            </div>
+            <div class="eachInfo">
+                <div class="iconCont">
+                    <svg-icons name="location"></svg-icons>
+                </div>
                 <div>
-                    <div>
-                        <svg-icons name="mail"></svg-icons>
-                    </div>
-                    <div>example@yahoo.com</div>
+                    71 shitta street, Dopemu round-about Agege Lagos, Nigeria
                 </div>
             </div>
-            <div class="location">
-                <div>
-                    <div>
-                        <svg-icons name="location"></svg-icons>
-                    </div>
-                    <div>
-                        71 shitta street, Dopemu round-about Agege Lagos,
-                        Nigeria
-                    </div>
+            <div class="eachInfo">
+                <div class="iconCont">
+                    <svg-icons name="phone"></svg-icons>
                 </div>
-            </div>
-            <div class="phone">
-                <div>
-                    <div>
-                        <svg-icons name="phone"></svg-icons>
-                    </div>
-                    <div>+2347066091112</div>
-                </div>
+                <div>+2347066091112</div>
             </div>
         </div>
     </div>
     <div class="rightSide">
         <div class="editProf">
             <form [formGroup]="form" (ngSubmit)="submit()">
-                <div class="formBody">
-                    <div class="edit">
-                        <div class="left">
-                            <div class="formGroup">
-                                <label for="" class="req">First Name</label>
-                                <input type="text" formControlName="first_name" />
-                            </div>
-
-                            <div class="formGroup">
-                                <label for="email" class="req">Email</label>
-                                <input type="email" formControlName="email" />
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="formGroup">
-                                <label for="lname" class="req">Last Name</label>
-                                <input type="text" formControlName="last_name" />
-                            </div>
-                            <div class="formGroup">
-                                <label for="phone" class="req"
-                                    >Phone Number</label
-                                >
-                                <input type="text" formControlName="phone" appAllowNum />
-                            </div>
-                        </div>
+                <div class="gridCont">
+                    <div class="formGroup">
+                        <label for="" class="req">First Name</label>
+                        <input type="text" formControlName="first_name" />
                     </div>
                     <div class="formGroup">
-                        <label for="address" class="req">Address</label>
-                        <textarea
-                            formControlName="address"
-                            rows="10"
-                        ></textarea>
+                        <label for="email" class="req">Email</label>
+                        <input type="email" formControlName="email" />
                     </div>
-                    <div class="actions">
-                        <button class="greyBtn">Cancel</button>
-                        <submit-btn
-                            btnTxt="Update"
-                            [loading]="submitting"
-                            [disabled]="form.invalid"
-                        ></submit-btn>
+                    <div class="formGroup">
+                        <label for="lname" class="req">Last Name</label>
+                        <input type="text" formControlName="last_name" />
                     </div>
+                    <div class="formGroup">
+                        <label for="phone" class="req">Phone Number</label>
+                        <input
+                            type="text"
+                            formControlName="phone"
+                            appAllowNum
+                        />
+                    </div>
+                </div>
+                <div class="formGroup">
+                    <label for="address" class="req">Address</label>
+                    <textarea formControlName="address" rows="10"></textarea>
+                </div>
+                <div class="actions">
+                    <button class="greyBtn">Cancel</button>
+                    <submit-btn
+                        btnTxt="Update"
+                        [loading]="submitting"
+                        [disabled]="form.invalid"
+                    ></submit-btn>
                 </div>
             </form>
         </div>

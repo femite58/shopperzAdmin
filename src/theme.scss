@@ -1,10 +1,10 @@
 $primary: var(--primary);
 $secondary: var(--seccondary);
 // $secBtn: #FFEBED;
-$activeBg : #ECFDF3;
-$inactiveBg: #F2F4F7;
-$pendingBg: #FFEBED;
-$shippedBg: #EAEEFF;
-$txtDark: #292931;  
-$txtLight: #667085;
-$border: 1px solid #D6D9DE;
+$activeBg: #ecfdf3;
+$inactiveBg: #f2f4f7;
+$pendingBg: #ffebed;
+$shippedBg: #eaeeff;
+$txtDark: var(--bodyTxt);
+$txtLight: var(--txtLight);
+$border: var(--border);

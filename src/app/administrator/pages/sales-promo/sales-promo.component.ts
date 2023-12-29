@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { ConfirmActionService } from 'src/app/data/services/confirm-action.service';
 import { InformationService } from 'src/app/data/services/information.service';
@@ -7,16 +8,18 @@ import { InformationService } from 'src/app/data/services/information.service';
 @Component({
   selector: 'app-sales-promo',
   templateUrl: './sales-promo.component.html',
-  styleUrls: ['./sales-promo.component.scss']
+  styleUrls: ['./sales-promo.component.scss'],
 })
-export class SalesPromoComponent {
+export class SalesPromoComponent implements OnInit {
   constructor(
     private infoService: InformationService,
-    private confS: ConfirmActionService
+    private confS: ConfirmActionService,
+    private route: ActivatedRoute
   ) {}
   customerData = this.infoService.customerData;
   couponData = this.infoService.couponData;
   products = this.infoService.products;
+  tab = 'coupons';
   count = 5;
   limit = 3;
   page = 1;
@@ -44,13 +47,8 @@ export class SalesPromoComponent {
     { txt: 'Active', value: 'Active' },
     { txt: 'Inactive', value: 'Inactive' },
   ];
-  prods = this.products
-  selectTab(tabNumber: number) {
-    this.selectedTab = tabNumber;
-    this.filteredVal = new FormControl('All');
-    document.documentElement.style.setProperty('--active-tab', `${tabNumber}`);
-  }
-  
+  prods = this.products;
+
   get couponFiltered() {
     return this.couponData.filter((item) => {
       if (this.filteredVal.value == 'All') return true;
@@ -73,6 +71,12 @@ export class SalesPromoComponent {
       this.deleting = null;
     }, 1000);
     this.closeModal.next(true);
+  }
+
+  ngOnInit(): void {
+    this.route.params.subscribe((p) => {
+      this.tab = p.tab;
+    });
   }
   onSetPage(page) {
     this.page = page;
