@@ -112,11 +112,14 @@ layout ::ng-deep main{
     border-radius: 10px;
     margin: 20px;
     height: 100vh;
+    &>strong{
+        padding: 20px;
+    }
     form {
         padding: 20px;
         display: flex;
         flex-grow: 1;
-        width: 50%;
+        width: 70%;
         .formBody {
             flex-grow: 1;
             .edit {

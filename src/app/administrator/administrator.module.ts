@@ -26,7 +26,8 @@ import { CustomizationComponent } from './pages/general-settings/customization/c
 import { AppSettingsComponent } from './pages/general-settings/app-settings/app-settings.component';
 import { BannersComponent } from './pages/general-settings/banners/banners.component';
 import { ImageUploadComponent } from './pages/general-settings/image-upload/image-upload.component';
-
+import { SalesPromoComponent } from './pages/sales-promo/sales-promo.component';
+import { AccSettingsComponent } from './pages/acc-settings/acc-settings.component';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -51,6 +52,8 @@ import { ImageUploadComponent } from './pages/general-settings/image-upload/imag
     AppSettingsComponent,
     BannersComponent,
     ImageUploadComponent,
+    SalesPromoComponent,
+    AccSettingsComponent
   ],
   imports: [CommonModule, AdminSharedModule, AdministratorRoutingModule, SharedModule],
 })

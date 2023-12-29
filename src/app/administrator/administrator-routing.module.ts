@@ -21,6 +21,8 @@ import { CompanyInfoComponent } from './pages/general-settings/company-info/comp
 import { CustomizationComponent } from './pages/general-settings/customization/customization.component';
 import { AppSettingsComponent } from './pages/general-settings/app-settings/app-settings.component';
 import { BannersComponent } from './pages/general-settings/banners/banners.component';
+import { SalesPromoComponent } from './pages/sales-promo/sales-promo.component';
+import { AccSettingsComponent } from './pages/acc-settings/acc-settings.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -89,6 +91,9 @@ const routes: Routes = [
       { path: 'banners', component: BannersComponent },
     ],
   },
+  {
+    path: 'account-settings', component: AccSettingsComponent
+  }
 ];
 
 @NgModule({
