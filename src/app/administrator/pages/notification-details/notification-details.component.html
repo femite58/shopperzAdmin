@@ -1,37 +1,14 @@
-<layout [backAct]="true" pageTitle="Notification Details">
-    <div id="headBtnCont">
-        <button class="primBtn" [openModal]="">
-            <svg-icons name="plus"></svg-icons>
-            <span>Create New</span>
-        </button>
-    </div>
-    <div class="tabContainer">
-        <div class="tabHeader">
-            <div
-                class="tab pointer"
-                [class.active]="selectedTab === 1"
-                (click)="selectTab(1)"
-            >
-                Admin Notification
-            </div>
-            
+<div class="notification">
+    <div class="center">
+        <div class="notiContent">
+            <small>
+                Today at
+                {{ adminNotifications[1].timeStamp | date : "shortTime" }}
+            </small>
+            <strong>{{ adminNotifications[1].title }}</strong>
+            <p>
+                {{ adminNotifications[1].message }}
+            </p>
         </div>
     </div>
-    <div class="tabContent">
-        <div *ngIf="selectedTab == 1">
-            <div class="notification" >
-                <div class="center">
-                   
-                    <div class="notiContent" >
-                        <small> Today at {{ adminNotifications[1].timeStamp | date: 'shortTime' }} </small>
-                        <strong>{{ adminNotifications[1].title }}</strong>
-                        <p>
-                            {{ adminNotifications[1].message }}
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</layout>
+</div>

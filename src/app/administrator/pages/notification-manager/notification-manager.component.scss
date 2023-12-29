@@ -1,57 +1,6 @@
-layout ::ng-deep main{
+layout ::ng-deep main {
     margin: 0;
     border-radius: 0;
     border: none;
 }
-.notificationsCont{
-    .tabContent {
-        .notification {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-left: 111px;
-            border-left: 1px solid #D6D9DE;
-            border-bottom: 1px solid #d5d8dd;
-            padding: 20px 37px 20px 17px;
-            &:last-of-type{
-                border-bottom: none;
-            }
-            .center{
-                display: flex;
-                .left {
-                    margin-right: 17px;
-                    padding-top: 6px;
-                    .ellipse {
-                        width: 7px;
-                        height: 7px;
-                        border-radius: 100%;
-                        background-color: #E9E8E8;
-                    }
-                }
-                .imgDesc{
-                    margin-right: 15px;
-                }
-                .notiContent{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    gap: 5px;
-                    p{
-                        margin-bottom: 0;
-                        width: 531px;
-                    }
-                }
-            }
-            .right{
-                display: flex;
-                align-items: center;
-                gap: 5px;
-            }
-            &:hover{
-                background-color: #F7F7F7;
-                transition: .3s;
-            }
-        }
-    }
-    
-}
+

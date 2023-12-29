@@ -23,6 +23,9 @@ import { AppSettingsComponent } from './pages/general-settings/app-settings/app-
 import { BannersComponent } from './pages/general-settings/banners/banners.component';
 import { SalesPromoComponent } from './pages/sales-promo/sales-promo.component';
 import { AccSettingsComponent } from './pages/acc-settings/acc-settings.component';
+import { ProfileComponent } from './pages/acc-settings/profile/profile.component';
+import { PasswordComponent } from './pages/acc-settings/password/password.component';
+import { NotificationsListingComponent } from './pages/notifications-listing/notifications-listing.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -40,21 +43,20 @@ const routes: Routes = [
       { path: 'details/:id', component: AdminDetailsComponent },
     ],
   },
-  { path: 'notifications', component: NotificationManagerComponent },
   {
-    path: 'notifications/admin',
+    path: 'notifications',
+    redirectTo: '/administrator/notifications/admin',
+    pathMatch: 'full',
+  },
+  {
+    path: 'notifications/:tab',
+    component: NotificationManagerComponent,
     children: [
-      { path: '', component: NotificationManagerComponent },
+      { path: '', component: NotificationsListingComponent },
       { path: 'details/:id', component: NotificationDetailsComponent },
     ],
   },
-  {
-    path: 'notifications/user',
-    children: [
-      { path: '', component: NotificationManagerComponent },
-      { path: 'details/:id', component: UserNotificationsDetailsComponent },
-    ],
-  },
+  
   // { path: 'order', component: OrderDetailsComponent },
   { path: 'stores', component: StoresComponent },
   { path: 'sales-promotion', component: SalesPromoComponent },
@@ -92,8 +94,14 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'account-settings', component: AccSettingsComponent
-  }
+    path: 'account-settings',
+    component: AccSettingsComponent,
+    children: [
+      { path: '', redirectTo: 'profile', pathMatch: 'full' },
+      { path: 'profile', component: ProfileComponent },
+      { path: 'password', component: PasswordComponent },
+    ],
+  },
 ];
 
 @NgModule({

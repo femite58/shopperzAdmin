@@ -1,0 +1,109 @@
+.gridView{
+    display: flex;
+    gap: 21px;
+    .leftSide{
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+        flex: 1 300px;
+        width: 300px;
+        .userProf {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            border: var(--border);
+            height: 317px;
+    
+            .userImg {
+                padding: 6px;
+                border-radius: 100%;
+                border: 1px solid #f8253a;
+                margin-bottom: 12px;
+                position: relative;
+                img {
+                    width: 118.3px;
+                    height: 119.32px;
+                    // object-fit: cover;
+                    border-radius: 50%;
+                    position: relative;
+                }
+                .edit{
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    background-color: #f8253a;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    top: 60%;
+                    left: 70%;
+                }
+            }
+            .fullname{
+                font-size: 18px;
+            }
+            .status {
+                margin-top: 11px;
+                padding: 7px 15px;
+                background-color: #ffe5e7 !important;
+                display: flex;
+                align-items: center;
+                justify-self: center;
+            }
+            .btnCont {
+                margin-top: 30px;
+                padding: 7px 20px !important;
+            }
+        }
+        .contactDet{
+            border-radius: 10px;
+            border: var(--border); 
+            padding: 42px 37px;
+            .mail div, .location div, .phone div{
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 20px;
+                &:first-child{
+                    padding-right: 10px;
+                    margin-top: 3px;
+                }
+            }
+        }
+
+    }
+    .rightSide{
+        border: var(--border);
+        border-radius: 10px;
+        flex: 2 400px;
+        width: 400px;
+        form {
+            padding: 20px;
+            display: flex;
+            flex-grow: 1;
+            .formBody {
+                flex-grow: 1;
+                .edit {
+                    width: 100%;
+                    display: flex;
+                    flex-grow: 1;
+                    gap: 15px;
+                    .left {
+                        width: 50%;
+                    }
+                    .right {
+                        width: 50%;
+                    }
+                }
+                .actions {
+                    display: flex;
+                    width: 50%;
+                    gap: 12px;
+                    
+                }
+            }
+        }
+    }
+}

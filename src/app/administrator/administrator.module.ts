@@ -28,6 +28,9 @@ import { BannersComponent } from './pages/general-settings/banners/banners.compo
 import { ImageUploadComponent } from './pages/general-settings/image-upload/image-upload.component';
 import { SalesPromoComponent } from './pages/sales-promo/sales-promo.component';
 import { AccSettingsComponent } from './pages/acc-settings/acc-settings.component';
+import { PasswordComponent } from './pages/acc-settings/password/password.component';
+import { ProfileComponent } from './pages/acc-settings/profile/profile.component';
+import { NotificationsListingComponent } from './pages/notifications-listing/notifications-listing.component';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -53,7 +56,10 @@ import { AccSettingsComponent } from './pages/acc-settings/acc-settings.componen
     BannersComponent,
     ImageUploadComponent,
     SalesPromoComponent,
-    AccSettingsComponent
+    AccSettingsComponent,
+    PasswordComponent,
+    ProfileComponent,
+    NotificationsListingComponent
   ],
   imports: [CommonModule, AdminSharedModule, AdministratorRoutingModule, SharedModule],
 })
