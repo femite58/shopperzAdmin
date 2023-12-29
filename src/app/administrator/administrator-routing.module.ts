@@ -21,6 +21,11 @@ import { CompanyInfoComponent } from './pages/general-settings/company-info/comp
 import { CustomizationComponent } from './pages/general-settings/customization/customization.component';
 import { AppSettingsComponent } from './pages/general-settings/app-settings/app-settings.component';
 import { BannersComponent } from './pages/general-settings/banners/banners.component';
+import { SalesPromoComponent } from './pages/sales-promo/sales-promo.component';
+import { AccSettingsComponent } from './pages/acc-settings/acc-settings.component';
+import { ProfileComponent } from './pages/acc-settings/profile/profile.component';
+import { PasswordComponent } from './pages/acc-settings/password/password.component';
+import { NotificationsListingComponent } from './pages/notifications-listing/notifications-listing.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -31,24 +36,30 @@ const routes: Routes = [
       { path: 'details/:id', component: OrderDetailsComponent },
     ],
   },
-  { path: 'notifications', component: NotificationManagerComponent },
   {
-    path: 'notifications/admin',
+    path: 'admin',
     children: [
-      { path: '', component: NotificationManagerComponent },
+      { path: '', component: ManageAdminComponent },
+      { path: 'details/:id', component: AdminDetailsComponent },
+    ],
+  },
+  {
+    path: 'notifications',
+    redirectTo: '/administrator/notifications/admin',
+    pathMatch: 'full',
+  },
+  {
+    path: 'notifications/:tab',
+    component: NotificationManagerComponent,
+    children: [
+      { path: '', component: NotificationsListingComponent },
       { path: 'details/:id', component: NotificationDetailsComponent },
     ],
   },
-  {
-    path: 'notifications/user',
-    children: [
-      { path: '', component: NotificationManagerComponent },
-      { path: 'details/:id', component: UserNotificationsDetailsComponent },
-    ],
-  },
+  
   // { path: 'order', component: OrderDetailsComponent },
   { path: 'stores', component: StoresComponent },
-  { path: 'sales-promotion', component: CouponComponent },
+  { path: 'sales-promotion', component: SalesPromoComponent },
   { path: 'customers', component: CustomersComponent },
   { path: 'manage-admins', component: ManageAdminComponent },
   { path: 'manage-admins/details/:id', component: AdminDetailsComponent },
@@ -80,6 +91,15 @@ const routes: Routes = [
       { path: 'customization', component: CustomizationComponent },
       { path: 'app-settings', component: AppSettingsComponent },
       { path: 'banners', component: BannersComponent },
+    ],
+  },
+  {
+    path: 'account-settings',
+    component: AccSettingsComponent,
+    children: [
+      { path: '', redirectTo: 'profile', pathMatch: 'full' },
+      { path: 'profile', component: ProfileComponent },
+      { path: 'password', component: PasswordComponent },
     ],
   },
 ];

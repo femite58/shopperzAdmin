@@ -18,95 +18,23 @@
         </button>
     </div>
     <div id="tabCont">
-        <div
+        <a
             class="eachTab"
-            [class.activeTab]="selectedTab === 1"
-            (click)="selectTab(1)"
+            routerLink="/administrator/notifications/admin"
+            routerLinkActive="activeTab"
         >
             Admin Notification
-        </div>
-        <div
+        </a>
+        <a
             class="eachTab"
-            [class.activeTab]="selectedTab === 2"
-            (click)="selectTab(2)"
+            routerLink="/administrator/notifications/user"
+            routerLinkActive="activeTab"
         >
             User Notification
-        </div>
+        </a>
     </div>
-    <div class="notificationsCont">
-        <app-custom-scroll>
-            <div class="tabContent">
-                <div *ngIf="selectedTab == 1">
-                    <div
-                        routerLink="/administrator/notifications/admin/details/{{
-                            noti?.id
-                        }}"
-                        class="notification pointer"
-                        *ngFor="let noti of adminNotifications"
-                    >
-                        <div class="center">
-                            <div class="left">
-                                <div class="ellipse"></div>
-                            </div>
-                            <div class="notiContent">
-                                <strong>{{ noti.title }}</strong>
-                                <p class="ellipsis">
-                                    {{ noti.message }}
-                                </p>
-                                <small>
-                                    Today at
-                                    {{ noti.timeStamp | date : "shortTime" }}
-                                </small>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <span>
-                                <svg-icons name="eye"></svg-icons>
-                            </span>
-                            <span> {{ noti.viewCount }} Views </span>
-                        </div>
-                    </div>
-                </div>
-                <div *ngIf="selectedTab == 2">
-                    <div
-                        routerLink="/administrator/notifications/user/details/{{
-                            noti?.id
-                        }}"
-                        class="notification pointer"
-                        *ngFor="let noti of adminNotifications"
-                    >
-                        <div class="center">
-                            <div class="left">
-                                <div class="ellipse"></div>
-                            </div>
-                            <div class="imgDesc">
-                                <img
-                                    src="assets/images/notificationImg.png"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="notiContent">
-                                <strong>{{ noti.title }}</strong>
-                                <p class="ellipsis">
-                                    {{ noti.message }}
-                                </p>
-                                <small>
-                                    Today at
-                                    {{ noti.timeStamp | date : "shortTime" }}
-                                </small>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <span>
-                                <svg-icons name="eye"></svg-icons>
-                            </span>
-                            <span> {{ noti.viewCount }} Views </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </app-custom-scroll>
-    </div>
+
+    <router-outlet></router-outlet>
 </layout>
 <div id="modals">
     <app-modal #createNoti [closeModal]="closeModal">

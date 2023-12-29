@@ -1,0 +1,10 @@
+:host ::ng-deep main {
+    border: none !important;
+    .actions{
+        margin-top: 35px;
+        button{
+            width: 137px !important;
+            height: 40px;
+        }   
+    }
+}

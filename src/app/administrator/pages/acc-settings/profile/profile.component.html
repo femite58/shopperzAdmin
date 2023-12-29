@@ -1,0 +1,95 @@
+<div class="gridView">
+    <div class="leftSide">
+        <div class="userProf">
+            <div class="userImg">
+                <img src="assets/images/userImg.png" alt="profile" />
+                <div class="edit pointer">
+                    <svg-icons name="edit-white"></svg-icons>
+                </div>
+            </div>
+            <div class="fullname">
+                <strong>Folashade Adeshina</strong>
+            </div>
+            <div class="status userBadge">
+                <span>Admin</span>
+            </div>
+        </div>
+        <div class="contactDet">
+            <div class="mail">
+                <div>
+                    <div>
+                        <svg-icons name="mail"></svg-icons>
+                    </div>
+                    <div>example@yahoo.com</div>
+                </div>
+            </div>
+            <div class="location">
+                <div>
+                    <div>
+                        <svg-icons name="location"></svg-icons>
+                    </div>
+                    <div>
+                        71 shitta street, Dopemu round-about Agege Lagos,
+                        Nigeria
+                    </div>
+                </div>
+            </div>
+            <div class="phone">
+                <div>
+                    <div>
+                        <svg-icons name="phone"></svg-icons>
+                    </div>
+                    <div>+2347066091112</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rightSide">
+        <div class="editProf">
+            <form [formGroup]="form" (ngSubmit)="submit()">
+                <div class="formBody">
+                    <div class="edit">
+                        <div class="left">
+                            <div class="formGroup">
+                                <label for="" class="req">First Name</label>
+                                <input type="text" formControlName="first_name" />
+                            </div>
+
+                            <div class="formGroup">
+                                <label for="email" class="req">Email</label>
+                                <input type="email" formControlName="email" />
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="formGroup">
+                                <label for="lname" class="req">Last Name</label>
+                                <input type="text" formControlName="last_name" />
+                            </div>
+                            <div class="formGroup">
+                                <label for="phone" class="req"
+                                    >Phone Number</label
+                                >
+                                <input type="text" formControlName="phone" appAllowNum />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formGroup">
+                        <label for="address" class="req">Address</label>
+                        <textarea
+                            formControlName="address"
+                            rows="10"
+                        ></textarea>
+                    </div>
+                    <div class="actions">
+                        <button class="greyBtn">Cancel</button>
+                        <submit-btn
+                            btnTxt="Update"
+                            [loading]="submitting"
+                            [disabled]="form.invalid"
+                        ></submit-btn>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

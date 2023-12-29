@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
 import { ConfirmActionService } from 'src/app/data/services/confirm-action.service';
 import { InformationService } from 'src/app/data/services/information.service';
 
 @Component({
-  selector: 'app-coupon',
-  templateUrl: './coupon.component.html',
-  styleUrls: ['./coupon.component.scss'],
+  selector: 'app-sales-promo',
+  templateUrl: './sales-promo.component.html',
+  styleUrls: ['./sales-promo.component.scss']
 })
-export class CouponComponent {
+export class SalesPromoComponent {
   constructor(
     private infoService: InformationService,
     private confS: ConfirmActionService
@@ -34,11 +34,48 @@ export class CouponComponent {
   selectedTab = 1;
   closeModal = new BehaviorSubject(false);
 
+  filterOpts = [
+    { txt: 'All', value: 'All' },
+    { txt: 'Active', value: 'Active' },
+    { txt: 'Inactive', value: 'Inactive' },
+  ];
+  filterOpts2 = [
+    { txt: 'All', value: 'All' },
+    { txt: 'Active', value: 'Active' },
+    { txt: 'Inactive', value: 'Inactive' },
+  ];
+  prods = this.products
+  selectTab(tabNumber: number) {
+    this.selectedTab = tabNumber;
+    this.filteredVal = new FormControl('All');
+    document.documentElement.style.setProperty('--active-tab', `${tabNumber}`);
+  }
+  
   get couponFiltered() {
     return this.couponData.filter((item) => {
       if (this.filteredVal.value == 'All') return true;
       return this.filteredVal.value == item.status;
     });
+  }
+  get fSalesFiltered() {
+    return this.couponData.filter((item) => {
+      if (this.filteredVal.value == 'All') return true;
+      return this.filteredVal.value == item.status;
+    });
+  }
+  deleteCustomer() {
+    // this.currentId;
+    this.deleting = this.currentId;
+    setTimeout(() => {
+      this.customerData = this.customerData.filter(
+        (c) => c.id != this.currentId
+      );
+      this.deleting = null;
+    }, 1000);
+    this.closeModal.next(true);
+  }
+  onSetPage(page) {
+    this.page = page;
   }
   deleteConf(id) {
     this.currentId = id;
@@ -59,21 +96,4 @@ export class CouponComponent {
     });
   }
   submit() {}
-
-  filterOpts = [
-    { txt: 'All', value: 'All' },
-    { txt: 'Active', value: 'Active' },
-    { txt: 'Inactive', value: 'Inactive' },
-  ];
-  filterOpts2 = [
-    { txt: 'All', value: 'All' },
-    { txt: 'Active', value: 'Active' },
-    { txt: 'Inactive', value: 'Inactive' },
-  ];
-  
-  selectTab(tabNumber: number) {
-    this.selectedTab = tabNumber;
-    this.filteredVal = new FormControl('All');
-    document.documentElement.style.setProperty('--active-tab', `${tabNumber}`);
-  }
 }

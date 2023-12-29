@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { InformationService } from 'src/app/data/services/information.service';
 
@@ -10,7 +11,7 @@ import { InformationService } from 'src/app/data/services/information.service';
 })
 export class NotificationManagerComponent {
   constructor (
-    private infoS: InformationService
+    private infoS: InformationService,
   ) {}
   selectedTab = 1;
   selectTab(tabNumber: number) {
