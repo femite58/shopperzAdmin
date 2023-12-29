@@ -1,0 +1,244 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="eachField">
+        <div class="txtDesc">
+            <div class="fieldTitle">Application Name and Icon</div>
+            <div class="fieldDesc">
+                Set the name and icon of your apps. Try to select a name and an
+                icon that are easy to remember and aesthetically pleasing.
+            </div>
+        </div>
+        <div class="fieldCont">
+            <div class="inputFieldPar">
+                <div class="formGroup">
+                    <label for="">Application Name</label>
+                    <input type="text" formControlName="app_name" />
+                </div>
+                <div class="formGroup">
+                    <label for="">Application Icon</label>
+                    <app-image-upload
+                        [fc]="f('app_icon')"
+                        sizeDesc="Min image size: 1024px X 1024px."
+                        uid="appIcon"
+                    ></app-image-upload>
+                </div>
+            </div>
+            <div class="imgPreviewPar">
+                <div class="phoneCase">
+                    <img src="assets/images/phone_bg.png" alt="Phone bg" />
+                    <div class="phoneAppsCont">
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon1.svg"
+                                alt="App Icon"
+                                class="sqaured"
+                            />
+                            <div class="pappname">Music</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon2.svg"
+                                alt="App Icon"
+                                class="sqaured"
+                            />
+                            <div class="pappname">Settings</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                [src]="f('app_icon').value | safeUrl"
+                                alt="App Icon"
+                                class="sqaured"
+                            />
+                            <div class="pappname ellipsis">
+                                {{ f("app_name").value }}
+                            </div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon1.svg"
+                                alt="App Icon"
+                                class="round"
+                            />
+                            <div class="pappname">Music</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon2.svg"
+                                alt="App Icon"
+                                class="round"
+                            />
+                            <div class="pappname">Settings</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                [src]="f('app_icon').value | safeUrl"
+                                alt="App Icon"
+                                class="round"
+                            />
+                            <div class="pappname ellipsis">
+                                {{ f("app_name").value }}
+                            </div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon1.svg"
+                                alt="App Icon"
+                                class="circle"
+                            />
+                            <div class="pappname">Music</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon2.svg"
+                                alt="App Icon"
+                                class="circle"
+                            />
+                            <div class="pappname">Settings</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                [src]="f('app_icon').value | safeUrl"
+                                alt="App Icon"
+                                class="circle"
+                            />
+                            <div class="pappname ellipsis">
+                                {{ f("app_name").value }}
+                            </div>
+                        </div>
+                    </div>
+                    <img src="assets/images/phone_case.svg" alt="Phone" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="eachField">
+        <div class="txtDesc">
+            <div class="fieldTitle">Splash Screens</div>
+            <div class="fieldDesc">
+                A splash screen is an introductory screen that appears while
+                your application loads in the background.
+            </div>
+        </div>
+        <div class="fieldCont">
+            <div formArrayName="splash_screens" class="splashContArr">
+                <div
+                    *ngFor="
+                        let s of f('splash_screens').controls;
+                        let i = index
+                    "
+                    [formGroupName]="i"
+                    class="eachSplash"
+                >
+                    <div class="splashImgPar">
+                        <div class="splashNumTitle">
+                            Splash screen{{ i + 1 }}
+                        </div>
+                        <app-image-upload
+                            sizeDesc="Image size: 300px X 350px."
+                            [fc]="sc(i, 'image')"
+                            uid="splashUploadImg"
+                        ></app-image-upload>
+                    </div>
+                    <div class="inputFieldPar">
+                        <div class="formGroup">
+                            <label for="">Title</label>
+                            <input type="text" formControlName="title" />
+                        </div>
+                        <div class="formGroup">
+                            <label for="">Description</label>
+                            <textarea
+                                formControlName="description"
+                                rows="5"
+                            ></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="imgPreviewPar">
+                <div class="phoneCase">
+                    <img src="assets/images/phone_bg.png" alt="Phone bg" />
+                    <div class="phoneAppsCont">
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon1.svg"
+                                alt="App Icon"
+                                class="sqaured"
+                            />
+                            <div class="pappname">Music</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon2.svg"
+                                alt="App Icon"
+                                class="sqaured"
+                            />
+                            <div class="pappname">Settings</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                [src]="f('app_icon').value | safeUrl"
+                                alt="App Icon"
+                                class="sqaured"
+                            />
+                            <div class="pappname ellipsis">
+                                {{ f("app_name").value }}
+                            </div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon1.svg"
+                                alt="App Icon"
+                                class="round"
+                            />
+                            <div class="pappname">Music</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon2.svg"
+                                alt="App Icon"
+                                class="round"
+                            />
+                            <div class="pappname">Settings</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                [src]="f('app_icon').value | safeUrl"
+                                alt="App Icon"
+                                class="round"
+                            />
+                            <div class="pappname ellipsis">
+                                {{ f("app_name").value }}
+                            </div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon1.svg"
+                                alt="App Icon"
+                                class="circle"
+                            />
+                            <div class="pappname">Music</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon2.svg"
+                                alt="App Icon"
+                                class="circle"
+                            />
+                            <div class="pappname">Settings</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                [src]="f('app_icon').value | safeUrl"
+                                alt="App Icon"
+                                class="circle"
+                            />
+                            <div class="pappname ellipsis">
+                                {{ f("app_name").value }}
+                            </div>
+                        </div>
+                    </div>
+                    <img src="assets/images/phone_case.svg" alt="Phone" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,102 @@
+@import "../customization/customization.component.scss";
+form {
+    max-width: unset;
+}
+.eachField {
+    gap: 30px 60px;
+}
+.fieldCont {
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 500px;
+    width: 500px;
+    .inputFieldPar {
+        max-width: 286px;
+        width: 100%;
+    }
+    ::ng-deep .appIcon {
+        .imgCont {
+            width: 146px !important;
+            height: 146px !important;
+        }
+    }
+}
+.imgPreviewPar {
+    display: flex;
+    align-items: center;
+    background: #f7f7f7;
+    border: var(--border);
+    max-width: 334px;
+    width: 100%;
+    border-radius: 10px;
+    justify-content: center;
+    height: 442px;
+    .phoneCase {
+        position: relative;
+        width: 203px;
+        & > *:not(:last-child) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            &:first-child {
+                width: 87.192118226601%;
+            }
+            &.phoneAppsCont {
+                width: 150px;
+                display: grid;
+                top: 43px;
+                transform: translateX(-50%);
+                gap: 17px;
+                grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+                .eachApp {
+                    font-size: 10px;
+                    color: #fff;
+                    text-align: center;
+                    img {
+                        width: 100%;
+                        margin-bottom: 5px;
+                        &.round {
+                            border-radius: 5px;
+                        }
+                        &.circle {
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+        & > img:last-child {
+            z-index: 20;
+            position: relative;
+        }
+    }
+}
+.eachField:nth-child(2) {
+    .fieldCont {
+        flex: 1 800px;
+        width: 800px;
+    }
+}
+.splashContArr {
+    flex: 1 400px;
+    width: 400px;
+}
+.eachSplash {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    ::ng-deep .splashUploadImg {
+        .imgCont {
+            width: 131px !important;
+            height: 153px !important;
+        }
+    }
+    .splashNumTitle {
+        color: var(--txtLight);
+        margin-bottom: 12px;
+        font-size: 15px;
+    }
+}
