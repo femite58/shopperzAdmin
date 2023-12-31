@@ -1,0 +1,27 @@
+.imgFlex {
+    display: flex;
+    gap: 32px;
+    & > div {
+        flex: 1 50%;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+#cropModal {
+    max-width: 900px;
+    .modalHead {
+        align-items: flex-start;
+        gap: 2px;
+    }
+    .modalBody {
+        padding: 0;
+        ::ng-deep .scrollInnerCont {
+            padding: 32px 32px 0;
+        }
+        .btnCont {
+            margin-top: 32px;
+            padding: 0 32px 32px !important;
+        }
+    }
+}

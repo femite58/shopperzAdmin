@@ -1,4 +1,4 @@
-@import "../customization/customization.component.scss";
+@import "../app-settings/app-settings.component.scss";
 form {
     max-width: 722px;
     ::ng-deep .imageUpload {
@@ -13,6 +13,9 @@ form {
 }
 .eachField {
     gap: 60px;
+    .fieldCont {
+        display: block;
+    }
 }
 .addMore {
     text-decoration: underline;

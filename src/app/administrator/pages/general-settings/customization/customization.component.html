@@ -45,9 +45,11 @@
         </div>
         <div class="fieldCont">
             <app-image-upload
-                sizeDesc="Logo size: 138 X 31px."
+                sizeDesc="Logo size: 138px X 31px."
                 [fc]="f('logo')"
                 uid="brandLogo"
+                [minH]="31"
+                [minW]="138"
             ></app-image-upload>
         </div>
     </div>
@@ -61,9 +63,11 @@
         </div>
         <div class="fieldCont">
             <app-image-upload
-                sizeDesc="Fav icon size: 48 X 48px."
+                sizeDesc="Fav icon size: 48px X 48px."
                 [fc]="f('favicon')"
                 uid="favicon"
+                [minW]="48"
+                [minH]="48"
             ></app-image-upload>
             <div class="btnCont mt35">
                 <submit-btn

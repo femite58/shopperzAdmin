@@ -48,6 +48,7 @@
     ::ng-deep .modalHead {
         display: flex;
         align-items: center;
+        flex-direction: column;
         justify-content: space-between;
         .modalTitle {
             font-weight: 600;

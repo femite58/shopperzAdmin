@@ -45,6 +45,8 @@ import { CustomSelectComponent } from './components/custom-select/custom-select.
 import { DateFormatPipe } from './pipe/date-format.pipe';
 import { CusCheckboxComponent } from './components/cus-checkbox/cus-checkbox.component';
 import { CustomDatePickerComponent } from './components/custom-date-picker/custom-date-picker.component';
+import { CropperOpenerComponent } from './components/cropper-opener/cropper-opener.component';
+import { ImageCropperModule } from 'ngx-image-cropper';
 
 @NgModule({
   declarations: [
@@ -89,6 +91,7 @@ import { CustomDatePickerComponent } from './components/custom-date-picker/custo
     DateFormatPipe,
     CusCheckboxComponent,
     CustomDatePickerComponent,
+    CropperOpenerComponent,
   ],
   imports: [
     CommonModule,
@@ -97,6 +100,7 @@ import { CustomDatePickerComponent } from './components/custom-date-picker/custo
     ReactiveFormsModule,
     ModalModule,
     clModule,
+    ImageCropperModule,
   ],
   exports: [
     FormsModule,
@@ -144,6 +148,7 @@ import { CustomDatePickerComponent } from './components/custom-date-picker/custo
     DateFormatPipe,
     CusCheckboxComponent,
     CustomDatePickerComponent,
+    CropperOpenerComponent,
   ],
 })
 export class SharedModule {}

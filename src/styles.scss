@@ -56,6 +56,7 @@
     --txtLight: #a6a5b2;
     --border: 1px solid #d6d9de;
     --view-height: 100vh;
+    --cropper-outline-color: #00000050;
 }
 
 html {
@@ -240,16 +241,28 @@ a {
     white-space: nowrap;
     gap: 8px;
     padding: 0 16px;
+    font-weight: 500;
 
     &.primBtn {
         background: $primary;
         color: #fff;
-        font-weight: 500;
+        svg {
+            *[stroke]:not([stroke="none"]) {
+                stroke: #fff;
+            }
+            *[fill]:not([fill="none"]) {
+                fill: #fff;
+            }
+        }
+    }
+    &.primBtnOutline {
+        background: #fff;
+        color: var(--primary);
+        border: 1px solid var(--primary);
     }
     &.secBtn {
         background: $pendingBg !important;
         color: #f8253a !important;
-        font-weight: 500;
     }
 
     &.greyOutlineBtn {
@@ -445,4 +458,8 @@ a {
             color: #888888;
         }
     }
+}
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed !important;
 }

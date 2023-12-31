@@ -4,14 +4,14 @@
             <svg-icons *ngIf="!fc?.value" name="image"></svg-icons>
             <img *ngIf="fc?.value" [src]="fc.value | safeUrl" alt="Upload" />
         </div>
-        <input
+        <!-- <input
             type="file"
             id="{{ uid }}"
             hidden
             (change)="selectImg($event)"
             accept="png,jpg,svg"
-        />
-        <label for="{{ uid }}" class="greyBtn">Upload</label>
+        /> -->
+        <label (click)="selectImg()" for="{{ uid }}" class="greyBtn">Upload</label>
     </div>
     <div class="greyTxt">{{ sizeDesc }}</div>
 </div>

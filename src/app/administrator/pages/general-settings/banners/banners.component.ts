@@ -23,5 +23,9 @@ export class BannersComponent implements OnInit {
     this.banners.push(new FormControl(''));
   }
 
+  delBan(i) {
+    this.banners.removeAt(i);
+  }
+
   submit() {}
 }
