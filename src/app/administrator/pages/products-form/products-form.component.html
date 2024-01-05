@@ -1,1 +1,110 @@
-<layout></layout>
+<layout pageTitle="Add Product">
+    <div class="formFlex">
+        <div class="largePart">
+            <div class="headPart">Product Information</div>
+            <div class="bodyPart">
+                <div class="formGroup">
+                    <label class="req" for="">Product name</label>
+                    <input type="text" [formControl]="f('name')" />
+                </div>
+                <div class="fieldFlex">
+                    <div class="formGroup">
+                        <label class="req" for="">Category</label>
+                        <custom-select
+                            [fc]="f('category')"
+                            [options]="categories"
+                        >
+                            <div *ngFor="let o of categories" class="option">
+                                {{ o?.txt }}
+                            </div>
+                        </custom-select>
+                    </div>
+                    <div class="formGroup">
+                        <label class="req" for=""
+                            >Short description(300 characters max)</label
+                        >
+                        <input type="text" [formControl]="f('overview')" />
+                    </div>
+                </div>
+                <div class="formGroup">
+                    <label class="req" for="">Full description*</label>
+                    <textarea
+                        [formControl]="f('description')"
+                        rows="5"
+                    ></textarea>
+                </div>
+                <div class="fieldFlex">
+                    <div class="formGroup">
+                        <label for="" class="req">Regular price</label>
+                        <div class="inputCont">
+                            <input
+                                type="number"
+                                [formControl]="f('regular_price')"
+                            />
+                        </div>
+                    </div>
+                    <div class="formGroup">
+                        <label for="">Discount price</label>
+                        <div class="inputCont">
+                            <input
+                                type="number"
+                                [formControl]="f('discount_price')"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="fieldFlex">
+                    <div class="formGroup">
+                        <label for="">SKU</label>
+                        <input type="text" [formControl]="f('sku')" />
+                    </div>
+                    <div class="formGroup">
+                        <label for="">Warranty</label>
+                        <div class="inputCont">
+                            <input
+                                type="number"
+                                [formControl]="f('warranty')"
+                            />
+                            <custom-select
+                                [options]="warranties"
+                                [fc]="f('warranty_unit')"
+                            >
+                                <div
+                                    *ngFor="let o of warranties"
+                                    class="option"
+                                >
+                                    {{ o?.txt }}
+                                </div>
+                            </custom-select>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    *ngFor="let s of f('stores').controls; let i = index"
+                    class="fieldFlex storeInfo"
+                >
+                    <div class="formGroup">
+                        <label for="" class="req">Choose Store</label>
+                        <custom-select
+                            [options]="stores"
+                            [fc]="s.controls.store"
+                        >
+                            <div *ngFor="let o of stores" class="option">
+                                {{ o?.txt }}
+                            </div>
+                        </custom-select>
+                    </div>
+                    <div class="formGroup">
+                        <label for="" class="req">Quantity</label>
+                        <input
+                            type="number"
+                            [formControl]="s.controls.quantity"
+                        />
+                    </div>
+                </div>
+                <div class="txtBtn priCol">Add Store</div>
+            </div>
+        </div>
+        <div class="smallPart"></div>
+    </div>
+</layout>
