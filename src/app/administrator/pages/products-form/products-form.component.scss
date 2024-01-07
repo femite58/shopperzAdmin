@@ -1,0 +1,89 @@
+:host ::ng-deep main {
+    border: unset !important;
+}
+.formFlex {
+    display: flex;
+    gap: 15px;
+}
+.largePart {
+    flex: 2 500px;
+    .headPart {
+        padding: 25px 30px 13px;
+        border-radius: 10px 10px 0 0;
+        border: var(--border);
+        font-weight: 500;
+        font-size: 14px;
+    }
+    .bodyPart {
+        border: var(--border);
+        border-top: none;
+        padding: 30px;
+    }
+    .fieldFlex {
+        display: flex;
+        gap: 0 20px;
+        & > * {
+            flex: 1 200px;
+        }
+    }
+    .price {
+        & > div:first-child {
+            padding: 0 16px;
+            border-right: var(--border);
+            left: 0;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            color: var(--txtLight);
+            font-weight: 500;
+        }
+        input {
+            padding-left: 50px;
+        }
+    }
+    .warranty {
+        & > *:not(input) {
+            right: 0;
+        }
+        input::-webkit-inner-spin-button {
+            display: none;
+        }
+    }
+    .storeInfo {
+        padding: 20px;
+        border-radius: 10px;
+        background: #f7f7f7;
+        margin-bottom: 20px;
+        &.fieldFlex {
+            gap: 20px;
+        }
+        & > * {
+            margin-bottom: 0;
+        }
+    }
+}
+.smallPart {
+    flex: 1 300px;
+}
+::ng-deep .productSelect {
+    .customInput {
+        height: 45px !important;
+    }
+}
+:host ::ng-deep .warrantySelect {
+    right: 0;
+    .clickable {
+        align-items: center !important;
+        border-left: var(--border);
+        padding: 0 18px;
+        .customInput {
+            border: none !important;
+            padding: 0 !important;
+            height: 43px !important;
+        }
+        i {
+            position: static;
+            transform: unset;
+        }
+    }
+}

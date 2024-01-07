@@ -13,6 +13,7 @@
                         <custom-select
                             [fc]="f('category')"
                             [options]="categories"
+                            uniqueId="productSelect"
                         >
                             <div *ngFor="let o of categories" class="option">
                                 {{ o?.txt }}
@@ -36,7 +37,8 @@
                 <div class="fieldFlex">
                     <div class="formGroup">
                         <label for="" class="req">Regular price</label>
-                        <div class="inputCont">
+                        <div class="inputCont preIcon price">
+                            <div>₦</div>
                             <input
                                 type="number"
                                 [formControl]="f('regular_price')"
@@ -45,7 +47,8 @@
                     </div>
                     <div class="formGroup">
                         <label for="">Discount price</label>
-                        <div class="inputCont">
+                        <div class="inputCont preIcon price">
+                            <div>₦</div>
                             <input
                                 type="number"
                                 [formControl]="f('discount_price')"
@@ -60,7 +63,7 @@
                     </div>
                     <div class="formGroup">
                         <label for="">Warranty</label>
-                        <div class="inputCont">
+                        <div class="inputCont warranty">
                             <input
                                 type="number"
                                 [formControl]="f('warranty')"
@@ -68,6 +71,7 @@
                             <custom-select
                                 [options]="warranties"
                                 [fc]="f('warranty_unit')"
+                                uniqueId="productSelect warrantySelect"
                             >
                                 <div
                                     *ngFor="let o of warranties"
@@ -88,6 +92,7 @@
                         <custom-select
                             [options]="stores"
                             [fc]="s.controls.store"
+                            uniqueId="productSelect"
                         >
                             <div *ngFor="let o of stores" class="option">
                                 {{ o?.txt }}
@@ -105,6 +110,21 @@
                 <div class="txtBtn priCol">Add Store</div>
             </div>
         </div>
-        <div class="smallPart"></div>
+        <div class="smallPart">
+            <div class="mainImg">
+                <div class="imgSizer">
+                    <div class="desc">
+                        <div class="circleIcon">
+                            <svg-icons name="picturePlus"></svg-icons>
+                        </div>
+                        <div class="txt">
+                            <span class="priCol">Click to upload</span> or drag
+                            and drop
+                            <div>SVG, PNG, JPG or GIF (max. 800x400px)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </layout>
