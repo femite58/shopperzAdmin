@@ -1,4 +1,4 @@
-<layout pageTitle="Products">
+<app-page-head pageTitle="Products">
     <div id="headBtnCont">
         <button class="greyOutlineBtn">
             <svg-icons name="download"></svg-icons>
@@ -9,6 +9,8 @@
             <span>Add Product</span>
         </button>
     </div>
+</app-page-head>
+<main>
     <app-empty-items
         *ngIf="!products.length"
         title="No Products yet!"
@@ -122,7 +124,7 @@
             (setPage)="setPage($event)"
         ></app-pagination-parent>
     </div>
-</layout>
+</main>
 <div id="modals">
     <app-modal
         #storeQuestionModal

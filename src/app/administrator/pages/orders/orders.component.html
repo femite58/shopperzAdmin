@@ -1,10 +1,5 @@
-<layout pageTitle="Orders">
-    <div id="headBtnCont">
-        <!-- <button class="primBtn" #addStoreModalOpener>
-            <svg-icons name="plus"></svg-icons>
-            <span>Add New</span>
-        </button> -->
-    </div>
+<app-page-head pageTitle="Orders"></app-page-head>
+<main>
     <div id="tableCont">
         <div id="topActions">
             <div class="searchCont">
@@ -120,7 +115,9 @@
                                             <th>Disc.</th>
                                             <th>Total</th>
                                             <th>
-                                                <div class="d-flex align-items-center">
+                                                <div
+                                                    class="d-flex align-items-center"
+                                                >
                                                     <svg-icons
                                                         name="print"
                                                     ></svg-icons>
@@ -247,4 +244,4 @@
             (setPage)="onSetPage($event)"
         ></app-pagination-parent>
     </div>
-</layout>
+</main>

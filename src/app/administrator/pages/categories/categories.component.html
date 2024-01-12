@@ -1,10 +1,12 @@
-<layout pageTitle="Category">
+<app-page-head pageTitle="Category">
     <div id="headBtnCont">
         <button class="primBtn" [openModal]="addCatModal">
             <svg-icons name="plus"></svg-icons>
             <span>Add Category</span>
         </button>
     </div>
+</app-page-head>
+<main>
     <div id="tableCont">
         <div id="topActions">
             <div class="searchCont">
@@ -53,7 +55,7 @@
             </table>
         </div>
     </div>
-</layout>
+</main>
 <div id="modals">
     <app-modal #addCatModal [closeModal]="closeModal" (onClose)="onClose()">
         <div class="modalContent">

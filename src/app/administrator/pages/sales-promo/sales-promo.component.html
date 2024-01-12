@@ -1,4 +1,4 @@
-<layout pageTitle="Sales Promotion">
+<app-page-head pageTitle="Sales Promotion">
     <div id="headBtnCont">
         <button class="greyOutlineBtn">
             <svg-icons name="upload"></svg-icons>
@@ -13,23 +13,24 @@
             <span>Create New</span>
         </button>
     </div>
-    <div id="tabCont">
-        <a
-            class="eachTab"
-            routerLink="/administrator/sales-promotion/coupons"
-            routerLinkActive="activeTab"
-        >
-            Coupons
-        </a>
-        <a
-            class="eachTab"
-            routerLink="/administrator/sales-promotion/flash-sales"
-            routerLinkActive="activeTab"
-        >
-            Flash Sales
-        </a>
-    </div>
-
+</app-page-head>
+<div id="tabCont">
+    <a
+        class="eachTab"
+        routerLink="/administrator/sales-promotion/coupons"
+        routerLinkActive="activeTab"
+    >
+        Coupons
+    </a>
+    <a
+        class="eachTab"
+        routerLink="/administrator/sales-promotion/flash-sales"
+        routerLinkActive="activeTab"
+    >
+        Flash Sales
+    </a>
+</div>
+<main>
     <div id="tableCont">
         <div id="topActions">
             <div class="searchCont">
@@ -201,7 +202,7 @@
             </table>
         </div>
     </div>
-</layout>
+</main>
 <!-- <div id="modals">
     <app-modal #addStoreModal [closeModal]="closeModal">
         <div class="modalContent">

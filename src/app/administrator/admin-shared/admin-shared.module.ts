@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { EmptyItemsComponent } from './components/empty-items/empty-items.component';
 import { PaginationParentComponent } from './components/pagination-parent/pagination-parent.component';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import { PageHeadComponent } from './components/page-head/page-head.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FileUploadComponent } from './components/file-upload/file-upload.compon
     EmptyItemsComponent,
     PaginationParentComponent,
     FileUploadComponent,
+    PageHeadComponent,
   ],
   imports: [CommonModule, RouterModule, SharedModule],
   exports: [
@@ -25,6 +27,7 @@ import { FileUploadComponent } from './components/file-upload/file-upload.compon
     PaginationParentComponent,
     SharedModule,
     FileUploadComponent,
+    PageHeadComponent,
   ],
 })
 export class AdminSharedModule {}

@@ -26,78 +26,85 @@ import { AccSettingsComponent } from './pages/acc-settings/acc-settings.componen
 import { ProfileComponent } from './pages/acc-settings/profile/profile.component';
 import { PasswordComponent } from './pages/acc-settings/password/password.component';
 import { NotificationsListingComponent } from './pages/notifications-listing/notifications-listing.component';
+import { LayoutComponent } from './admin-shared/components/layout/layout.component';
 
 const routes: Routes = [
-  { path: 'dashboard', component: DashboardComponent },
   {
-    path: 'orders',
+    path: '',
+    component: LayoutComponent,
     children: [
-      { path: '', component: OrdersComponent },
-      { path: 'details/:id', component: OrderDetailsComponent },
-    ],
-  },
-  {
-    path: 'notifications',
-    redirectTo: '/administrator/notifications/admin',
-    pathMatch: 'full',
-  },
-  {
-    path: 'notifications/:tab',
-    component: NotificationManagerComponent,
-    children: [
-      { path: '', component: NotificationsListingComponent },
-      { path: 'details/:id', component: NotificationDetailsComponent },
-    ],
-  },
-
-  // { path: 'order', component: OrderDetailsComponent },
-  { path: 'stores', component: StoresComponent },
-  {
-    path: 'sales-promotion',
-    redirectTo: 'sales-promotion/coupons',
-    pathMatch: 'full',
-  },
-  { path: 'sales-promotion/:tab', component: SalesPromoComponent },
-  { path: 'customers', component: CustomersComponent },
-  { path: 'manage-admins', component: ManageAdminComponent },
-  { path: 'manage-admins/details/:id', component: AdminDetailsComponent },
-  {
-    path: 'products',
-    children: [
+      { path: 'dashboard', component: DashboardComponent },
       {
-        path: '',
-        redirectTo: '/administrator/products/listing',
+        path: 'orders',
+        children: [
+          { path: '', component: OrdersComponent },
+          { path: 'details/:id', component: OrderDetailsComponent },
+        ],
+      },
+      {
+        path: 'notifications',
+        redirectTo: '/administrator/notifications/admin',
         pathMatch: 'full',
       },
-      { path: 'listing', component: ProductsComponent },
-      { path: 'details/:id', component: ProductDetailsComponent },
-      { path: 'add', component: ProductsFormComponent },
-      { path: 'edit/:id', component: ProductsFormComponent },
-    ],
-  },
-  { path: 'product-variations', component: ProductSpecificationsComponent },
-  {
-    path: 'product-categories',
-    component: CategoriesComponent,
-  },
-  {
-    path: 'general-settings',
-    component: GeneralSettingsComponent,
-    children: [
-      { path: '', redirectTo: 'company-info', pathMatch: 'full' },
-      { path: 'company-info', component: CompanyInfoComponent },
-      { path: 'customization', component: CustomizationComponent },
-      { path: 'app-settings', component: AppSettingsComponent },
-      { path: 'banners', component: BannersComponent },
-    ],
-  },
-  {
-    path: 'account-settings',
-    component: AccSettingsComponent,
-    children: [
-      { path: '', redirectTo: 'profile', pathMatch: 'full' },
-      { path: 'profile', component: ProfileComponent },
-      { path: 'password', component: PasswordComponent },
+      {
+        path: 'notifications/:tab',
+        component: NotificationManagerComponent,
+        children: [
+          { path: '', component: NotificationsListingComponent },
+          { path: 'details/:id', component: NotificationDetailsComponent },
+        ],
+      },
+
+      // { path: 'order', component: OrderDetailsComponent },
+      { path: 'stores', component: StoresComponent },
+      {
+        path: 'sales-promotion',
+        redirectTo: 'sales-promotion/coupons',
+        pathMatch: 'full',
+      },
+      { path: 'sales-promotion/:tab', component: SalesPromoComponent },
+      { path: 'customers', component: CustomersComponent },
+      { path: 'manage-admins', component: ManageAdminComponent },
+      { path: 'manage-admins/details/:id', component: AdminDetailsComponent },
+      {
+        path: 'products',
+        children: [
+          {
+            path: '',
+            redirectTo: '/administrator/products/listing',
+            pathMatch: 'full',
+          },
+          { path: 'listing', component: ProductsComponent },
+          { path: 'details/:id', component: ProductDetailsComponent },
+          { path: 'add', component: ProductsFormComponent },
+          { path: 'edit/:id', component: ProductsFormComponent },
+        ],
+      },
+      { path: 'product-variations', component: ProductSpecificationsComponent },
+      {
+        path: 'product-categories',
+        component: CategoriesComponent,
+      },
+      {
+        path: 'general-settings',
+        component: GeneralSettingsComponent,
+        children: [
+          { path: '', redirectTo: 'company-info', pathMatch: 'full' },
+          { path: 'company-info', component: CompanyInfoComponent },
+          { path: 'customization', component: CustomizationComponent },
+          { path: 'app-settings', component: AppSettingsComponent },
+          { path: 'banners', component: BannersComponent },
+        ],
+      },
+      {
+        path: 'account-settings',
+        component: AccSettingsComponent,
+        children: [
+          { path: '', redirectTo: 'profile', pathMatch: 'full' },
+          { path: 'profile', component: ProfileComponent },
+          { path: 'password', component: PasswordComponent },
+        ],
+      },
     ],
   },
 ];

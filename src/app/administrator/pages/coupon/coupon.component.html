@@ -1,4 +1,4 @@
-<layout pageTitle="Sales Promotion">
+<app-page-head pageTitle="Sales Promotion">
     <div id="headBtnCont">
         <button class="primBtn" [openModal]="" *ngIf="selectedTab == 1">
             <svg-icons name="plus"></svg-icons>
@@ -9,22 +9,24 @@
             <span>Create Coupon</span>
         </button>
     </div>
-    <div id="tabCont">
-        <div
-            class="eachTab"
-            [class.activeTab]="selectedTab === 1"
-            (click)="selectTab(1)"
-        >
-            Coupons
-        </div>
-        <div
-            class="eachTab"
-            [class.activeTab]="selectedTab === 2"
-            (click)="selectTab(2)"
-        >
-            Flash Sales
-        </div>
+</app-page-head>
+<div id="tabCont">
+    <div
+        class="eachTab"
+        [class.activeTab]="selectedTab === 1"
+        (click)="selectTab(1)"
+    >
+        Coupons
     </div>
+    <div
+        class="eachTab"
+        [class.activeTab]="selectedTab === 2"
+        (click)="selectTab(2)"
+    >
+        Flash Sales
+    </div>
+</div>
+<main>
     <div class="tabContent">
         <div *ngIf="selectedTab == 1">
             <div id="tableCont">
@@ -227,7 +229,8 @@
             </div>
         </div>
     </div>
-</layout>
+</main>
+
 <!-- <div id="modals">
     <app-modal #addStoreModal [closeModal]="closeModal">
         <div class="modalContent">

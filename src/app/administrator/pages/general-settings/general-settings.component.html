@@ -1,29 +1,30 @@
-<layout pageTitle="General Settings">
-    <div id="tabCont">
-        <a
-            routerLink="/administrator/general-settings/company-info"
-            routerLinkActive="activeTab"
-            class="eachTab"
-            >Company's Info</a
-        >
-        <a
-            routerLink="/administrator/general-settings/customization"
-            routerLinkActive="activeTab"
-            class="eachTab"
-            >Customization</a
-        >
-        <a
-            routerLink="/administrator/general-settings/app-settings"
-            routerLinkActive="activeTab"
-            class="eachTab"
-            >App Settings</a
-        >
-        <a
-            routerLink="/administrator/general-settings/banners"
-            routerLinkActive="activeTab"
-            class="eachTab"
-            >Banners</a
-        >
-    </div>
+<app-page-head pageTitle="General Settings"></app-page-head>
+<div id="tabCont">
+    <a
+        routerLink="/administrator/general-settings/company-info"
+        routerLinkActive="activeTab"
+        class="eachTab"
+        >Company's Info</a
+    >
+    <a
+        routerLink="/administrator/general-settings/customization"
+        routerLinkActive="activeTab"
+        class="eachTab"
+        >Customization</a
+    >
+    <a
+        routerLink="/administrator/general-settings/app-settings"
+        routerLinkActive="activeTab"
+        class="eachTab"
+        >App Settings</a
+    >
+    <a
+        routerLink="/administrator/general-settings/banners"
+        routerLinkActive="activeTab"
+        class="eachTab"
+        >Banners</a
+    >
+</div>
+<main>
     <router-outlet></router-outlet>
-</layout>
+</main>

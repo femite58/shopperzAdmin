@@ -1,10 +1,12 @@
-<layout [backAct]="true" pageTitle="Order Details">
+<app-page-head [backAct]="true" pageTitle="Order Details">
     <div id="headBtnCont">
         <div class="status {{ orderStatus }}">
             <span></span>
             <span>{{ orderStatus }}</span>
         </div>
     </div>
+</app-page-head>
+<main>
     <div id="orderDetCont">
         <div class="orderDet">
             <div class="profImg">
@@ -160,4 +162,4 @@
             </table>
         </div>
     </div>
-</layout>
+</main>

@@ -2,24 +2,7 @@
     <sidemenu></sidemenu>
     <div id="bigMain">
         <admin-header></admin-header>
-        <div *ngIf="pageTitle" id="pageHead">
-            <div class="leftSide">
-                <span
-                    *ngIf="backAct"
-                    onclick="history.back()"
-                    class="backAct pointer"
-                >
-                    <svg-icons name="longArrowLeft"></svg-icons>
-                </span>
-                <h1>{{ pageTitle }}</h1>
-            </div>
-            <ng-content select="#headBtnCont"></ng-content>
-        </div>
-
-        <ng-content select="#tabCont"></ng-content>
-        <main>
-            <ng-content></ng-content>
-        </main>
+        <router-outlet></router-outlet>
     </div>
 </div>
 <app-cropper-opener></app-cropper-opener>

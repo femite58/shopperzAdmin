@@ -1,4 +1,4 @@
-<layout pageTitle="Notifications">
+<app-page-head pageTitle="Notifications">
     <div id="headBtnCont">
         <button
             class="primBtn"
@@ -17,25 +17,27 @@
             <span>Create New</span>
         </button>
     </div>
-    <div id="tabCont">
-        <a
-            class="eachTab"
-            routerLink="/administrator/notifications/admin"
-            routerLinkActive="activeTab"
-        >
-            Admin Notification
-        </a>
-        <a
-            class="eachTab"
-            routerLink="/administrator/notifications/user"
-            routerLinkActive="activeTab"
-        >
-            User Notification
-        </a>
-    </div>
-
+</app-page-head>
+<div id="tabCont">
+    <a
+        class="eachTab"
+        routerLink="/administrator/notifications/admin"
+        routerLinkActive="activeTab"
+    >
+        Admin Notification
+    </a>
+    <a
+        class="eachTab"
+        routerLink="/administrator/notifications/user"
+        routerLinkActive="activeTab"
+    >
+        User Notification
+    </a>
+</div>
+<main>
     <router-outlet></router-outlet>
-</layout>
+</main>
+
 <div id="modals">
     <app-modal #createNoti [closeModal]="closeModal">
         <div class="modalContent">

@@ -9,41 +9,8 @@
     // display: flex;
     // flex-direction: column;
 }
-#pageHead {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-    border-bottom: $border;
-    padding: 0 30px;
-    position: sticky;
-    top: 70px;
-    z-index: 200;
-    background-color: #fff;
-    .leftSide {
-        display: flex;
-        align-items: center;
-        gap: 18px;
-    }
-    h1 {
-        font-size: 18px;
-        font-weight: 600;
-        margin: 0;
-    }
-    ::ng-deep #headBtnCont {
-        display: flex;
-        align-items: center;
-        gap: 11px;
-        button {
-            gap: 8px;
-            padding: 0 16px;
-            &:not(.primBtn) {
-                background: #fff;
-            }
-        }
-    }
-}
-main {
+
+::ng-deep main {
     margin: 20px 30px;
     border: $border;
     border-radius: 10px;
@@ -172,27 +139,6 @@ main {
     .dropped {
         right: 10px !important;
         min-width: 99px;
-    }
-}
-::ng-deep .tabContainer {
-    padding: 20px 30px 0 30px;
-    border-bottom: 1px solid #d6d9de;
-    .tabHeader {
-        display: flex;
-        width: 100%;
-        padding-right: 0px;
-        align-items: flex-start;
-        .tab {
-            display: flex;
-            padding: 8px 20px;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            &.active {
-                border-radius: 6px 0px 0px 0px;
-                border-bottom: 2px solid #f8253a;
-            }
-        }
     }
 }
 

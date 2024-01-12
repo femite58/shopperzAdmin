@@ -1,18 +1,18 @@
-<layout pageTitle="Account Settings">
-    <div id="tabCont">
-        <a
-            routerLink="/administrator/account-settings/profile"
-            routerLinkActive="activeTab"
-            class="eachTab"
-            >Profile</a
-        >
-        <a
-            routerLink="/administrator/account-settings/password"
-            routerLinkActive="activeTab"
-            class="eachTab"
-            >Password Settings</a
-        >
-        
-    </div>
+<app-page-head pageTitle="Account Settings"></app-page-head>
+<div id="tabCont">
+    <a
+        routerLink="/administrator/account-settings/profile"
+        routerLinkActive="activeTab"
+        class="eachTab"
+        >Profile</a
+    >
+    <a
+        routerLink="/administrator/account-settings/password"
+        routerLinkActive="activeTab"
+        class="eachTab"
+        >Password Settings</a
+    >
+</div>
+<main>
     <router-outlet></router-outlet>
-</layout>
+</main>

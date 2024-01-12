@@ -1,4 +1,4 @@
-<layout pageTitle="Stores">
+<app-page-head pageTitle="Stores">
     <div id="headBtnCont">
         <button
             class="primBtn"
@@ -9,6 +9,8 @@
             <span>Add New</span>
         </button>
     </div>
+</app-page-head>
+<main>
     <div id="tableCont">
         <div id="topActions">
             <div class="searchCont">
@@ -111,7 +113,7 @@
             (setPage)="onSetPage($event)"
         ></app-pagination-parent>
     </div>
-</layout>
+</main>
 
 <div id="modals">
     <app-modal #addStoreModal [closeModal]="closeModal">
