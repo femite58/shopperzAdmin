@@ -28,6 +28,7 @@ export class ProductsFormComponent {
     color: new FormControl(''),
     barcode: new FormControl(''),
   });
+  submitting = false;
 
   stores = [];
   categories = [];

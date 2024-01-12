@@ -26,12 +26,4 @@ form {
         border-radius: 0 5px 5px 0;
     }
 }
-.btnCont {
-    display: flex;
-    gap: 12px;
-    margin-top: 35px;
-    button,
-    ::ng-deep .primBtn {
-        width: 137px !important;
-    }
-}
+

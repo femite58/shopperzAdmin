@@ -1,12 +1,3 @@
 :host ::ng-deep main {
     border: none !important;
-    ::ng-deep .actions {
-        margin-top: 35px;
-        display: flex;
-        gap: 12px;
-        button {
-            width: 137px !important;
-            height: 40px;
-        }
-    }
 }
