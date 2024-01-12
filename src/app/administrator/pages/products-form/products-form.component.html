@@ -6,7 +6,14 @@
             <div class="paneBody">
                 <div class="formGroup">
                     <label class="req" for="">Product name</label>
-                    <input type="text" [formControl]="f('name')" />
+                    <div class="cusDropdown">
+                        <div class="clickable">
+                            <input type="text" [formControl]="f('name')" />
+                        </div>
+                        <div class="dropped">
+                            <div class="dropItem"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="fieldFlex mb20">
                     <div class="formGroup">
