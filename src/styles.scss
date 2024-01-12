@@ -252,6 +252,28 @@ a {
         }
     }
 }
+.delIconBtn {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    svg {
+        width: 14px;
+        height: auto;
+        *[stroke]:not([stroke="none"]) {
+            stroke: red;
+        }
+        *[fill]:not([fill="none"]) {
+            fill: red;
+        }
+    }
+}
 
 .primBtn,
 .secBtn,

@@ -107,13 +107,25 @@
                             [formControl]="s.controls.quantity"
                         />
                     </div>
+                    <div
+                        *ngIf="f('stores').length > 1"
+                        (click)="delStore(i)"
+                        class="delStore"
+                    >
+                        <svg-icons name="delete"></svg-icons>
+                    </div>
                 </div>
-                <div class="txtBtn priCol">Add Store</div>
+                <div (click)="addStore()" class="txtBtn priCol">Add Store</div>
             </div>
         </div>
         <div class="smallPart">
-            <div class="mainImg">
-                <div class="desc">
+            <div (click)="pickImg(0)" class="mainImg">
+                <img
+                    *ngIf="f('images').value[0]"
+                    [src]="f('images').value[0] | safeUrl"
+                    alt="Product Img1"
+                />
+                <div *ngIf="!f('images').value[0]" class="desc">
                     <div class="circleIcon">
                         <svg-icons name="picturePlus"></svg-icons>
                     </div>
@@ -123,16 +135,61 @@
                         <div>SVG, PNG, JPG or GIF (max. 800x400px)</div>
                     </div>
                 </div>
-            </div>
-            <div class="imgFlex">
-                <div class="eachImg">
+                <div *ngIf="f('images').value[0]" class="imgOverlay">
+                    <div (click)="delImg(0, $event)" class="delIconBtn">
+                        <svg-icons name="delete"></svg-icons>
+                    </div>
                     <div class="circleIcon">
                         <svg-icons name="picturePlus"></svg-icons>
                     </div>
+                    <span>Browse Image</span>
                 </div>
-                <div class="eachImg">
-                    <div class="circleIcon">
+            </div>
+            <div class="imgFlex">
+                <div
+                    (click)="!f('images').value[0] ? null : pickImg(1)"
+                    [class.disabled]="!f('images').value[0]"
+                    class="eachImg"
+                >
+                    <img
+                        *ngIf="f('images').value[1]"
+                        [src]="f('images').value[1] | safeUrl"
+                        alt="Product Img1"
+                    />
+                    <div *ngIf="!f('images').value[1]" class="circleIcon">
                         <svg-icons name="picturePlus"></svg-icons>
+                    </div>
+                    <div *ngIf="f('images').value[1]" class="imgOverlay">
+                        <div (click)="delImg(1, $event)" class="delIconBtn">
+                            <svg-icons name="delete"></svg-icons>
+                        </div>
+                        <div class="circleIcon">
+                            <svg-icons name="picturePlus"></svg-icons>
+                        </div>
+                        <span>Browse Image</span>
+                    </div>
+                </div>
+                <div
+                    (click)="!f('images').value[1] ? null : pickImg(2)"
+                    [class.disabled]="!f('images').value[1]"
+                    class="eachImg"
+                >
+                    <img
+                        *ngIf="f('images').value[2]"
+                        [src]="f('images').value[2] | safeUrl"
+                        alt="Product Img1"
+                    />
+                    <div *ngIf="!f('images').value[2]" class="circleIcon">
+                        <svg-icons name="picturePlus"></svg-icons>
+                    </div>
+                    <div *ngIf="f('images').value[2]" class="imgOverlay">
+                        <div (click)="delImg(2, $event)" class="delIconBtn">
+                            <svg-icons name="delete"></svg-icons>
+                        </div>
+                        <div class="circleIcon">
+                            <svg-icons name="picturePlus"></svg-icons>
+                        </div>
+                        <span>Browse Image</span>
                     </div>
                 </div>
             </div>
@@ -184,7 +241,7 @@
             </div>
         </div>
     </div>
-    <div class="pageFormBtnCont mt35">
+    <div class="pageFormBtnCont">
         <submit-btn
             btnTxt="Submit"
             [loading]="submitting"

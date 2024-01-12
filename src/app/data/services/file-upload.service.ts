@@ -11,7 +11,7 @@ export class FileUploadService {
   constructor(private http: HttpClient, config: ConfigService) {
     this.baseUrl = config.baseUrl;
   }
-  cropInfo = new BehaviorSubject(null);
+  cropInfo = new BehaviorSubject<{ aspectRatio: number; callback }>(null);
 
   upload(fd, folder, name) {
     let url = `${this.baseUrl}fileupload/${folder}/${name}`;

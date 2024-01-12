@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FileUploadService } from 'src/app/data/services/file-upload.service';
 
 @Component({
   selector: 'app-products-form',
@@ -16,6 +17,7 @@ export class ProductsFormComponent {
     sku: new FormControl(''),
     warranty: new FormControl(''),
     warranty_unit: new FormControl('Years'),
+    images: new FormControl([]),
     stores: new FormArray([
       new FormGroup({
         store: new FormControl(''),
@@ -43,5 +45,36 @@ export class ProductsFormComponent {
     return this.form.get(n);
   }
 
-  constructor() {}
+  constructor(private fileS: FileUploadService) {}
+
+  delImg(i, e) {
+    e.stopPropagation();
+    let imgs = this.f('images').value;
+    imgs.splice(i, 1);
+    this.f('images').setValue(imgs);
+  }
+
+  addStore() {
+    this.f('stores').push(
+      new FormGroup({
+        store: new FormControl('', Validators.required),
+        quantity: new FormControl('', Validators.required),
+      })
+    );
+  }
+
+  delStore(i) {
+    this.f('stores').removeAt(i);
+  }
+
+  pickImg(i) {
+    this.fileS.cropInfo.next({
+      aspectRatio: 1,
+      callback: (info) => {
+        let imgs = this.f('images').value;
+        imgs.splice(i, 1, info.url);
+        this.f('images').setValue(imgs);
+      },
+    });
+  }
 }
