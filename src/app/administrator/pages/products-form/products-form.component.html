@@ -2,8 +2,8 @@
 <main>
     <div class="formFlex">
         <div class="largePart">
-            <div class="headPart">Product Information</div>
-            <div class="bodyPart">
+            <div class="paneHead">Product Information</div>
+            <div class="paneBody">
                 <div class="formGroup">
                     <label class="req" for="">Product name</label>
                     <input type="text" [formControl]="f('name')" />
@@ -35,7 +35,7 @@
                         rows="5"
                     ></textarea>
                 </div>
-                <div class="fieldFlex">
+                <div class="fieldFlex mb20">
                     <div class="formGroup">
                         <label for="" class="req">Regular price</label>
                         <div class="inputCont preIcon price">
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="fieldFlex">
+                <div class="fieldFlex mb20">
                     <div class="formGroup">
                         <label for="">SKU</label>
                         <input type="text" [formControl]="f('sku')" />
@@ -113,15 +113,74 @@
         </div>
         <div class="smallPart">
             <div class="mainImg">
-                <div class="imgSizer">
-                    <div class="desc">
-                        <div class="circleIcon">
-                            <svg-icons name="picturePlus"></svg-icons>
+                <div class="desc">
+                    <div class="circleIcon">
+                        <svg-icons name="picturePlus"></svg-icons>
+                    </div>
+                    <div class="txt">
+                        <span class="priCol">Click to upload</span> or drag and
+                        drop
+                        <div>SVG, PNG, JPG or GIF (max. 800x400px)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="imgFlex">
+                <div class="eachImg">
+                    <div class="circleIcon">
+                        <svg-icons name="picturePlus"></svg-icons>
+                    </div>
+                </div>
+                <div class="eachImg">
+                    <div class="circleIcon">
+                        <svg-icons name="picturePlus"></svg-icons>
+                    </div>
+                </div>
+            </div>
+            <div id="specification" class="mt20">
+                <div class="paneHead">Specification</div>
+                <div class="paneBody">
+                    <div class="formGroup">
+                        <label for="">Brand name</label>
+                        <input type="text" [formControl]="f('brand')" />
+                    </div>
+                    <div class="fieldFlex">
+                        <div class="formGroup">
+                            <label for="">Size(L*W*H, inches)</label>
+                            <input type="text" [formControl]="f('size')" />
                         </div>
-                        <div class="txt">
-                            <span class="priCol">Click to upload</span> or drag
-                            and drop
-                            <div>SVG, PNG, JPG or GIF (max. 800x400px)</div>
+                        <div class="formGroup">
+                            <label for="">Weight. kg</label>
+                            <input type="text" [formControl]="f('weight')" />
+                        </div>
+                        <div class="formGroup">
+                            <label for="">Colors</label>
+                            <div class="inputCont color">
+                                <input
+                                    type="text"
+                                    [value]="f('color').value"
+                                    [formControl]="f('color')"
+                                />
+                                <input
+                                    type="color"
+                                    [value]="f('color').value"
+                                    [formControl]="f('color')"
+                                />
+                            </div>
+                        </div>
+                        <div class="formGroup">
+                            <label for="">Barcode</label>
+                            <div class="inputFlex">
+                                <input
+                                    type="text"
+                                    [formControl]="f('barcode')"
+                                />
+                                <button
+                                    type="button"
+                                    class="greyOutlineBtn"
+                                >
+                            <svg-icons name="barcode"></svg-icons>
+                            </button>
+                            </div>
                         </div>
                     </div>
                 </div>

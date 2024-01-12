@@ -22,6 +22,11 @@ export class ProductsFormComponent {
         quantity: new FormControl(''),
       }),
     ]),
+    brand: new FormControl(''),
+    size: new FormControl(''),
+    weight: new FormControl(''),
+    color: new FormControl(''),
+    barcode: new FormControl(''),
   });
 
   stores = [];
