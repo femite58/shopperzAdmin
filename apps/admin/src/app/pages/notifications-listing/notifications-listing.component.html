@@ -1,0 +1,59 @@
+<ng-container *ngFor="let noti of notifications">
+    <div
+        *ngIf="tab == 'admin'"
+        routerLink="/administrator/notifications/admin/details/{{ noti?.id }}"
+        class="notification pointer"
+    >
+        <div class="center">
+            <div class="left">
+                <div class="ellipse"></div>
+            </div>
+            <div class="notiContent">
+                <strong>{{ noti.title }}</strong>
+                <p class="ellipsis">
+                    {{ noti.message }}
+                </p>
+                <small>
+                    Today at
+                    {{ noti.timeStamp | date : 'shortTime' }}
+                </small>
+            </div>
+        </div>
+        <div class="right">
+            <span>
+                <svg-icons name="eye"></svg-icons>
+            </span>
+            <span> {{ noti.viewCount }} Views </span>
+        </div>
+    </div>
+    <div
+        routerLink="/administrator/notifications/user/details/{{ noti?.id }}"
+        class="notification pointer"
+        *ngIf="tab == 'user'"
+    >
+        <div class="center">
+            <div class="left">
+                <div class="ellipse"></div>
+            </div>
+            <div class="imgDesc">
+                <img src="assets/images/notificationImg.png" alt="" />
+            </div>
+            <div class="notiContent">
+                <strong>{{ noti.title }}</strong>
+                <p class="ellipsis">
+                    {{ noti.message }}
+                </p>
+                <small class="greyTxt">
+                    Today at
+                    {{ noti.timeStamp | date : 'shortTime' }}
+                </small>
+            </div>
+        </div>
+        <div class="right">
+            <span>
+                <svg-icons name="eye"></svg-icons>
+            </span>
+            <span> {{ noti.viewCount }} Views </span>
+        </div>
+    </div>
+</ng-container>

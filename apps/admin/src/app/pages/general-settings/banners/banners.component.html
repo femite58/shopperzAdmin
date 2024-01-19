@@ -1,0 +1,51 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="eachField">
+        <div class="txtDesc">
+            <div class="fieldTitle">App Dashboard Banners</div>
+            <div class="fieldDesc">
+                Try upload banners you want your app users to see on their
+                dashboards, according to the specified size requirements.
+            </div>
+        </div>
+        <div class="fieldCont">
+            <div
+                *ngFor="let b of banners.controls; let i = index"
+                class="formGroup"
+            >
+                <label for="">Banner{{ i + 1 }}</label>
+                <app-image-upload
+                    [fc]="b"
+                    sizeDesc="Image size: 325px X 95px."
+                    uid="banner{{ i }}"
+                    [minH]="95"
+                    [minW]="325"
+                ></app-image-upload>
+                <div class="actions mt15">
+                    <div
+                        *ngIf="i == banners.length - 1"
+                        (click)="addMore()"
+                        class="txtBtn"
+                    >
+                        <svg-icons name="plus"></svg-icons>
+                        <span>Add more</span>
+                    </div>
+                    <div
+                        *ngIf="banners.length > 1"
+                        (click)="delBan(i)"
+                        class="txtBtnPrim"
+                    >
+                        <svg-icons name="delete2"></svg-icons>
+                        <span>Delete</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pageFormBtnCont">
+                <submit-btn
+                    btnTxt="Update"
+                    [loading]="submitting"
+                    [disabled]="form.invalid"
+                ></submit-btn>
+            </div>
+        </div>
+    </div>
+</form>

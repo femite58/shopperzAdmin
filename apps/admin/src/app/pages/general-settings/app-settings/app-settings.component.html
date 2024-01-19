@@ -1,0 +1,308 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="eachField">
+        <div class="txtDesc">
+            <div class="fieldTitle">Application Name and Icon</div>
+            <div class="fieldDesc">
+                Set the name and icon of your apps. Try to select a name and an
+                icon that are easy to remember and aesthetically pleasing.
+            </div>
+        </div>
+        <div class="fieldCont">
+            <div class="inputFieldPar">
+                <div class="formGroup">
+                    <label for="">Application Name</label>
+                    <input type="text" formControlName="app_name" />
+                </div>
+                <div class="formGroup">
+                    <label for="">Application Icon</label>
+                    <app-image-upload
+                        [fc]="f('app_icon')"
+                        sizeDesc="Min image size: 512px X 512px."
+                        [minW]="512"
+                        [minH]="512"
+                        uid="appIcon"
+                    ></app-image-upload>
+                </div>
+            </div>
+            <div class="imgPreviewPar">
+                <div class="phoneCase">
+                    <img src="assets/images/phone_bg.png" alt="Phone bg" />
+                    <div class="phoneAppsCont">
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon1.svg"
+                                alt="App Icon"
+                                class="sqaured"
+                            />
+                            <div class="pappname">Music</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon2.svg"
+                                alt="App Icon"
+                                class="sqaured"
+                            />
+                            <div class="pappname">Settings</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                [src]="
+                                    f('app_icon').value ||
+                                        'assets/images/app_icons/app_icon3.svg'
+                                        | safeUrl
+                                "
+                                alt="App Icon"
+                                class="sqaured"
+                            />
+                            <div class="pappname ellipsis">
+                                {{ f('app_name').value }}
+                            </div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon1.svg"
+                                alt="App Icon"
+                                class="round"
+                            />
+                            <div class="pappname">Music</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon2.svg"
+                                alt="App Icon"
+                                class="round"
+                            />
+                            <div class="pappname">Settings</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                [src]="
+                                    f('app_icon').value ||
+                                        'assets/images/app_icons/app_icon3.svg'
+                                        | safeUrl
+                                "
+                                alt="App Icon"
+                                class="round"
+                            />
+                            <div class="pappname ellipsis">
+                                {{ f('app_name').value }}
+                            </div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon1.svg"
+                                alt="App Icon"
+                                class="circle"
+                            />
+                            <div class="pappname">Music</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                src="assets/images/app_icons/app_icon2.svg"
+                                alt="App Icon"
+                                class="circle"
+                            />
+                            <div class="pappname">Settings</div>
+                        </div>
+                        <div class="eachApp">
+                            <img
+                                [src]="
+                                    f('app_icon').value ||
+                                        'assets/images/app_icons/app_icon3.svg'
+                                        | safeUrl
+                                "
+                                alt="App Icon"
+                                class="circle"
+                            />
+                            <div class="pappname ellipsis">
+                                {{ f('app_name').value }}
+                            </div>
+                        </div>
+                    </div>
+                    <img src="assets/images/phone_case.svg" alt="Phone" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="eachField">
+        <div class="txtDesc">
+            <div class="fieldTitle">Onboarding Screen</div>
+            <div class="fieldDesc">
+                A splash screen is an introductory screen that appears while
+                your application loads in the background.
+            </div>
+        </div>
+        <div class="fieldCont">
+            <div formArrayName="onboarding_screen" class="splashContArr">
+                <div
+                    *ngFor="
+                        let s of f('onboarding_screen').controls;
+                        let i = index
+                    "
+                    [formGroupName]="i"
+                    class="eachSplash"
+                >
+                    <div class="splashImgPar">
+                        <div class="splashNumTitle">Slide {{ i + 1 }}</div>
+                        <app-image-upload
+                            sizeDesc="Image size: 300px X 350px."
+                            [minW]="300"
+                            [minH]="350"
+                            [fc]="sc(i, 'image')"
+                            uid="splashUploadImg{{ i }}"
+                        ></app-image-upload>
+                    </div>
+                    <div class="inputFieldPar">
+                        <div class="formGroup">
+                            <label for="">Title</label>
+                            <input
+                                type="text"
+                                (input)="rebuildSlide()"
+                                formControlName="title"
+                            />
+                        </div>
+                        <div class="formGroup mb16">
+                            <label for="">Description</label>
+                            <textarea
+                                formControlName="description"
+                                (input)="rebuildSlide()"
+                                rows="5"
+                            ></textarea>
+                        </div>
+                        <div class="actions">
+                            <div
+                                *ngIf="
+                                    i == f('onboarding_screen').length - 1 &&
+                                    f('onboarding_screen').length < 3
+                                "
+                                (click)="addMore()"
+                                class="txtBtn"
+                            >
+                                <svg-icons name="plus"></svg-icons>
+                                <span>Add more</span>
+                            </div>
+                            <div
+                                *ngIf="f('onboarding_screen').length > 1"
+                                (click)="delSlide(i)"
+                                class="txtBtnPrim"
+                            >
+                                <svg-icons name="delete2"></svg-icons>
+                                <span>Delete</span>
+                            </div>
+                        </div>
+                        <div
+                            *ngIf="i == f('onboarding_screen').length - 1"
+                            class="pageFormBtnCont mt40"
+                        >
+                            <submit-btn
+                                btnTxt="Update"
+                                [loading]="submitting"
+                                [disabled]="form.invalid"
+                            ></submit-btn>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="imgPreviewPar phoneSlidePar">
+                <div class="label greyTxt fs15 fw500 mb22">
+                    Slide {{ actInd + 1 }}
+                </div>
+                <div class="phoneCase mb50">
+                    <div class="phoneAppsCont onboardingPhoneSlide">
+                        <app-banner-carousel
+                            *ngIf="showSlide"
+                            [autoSlide]="false"
+                            (indEv)="actInd = $event"
+                            [initActInd]="actInd"
+                            [infiniteSlide]="false"
+                        >
+                            <div class="flexCont">
+                                <div
+                                    *ngFor="
+                                        let s of f('onboarding_screen').value;
+                                        let i = index
+                                    "
+                                    class="carouselItem"
+                                >
+                                    <img
+                                        class="mb20"
+                                        [src]="
+                                            s.image ||
+                                                'assets/images/onboarding_default.png'
+                                                | safeUrl
+                                        "
+                                        alt="Onboarding Image"
+                                    />
+                                    <div class="onbTitle">
+                                        {{ s.title }}
+                                    </div>
+                                    <div class="onbDesc">
+                                        {{ s.description }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carouselIndicators">
+                                <div
+                                    *ngFor="
+                                        let c of f('onboarding_screen').value;
+                                        let i = index
+                                    "
+                                    class="indicatorItem"
+                                    [class.cusActive]="i == actInd"
+                                ></div>
+                            </div>
+                            <input
+                                hidden
+                                type="text"
+                                class="carouselCtrlPrev"
+                                id="carouselCtrlPrev"
+                            />
+                            <input
+                                hidden
+                                type="text"
+                                class="carouselCtrlNext"
+                                id="carouselCtrlNext"
+                            />
+                        </app-banner-carousel>
+                        <div class="btnCont mt27">
+                            <div class="primBtn">
+                                <span>Get Started</span>
+                                <svg-icons name="shortArrowRight"></svg-icons>
+                            </div>
+                            <div class="primBtnOutline">
+                                Have an account? Login
+                            </div>
+                        </div>
+                    </div>
+                    <img src="assets/images/phone_case.svg" alt="Phone" />
+                </div>
+                <div class="indicators mb40">
+                    <div
+                        *ngFor="
+                            let c of f('onboarding_screen').value;
+                            let i = index
+                        "
+                        class="eachInd"
+                        [class.actInd]="i == actInd"
+                    ></div>
+                </div>
+                <div class="ctrls">
+                    <label
+                        for="carouselCtrlPrev"
+                        [class.disabled]="actInd == 0"
+                    >
+                        <svg-icons name="arrowLeft"></svg-icons>
+                    </label>
+                    <label
+                        [class.disabled]="
+                            actInd == f('onboarding_screen').length - 1
+                        "
+                        for="carouselCtrlNext"
+                    >
+                        <svg-icons name="arrowRight"></svg-icons>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

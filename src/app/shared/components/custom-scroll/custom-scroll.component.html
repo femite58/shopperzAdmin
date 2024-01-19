@@ -1,8 +1,0 @@
-<div class="scrollCont {{checkChng}}" #scrollCont>
-    <div class="scrollInnerCont" (scroll)="setTop()">
-        <ng-content></ng-content>
-    </div>
-    <div class="scrollTrack" [class.dragging]="dragging">
-        <div class="scrollThumb" (mousedown)="dragStart($event)"></div>
-    </div>
-</div>

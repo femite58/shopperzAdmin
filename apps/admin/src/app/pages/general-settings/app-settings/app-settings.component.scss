@@ -1,0 +1,225 @@
+@import '../customization/customization.component.scss';
+form {
+    max-width: unset;
+}
+.eachField {
+    gap: 30px 60px;
+}
+.fieldCont {
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 500px;
+    width: 500px;
+    .inputFieldPar {
+        max-width: 286px;
+        width: 100%;
+    }
+    ::ng-deep .appIcon {
+        .imgCont {
+            width: 146px !important;
+            height: 146px !important;
+        }
+    }
+}
+.imgPreviewPar {
+    display: flex;
+    align-items: center;
+    background: #f7f7f7;
+    border: var(--border);
+    max-width: 334px;
+    width: 100%;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 18px 0;
+    // height: 442px;
+    flex-direction: column;
+    &.phoneSlidePar {
+        padding: 58px 0;
+    }
+    .phoneCase {
+        position: relative;
+        width: 203px;
+        & > *:not(:last-child) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            &:first-child {
+                width: 87.192118226601%;
+            }
+            &.phoneAppsCont {
+                width: 150px;
+                display: grid;
+                top: 43px;
+                transform: translateX(-50%);
+                gap: 17px;
+                grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+                .eachApp {
+                    font-size: 10px;
+                    color: #fff;
+                    text-align: center;
+                    img {
+                        width: 100%;
+                        margin-bottom: 5px;
+                        &.round {
+                            border-radius: 5px;
+                        }
+                        &.circle {
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+            &.onboardingPhoneSlide {
+                width: 100%;
+                height: 100%;
+                padding: 40px 25px 25px;
+                background: #fff;
+                top: 0;
+                left: 0;
+                transform: unset;
+                display: block;
+                text-align: center;
+                img {
+                    width: 100%;
+                    border-radius: 20px 20px 0 0;
+                }
+                .onbTitle {
+                    font-size: 14px;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                }
+                .onbDesc {
+                    font-size: 8px;
+                    color: #9f9f9f;
+                }
+                .carouselIndicators {
+                    position: static;
+                    margin-top: 10px;
+                    padding: 0;
+                    gap: 5px;
+                    .indicatorItem {
+                        width: 9px;
+                        height: 2px;
+                        min-width: 9px;
+                        border: none;
+                        border-radius: 100px;
+                        background: #ffe2e5;
+                        &.cusActive {
+                            background: var(--primary);
+                        }
+                    }
+                }
+                .btnCont {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    [class*='primBtn'] {
+                        height: 30px;
+                        font-size: 9px;
+                        border-radius: 5px;
+                        gap: 8px;
+                        // ::ng-deep svg {
+                        //     width:
+                        // }
+                    }
+                }
+            }
+        }
+        & > img:last-child {
+            z-index: 20;
+            position: relative;
+        }
+    }
+    .indicators {
+        display: flex;
+        gap: 5px;
+        .eachInd {
+            width: 7px;
+            height: 7px;
+            min-width: 7px;
+            border-radius: 50%;
+            background: #ffe2e5;
+            &.actInd {
+                background: var(--primary);
+            }
+        }
+    }
+    .ctrls {
+        display: flex;
+        gap: 15px;
+        label {
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #1e1e1c12;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+.actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.txtBtn,
+.txtBtnPrim {
+    cursor: pointer;
+    display: flex;
+    text-decoration: underline;
+    font-weight: 500;
+    align-items: center;
+    ::ng-deep svg {
+        width: 20px;
+        height: auto;
+        *[stroke]:not([stroke='none']) {
+            stroke: var(--bodyTxt);
+        }
+        *[fill]:not([fill='none']) {
+            fill: var(--bodyTxt);
+        }
+    }
+    &.txtBtnPrim {
+        color: var(--primary);
+        ::ng-deep svg {
+            *[stroke]:not([stroke='none']) {
+                stroke: var(--primary);
+            }
+            *[fill]:not([fill='none']) {
+                fill: var(--primary);
+            }
+        }
+    }
+}
+.eachField:nth-child(2) {
+    .fieldCont {
+        flex: 1 1000px;
+        width: 1000px;
+    }
+}
+.splashContArr {
+    flex: 1 400px;
+    width: 400px;
+}
+.eachSplash {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    margin-bottom: 42px;
+    ::ng-deep [class*='splashUploadImg'] {
+        .imgCont {
+            width: 131px !important;
+            height: 153px !important;
+        }
+    }
+    .splashNumTitle {
+        color: var(--txtLight);
+        margin-bottom: 12px;
+        font-size: 15px;
+    }
+}

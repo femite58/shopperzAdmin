@@ -1,0 +1,82 @@
+#headBtnCont {
+    .secBtn {
+        svg-icons {
+            ::ng-deep path {
+                color: #f8253a;
+            }
+        }
+    }
+}
+
+.mngData {
+    padding: 76px 46px 46px;
+    display: flex;
+    .leftSide {
+        width: 40%;
+        padding: 30px 65px 30px 0 !important;
+        border-right: 1px solid #d6d9de;
+        .userProf {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+            border: 1px solid #d6d9de;
+            padding: 46px 88px;
+
+            .userImg {
+                padding: 6px;
+                border-radius: 100%;
+                border: 1px solid #f8253a;
+                margin-bottom: 12px;
+                img {
+                    width: 118.3px;
+                    height: 119.32px;
+                    // object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+            .status {
+                margin-top: 15px;
+            }
+            .btnCont {
+                margin-top: 30px;
+                padding: 7px 20px !important;
+            }
+        }
+    }
+    .rightSide {
+        width: 60%;
+        display: flex;
+        flex-grow: 1;
+        padding-left: 65px;
+        padding-top: 33px;
+        form {
+            display: flex;
+            flex-grow: 1;
+            .formBody {
+                flex-grow: 1;
+                .edit {
+                    width: 100%;
+                    display: flex;
+                    flex-grow: 1;
+                    gap: 15px;
+                    .left {
+                        width: 50%;
+                    }
+                    .right {
+                        width: 50%;
+                    }
+                }
+                .btnCont {
+                    display: flex;
+                    gap: 8px;
+                }
+            }
+        }
+    }
+}
+
+.show {
+    display: flex;
+}

@@ -1,0 +1,46 @@
+<layout [backAct]="true" pageTitle="Notification Details">
+    <div id="headBtnCont">
+        <button class="primBtn" [openModal]="">
+            <svg-icons name="plus"></svg-icons>
+            <span>Create New</span>
+        </button>
+    </div>
+    <div class="tabContainer">
+        <div class="tabHeader">
+            <div
+                class="tab pointer"
+                [class.active]="selectedTab === 1"
+                (click)="selectTab(1)"
+            >
+                User Notification
+            </div>
+        </div>
+    </div>
+    <div class="tabContent">
+        <div *ngIf="selectedTab == 1">
+            <div class="notification">
+                <div class="center">
+                    <div class="imgDesc">
+                        <img
+                            src="assets/images/notificationImgBig.png"
+                            alt="notificationImg"
+                        />
+                    </div>
+                    <div class="notiContent">
+                        <small>
+                            Today at
+                            {{
+                                adminNotifications[1].timeStamp
+                                    | date : 'shortTime'
+                            }}
+                        </small>
+                        <strong>{{ adminNotifications[1].title }}</strong>
+                        <p class="greyTxt">
+                            {{ adminNotifications[1].message }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</layout>

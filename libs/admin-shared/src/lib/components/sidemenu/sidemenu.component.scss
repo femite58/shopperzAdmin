@@ -1,0 +1,88 @@
+aside {
+    position: sticky;
+    top: 0;
+    height: var(--view-height);
+}
+#innerSideMenu {
+    position: relative;
+    width: 260px;
+    height: 100%;
+    background: #f1f2f6;
+    display: flex;
+    flex-direction: column;
+}
+.scrollable {
+    flex: 1;
+    overflow: auto;
+}
+.logo {
+    padding: 35px 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.eachMenuCat {
+    margin-bottom: 22px;
+    .menuTitle {
+        color: var(--txtLight);
+        font-size: 11px;
+        font-weight: 500;
+        padding: 0 30px;
+        margin-bottom: 15px;
+    }
+}
+.eachMenu {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    height: 40px;
+    // margin-bottom: 8px;
+    padding: 0 30px;
+    color: var(--txtDark);
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+    .iconCont {
+        width: 22px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        ::ng-deep svg {
+            max-width: 100%;
+        }
+    }
+    ::ng-deep path[style*='fill: #292931'],
+    ::ng-deep path[fill='#292931'] {
+        fill: var(--txtDark) !important;
+    }
+    ::ng-deep path[stroke='#292931'],
+    ::ng-deep path[style*='stroke: #292931'] {
+        stroke: var(--txtDark) !important;
+    }
+    &.active {
+        color: var(--primary);
+        ::ng-deep path[stroke='#292931'],
+        ::ng-deep path[style*='stroke: #292931'] {
+            stroke: var(--primary) !important;
+        }
+        ::ng-deep path[fill='#292931'],
+        ::ng-deep path[style*='fill: #292931'] {
+            fill: var(--primary) !important;
+        }
+        &::after {
+            display: block;
+            right: 0;
+            top: 0;
+            height: 100%;
+            position: absolute;
+            content: '';
+            border-right: 2px solid var(--primary);
+        }
+    }
+    &.logout {
+        height: 62px;
+        border-top: var(--border);
+    }
+}

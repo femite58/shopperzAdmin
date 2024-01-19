@@ -1,0 +1,285 @@
+<app-page-head pageTitle="Sales Promotion">
+    <div id="headBtnCont">
+        <button class="primBtn" [openModal]="" *ngIf="selectedTab == 1">
+            <svg-icons name="plus"></svg-icons>
+            <span>Create Coupon</span>
+        </button>
+        <button class="primBtn" [openModal]="" *ngIf="selectedTab == 2">
+            <svg-icons name="plus"></svg-icons>
+            <span>Create Coupon</span>
+        </button>
+    </div>
+</app-page-head>
+<div id="tabCont">
+    <div
+        class="eachTab"
+        [class.activeTab]="selectedTab === 1"
+        (click)="selectTab(1)"
+    >
+        Coupons
+    </div>
+    <div
+        class="eachTab"
+        [class.activeTab]="selectedTab === 2"
+        (click)="selectTab(2)"
+    >
+        Flash Sales
+    </div>
+</div>
+<main>
+    <div class="tabContent">
+        <div *ngIf="selectedTab == 1">
+            <div id="tableCont">
+                <div id="topActions">
+                    <div class="searchCont">
+                        <input type="text" placeholder="Search order..." />
+                        <svg-icons name="search"></svg-icons>
+                    </div>
+                    <custom-select
+                        placeholder="Status: All"
+                        [options]="filterOpts"
+                        [fc]="filteredVal"
+                    >
+                        <div class="option" *ngFor="let option of filterOpts">
+                            {{ option?.txt }}
+                        </div>
+                    </custom-select>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <th>ID</th>
+                            <th>Coupon Code</th>
+                            <th>Coupon Type</th>
+                            <th>Discount</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Usage</th>
+                            <th>Status</th>
+                            <th></th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let coup_data of couponFiltered">
+                                <td>
+                                    <div class="ellipsis">
+                                        {{ coup_data.id }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ellipsis">
+                                        {{ coup_data.coupon_code }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ellipsis">
+                                        {{ coup_data.coupon_type }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ellipsis">
+                                        {{ coup_data.discount }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ellipsis">
+                                        {{
+                                            coup_data.start_at
+                                                | date : 'm, dd, yyyy'
+                                        }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ellipsis">
+                                        {{
+                                            coup_data.end_at
+                                                | date : 'm, dd, yyyy'
+                                        }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ellipsis">
+                                        {{ coup_data.usage }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="status {{ coup_data.status }}">
+                                        <span></span>
+                                        <span>{{ coup_data.status }}</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <svg-icons name="edit"></svg-icons>
+                                </td>
+                                <td>
+                                    <svg-icons
+                                        name="delete"
+                                        (click)="deleteConf(coup_data.id)"
+                                        *ngIf="deleting != coup_data.id"
+                                    ></svg-icons>
+                                    <i
+                                        class="fa fa-spinner spin"
+                                        *ngIf="deleting == coup_data.id"
+                                    ></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="selectedTab === 2">
+            <div id="tableCont">
+                <div id="topActions">
+                    <div class="searchCont">
+                        <input type="text" placeholder="Search order..." />
+                        <svg-icons name="search"></svg-icons>
+                    </div>
+                    <custom-select
+                        placeholder="Status: All"
+                        [options]="filterOpts"
+                        [fc]="filteredVal"
+                    >
+                        <div class="option" *ngFor="let option of filterOpts2">
+                            {{ option?.txt }}
+                        </div>
+                    </custom-select>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <th>ID</th>
+                            <th>Coupon Code</th>
+                            <th>Coupon Type</th>
+                            <th>Discount</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Usage</th>
+                            <th>Status</th>
+                            <th></th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let coup_data of couponFiltered">
+                                <td>
+                                    <div class="ellipsis">
+                                        {{ coup_data.id }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ellipsis">
+                                        {{ coup_data.coupon_code }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ellipsis">
+                                        {{ coup_data.coupon_type }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ellipsis yellow">
+                                        {{ coup_data.discount }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ellipsis">
+                                        {{
+                                            coup_data.start_at
+                                                | date : 'm, dd, yyyy'
+                                        }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ellipsis">
+                                        {{
+                                            coup_data.end_at
+                                                | date : 'm, dd, yyyy'
+                                        }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ellipsis">
+                                        {{ coup_data.usage }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="status {{ coup_data.status }}">
+                                        <span></span>
+                                        <span>{{ coup_data.status }}</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <svg-icons name="edit"></svg-icons>
+                                </td>
+                                <td>
+                                    <svg-icons
+                                        name="delete"
+                                        (click)="deleteConf(coup_data.id)"
+                                        *ngIf="deleting != coup_data.id"
+                                    ></svg-icons>
+                                    <i
+                                        class="fa fa-spinner spin"
+                                        *ngIf="deleting == coup_data.id"
+                                    ></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- <div id="modals">
+    <app-modal #addStoreModal [closeModal]="closeModal">
+        <div class="modalContent">
+            <div class="modalHead">
+                <div class="modalTitle">Add New Store</div>
+                <span class="closeBtn">
+                    <svg-icons name="times"></svg-icons>
+                </span>
+            </div>
+            <div class="modalBody">
+                <form [formGroup]="form" (ngSubmit)="submit()">
+                    <div class="formBody">
+                        <app-custom-scroll>
+                            <div class="formGroup">
+                                <label for="" class="req">State</label>
+                                <custom-select
+                                    placeholder="Choose state"
+                                    [fc]="f('state')"
+                                    [options]=""
+                                >
+                                    <div
+                                        *ngFor="let st of stateOpts"
+                                        class="option"
+                                    >
+                                        {{ st.txt }}
+                                    </div>
+                                </custom-select>
+                            </div>
+                        </app-custom-scroll>
+                    </div>
+                    <div class="btnCont">
+                        <button
+                            type="button"
+                            class="greyBtn"
+                            (click)="closeModal.next(true)"
+                        >
+                            Cancel
+                        </button>
+                        <submit-btn
+                            btnTxt="Submit"
+                            class="primBtn"
+                            [loading]="submitting"
+                            [disabled]="form.invalid"
+                        >
+                        </submit-btn>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </app-modal>
+    
+</div> -->

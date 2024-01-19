@@ -1,0 +1,249 @@
+:host ::ng-deep main {
+    border: unset !important;
+}
+.formFlex {
+    display: flex;
+    gap: 20px;
+}
+.paneHead {
+    padding: 25px 30px 13px;
+    border-radius: 10px 10px 0 0;
+    border: var(--border);
+    font-weight: 500;
+    font-size: 14px;
+}
+.paneBody {
+    border: var(--border);
+    border-top: none;
+    padding: 30px;
+    flex: 1;
+}
+.fieldFlex {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    & > * {
+        flex: 1 150px;
+        width: 150px;
+        margin-bottom: 0;
+    }
+}
+.largePart {
+    flex: 2 500px;
+    display: flex;
+    flex-direction: column;
+    .price {
+        & > div:first-child {
+            padding: 0 16px;
+            border-right: var(--border);
+            left: 0;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            color: var(--txtLight);
+            font-weight: 500;
+        }
+        input {
+            padding-left: 50px;
+        }
+    }
+    .warranty {
+        & > *:not(input) {
+            right: 0;
+        }
+        input::-webkit-inner-spin-button {
+            display: none;
+        }
+    }
+    .storeInfo {
+        padding: 26px 20px 20px;
+        border-radius: 10px;
+        background: #f7f7f7;
+        margin-bottom: 20px;
+        position: relative;
+        &.fieldFlex {
+            gap: 20px;
+        }
+        & > * {
+            margin-bottom: 0;
+        }
+        .delStore {
+            position: absolute;
+            width: fit-content;
+            top: 14px;
+            right: 20px;
+            cursor: pointer;
+            ::ng-deep svg {
+                width: 16px;
+                height: auto;
+                *[stroke]:not([stroke='none']) {
+                    stroke: var(--bodyTxt);
+                }
+                *[fill]:not([fill='none']) {
+                    fill: var(--bodyTxt);
+                }
+            }
+        }
+    }
+}
+.smallPart {
+    flex: 1 300px;
+}
+::ng-deep .productSelect {
+    .customInput {
+        height: 45px !important;
+    }
+}
+:host ::ng-deep .warrantySelect {
+    right: 0;
+    .clickable {
+        align-items: center !important;
+        border-left: var(--border);
+        padding: 0 18px;
+        .customInput {
+            border: none !important;
+            padding: 0 !important;
+            height: 43px !important;
+        }
+        i {
+            position: static;
+            transform: unset;
+        }
+    }
+}
+.imgOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background: #29293159;
+    color: #fff;
+    .circleIcon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 5px;
+        ::ng-deep svg {
+            width: 18px;
+            height: auto;
+        }
+    }
+    span {
+        font-weight: 500;
+    }
+}
+.mainImg {
+    border: var(--border);
+    border-style: dashed;
+    height: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    &:hover {
+        .imgOverlay {
+            opacity: 1;
+        }
+    }
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .desc {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .txt {
+            text-align: center;
+            color: var(--txtLight);
+        }
+    }
+}
+.circleIcon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #f2f4f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.imgFlex {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    .eachImg {
+        display: flex;
+        align-items: center;
+        height: 136px;
+        border-radius: 10px;
+        border: var(--border);
+        flex: 1 100px;
+        justify-content: center;
+        width: 100px;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+        border-style: dashed;
+        &:hover {
+            .imgOverlay {
+                opacity: 1;
+            }
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        &:not(.disabled) {
+            cursor: pointer;
+        }
+        .circleIcon {
+            margin-bottom: 0;
+        }
+    }
+}
+#specification {
+    .color {
+        input:last-child {
+            position: absolute;
+            top: 50%;
+            right: 9px;
+            height: 27px;
+            width: 27px;
+            border-radius: 4px;
+            padding: 0;
+            transform: translate(0, -50%);
+            background: transparent;
+            overflow: hidden;
+            border: none;
+            &::-webkit-color-swatch {
+                border-radius: 4px;
+            }
+        }
+    }
+    .inputFlex {
+        display: flex;
+        gap: 10px;
+        button {
+            min-width: unset;
+            height: 45px;
+            padding: 0 12px;
+            width: fit-content;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.fileUpload {
+    display: flex;
+    align-items: center;
+    border: 1px dashed #d6d9de;
+    border-radius: 10px;
+    justify-content: center;
+    height: 98px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    .noImg {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nativeIconTxt {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        ::ng-deep svg {
+            width: 24px;
+            height: auto;
+            *[stroke]:not([stroke='none']) {
+                stroke: var(--primary);
+            }
+            *[fill]:not([fill='none']) {
+                fill: var(--primary);
+            }
+        }
+        span {
+            color: var(--txtLight);
+            font-weight: 500;
+        }
+    }
+    .imgCont {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    &.withImg {
+        .noImg {
+            display: flex !important;
+            background: #0000004d;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: 0.3s ease;
+            span {
+                color: #fff;
+            }
+            ::ng-deep svg {
+                *[stroke]:not([stroke='none']) {
+                    stroke: #fff;
+                }
+                *[fill]:not([fill='none']) {
+                    fill: #fff;
+                }
+            }
+        }
+        &:hover {
+            .noImg {
+                opacity: 1;
+            }
+        }
+        .delBtn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            z-index: 20;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            ::ng-deep svg {
+                width: 14px;
+                height: auto;
+                *[stroke]:not([stroke='none']) {
+                    stroke: red;
+                }
+                *[fill]:not([fill='none']) {
+                    fill: red;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,235 @@
+#adminLayout {
+    display: flex;
+    min-height: var(--view-height);
+}
+#bigMain {
+    flex: 1 10px;
+    width: 10px;
+    // display: flex;
+    // flex-direction: column;
+}
+
+::ng-deep main {
+    margin: 20px 30px;
+    border: var(--border);
+    border-radius: 10px;
+    flex: 1 10px;
+    ::ng-deep #tableCont {
+        #topActions {
+            padding: 23px 17px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .searchCont {
+                position: relative;
+                & > *:not(input) {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    right: 20px;
+                }
+            }
+            .btnCont {
+                display: flex;
+                gap: 12px;
+            }
+
+            ::ng-deep .cusDropdown {
+                .customInput {
+                    .value {
+                        &::before {
+                            content: 'Status:';
+                        }
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 59px;
+            th,
+            td {
+                border-bottom: 1px solid #eaecf0;
+                white-space: nowrap;
+                // display: flex;
+                vertical-align: middle;
+                align-items: center;
+                // min-width: 90px;
+                padding: 12px 12px;
+                &:first-child {
+                    width: 50px;
+                }
+            }
+            .check {
+                .eachCheck {
+                    margin: 0;
+                    label {
+                        gap: 0 !important;
+                        .cusCheck {
+                            width: 20px;
+                            height: 20px;
+                            svg {
+                                width: 12px;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+            thead {
+                background: #f1f2f6;
+                color: var(--txtLight);
+                font-weight: 500;
+                font-size: 12px;
+                // display: flex;
+                th {
+                    white-space: nowrap;
+                    text-transform: uppercase;
+                }
+            }
+            tbody {
+                tr {
+                    // display: flex;
+                    width: 100%;
+                    &:hover {
+                        background: #f9f9f9;
+                    }
+                    td {
+                        vertical-align: middle;
+                        .withImg {
+                            display: flex;
+                            width: 100%;
+                            align-items: center;
+                            gap: 12px;
+                            span {
+                                // flex: 1 5px;
+                                // width: 5px;
+                            }
+                        }
+                        .ratingFlash {
+                            display: flex;
+                            align-items: center;
+                            gap: 13px;
+                            .rating {
+                                gap: 5px;
+                                display: flex;
+                                align-items: center;
+                            }
+                            .hidden {
+                                visibility: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+::ng-deep .pageFormBtnCont {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+    button {
+        width: 140px !important;
+    }
+}
+::ng-deep .tableDataDropdwn {
+    width: fit-content;
+    margin-left: auto;
+    .clickable {
+        justify-content: flex-end;
+        width: fit-content;
+        padding: 0 5px;
+    }
+    .dropped {
+        right: 10px !important;
+        min-width: 99px;
+    }
+}
+
+// ::ng-deep .tab-container {
+//     width: 400px;
+//     margin: 0 auto;
+//     background-color: #f4f4f4;
+//     border-radius: 10px;
+//   }
+
+//   .tab-header {
+//     display: flex;
+//     background-color: #007bff;
+//     border-top-left-radius: 10px;
+//     border-top-right-radius: 10px;
+//   }
+
+//   .tab {
+//     flex: 1;
+//     text-align: center;
+//     padding: 10px 0;
+//     cursor: pointer;
+//     transition: background-color 0.3s;
+//   }
+
+//   .tab.active {
+//     background-color: #fff;
+//     color: #007bff;
+//   }
+
+//   .tab-title {
+//     font-size: 18px;
+//     font-weight: bold;
+//   }
+
+//   .tab-content {
+//     padding: 20px;
+//     border-bottom-left-radius: 10px;
+//     border-bottom-right-radius: 10px;
+//   }
+
+//   .tab-pane {
+//     display: none;
+//   }
+
+//   .tab-pane.active {
+//     display: block;
+//   }
+
+//   .tab-pane p {
+//     font-size: 16px;
+//     line-height: 1.5;
+//     color: #333;
+//   }
+:host ::ng-deep #tabCont {
+    display: flex;
+    height: 58px;
+    border-bottom: var(--border);
+    padding: 0 30px;
+    align-items: flex-end;
+    position: sticky;
+    top: 150px;
+    background: #fff;
+    z-index: 200;
+    .eachTab {
+        display: flex;
+        align-items: center;
+        height: 38px;
+        cursor: pointer;
+        color: var(--txtLight);
+        font-weight: 600;
+        font-size: 15px;
+        padding: 0 20px;
+        position: relative;
+        &.activeTab {
+            color: var(--primary);
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                border-bottom: 2px solid var(--primary);
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+main {
+    display: flex;
+    min-height: var(--view-height);
+    & > div {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        &.bannerCont {
+            background: lighten(#f8253a, 37%);
+            & > img {
+                position: absolute;
+                &:first-child {
+                    top: 0;
+                    right: 0;
+                }
+                &:nth-child(2) {
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+            .centered {
+                position: relative;
+                z-index: 23;
+                text-align: center;
+                .logo {
+                    margin-bottom: 30px;
+                }
+                p {
+                    max-width: 290px;
+                    font-family: 'Reliq Std';
+                    margin: 0 auto 11px;
+                    line-height: 120%;
+                    font-size: 20px;
+                }
+                img {
+                    max-width: 100%;
+                    margin: auto;
+                    display: block;
+                    &:nth-child(3) {
+                        transform: translate(-300%, 0);
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+        &.formPar {
+            padding: 0 40px;
+        }
+    }
+}
+h1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+.formCont {
+    width: 100%;
+    max-width: 400px;
+}
+.formGroup {
+    margin-bottom: 18px;
+    &:nth-child(2) {
+        margin-bottom: 15px;
+    }
+}
+:host {
+    ::ng-deep button {
+        height: 45px;
+    }
+}

@@ -1,0 +1,151 @@
+<aside>
+    <div id="innerSideMenu">
+        <a routerLink="/dashboard" class="logo">
+            <img src="assets/images/logo_big.svg" alt="Logo" />
+        </a>
+        <div class="scrollable">
+            <app-custom-scroll
+                [scrlListner]="scrlListner"
+                (scrollEv)="onScroll($event)"
+            >
+                <div class="eachMenuCat">
+                    <div class="menuTitle">MAIN MENU</div>
+                    <a
+                        routerLink="/dashboard"
+                        routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }"
+                        class="eachMenu"
+                    >
+                        <div class="iconCont">
+                            <svg-icons name="home"></svg-icons>
+                        </div>
+                        <span>Dashboard</span>
+                    </a>
+                    <a
+                        routerLink="/orders"
+                        routerLinkActive="active"
+                        class="eachMenu"
+                    >
+                        <div class="iconCont">
+                            <svg-icons name="shopping-cart"></svg-icons>
+                        </div>
+                        <span>Orders</span>
+                    </a>
+                    <a
+                        routerLink="/products"
+                        routerLinkActive="active"
+                        class="eachMenu"
+                    >
+                        <div class="iconCont">
+                            <svg-icons name="box"></svg-icons>
+                        </div>
+                        <span>Products</span>
+                    </a>
+                    <a
+                        routerLink="/stores"
+                        routerLinkActive="active"
+                        class="eachMenu"
+                    >
+                        <div class="iconCont">
+                            <svg-icons name="store"></svg-icons>
+                        </div>
+                        <span>Stores</span>
+                    </a>
+                    <a
+                        routerLink="/customers"
+                        routerLinkActive="active"
+                        class="eachMenu"
+                    >
+                        <div class="iconCont">
+                            <svg-icons name="users"></svg-icons>
+                        </div>
+                        <span>Customers</span>
+                    </a>
+                </div>
+                <div class="eachMenuCat">
+                    <div class="menuTitle">OTHERS</div>
+                    <a
+                        routerLink="/product-categories"
+                        routerLinkActive="active"
+                        class="eachMenu"
+                        [routerLinkActiveOptions]="{ exact: true }"
+                    >
+                        <div class="iconCont">
+                            <svg-icons name="categories"></svg-icons>
+                        </div>
+                        <span>Categories</span>
+                    </a>
+                    <a
+                        routerLink="/sales-promotion"
+                        routerLinkActive="active"
+                        class="eachMenu"
+                    >
+                        <div class="iconCont">
+                            <svg-icons name="tag"></svg-icons>
+                        </div>
+                        <span>Sales Promotion</span>
+                    </a>
+                    <a
+                        routerLink="/product-variations"
+                        routerLinkActive="active"
+                        class="eachMenu"
+                    >
+                        <div class="iconCont">
+                            <svg-icons name="filters"></svg-icons>
+                        </div>
+                        <span>Variations</span>
+                    </a>
+                    <a
+                        routerLink="/manage-admins"
+                        routerLinkActive="active"
+                        class="eachMenu"
+                    >
+                        <div class="iconCont">
+                            <svg-icons name="userMultiple"></svg-icons>
+                        </div>
+                        <span>Manage Admins</span>
+                    </a>
+                    <a
+                        routerLink="/notifications"
+                        routerLinkActive="active"
+                        class="eachMenu"
+                    >
+                        <div class="iconCont">
+                            <svg-icons name="notification"></svg-icons>
+                        </div>
+                        <span>Push Notification</span>
+                    </a>
+                </div>
+                <div class="eachMenuCat">
+                    <div class="menuTitle">SETTINGS</div>
+                    <a
+                        routerLink="/account-settings"
+                        routerLinkActive="active"
+                        class="eachMenu"
+                    >
+                        <div class="iconCont">
+                            <svg-icons name="userCircle"></svg-icons>
+                        </div>
+                        <span>Account Settings</span>
+                    </a>
+                    <a
+                        routerLink="/general-settings"
+                        routerLinkActive="active"
+                        class="eachMenu"
+                    >
+                        <div class="iconCont">
+                            <svg-icons name="settings"></svg-icons>
+                        </div>
+                        <span>General Settings</span>
+                    </a>
+                </div>
+            </app-custom-scroll>
+        </div>
+        <div class="eachMenu logout">
+            <div class="iconCont">
+                <svg-icons name="logout"></svg-icons>
+            </div>
+            <span>Logout</span>
+        </div>
+    </div>
+</aside>
