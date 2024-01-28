@@ -1,1 +1,16 @@
+<app-page-head pageTitle="Product Details" [backAct]="true">
+    <div id="headBtnCont">
+        <button class="greyOutlineBtn">
+            <svg-icons name="delete"></svg-icons>
+            <span>Delete</span>
+        </button>
+        <button
+            routerLink="/products/edit/{{ product?.id }}"
+            class="greyOutlineBtn"
+        >
+            <svg-icons name="edit2"></svg-icons>
+            <span>Edit Product</span>
+        </button>
+    </div>
+</app-page-head>
 <main></main>

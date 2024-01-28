@@ -46,7 +46,10 @@
                     <th></th>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let prod of products">
+                    <tr
+                        routerLink="/products/details/{{ prod?.id }}"
+                        *ngFor="let prod of products"
+                    >
                         <td class="check">
                             <cus-checkbox></cus-checkbox>
                         </td>
@@ -104,11 +107,22 @@
                         </td>
                         <td>
                             <div class="cusDropdown tableDataDropdwn">
-                                <div appDropdown class="clickable">
+                                <div
+                                    appDropdown
+                                    (click)="$event.stopPropagation()"
+                                    class="clickable"
+                                >
                                     <svg-icons name="vEllipsis"></svg-icons>
                                 </div>
                                 <div class="dropped">
-                                    <div class="dropItem">Edit</div>
+                                    <div
+                                        routerLink="/products/edit/{{
+                                            prod?.id
+                                        }}"
+                                        class="dropItem"
+                                    >
+                                        Edit
+                                    </div>
                                     <div class="dropItem">Delete</div>
                                 </div>
                             </div>
@@ -145,10 +159,7 @@
                     branches or outlets throughout the country.
                 </div>
                 <div class="btnCont">
-                    <button
-                        class="greyBtn"
-                        routerLink="/products/add"
-                    >
+                    <button class="greyBtn" routerLink="/products/add">
                         No, Continue
                     </button>
                     <button

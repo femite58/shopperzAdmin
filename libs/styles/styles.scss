@@ -320,6 +320,14 @@ a {
     &.greyOutlineBtn {
         border: var(--border);
         background: #fff;
+        svg {
+            *[stroke]:not([stroke='none']) {
+                stroke: var(--bodyTxt);
+            }
+            *[fill]:not([fill='none']) {
+                fill: var(--bodyTxt);
+            }
+        }
     }
 
     &.greyBtn {

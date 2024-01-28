@@ -79,256 +79,104 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".editorconfig",
-        "hash": "729210714042218786"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "7663861978715868291"
-      },
-      {
         "file": ".eslintrc.json",
         "hash": "10357578163422506146"
-      },
-      {
-        "file": ".github/workflows/cd.yml",
-        "hash": "13714529222052690641"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "16276728588707165928"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "3395189204293871444"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "10801117440090935095"
-      },
-      {
-        "file": ".releaserc",
-        "hash": "1533519460304397903"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "8165953437148473796"
-      },
-      {
-        "file": ".vscode/launch.json",
-        "hash": "4103394674155001761"
-      },
-      {
-        "file": ".vscode/tasks.json",
-        "hash": "10993352802354330803"
-      },
-      {
-        "file": "README.md",
-        "hash": "17352059486184399336"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "12333515226966617182"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
-      },
-      {
-        "file": "karma.conf.js",
-        "hash": "11538871871811595139"
       },
       {
         "file": "libs/.gitkeep",
         "hash": "3244421341483603138"
       },
       {
-        "file": "libs/assets/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-Black.otf",
-        "hash": "3743425815831431095"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-BlackIt.otf",
-        "hash": "14513408490710260705"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-Bold.otf",
-        "hash": "6614659769325435627"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-BoldCond.otf",
-        "hash": "14884860952651769633"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-BoldCondIt.otf",
-        "hash": "16621143039881440608"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-BoldIt.otf",
-        "hash": "9365664446081981142"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-BoldSemiCn.otf",
-        "hash": "17678174580817547692"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-BoldSemiCnIt.otf",
-        "hash": "9150299472581563512"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-Cond.otf",
-        "hash": "526420794726045351"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-CondIt.otf",
-        "hash": "8588601982854415156"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-ExtraBold.otf",
-        "hash": "11591918476279702445"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-ExtraBoldIt.otf",
-        "hash": "2358603161548313656"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-It.otf",
-        "hash": "5190973533251456152"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-Light.otf",
-        "hash": "15676222359267366539"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-LightIt.otf",
-        "hash": "13518965619783277710"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-Medium.otf",
-        "hash": "17863706610644412946"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-Regular.otf",
-        "hash": "1412635047586869909"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-SemiCn.otf",
-        "hash": "17012150856801698361"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-SemiCnIt.otf",
-        "hash": "11427118479254183344"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-SemiLight.otf",
-        "hash": "10990952008167922072"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-SemiLightIt.otf",
-        "hash": "17772916071616045322"
-      },
-      {
-        "file": "libs/assets/fonts/ReliqStd-Active.otf",
-        "hash": "1252477394970736227"
-      },
-      {
-        "file": "libs/assets/fonts/ReliqStd-Active.woff2",
-        "hash": "7993193017078298510"
-      },
-      {
-        "file": "libs/assets/images/app_icons/app_icon1.svg",
-        "hash": "958189524204376665"
-      },
-      {
-        "file": "libs/assets/images/app_icons/app_icon2.svg",
-        "hash": "13071324196676806900"
-      },
-      {
-        "file": "libs/assets/images/app_icons/app_icon3.svg",
-        "hash": "16337847047004794625"
-      },
-      {
-        "file": "libs/assets/images/bottomLeftImg.svg",
-        "hash": "5334311922309340672"
-      },
-      {
-        "file": "libs/assets/images/centered-app preview.webp",
-        "hash": "16886762229923099191"
-      },
-      {
-        "file": "libs/assets/images/empty_box.svg",
-        "hash": "10136415473294887678"
-      },
-      {
-        "file": "libs/assets/images/loginArrow.svg",
-        "hash": "17390717419842182833"
-      },
-      {
-        "file": "libs/assets/images/loginImg.png",
-        "hash": "6486818851113537682"
-      },
-      {
-        "file": "libs/assets/images/logo.svg",
-        "hash": "17547983236110334027"
-      },
-      {
-        "file": "libs/assets/images/logo_big.svg",
-        "hash": "5714047140849335065"
-      },
-      {
-        "file": "libs/assets/images/notificationImg.png",
-        "hash": "748692687870180931"
-      },
-      {
-        "file": "libs/assets/images/notificationImgBig.png",
-        "hash": "13354613026492972458"
+        "file": "libs/assets/images/topRightImg.svg",
+        "hash": "2195258092898791468"
       },
       {
         "file": "libs/assets/images/onboarding_default.png",
         "hash": "9427383488655522429"
       },
       {
+        "file": "jest.config.ts",
+        "hash": "12333515226966617182"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-SemiLight.otf",
+        "hash": "10990952008167922072"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "3395189204293871444"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "16536852516033891637"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "8165953437148473796"
+      },
+      {
+        "file": ".github/workflows/cd.yml",
+        "hash": "13714529222052690641"
+      },
+      {
+        "file": "libs/assets/images/loginArrow.svg",
+        "hash": "17390717419842182833"
+      },
+      {
+        "file": ".releaserc",
+        "hash": "1533519460304397903"
+      },
+      {
+        "file": "libs/assets/images/notificationImg.png",
+        "hash": "748692687870180931"
+      },
+      {
         "file": "libs/assets/images/phone_bg.png",
         "hash": "9758949531347760860"
       },
       {
-        "file": "libs/assets/images/phone_case.svg",
-        "hash": "10930501565337920508"
+        "file": "libs/assets/fonts/AdobeClean-BoldCondIt.otf",
+        "hash": "16621143039881440608"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-SemiCnIt.otf",
+        "hash": "11427118479254183344"
+      },
+      {
+        "file": "libs/assets/images/loginImg.png",
+        "hash": "6486818851113537682"
+      },
+      {
+        "file": "tools/tsconfig.tools.json",
+        "hash": "113529236189617652"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-ExtraBold.otf",
+        "hash": "11591918476279702445"
+      },
+      {
+        "file": "libs/assets/images/app_icons/app_icon2.svg",
+        "hash": "13071324196676806900"
+      },
+      {
+        "file": "libs/assets/images/notificationImgBig.png",
+        "hash": "13354613026492972458"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "4103394674155001761"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-CondIt.otf",
+        "hash": "8588601982854415156"
       },
       {
         "file": "libs/assets/images/products/image_sm1.png",
         "hash": "7706717343620041726"
       },
       {
-        "file": "libs/assets/images/products/image_sm2.png",
-        "hash": "1908289265808490237"
-      },
-      {
-        "file": "libs/assets/images/profile-default.png",
-        "hash": "10649455190979104351"
-      },
-      {
-        "file": "libs/assets/images/topRightImg.svg",
-        "hash": "2195258092898791468"
-      },
-      {
-        "file": "libs/assets/images/userImg.png",
-        "hash": "8403089660720390929"
-      },
-      {
-        "file": "libs/styles/styles.scss",
-        "hash": "17235911892595572178"
-      },
-      {
-        "file": "nx.json",
-        "hash": "17413548031555426275"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "16536852516033891637"
+        "file": "tsconfig.base.json",
+        "hash": "2161759191166556406"
       },
       {
         "file": "package.json",
@@ -339,1249 +187,167 @@
         "hash": "3244421341483603138"
       },
       {
-        "file": "tools/tsconfig.tools.json",
-        "hash": "113529236189617652"
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
       },
       {
-        "file": "tsconfig.base.json",
-        "hash": "2161759191166556406"
+        "file": ".prettierrc",
+        "hash": "10801117440090935095"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-BoldCond.otf",
+        "hash": "14884860952651769633"
+      },
+      {
+        "file": "libs/assets/images/profile-default.png",
+        "hash": "10649455190979104351"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-LightIt.otf",
+        "hash": "13518965619783277710"
+      },
+      {
+        "file": "libs/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "libs/assets/images/app_icons/app_icon1.svg",
+        "hash": "958189524204376665"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-Black.otf",
+        "hash": "3743425815831431095"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-ExtraBoldIt.otf",
+        "hash": "2358603161548313656"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-SemiCn.otf",
+        "hash": "17012150856801698361"
+      },
+      {
+        "file": "libs/assets/fonts/ReliqStd-Active.otf",
+        "hash": "1252477394970736227"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "729210714042218786"
+      },
+      {
+        "file": "libs/assets/images/app_icons/app_icon3.svg",
+        "hash": "16337847047004794625"
+      },
+      {
+        "file": "libs/assets/images/phone_case.svg",
+        "hash": "10930501565337920508"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-Light.otf",
+        "hash": "15676222359267366539"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-Cond.otf",
+        "hash": "526420794726045351"
+      },
+      {
+        "file": "karma.conf.js",
+        "hash": "11538871871811595139"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-BoldIt.otf",
+        "hash": "9365664446081981142"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "16276728588707165928"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-BoldSemiCnIt.otf",
+        "hash": "9150299472581563512"
+      },
+      {
+        "file": "nx.json",
+        "hash": "17413548031555426275"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-Medium.otf",
+        "hash": "17863706610644412946"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-It.otf",
+        "hash": "5190973533251456152"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-Regular.otf",
+        "hash": "1412635047586869909"
+      },
+      {
+        "file": "libs/assets/images/empty_box.svg",
+        "hash": "10136415473294887678"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "10993352802354330803"
+      },
+      {
+        "file": "libs/assets/fonts/ReliqStd-Active.woff2",
+        "hash": "7993193017078298510"
+      },
+      {
+        "file": "libs/assets/images/logo_big.svg",
+        "hash": "5714047140849335065"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-BoldSemiCn.otf",
+        "hash": "17678174580817547692"
+      },
+      {
+        "file": "libs/assets/images/logo.svg",
+        "hash": "17547983236110334027"
+      },
+      {
+        "file": "libs/assets/images/products/image_sm2.png",
+        "hash": "1908289265808490237"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-BlackIt.otf",
+        "hash": "14513408490710260705"
+      },
+      {
+        "file": "libs/styles/styles.scss",
+        "hash": "10502186761904413540"
+      },
+      {
+        "file": "README.md",
+        "hash": "17352059486184399336"
+      },
+      {
+        "file": "libs/assets/images/userImg.png",
+        "hash": "8403089660720390929"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-Bold.otf",
+        "hash": "6614659769325435627"
+      },
+      {
+        "file": "libs/assets/images/centered-app preview.webp",
+        "hash": "16886762229923099191"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-SemiLightIt.otf",
+        "hash": "17772916071616045322"
+      },
+      {
+        "file": "libs/assets/images/bottomLeftImg.svg",
+        "hash": "5334311922309340672"
       }
     ],
     "projectFileMap": {
-      "admin": [
-        {
-          "file": "apps/admin/.eslintrc.json",
-          "hash": "14524345451361998551"
-        },
-        {
-          "file": "apps/admin/jest.config.ts",
-          "hash": "1108770060659864213"
-        },
-        {
-          "file": "apps/admin/project.json",
-          "hash": "13156369488003798245"
-        },
-        {
-          "file": "apps/admin/src/app/app-routing.module.ts",
-          "hash": "11300073517809012509",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router",
-            "admin-shared",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/app.component.html",
-          "hash": "17816966185630879015"
-        },
-        {
-          "file": "apps/admin/src/app/app.component.scss",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/admin/src/app/app.component.ts",
-          "hash": "12700163368214997033",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/app.module.ts",
-          "hash": "6681686941768071597",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/platform-browser",
-            "shared",
-            "npm:@angular/common",
-            "admin-shared"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/class/custom-validators.ts",
-          "hash": "1808195974905364127",
-          "deps": [
-            "npm:@angular/forms"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/guard/auth.guard.ts",
-          "hash": "6043604761163786776",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/guard/bvn-verification.guard.ts",
-          "hash": "16390181469847112398",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/guard/dashboard.guard.ts",
-          "hash": "10592440493407393795",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/guard/guest-auth.guard.ts",
-          "hash": "10588953318374575108",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:@angular/router",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/guard/verfication.guard.ts",
-          "hash": "5344211893412751800",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/helpers/cookie.service.ts",
-          "hash": "14441128546943679789",
-          "deps": [
-            "npm:@angular/core",
-            "npm:ngx-cookie"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/helpers/date.service.ts",
-          "hash": "18332799443072956723",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/helpers/storage.service.ts",
-          "hash": "15178930772832372577",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:localforage"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/localData/banks.service.ts",
-          "hash": "3655908870536852342",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/localData/country.service.ts",
-          "hash": "12633096388129881849",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/auth.service.ts",
-          "hash": "4210133372728300134",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:rxjs",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/config.service.ts",
-          "hash": "5951984858922793021",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/confirm-action.service.ts",
-          "hash": "15407201123159178824",
-          "deps": [
-            "npm:@angular/core",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/custom-guard.service.ts",
-          "hash": "9047937647286109430",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/file-upload.service.ts",
-          "hash": "6098417686497312263",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/general-settings.service.ts",
-          "hash": "11498417455451619881",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/guest/blog.service.ts",
-          "hash": "2832112319318238006",
-          "deps": [
-            "npm:@angular/core",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/guest/legal.service.ts",
-          "hash": "6511202437135718595",
-          "deps": [
-            "npm:@angular/core",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/header-interceptor.service.ts",
-          "hash": "12048631272899789485",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/home.service.ts",
-          "hash": "16177397146544902575",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/information.service.ts",
-          "hash": "5256018965085430421",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/seo.service.ts",
-          "hash": "14830672026618272548",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/platform-browser"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/success.service.ts",
-          "hash": "8489224434818668340",
-          "deps": [
-            "npm:@angular/core",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/user/bank-info.service.ts",
-          "hash": "2130197667148622858",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/user/dashboard.service.ts",
-          "hash": "1882286877696627941",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/user/dispute-chat.service.ts",
-          "hash": "28005634414087364",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:rxjs",
-            "npm:socket.io-client"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/user/escrow.service.ts",
-          "hash": "15534070646344586658",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:rxjs",
-            "npm:socket.io-client"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/user/notification.service.ts",
-          "hash": "2102016800019403190",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:rxjs",
-            "npm:socket.io-client"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/user/socket.service.ts",
-          "hash": "12332928402994092628",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:socket.io-client"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/user/transactions.service.ts",
-          "hash": "5882615895697143994",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/user/verify-modal.service.ts",
-          "hash": "16499744253065047487",
-          "deps": [
-            "npm:@angular/core",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/user/wallet.service.ts",
-          "hash": "9906607172336309107",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/data/services/view-controller.service.ts",
-          "hash": "17281374023782770704",
-          "deps": [
-            "npm:@angular/core",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/layout/layout.component.html",
-          "hash": "3692868339420478178"
-        },
-        {
-          "file": "apps/admin/src/app/layout/layout.component.scss",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/admin/src/app/layout/layout.component.ts",
-          "hash": "13135248764102828203",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/acc-settings/acc-settings.component.html",
-          "hash": "17410908586810561646"
-        },
-        {
-          "file": "apps/admin/src/app/pages/acc-settings/acc-settings.component.scss",
-          "hash": "13840106282196468536"
-        },
-        {
-          "file": "apps/admin/src/app/pages/acc-settings/acc-settings.component.ts",
-          "hash": "17841647016932671069",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/acc-settings/password/password.component.html",
-          "hash": "9424127298899165139"
-        },
-        {
-          "file": "apps/admin/src/app/pages/acc-settings/password/password.component.scss",
-          "hash": "17130129884413844926"
-        },
-        {
-          "file": "apps/admin/src/app/pages/acc-settings/password/password.component.ts",
-          "hash": "3678462434197843472",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/acc-settings/profile/profile.component.html",
-          "hash": "12083972317442588293"
-        },
-        {
-          "file": "apps/admin/src/app/pages/acc-settings/profile/profile.component.scss",
-          "hash": "730963168671871498"
-        },
-        {
-          "file": "apps/admin/src/app/pages/acc-settings/profile/profile.component.ts",
-          "hash": "13394426020048381194",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/admin-details/admin-details.component.html",
-          "hash": "4489754243889579209"
-        },
-        {
-          "file": "apps/admin/src/app/pages/admin-details/admin-details.component.scss",
-          "hash": "7335619283104770403"
-        },
-        {
-          "file": "apps/admin/src/app/pages/admin-details/admin-details.component.ts",
-          "hash": "9700305133872011133",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:rxjs",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/categories/categories.component.html",
-          "hash": "3502405813295231649"
-        },
-        {
-          "file": "apps/admin/src/app/pages/categories/categories.component.scss",
-          "hash": "454113246004972729"
-        },
-        {
-          "file": "apps/admin/src/app/pages/categories/categories.component.ts",
-          "hash": "18128135826898546895",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:rxjs",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/coupon/coupon.component.html",
-          "hash": "14783211920270717812"
-        },
-        {
-          "file": "apps/admin/src/app/pages/coupon/coupon.component.scss",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/admin/src/app/pages/coupon/coupon.component.ts",
-          "hash": "701098616727129939",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:rxjs",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/customers/customers.component.html",
-          "hash": "10740666780545764373"
-        },
-        {
-          "file": "apps/admin/src/app/pages/customers/customers.component.scss",
-          "hash": "13617883144838985002"
-        },
-        {
-          "file": "apps/admin/src/app/pages/customers/customers.component.ts",
-          "hash": "2707026894407234599",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:rxjs",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/dashboard/dashboard.component.html",
-          "hash": "5329413098763565946"
-        },
-        {
-          "file": "apps/admin/src/app/pages/dashboard/dashboard.component.scss",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/admin/src/app/pages/dashboard/dashboard.component.ts",
-          "hash": "4734615436575165578",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/app-settings/app-settings.component.html",
-          "hash": "17434027854535422552"
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/app-settings/app-settings.component.scss",
-          "hash": "218741109418981966"
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/app-settings/app-settings.component.ts",
-          "hash": "2833143135989634151",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/banners/banners.component.html",
-          "hash": "4781843996160155444"
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/banners/banners.component.scss",
-          "hash": "6364523729448551268"
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/banners/banners.component.ts",
-          "hash": "12042781132832586432",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/company-info/company-info.component.html",
-          "hash": "11636382049726429047"
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/company-info/company-info.component.scss",
-          "hash": "2276751924011456488"
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/company-info/company-info.component.ts",
-          "hash": "11211126962884787599",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/customization/customization.component.html",
-          "hash": "12227593049115989193"
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/customization/customization.component.scss",
-          "hash": "5976711656440388873"
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/customization/customization.component.ts",
-          "hash": "7881624773374964540",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/general-settings.component.html",
-          "hash": "16945913367178418887"
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/general-settings.component.scss",
-          "hash": "8284405493301353220"
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/general-settings.component.ts",
-          "hash": "4233069583337303647",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/image-upload/image-upload.component.html",
-          "hash": "18270301202038296698"
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/image-upload/image-upload.component.scss",
-          "hash": "9601696496500042627"
-        },
-        {
-          "file": "apps/admin/src/app/pages/general-settings/image-upload/image-upload.component.ts",
-          "hash": "5690149347488706063",
-          "deps": [
-            "npm:@angular/core",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/login/login.component.html",
-          "hash": "9594801756679512581"
-        },
-        {
-          "file": "apps/admin/src/app/pages/login/login.component.scss",
-          "hash": "1345005833959757835"
-        },
-        {
-          "file": "apps/admin/src/app/pages/login/login.component.ts",
-          "hash": "15614856965129640122",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/manage-admin/manage-admin.component.html",
-          "hash": "4109036639569949440"
-        },
-        {
-          "file": "apps/admin/src/app/pages/manage-admin/manage-admin.component.scss",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/admin/src/app/pages/manage-admin/manage-admin.component.ts",
-          "hash": "11075132677481558656",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:rxjs",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/notification-details/notification-details.component.html",
-          "hash": "8025625505844437837"
-        },
-        {
-          "file": "apps/admin/src/app/pages/notification-details/notification-details.component.scss",
-          "hash": "16691664223441104285"
-        },
-        {
-          "file": "apps/admin/src/app/pages/notification-details/notification-details.component.ts",
-          "hash": "805451424572475659",
-          "deps": [
-            "npm:@angular/core",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/notification-manager/notification-manager.component.html",
-          "hash": "8564991973047723334"
-        },
-        {
-          "file": "apps/admin/src/app/pages/notification-manager/notification-manager.component.scss",
-          "hash": "7386318370764171341"
-        },
-        {
-          "file": "apps/admin/src/app/pages/notification-manager/notification-manager.component.ts",
-          "hash": "6778301991758384781",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:@angular/router",
-            "npm:rxjs",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/notifications-listing/notifications-listing.component.html",
-          "hash": "4231000474338853088"
-        },
-        {
-          "file": "apps/admin/src/app/pages/notifications-listing/notifications-listing.component.scss",
-          "hash": "13514888372297023128"
-        },
-        {
-          "file": "apps/admin/src/app/pages/notifications-listing/notifications-listing.component.ts",
-          "hash": "9358538112941517664",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/order-details/order-details.component.html",
-          "hash": "17800136354300406292"
-        },
-        {
-          "file": "apps/admin/src/app/pages/order-details/order-details.component.scss",
-          "hash": "12314317519953820028"
-        },
-        {
-          "file": "apps/admin/src/app/pages/order-details/order-details.component.ts",
-          "hash": "17369339455179903502",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/orders/orders.component.html",
-          "hash": "6071325834979857563"
-        },
-        {
-          "file": "apps/admin/src/app/pages/orders/orders.component.scss",
-          "hash": "11810211102778187814"
-        },
-        {
-          "file": "apps/admin/src/app/pages/orders/orders.component.ts",
-          "hash": "14151732666160606227",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:@angular/router",
-            "npm:rxjs",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/product-details/product-details.component.html",
-          "hash": "5329413098763565946"
-        },
-        {
-          "file": "apps/admin/src/app/pages/product-details/product-details.component.scss",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/admin/src/app/pages/product-details/product-details.component.ts",
-          "hash": "1847852730526181532",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/product-specifications/product-specifications.component.html",
-          "hash": "5329413098763565946"
-        },
-        {
-          "file": "apps/admin/src/app/pages/product-specifications/product-specifications.component.scss",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/admin/src/app/pages/product-specifications/product-specifications.component.ts",
-          "hash": "7225839970884729540",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/products-form/products-form.component.html",
-          "hash": "17584547883022155576"
-        },
-        {
-          "file": "apps/admin/src/app/pages/products-form/products-form.component.scss",
-          "hash": "5092457830547362855"
-        },
-        {
-          "file": "apps/admin/src/app/pages/products-form/products-form.component.ts",
-          "hash": "10486281906021838530",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/products/products.component.html",
-          "hash": "17903285322495730277"
-        },
-        {
-          "file": "apps/admin/src/app/pages/products/products.component.scss",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/admin/src/app/pages/products/products.component.ts",
-          "hash": "16658481918724542719",
-          "deps": [
-            "npm:@angular/core",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/sales-promo/sales-promo.component.html",
-          "hash": "6909163048786105599"
-        },
-        {
-          "file": "apps/admin/src/app/pages/sales-promo/sales-promo.component.scss",
-          "hash": "14886385510368259132"
-        },
-        {
-          "file": "apps/admin/src/app/pages/sales-promo/sales-promo.component.ts",
-          "hash": "3331496454787777311",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:@angular/router",
-            "npm:rxjs",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/stores/stores.component.html",
-          "hash": "1802222982587976225"
-        },
-        {
-          "file": "apps/admin/src/app/pages/stores/stores.component.scss",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/admin/src/app/pages/stores/stores.component.ts",
-          "hash": "14471058951860737576",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:@angular/router",
-            "npm:rxjs",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/admin/src/app/pages/user-notifications-details/user-notifications-details.component.html",
-          "hash": "11445048633467488840"
-        },
-        {
-          "file": "apps/admin/src/app/pages/user-notifications-details/user-notifications-details.component.scss",
-          "hash": "1260256330482386681"
-        },
-        {
-          "file": "apps/admin/src/app/pages/user-notifications-details/user-notifications-details.component.ts",
-          "hash": "8372766046027820643",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:rxjs",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/admin/src/assets/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-Black.otf",
-          "hash": "3743425815831431095"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-BlackIt.otf",
-          "hash": "14513408490710260705"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-Bold.otf",
-          "hash": "6614659769325435627"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-BoldCond.otf",
-          "hash": "14884860952651769633"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-BoldCondIt.otf",
-          "hash": "16621143039881440608"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-BoldIt.otf",
-          "hash": "9365664446081981142"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-BoldSemiCn.otf",
-          "hash": "17678174580817547692"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-BoldSemiCnIt.otf",
-          "hash": "9150299472581563512"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-Cond.otf",
-          "hash": "526420794726045351"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-CondIt.otf",
-          "hash": "8588601982854415156"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-ExtraBold.otf",
-          "hash": "11591918476279702445"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-ExtraBoldIt.otf",
-          "hash": "2358603161548313656"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-It.otf",
-          "hash": "5190973533251456152"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-Light.otf",
-          "hash": "15676222359267366539"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-LightIt.otf",
-          "hash": "13518965619783277710"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-Medium.otf",
-          "hash": "17863706610644412946"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-Regular.otf",
-          "hash": "1412635047586869909"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-SemiCn.otf",
-          "hash": "17012150856801698361"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-SemiCnIt.otf",
-          "hash": "11427118479254183344"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-SemiLight.otf",
-          "hash": "10990952008167922072"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/AdobeClean-SemiLightIt.otf",
-          "hash": "17772916071616045322"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/ReliqStd-Active.otf",
-          "hash": "1252477394970736227"
-        },
-        {
-          "file": "apps/admin/src/assets/fonts/ReliqStd-Active.woff2",
-          "hash": "7993193017078298510"
-        },
-        {
-          "file": "apps/admin/src/favicon.ico",
-          "hash": "3464744996580215640"
-        },
-        {
-          "file": "apps/admin/src/index.html",
-          "hash": "10133914549576785804"
-        },
-        {
-          "file": "apps/admin/src/main.ts",
-          "hash": "3259059517603285449",
-          "deps": [
-            "npm:@angular/platform-browser-dynamic"
-          ]
-        },
-        {
-          "file": "apps/admin/src/styles.scss",
-          "hash": "5195668842064076916"
-        },
-        {
-          "file": "apps/admin/src/test-setup.ts",
-          "hash": "12935735732682149507",
-          "deps": [
-            "npm:jest-preset-angular"
-          ]
-        },
-        {
-          "file": "apps/admin/src/theme.scss",
-          "hash": "11213784175469263673"
-        },
-        {
-          "file": "apps/admin/tsconfig.app.json",
-          "hash": "10832768672368521252"
-        },
-        {
-          "file": "apps/admin/tsconfig.editor.json",
-          "hash": "3782190314296404468"
-        },
-        {
-          "file": "apps/admin/tsconfig.json",
-          "hash": "8549537712275309710"
-        },
-        {
-          "file": "apps/admin/tsconfig.spec.json",
-          "hash": "7582695473675793029"
-        }
-      ],
-      "pos": [
-        {
-          "file": "apps/pos/.eslintrc.json",
-          "hash": "14524345451361998551"
-        },
-        {
-          "file": "apps/pos/jest.config.ts",
-          "hash": "1108770060659864213"
-        },
-        {
-          "file": "apps/pos/project.json",
-          "hash": "5479317355851861994"
-        },
-        {
-          "file": "apps/pos/src/app/app.component.html",
-          "hash": "17816966185630879015"
-        },
-        {
-          "file": "apps/pos/src/app/app.component.scss",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/pos/src/app/app.component.spec.ts",
-          "hash": "10599542983187944250",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/pos/src/app/app.component.ts",
-          "hash": "11471472040014151006",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/pos/src/app/app.module.ts",
-          "hash": "1393875594202236415",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/platform-browser",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/pos/src/app/app.routes.ts",
-          "hash": "6185150965714414910",
-          "deps": [
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/pos/src/app/nx-welcome.component.ts",
-          "hash": "8039187357415671966",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/pos/src/assets/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/pos/src/favicon.ico",
-          "hash": "9303420814833116677"
-        },
-        {
-          "file": "apps/pos/src/index.html",
-          "hash": "5937011192990077888"
-        },
-        {
-          "file": "apps/pos/src/main.ts",
-          "hash": "14191774545949582757",
-          "deps": [
-            "npm:@angular/platform-browser-dynamic"
-          ]
-        },
-        {
-          "file": "apps/pos/src/styles.scss",
-          "hash": "5195668842064076916"
-        },
-        {
-          "file": "apps/pos/src/test-setup.ts",
-          "hash": "12935735732682149507",
-          "deps": [
-            "npm:jest-preset-angular"
-          ]
-        },
-        {
-          "file": "apps/pos/tsconfig.app.json",
-          "hash": "10832768672368521252"
-        },
-        {
-          "file": "apps/pos/tsconfig.editor.json",
-          "hash": "3782190314296404468"
-        },
-        {
-          "file": "apps/pos/tsconfig.json",
-          "hash": "8118050493832768378"
-        },
-        {
-          "file": "apps/pos/tsconfig.spec.json",
-          "hash": "7582695473675793029"
-        }
-      ],
-      "admin-shared": [
-        {
-          "file": "libs/admin-shared/.eslintrc.json",
-          "hash": "12249191440266860313"
-        },
-        {
-          "file": "libs/admin-shared/README.md",
-          "hash": "93848232545544999"
-        },
-        {
-          "file": "libs/admin-shared/jest.config.ts",
-          "hash": "10749976721115019772"
-        },
-        {
-          "file": "libs/admin-shared/project.json",
-          "hash": "2170838092659275395"
-        },
-        {
-          "file": "libs/admin-shared/src/index.ts",
-          "hash": "8907070778795086187"
-        },
-        {
-          "file": "libs/admin-shared/src/lib/admin-shared.module.ts",
-          "hash": "6367157933918542132",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common",
-            "npm:@angular/router",
-            "shared"
-          ]
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/admin-header/admin-header.component.html",
-          "hash": "9392451173033814218"
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/admin-header/admin-header.component.scss",
-          "hash": "13201272277136201875"
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/admin-header/admin-header.component.ts",
-          "hash": "3928896919378805015",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router",
-            "npm:rxjs",
-            "shared"
-          ]
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/empty-items/empty-items.component.html",
-          "hash": "4647315956706117032"
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/empty-items/empty-items.component.scss",
-          "hash": "13776455841264907454"
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/empty-items/empty-items.component.ts",
-          "hash": "13374594298294278914",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/file-upload/file-upload.component.html",
-          "hash": "1043765540464184028"
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/file-upload/file-upload.component.scss",
-          "hash": "4924814058853707751"
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/file-upload/file-upload.component.ts",
-          "hash": "9582985148788823063",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/layout/layout.component.html",
-          "hash": "6265444112361737508"
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/layout/layout.component.scss",
-          "hash": "11018469593272617838"
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/layout/layout.component.ts",
-          "hash": "15966461509308528563",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/page-head/page-head.component.html",
-          "hash": "13178870591854513706"
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/page-head/page-head.component.scss",
-          "hash": "1440502689518427129"
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/page-head/page-head.component.ts",
-          "hash": "7542945093278234424",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/pagination-parent/pagination-parent.component.html",
-          "hash": "14621641409169233682"
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/pagination-parent/pagination-parent.component.scss",
-          "hash": "520284260968434234"
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/pagination-parent/pagination-parent.component.ts",
-          "hash": "5057715019640633260",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/sidemenu/sidemenu.component.html",
-          "hash": "3474484552261590156"
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/sidemenu/sidemenu.component.scss",
-          "hash": "17909310959037396343"
-        },
-        {
-          "file": "libs/admin-shared/src/lib/components/sidemenu/sidemenu.component.ts",
-          "hash": "8222437568791455819",
-          "deps": [
-            "npm:@angular/core",
-            "npm:rxjs",
-            "shared"
-          ]
-        },
-        {
-          "file": "libs/admin-shared/src/test-setup.ts",
-          "hash": "12935735732682149507",
-          "deps": [
-            "npm:jest-preset-angular"
-          ]
-        },
-        {
-          "file": "libs/admin-shared/tsconfig.json",
-          "hash": "14819408947625383701"
-        },
-        {
-          "file": "libs/admin-shared/tsconfig.lib.json",
-          "hash": "12509280388318657009"
-        },
-        {
-          "file": "libs/admin-shared/tsconfig.spec.json",
-          "hash": "7582695473675793029"
-        }
-      ],
       "shared": [
         {
           "file": "libs/shared/.eslintrc.json",
@@ -2511,6 +1277,1157 @@
         },
         {
           "file": "libs/shared/tsconfig.spec.json",
+          "hash": "7582695473675793029"
+        },
+        {
+          "file": "libs/shared/src/lib/services/api/user/product.service.ts",
+          "hash": "8711468077933656287",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        }
+      ],
+      "admin": [
+        {
+          "file": "apps/admin/.eslintrc.json",
+          "hash": "14524345451361998551"
+        },
+        {
+          "file": "apps/admin/jest.config.ts",
+          "hash": "1108770060659864213"
+        },
+        {
+          "file": "apps/admin/project.json",
+          "hash": "13156369488003798245"
+        },
+        {
+          "file": "apps/admin/src/app/app-routing.module.ts",
+          "hash": "11300073517809012509",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "admin-shared",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/app.component.html",
+          "hash": "17816966185630879015"
+        },
+        {
+          "file": "apps/admin/src/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/admin/src/app/app.component.ts",
+          "hash": "12700163368214997033",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/app.module.ts",
+          "hash": "6681686941768071597",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "shared",
+            "npm:@angular/common",
+            "admin-shared"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/class/custom-validators.ts",
+          "hash": "1808195974905364127",
+          "deps": [
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/guard/auth.guard.ts",
+          "hash": "6043604761163786776",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/guard/bvn-verification.guard.ts",
+          "hash": "16390181469847112398",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/guard/dashboard.guard.ts",
+          "hash": "10592440493407393795",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/guard/guest-auth.guard.ts",
+          "hash": "10588953318374575108",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/guard/verfication.guard.ts",
+          "hash": "5344211893412751800",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/helpers/cookie.service.ts",
+          "hash": "14441128546943679789",
+          "deps": [
+            "npm:@angular/core",
+            "npm:ngx-cookie"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/helpers/date.service.ts",
+          "hash": "18332799443072956723",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/helpers/storage.service.ts",
+          "hash": "15178930772832372577",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:localforage"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/localData/banks.service.ts",
+          "hash": "3655908870536852342",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/localData/country.service.ts",
+          "hash": "12633096388129881849",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/auth.service.ts",
+          "hash": "4210133372728300134",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/config.service.ts",
+          "hash": "5951984858922793021",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/confirm-action.service.ts",
+          "hash": "15407201123159178824",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/custom-guard.service.ts",
+          "hash": "9047937647286109430",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/file-upload.service.ts",
+          "hash": "6098417686497312263",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/general-settings.service.ts",
+          "hash": "11498417455451619881",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/guest/blog.service.ts",
+          "hash": "2832112319318238006",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/guest/legal.service.ts",
+          "hash": "6511202437135718595",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/header-interceptor.service.ts",
+          "hash": "12048631272899789485",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/home.service.ts",
+          "hash": "16177397146544902575",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/information.service.ts",
+          "hash": "5256018965085430421",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/seo.service.ts",
+          "hash": "14830672026618272548",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/success.service.ts",
+          "hash": "8489224434818668340",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/user/bank-info.service.ts",
+          "hash": "2130197667148622858",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/user/dashboard.service.ts",
+          "hash": "1882286877696627941",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/user/dispute-chat.service.ts",
+          "hash": "28005634414087364",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs",
+            "npm:socket.io-client"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/user/escrow.service.ts",
+          "hash": "15534070646344586658",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs",
+            "npm:socket.io-client"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/user/notification.service.ts",
+          "hash": "2102016800019403190",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs",
+            "npm:socket.io-client"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/user/socket.service.ts",
+          "hash": "12332928402994092628",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:socket.io-client"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/user/transactions.service.ts",
+          "hash": "5882615895697143994",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/user/verify-modal.service.ts",
+          "hash": "16499744253065047487",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/user/wallet.service.ts",
+          "hash": "9906607172336309107",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/data/services/view-controller.service.ts",
+          "hash": "17281374023782770704",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/layout/layout.component.html",
+          "hash": "3692868339420478178"
+        },
+        {
+          "file": "apps/admin/src/app/layout/layout.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/admin/src/app/layout/layout.component.ts",
+          "hash": "13135248764102828203",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/acc-settings/acc-settings.component.html",
+          "hash": "17410908586810561646"
+        },
+        {
+          "file": "apps/admin/src/app/pages/acc-settings/acc-settings.component.scss",
+          "hash": "13840106282196468536"
+        },
+        {
+          "file": "apps/admin/src/app/pages/acc-settings/acc-settings.component.ts",
+          "hash": "17841647016932671069",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/acc-settings/password/password.component.html",
+          "hash": "9424127298899165139"
+        },
+        {
+          "file": "apps/admin/src/app/pages/acc-settings/password/password.component.scss",
+          "hash": "17130129884413844926"
+        },
+        {
+          "file": "apps/admin/src/app/pages/acc-settings/password/password.component.ts",
+          "hash": "3678462434197843472",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/acc-settings/profile/profile.component.html",
+          "hash": "12083972317442588293"
+        },
+        {
+          "file": "apps/admin/src/app/pages/acc-settings/profile/profile.component.scss",
+          "hash": "730963168671871498"
+        },
+        {
+          "file": "apps/admin/src/app/pages/acc-settings/profile/profile.component.ts",
+          "hash": "13394426020048381194",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/admin-details/admin-details.component.html",
+          "hash": "4489754243889579209"
+        },
+        {
+          "file": "apps/admin/src/app/pages/admin-details/admin-details.component.scss",
+          "hash": "7335619283104770403"
+        },
+        {
+          "file": "apps/admin/src/app/pages/admin-details/admin-details.component.ts",
+          "hash": "9700305133872011133",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:rxjs",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/categories/categories.component.html",
+          "hash": "3502405813295231649"
+        },
+        {
+          "file": "apps/admin/src/app/pages/categories/categories.component.scss",
+          "hash": "454113246004972729"
+        },
+        {
+          "file": "apps/admin/src/app/pages/categories/categories.component.ts",
+          "hash": "18128135826898546895",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:rxjs",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/coupon/coupon.component.html",
+          "hash": "14783211920270717812"
+        },
+        {
+          "file": "apps/admin/src/app/pages/coupon/coupon.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/admin/src/app/pages/coupon/coupon.component.ts",
+          "hash": "701098616727129939",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:rxjs",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/customers/customers.component.html",
+          "hash": "10740666780545764373"
+        },
+        {
+          "file": "apps/admin/src/app/pages/customers/customers.component.scss",
+          "hash": "13617883144838985002"
+        },
+        {
+          "file": "apps/admin/src/app/pages/customers/customers.component.ts",
+          "hash": "2707026894407234599",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:rxjs",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/dashboard/dashboard.component.html",
+          "hash": "5329413098763565946"
+        },
+        {
+          "file": "apps/admin/src/app/pages/dashboard/dashboard.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/admin/src/app/pages/dashboard/dashboard.component.ts",
+          "hash": "4734615436575165578",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/app-settings/app-settings.component.html",
+          "hash": "17434027854535422552"
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/app-settings/app-settings.component.scss",
+          "hash": "218741109418981966"
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/app-settings/app-settings.component.ts",
+          "hash": "2833143135989634151",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/banners/banners.component.html",
+          "hash": "4781843996160155444"
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/banners/banners.component.scss",
+          "hash": "6364523729448551268"
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/banners/banners.component.ts",
+          "hash": "12042781132832586432",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/company-info/company-info.component.html",
+          "hash": "11636382049726429047"
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/company-info/company-info.component.scss",
+          "hash": "2276751924011456488"
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/company-info/company-info.component.ts",
+          "hash": "11211126962884787599",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/customization/customization.component.html",
+          "hash": "12227593049115989193"
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/customization/customization.component.scss",
+          "hash": "5976711656440388873"
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/customization/customization.component.ts",
+          "hash": "7881624773374964540",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/general-settings.component.html",
+          "hash": "16945913367178418887"
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/general-settings.component.scss",
+          "hash": "8284405493301353220"
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/general-settings.component.ts",
+          "hash": "4233069583337303647",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/image-upload/image-upload.component.html",
+          "hash": "18270301202038296698"
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/image-upload/image-upload.component.scss",
+          "hash": "9601696496500042627"
+        },
+        {
+          "file": "apps/admin/src/app/pages/general-settings/image-upload/image-upload.component.ts",
+          "hash": "5690149347488706063",
+          "deps": [
+            "npm:@angular/core",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/login/login.component.html",
+          "hash": "9594801756679512581"
+        },
+        {
+          "file": "apps/admin/src/app/pages/login/login.component.scss",
+          "hash": "1345005833959757835"
+        },
+        {
+          "file": "apps/admin/src/app/pages/login/login.component.ts",
+          "hash": "15614856965129640122",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/manage-admin/manage-admin.component.html",
+          "hash": "4109036639569949440"
+        },
+        {
+          "file": "apps/admin/src/app/pages/manage-admin/manage-admin.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/admin/src/app/pages/manage-admin/manage-admin.component.ts",
+          "hash": "11075132677481558656",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:rxjs",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/notification-details/notification-details.component.html",
+          "hash": "8025625505844437837"
+        },
+        {
+          "file": "apps/admin/src/app/pages/notification-details/notification-details.component.scss",
+          "hash": "16691664223441104285"
+        },
+        {
+          "file": "apps/admin/src/app/pages/notification-details/notification-details.component.ts",
+          "hash": "805451424572475659",
+          "deps": [
+            "npm:@angular/core",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/notification-manager/notification-manager.component.html",
+          "hash": "8564991973047723334"
+        },
+        {
+          "file": "apps/admin/src/app/pages/notification-manager/notification-manager.component.scss",
+          "hash": "7386318370764171341"
+        },
+        {
+          "file": "apps/admin/src/app/pages/notification-manager/notification-manager.component.ts",
+          "hash": "6778301991758384781",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/router",
+            "npm:rxjs",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/notifications-listing/notifications-listing.component.html",
+          "hash": "4231000474338853088"
+        },
+        {
+          "file": "apps/admin/src/app/pages/notifications-listing/notifications-listing.component.scss",
+          "hash": "13514888372297023128"
+        },
+        {
+          "file": "apps/admin/src/app/pages/notifications-listing/notifications-listing.component.ts",
+          "hash": "9358538112941517664",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/order-details/order-details.component.html",
+          "hash": "17800136354300406292"
+        },
+        {
+          "file": "apps/admin/src/app/pages/order-details/order-details.component.scss",
+          "hash": "12314317519953820028"
+        },
+        {
+          "file": "apps/admin/src/app/pages/order-details/order-details.component.ts",
+          "hash": "17369339455179903502",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/orders/orders.component.html",
+          "hash": "6071325834979857563"
+        },
+        {
+          "file": "apps/admin/src/app/pages/orders/orders.component.scss",
+          "hash": "11810211102778187814"
+        },
+        {
+          "file": "apps/admin/src/app/pages/orders/orders.component.ts",
+          "hash": "14151732666160606227",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/router",
+            "npm:rxjs",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/product-details/product-details.component.html",
+          "hash": "12028940155933978013"
+        },
+        {
+          "file": "apps/admin/src/app/pages/product-details/product-details.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/admin/src/app/pages/product-details/product-details.component.ts",
+          "hash": "16292500157909419456",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/product-specifications/product-specifications.component.html",
+          "hash": "5329413098763565946"
+        },
+        {
+          "file": "apps/admin/src/app/pages/product-specifications/product-specifications.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/admin/src/app/pages/product-specifications/product-specifications.component.ts",
+          "hash": "7225839970884729540",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/products-form/products-form.component.html",
+          "hash": "17584547883022155576"
+        },
+        {
+          "file": "apps/admin/src/app/pages/products-form/products-form.component.scss",
+          "hash": "5092457830547362855"
+        },
+        {
+          "file": "apps/admin/src/app/pages/products-form/products-form.component.ts",
+          "hash": "10486281906021838530",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/products/products.component.html",
+          "hash": "5991938394870135652"
+        },
+        {
+          "file": "apps/admin/src/app/pages/products/products.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/admin/src/app/pages/products/products.component.ts",
+          "hash": "16658481918724542719",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/sales-promo/sales-promo.component.html",
+          "hash": "6909163048786105599"
+        },
+        {
+          "file": "apps/admin/src/app/pages/sales-promo/sales-promo.component.scss",
+          "hash": "14886385510368259132"
+        },
+        {
+          "file": "apps/admin/src/app/pages/sales-promo/sales-promo.component.ts",
+          "hash": "3331496454787777311",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/router",
+            "npm:rxjs",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/stores/stores.component.html",
+          "hash": "1802222982587976225"
+        },
+        {
+          "file": "apps/admin/src/app/pages/stores/stores.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/admin/src/app/pages/stores/stores.component.ts",
+          "hash": "14471058951860737576",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/router",
+            "npm:rxjs",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/admin/src/app/pages/user-notifications-details/user-notifications-details.component.html",
+          "hash": "11445048633467488840"
+        },
+        {
+          "file": "apps/admin/src/app/pages/user-notifications-details/user-notifications-details.component.scss",
+          "hash": "1260256330482386681"
+        },
+        {
+          "file": "apps/admin/src/app/pages/user-notifications-details/user-notifications-details.component.ts",
+          "hash": "8372766046027820643",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:rxjs",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/admin/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/admin/src/favicon.ico",
+          "hash": "3464744996580215640"
+        },
+        {
+          "file": "apps/admin/src/index.html",
+          "hash": "10133914549576785804"
+        },
+        {
+          "file": "apps/admin/src/main.ts",
+          "hash": "3259059517603285449",
+          "deps": [
+            "npm:@angular/platform-browser-dynamic"
+          ]
+        },
+        {
+          "file": "apps/admin/src/styles.scss",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/admin/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "apps/admin/src/theme.scss",
+          "hash": "11213784175469263673"
+        },
+        {
+          "file": "apps/admin/tsconfig.app.json",
+          "hash": "10832768672368521252"
+        },
+        {
+          "file": "apps/admin/tsconfig.editor.json",
+          "hash": "3782190314296404468"
+        },
+        {
+          "file": "apps/admin/tsconfig.json",
+          "hash": "8549537712275309710"
+        },
+        {
+          "file": "apps/admin/tsconfig.spec.json",
+          "hash": "7582695473675793029"
+        }
+      ],
+      "pos": [
+        {
+          "file": "apps/pos/.eslintrc.json",
+          "hash": "14524345451361998551"
+        },
+        {
+          "file": "apps/pos/jest.config.ts",
+          "hash": "1108770060659864213"
+        },
+        {
+          "file": "apps/pos/project.json",
+          "hash": "5479317355851861994"
+        },
+        {
+          "file": "apps/pos/src/app/app.component.html",
+          "hash": "17816966185630879015"
+        },
+        {
+          "file": "apps/pos/src/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/pos/src/app/app.component.spec.ts",
+          "hash": "10599542983187944250",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/pos/src/app/app.component.ts",
+          "hash": "11471472040014151006",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/pos/src/app/app.module.ts",
+          "hash": "1393875594202236415",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/pos/src/app/app.routes.ts",
+          "hash": "6185150965714414910",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/pos/src/app/nx-welcome.component.ts",
+          "hash": "8039187357415671966",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/pos/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/pos/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/pos/src/index.html",
+          "hash": "5937011192990077888"
+        },
+        {
+          "file": "apps/pos/src/main.ts",
+          "hash": "14191774545949582757",
+          "deps": [
+            "npm:@angular/platform-browser-dynamic"
+          ]
+        },
+        {
+          "file": "apps/pos/src/styles.scss",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/pos/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "apps/pos/tsconfig.app.json",
+          "hash": "10832768672368521252"
+        },
+        {
+          "file": "apps/pos/tsconfig.editor.json",
+          "hash": "3782190314296404468"
+        },
+        {
+          "file": "apps/pos/tsconfig.json",
+          "hash": "8118050493832768378"
+        },
+        {
+          "file": "apps/pos/tsconfig.spec.json",
+          "hash": "7582695473675793029"
+        }
+      ],
+      "admin-shared": [
+        {
+          "file": "libs/admin-shared/.eslintrc.json",
+          "hash": "12249191440266860313"
+        },
+        {
+          "file": "libs/admin-shared/README.md",
+          "hash": "93848232545544999"
+        },
+        {
+          "file": "libs/admin-shared/jest.config.ts",
+          "hash": "10749976721115019772"
+        },
+        {
+          "file": "libs/admin-shared/project.json",
+          "hash": "2170838092659275395"
+        },
+        {
+          "file": "libs/admin-shared/src/index.ts",
+          "hash": "8907070778795086187"
+        },
+        {
+          "file": "libs/admin-shared/src/lib/admin-shared.module.ts",
+          "hash": "6367157933918542132",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/router",
+            "shared"
+          ]
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/admin-header/admin-header.component.html",
+          "hash": "9392451173033814218"
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/admin-header/admin-header.component.scss",
+          "hash": "13201272277136201875"
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/admin-header/admin-header.component.ts",
+          "hash": "3928896919378805015",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:rxjs",
+            "shared"
+          ]
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/empty-items/empty-items.component.html",
+          "hash": "4647315956706117032"
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/empty-items/empty-items.component.scss",
+          "hash": "13776455841264907454"
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/empty-items/empty-items.component.ts",
+          "hash": "13374594298294278914",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/file-upload/file-upload.component.html",
+          "hash": "1043765540464184028"
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/file-upload/file-upload.component.scss",
+          "hash": "4924814058853707751"
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/file-upload/file-upload.component.ts",
+          "hash": "9582985148788823063",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/layout/layout.component.html",
+          "hash": "6265444112361737508"
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/layout/layout.component.scss",
+          "hash": "11018469593272617838"
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/layout/layout.component.ts",
+          "hash": "15966461509308528563",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/page-head/page-head.component.html",
+          "hash": "13178870591854513706"
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/page-head/page-head.component.scss",
+          "hash": "1440502689518427129"
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/page-head/page-head.component.ts",
+          "hash": "7542945093278234424",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/pagination-parent/pagination-parent.component.html",
+          "hash": "14621641409169233682"
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/pagination-parent/pagination-parent.component.scss",
+          "hash": "520284260968434234"
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/pagination-parent/pagination-parent.component.ts",
+          "hash": "5057715019640633260",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/sidemenu/sidemenu.component.html",
+          "hash": "3474484552261590156"
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/sidemenu/sidemenu.component.scss",
+          "hash": "17909310959037396343"
+        },
+        {
+          "file": "libs/admin-shared/src/lib/components/sidemenu/sidemenu.component.ts",
+          "hash": "8222437568791455819",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs",
+            "shared"
+          ]
+        },
+        {
+          "file": "libs/admin-shared/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/admin-shared/tsconfig.json",
+          "hash": "14819408947625383701"
+        },
+        {
+          "file": "libs/admin-shared/tsconfig.lib.json",
+          "hash": "12509280388318657009"
+        },
+        {
+          "file": "libs/admin-shared/tsconfig.spec.json",
           "hash": "7582695473675793029"
         }
       ]
