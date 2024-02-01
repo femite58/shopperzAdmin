@@ -5,18 +5,23 @@ import {
   EventEmitter,
   HostListener,
   Input,
+  OnDestroy,
   Output,
 } from '@angular/core';
 
 @Directive({
   selector: '[appDropdown]',
 })
-export class DropdownDirective implements AfterViewInit {
+export class DropdownDirective implements AfterViewInit, OnDestroy {
   @Input() innerClose = '';
   @Input() closeDropdown;
   @Output() onDropChng = new EventEmitter();
 
   constructor(private el: ElementRef) {}
+
+  ngOnDestroy(): void {
+    this.auxClick({ path: [1, 1] });
+  }
 
   ngAfterViewInit(): void {
     if (this.closeDropdown) {
