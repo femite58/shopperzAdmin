@@ -1,0 +1,90 @@
+main {
+    border: none;
+    margin-top: 37px;
+}
+.pageFlex {
+    display: flex;
+    gap: 39px;
+    .prodImgPar {
+        flex: 1 400px;
+        width: 400px;
+        ::ng-deep .carouselParent {
+            border: var(--border);
+            border-radius: 10px;
+        }
+        .imgCont {
+            position: relative;
+            padding-top: 71.5315315315315%;
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 80%;
+                height: 80%;
+                object-fit: contain;
+            }
+        }
+    }
+    .indicatorImgs {
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+        .indicatorItem {
+            width: 115px;
+            border: var(--border);
+            border-radius: 10px;
+            cursor: pointer;
+            &.actImg {
+                border-color: var(--primary);
+            }
+        }
+    }
+    .prodTxtDetails {
+        flex: 1 500px;
+        width: 500px;
+        .flash {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #f8253a;
+            gap: 4px;
+        }
+        .catCont {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+            .keyVal {
+                margin-bottom: 0;
+            }
+        }
+        .keyVal {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 8px;
+        }
+        .starsCont {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            .normal {
+                ::ng-deep svg {
+                    path {
+                        fill: #d9d9d9;
+                    }
+                }
+            }
+        }
+        .reviewCont {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .descTitle {
+            padding-bottom: 8px;
+            border-bottom: var(--border);
+            margin: 20px 0 10px;
+        }
+    }
+}

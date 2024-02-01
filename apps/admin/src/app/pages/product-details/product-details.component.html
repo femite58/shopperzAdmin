@@ -1,6 +1,6 @@
 <app-page-head pageTitle="Product Details" [backAct]="true">
     <div id="headBtnCont">
-        <button class="greyOutlineBtn">
+        <button (click)="deleteProd()" class="greyOutlineBtn">
             <svg-icons name="delete"></svg-icons>
             <span>Delete</span>
         </button>
@@ -13,4 +13,143 @@
         </button>
     </div>
 </app-page-head>
-<main></main>
+<main>
+    <div class="pageFlex">
+        <div class="prodImgPar">
+            <app-banner-carousel (indEv)="actInd = $event">
+                <div class="flexCont">
+                    <div
+                        *ngFor="let img of product?.images"
+                        class="carouselItem"
+                    >
+                        <div class="imgCont">
+                            <img [src]="img" alt="Product Image" />
+                        </div>
+                    </div>
+                </div>
+                <div class="carouselCtrlPrev"></div>
+                <div class="carouselCtrlNext"></div>
+                <div class="carouselIndicators">
+                    <input
+                        *ngFor="let ind of product?.images; let i = index"
+                        type="text"
+                        hidden
+                        id="prodImg{{ i }}"
+                        class="indicatorItem"
+                    />
+                </div>
+            </app-banner-carousel>
+            <div class="indicatorImgs">
+                <label
+                    *ngFor="let img of product?.images; let i = index"
+                    for="prodImg{{ i }}"
+                    class="indicatorItem"
+                    [class.actImg]="actInd == i"
+                >
+                    <div class="imgCont">
+                        <img [src]="img" alt="Indicator Image" />
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="prodTxtDetails">
+            <div class="d-flex align-items-center gap8 mb12">
+                <div class="name fs20 fw600">{{ product?.name }}</div>
+                <div class="flash">
+                    <svg-icons name="lightningBolt"></svg-icons>
+                    <span>Flash Sale</span>
+                </div>
+            </div>
+            <div class="catCont">
+                <div class="keyVal">
+                    <span class="greyTxt">Category:</span>
+                    <span>{{ product?.category }}</span>
+                </div>
+                <div class="keyVal">
+                    <span class="greyTxt">Sub-Category:</span>
+                    <span>{{ product?.sub_category }}</span>
+                </div>
+                <div class="keyVal">
+                    <span class="greyTxt">Sub-Child Category:</span>
+                    <span>{{ product?.subsub_category }}</span>
+                </div>
+            </div>
+            <div class="keyVal">
+                <span class="greyTxt">Short description:</span>
+                <span>{{ product?.overview }}</span>
+            </div>
+            <div class="keyVal">
+                <span class="greyTxt">Quantity:</span>
+                <span>{{ totalQty }}</span>
+            </div>
+            <div class="keyVal">
+                <span class="greyTxt">Store:</span>
+                <span
+                    ><ng-container
+                        *ngFor="let s of product?.stores; let i = index"
+                        >{{ i != 0 ? ', ' : '' }}{{ s?.name }}</ng-container
+                    ></span
+                >
+            </div>
+            <hr />
+            <div class="keyVal">
+                <span class="greyTxt">Selling price:</span>
+                <span>₦{{ product?.regular_price | number }}</span>
+            </div>
+            <div class="keyVal">
+                <span class="greyTxt">Discount price:</span>
+                <span>₦{{ product?.discount_price | number }}</span>
+            </div>
+            <div class="keyVal">
+                <span class="greyTxt">SKU:</span>
+                <span>₦{{ product?.sku }}</span>
+            </div>
+            <div class="keyVal">
+                <span class="greyTxt">Barcode:</span>
+                <span>{{ product?.sku }}</span>
+            </div>
+            <div class="keyVal">
+                <span class="greyTxt">Brand name:</span>
+                <span>{{ product?.brand }}</span>
+            </div>
+            <div class="keyVal">
+                <span class="greyTxt">Warranty:</span>
+                <span
+                    >{{ product?.warranty }} {{ product?.warranty_unit }}</span
+                >
+            </div>
+            <div class="keyVal">
+                <span class="greyTxt">Size:</span>
+                <span>{{ product?.size }}</span>
+            </div>
+            <div class="keyVal">
+                <span class="greyTxt">Color:</span>
+                <span>{{ product?.color }}</span>
+            </div>
+            <div class="keyVal">
+                <span class="greyTxt">Reviews:</span>
+                <div class="reviewCont">
+                    <div class="starsCont">
+                        <div *ngFor="let r of numArr(rating)" class="filled">
+                            <svg-icons name="star"></svg-icons>
+                        </div>
+                        <div
+                            *ngFor="let r of numArr(5 - rating)"
+                            class="normal"
+                        >
+                            <svg-icons name="star"></svg-icons>
+                        </div>
+                    </div>
+                    <span
+                        >({{ product?.rating_count | number }} customer
+                        reviews)</span
+                    >
+                </div>
+            </div>
+            <div class="greyTxt descTitle">Description:</div>
+            <div class="descCont">
+                {{ product?.description }}
+            </div>
+        </div>
+    </div>
+</main>

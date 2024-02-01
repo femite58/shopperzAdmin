@@ -117,6 +117,9 @@ body {
 }
 
 @for $i from 1 through 100 {
+    .gap#{$i} {
+        gap: #{$i}px;
+    }
     .fs#{$i} {
         font-size: #{$i}px;
     }
