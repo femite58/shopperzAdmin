@@ -65,7 +65,7 @@ const routes: Routes = [
       { path: 'stores', component: StoresComponent },
       {
         path: 'sales-promotion',
-        redirectTo: 'sales-promotion/coupons',
+        redirectTo: '/sales-promotion/coupons',
         pathMatch: 'full',
       },
       { path: 'sales-promotion/:tab', component: SalesPromoComponent },

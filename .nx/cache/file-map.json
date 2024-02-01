@@ -79,96 +79,44 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "libs/assets/images/products/image_sm2.png",
-        "hash": "1908289265808490237"
+        "file": "jest.config.ts",
+        "hash": "12333515226966617182"
       },
       {
-        "file": "libs/assets/images/topRightImg.svg",
-        "hash": "2195258092898791468"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-LightIt.otf",
-        "hash": "13518965619783277710"
-      },
-      {
-        "file": "libs/assets/images/loginImg.png",
-        "hash": "6486818851113537682"
-      },
-      {
-        "file": "karma.conf.js",
-        "hash": "11538871871811595139"
-      },
-      {
-        "file": "libs/assets/images/products/prodImg2.png",
-        "hash": "6933691420978141194"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "7663861978715868291"
-      },
-      {
-        "file": "tools/generators/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "libs/assets/images/logo_big.svg",
-        "hash": "5714047140849335065"
-      },
-      {
-        "file": ".github/workflows/cd.yml",
-        "hash": "13714529222052690641"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-SemiLight.otf",
-        "hash": "10990952008167922072"
-      },
-      {
-        "file": ".vscode/launch.json",
-        "hash": "4103394674155001761"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "729210714042218786"
-      },
-      {
-        "file": "libs/assets/images/phone_bg.png",
-        "hash": "9758949531347760860"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-BoldCondIt.otf",
-        "hash": "16621143039881440608"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-BoldIt.otf",
-        "hash": "9365664446081981142"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-SemiLightIt.otf",
-        "hash": "17772916071616045322"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-Light.otf",
-        "hash": "15676222359267366539"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-Black.otf",
-        "hash": "3743425815831431095"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-Regular.otf",
-        "hash": "1412635047586869909"
-      },
-      {
-        "file": "libs/assets/images/products/image_sm1.png",
-        "hash": "7706717343620041726"
+        "file": "libs/assets/images/empty_box.svg",
+        "hash": "10136415473294887678"
       },
       {
         "file": "package-lock.json",
         "hash": "16536852516033891637"
       },
       {
-        "file": "libs/assets/fonts/AdobeClean-BoldCond.otf",
-        "hash": "14884860952651769633"
+        "file": "libs/assets/fonts/AdobeClean-BlackIt.otf",
+        "hash": "14513408490710260705"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-BoldSemiCnIt.otf",
+        "hash": "9150299472581563512"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "16276728588707165928"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-SemiLightIt.otf",
+        "hash": "17772916071616045322"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-LightIt.otf",
+        "hash": "13518965619783277710"
+      },
+      {
+        "file": "libs/styles/styles.scss",
+        "hash": "6202231692819169357"
+      },
+      {
+        "file": "libs/assets/images/products/prodImg2.png",
+        "hash": "6933691420978141194"
       },
       {
         "file": "libs/assets/fonts/AdobeClean-It.otf",
@@ -179,156 +127,132 @@
         "hash": "2161759191166556406"
       },
       {
-        "file": "libs/assets/images/bottomLeftImg.svg",
-        "hash": "5334311922309340672"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-Cond.otf",
-        "hash": "526420794726045351"
-      },
-      {
-        "file": "libs/assets/images/phone_case.svg",
-        "hash": "10930501565337920508"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-SemiCn.otf",
-        "hash": "17012150856801698361"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-BoldSemiCn.otf",
-        "hash": "17678174580817547692"
-      },
-      {
-        "file": "libs/assets/images/onboarding_default.png",
-        "hash": "9427383488655522429"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-BlackIt.otf",
-        "hash": "14513408490710260705"
-      },
-      {
-        "file": "libs/assets/images/empty_box.svg",
-        "hash": "10136415473294887678"
-      },
-      {
-        "file": "libs/assets/images/loginArrow.svg",
-        "hash": "17390717419842182833"
-      },
-      {
-        "file": ".vscode/tasks.json",
-        "hash": "10993352802354330803"
-      },
-      {
-        "file": "libs/assets/images/app_icons/app_icon3.svg",
-        "hash": "16337847047004794625"
-      },
-      {
-        "file": "libs/assets/images/profile-default.png",
-        "hash": "10649455190979104351"
-      },
-      {
-        "file": "package.json",
-        "hash": "821753040164415936"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-ExtraBoldIt.otf",
-        "hash": "2358603161548313656"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "12333515226966617182"
-      },
-      {
-        "file": "libs/assets/images/app_icons/app_icon2.svg",
-        "hash": "13071324196676806900"
-      },
-      {
-        "file": "libs/assets/images/app_icons/app_icon1.svg",
-        "hash": "958189524204376665"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-Medium.otf",
-        "hash": "17863706610644412946"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "16276728588707165928"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-CondIt.otf",
-        "hash": "8588601982854415156"
-      },
-      {
-        "file": "libs/assets/images/notificationImg.png",
-        "hash": "748692687870180931"
-      },
-      {
-        "file": "libs/assets/images/notificationImgBig.png",
-        "hash": "13354613026492972458"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-BoldSemiCnIt.otf",
-        "hash": "9150299472581563512"
-      },
-      {
-        "file": "README.md",
-        "hash": "17352059486184399336"
-      },
-      {
-        "file": "libs/assets/fonts/ReliqStd-Active.woff2",
-        "hash": "7993193017078298510"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "3395189204293871444"
-      },
-      {
-        "file": "libs/assets/fonts/AdobeClean-SemiCnIt.otf",
-        "hash": "11427118479254183344"
-      },
-      {
-        "file": ".releaserc",
-        "hash": "1533519460304397903"
-      },
-      {
         "file": "libs/assets/.gitkeep",
         "hash": "3244421341483603138"
       },
       {
-        "file": "libs/assets/fonts/AdobeClean-ExtraBold.otf",
-        "hash": "11591918476279702445"
+        "file": "libs/assets/fonts/AdobeClean-Light.otf",
+        "hash": "15676222359267366539"
       },
       {
-        "file": "libs/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
-      },
-      {
-        "file": "libs/assets/images/products/prodImg3.png",
-        "hash": "10972926039372771286"
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
       },
       {
         "file": "nx.json",
         "hash": "17413548031555426275"
       },
       {
-        "file": "libs/assets/images/logo.svg",
-        "hash": "17547983236110334027"
-      },
-      {
-        "file": "libs/styles/styles.scss",
-        "hash": "6202231692819169357"
-      },
-      {
         "file": "libs/assets/images/products/prodImg1.png",
         "hash": "515442315001495860"
       },
       {
-        "file": "libs/assets/images/userImg.png",
-        "hash": "8403089660720390929"
+        "file": "libs/assets/fonts/AdobeClean-BoldIt.otf",
+        "hash": "9365664446081981142"
+      },
+      {
+        "file": "tools/generators/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "libs/assets/images/phone_bg.png",
+        "hash": "9758949531347760860"
+      },
+      {
+        "file": "libs/assets/images/onboarding_default.png",
+        "hash": "9427383488655522429"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "4103394674155001761"
+      },
+      {
+        "file": "libs/assets/images/bottomLeftImg.svg",
+        "hash": "5334311922309340672"
+      },
+      {
+        "file": "README.md",
+        "hash": "17352059486184399336"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-CondIt.otf",
+        "hash": "8588601982854415156"
+      },
+      {
+        "file": "libs/assets/images/profile-default.png",
+        "hash": "10649455190979104351"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-ExtraBoldIt.otf",
+        "hash": "2358603161548313656"
+      },
+      {
+        "file": "libs/assets/images/logo_big.svg",
+        "hash": "5714047140849335065"
+      },
+      {
+        "file": "libs/assets/images/products/prodImg3.png",
+        "hash": "10972926039372771286"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-ExtraBold.otf",
+        "hash": "11591918476279702445"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-Black.otf",
+        "hash": "3743425815831431095"
+      },
+      {
+        "file": "libs/assets/images/topRightImg.svg",
+        "hash": "2195258092898791468"
+      },
+      {
+        "file": "libs/assets/images/app_icons/app_icon2.svg",
+        "hash": "13071324196676806900"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-Medium.otf",
+        "hash": "17863706610644412946"
+      },
+      {
+        "file": "libs/assets/images/logo.svg",
+        "hash": "17547983236110334027"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-BoldSemiCn.otf",
+        "hash": "17678174580817547692"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-BoldCondIt.otf",
+        "hash": "16621143039881440608"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-Cond.otf",
+        "hash": "526420794726045351"
+      },
+      {
+        "file": "libs/assets/images/app_icons/app_icon1.svg",
+        "hash": "958189524204376665"
+      },
+      {
+        "file": "libs/assets/images/phone_case.svg",
+        "hash": "10930501565337920508"
+      },
+      {
+        "file": "libs/assets/images/notificationImg.png",
+        "hash": "748692687870180931"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "3395189204293871444"
+      },
+      {
+        "file": "package.json",
+        "hash": "821753040164415936"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-SemiCnIt.otf",
+        "hash": "11427118479254183344"
       },
       {
         "file": "libs/assets/fonts/AdobeClean-Bold.otf",
@@ -339,24 +263,100 @@
         "hash": "8165953437148473796"
       },
       {
-        "file": "libs/assets/images/centered-app preview.webp",
-        "hash": "16886762229923099191"
-      },
-      {
         "file": "libs/assets/fonts/ReliqStd-Active.otf",
         "hash": "1252477394970736227"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-SemiCn.otf",
+        "hash": "17012150856801698361"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "10801117440090935095"
+      },
+      {
+        "file": "libs/assets/images/loginArrow.svg",
+        "hash": "17390717419842182833"
+      },
+      {
+        "file": "libs/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
       },
       {
         "file": "tools/tsconfig.tools.json",
         "hash": "113529236189617652"
       },
       {
+        "file": "libs/assets/fonts/AdobeClean-Regular.otf",
+        "hash": "1412635047586869909"
+      },
+      {
+        "file": "libs/assets/images/products/image_sm1.png",
+        "hash": "7706717343620041726"
+      },
+      {
+        "file": "libs/assets/fonts/ReliqStd-Active.woff2",
+        "hash": "7993193017078298510"
+      },
+      {
+        "file": "libs/assets/images/centered-app preview.webp",
+        "hash": "16886762229923099191"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "729210714042218786"
+      },
+      {
+        "file": "libs/assets/images/loginImg.png",
+        "hash": "6486818851113537682"
+      },
+      {
+        "file": "libs/assets/fonts/AdobeClean-BoldCond.otf",
+        "hash": "14884860952651769633"
+      },
+      {
+        "file": ".releaserc",
+        "hash": "1533519460304397903"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "10993352802354330803"
+      },
+      {
+        "file": "libs/assets/images/app_icons/app_icon3.svg",
+        "hash": "16337847047004794625"
+      },
+      {
+        "file": "libs/assets/images/userImg.png",
+        "hash": "8403089660720390929"
+      },
+      {
+        "file": "libs/assets/images/products/image_sm2.png",
+        "hash": "1908289265808490237"
+      },
+      {
+        "file": "libs/assets/images/notificationImgBig.png",
+        "hash": "13354613026492972458"
+      },
+      {
         "file": ".eslintrc.json",
         "hash": "10357578163422506146"
       },
       {
-        "file": ".prettierrc",
-        "hash": "10801117440090935095"
+        "file": "libs/assets/fonts/AdobeClean-SemiLight.otf",
+        "hash": "10990952008167922072"
+      },
+      {
+        "file": ".github/workflows/cd.yml",
+        "hash": "13714529222052690641"
+      },
+      {
+        "file": "karma.conf.js",
+        "hash": "11538871871811595139"
       }
     ],
     "projectFileMap": {
@@ -1420,7 +1420,7 @@
         },
         {
           "file": "apps/admin/src/app/app-routing.module.ts",
-          "hash": "11300073517809012509",
+          "hash": "15378207577461661399",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router",
