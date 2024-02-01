@@ -8,10 +8,34 @@ main {
     .prodImgPar {
         flex: 1 400px;
         width: 400px;
+        .carouselCtrlPrev,
+        .carouselCtrlNext {
+            box-shadow: 0 0 15px #00000022;
+            transition: 0.3s ease;
+            cursor: pointer;
+            &.carouselCtrlPrev {
+                left: -200px;
+            }
+            &.carouselCtrlNext {
+                right: -200px;
+            }
+        }
         ::ng-deep .carouselParent {
             border: var(--border);
             border-radius: 10px;
+            &:hover {
+                .carouselCtrlPrev,
+                .carouselCtrlNext {
+                    &.carouselCtrlPrev {
+                        left: 0;
+                    }
+                    &.carouselCtrlNext {
+                        right: 0;
+                    }
+                }
+            }
         }
+
         .imgCont {
             position: relative;
             padding-top: 71.5315315315315%;
@@ -35,6 +59,13 @@ main {
             border: var(--border);
             border-radius: 10px;
             cursor: pointer;
+            .imgCont {
+                padding-top: 79.7977783366141%;
+                img {
+                    width: 70%;
+                    height: 70%;
+                }
+            }
             &.actImg {
                 border-color: var(--primary);
             }
