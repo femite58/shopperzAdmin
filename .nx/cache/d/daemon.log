@@ -2480,3 +2480,13 @@ Error: Cannot connect to Nx Cloud (scope: api, code: ECONNABORTED). Try invoking
 [NX Daemon Server] - 2024-02-01T04:05:34.273Z - Time taken for 'hash changed files from watcher' 2.120500087738037ms
 [NX Daemon Server] - 2024-02-01T04:06:26.940Z - [WATCHER]: Processing file changes in outputs
 [NX Daemon Server] - 2024-02-01T04:06:26.951Z - [WATCHER]: apps/admin/src/app/pages/sales-promo/sales-promo.component.html was modified
+[NX Daemon Server] - 2024-02-01T04:06:33.366Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-02-01T04:06:33.367Z - [REQUEST]: apps/admin/src/app/pages/sales-promo/sales-promo.component.html
+[NX Daemon Server] - 2024-02-01T04:06:33.367Z - [REQUEST]: 
+[NX Daemon Server] - 2024-02-01T04:06:33.776Z - Time taken for 'hash changed files from watcher' 2.6224000453948975ms
+[NX Daemon Server] - 2024-02-01T04:19:49.078Z - [WATCHER]: libs/shared/src/lib/directives/dropdown.directive.ts was modified
+[NX Daemon Server] - 2024-02-01T04:19:49.078Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-01T04:19:55.495Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-02-01T04:19:55.495Z - [REQUEST]: libs/shared/src/lib/directives/dropdown.directive.ts
+[NX Daemon Server] - 2024-02-01T04:19:55.495Z - [REQUEST]: 
+[NX Daemon Server] - 2024-02-01T04:19:55.823Z - Time taken for 'hash changed files from watcher' 1.6401000022888184ms
